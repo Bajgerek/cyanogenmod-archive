@@ -1,0 +1,705 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+
+	<title>A New Chapter | CyanogenMod</title>
+	
+	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	
+	<!-- Included Foundation CSS Files -->
+	<link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/css/foundation.css">
+	<link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/css/app.css">
+    <link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/tipTip.css">
+    <link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/fonts/style.css">
+    <link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/css/flexslider.css" type="text/css" media="screen" />
+	
+	<link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/style.css">
+	
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/css/ie.css">
+	<![endif]-->
+	
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<!-- Favicon and Feed -->
+	<link rel="shortcut icon" type="image/png" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/favicon.ico">
+	<link rel="alternate" type="application/rss+xml" title="CyanogenMod Feed" href="http://www.cyanogenmod.org/feed/">
+	
+	<!--  iPhone Web App Home Screen Icon -->
+	<link rel="apple-touch-icon" sizes="72x72" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-icon-ipad.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-icon-retina.png" />
+	<link rel="apple-touch-icon" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-icon.png" />
+	
+	<!-- Enable Startup Image for iOS Home Screen Web App -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link rel="apple-touch-startup-image" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/mobile-load.png" />
+
+	<!-- Startup Image iPad Landscape (748x1024) -->
+	<link rel="apple-touch-startup-image" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-load-ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)" />
+	<!-- Startup Image iPad Portrait (768x1004) -->
+	<link rel="apple-touch-startup-image" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-load-ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)" />
+	<!-- Startup Image iPhone (320x460) -->
+	<link rel="apple-touch-startup-image" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-load.png" media="screen and (max-device-width: 320px)" />
+	
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.min.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.jparallax.min.js" ></script>
+  <script defer type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.featureList-1.0.0.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.tipTip.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/easySlider1.7.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/modernizr.foundation.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.flexslider-min.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/custom.js"></script>
+  
+  <script type="text/javascript">
+    $(document).load(function(){
+
+	  // The slider being synced must be initialized first
+	  $('.flexslider').flexslider({
+		animation: "slide",
+		controlNav: false,
+	  });
+	  
+    });
+  </script>
+  
+  	
+<!-- All in One SEO Pack 2.2.7.1 by Michael Torbert of Semper Fi Web Design[493,515] -->
+<meta name="description"  content="To all CyanogenMod users, contributors, and fans: What follows is a true story. No names have been changed to protect the guilty. Let’s take it from the" />
+
+<link rel="canonical" href="http://www.cyanogenmod.org/blog/a_new_chapter" />
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-39737599-3']);
+		  _gaq.push(['_trackPageview']);
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
+<!-- /all in one seo pack -->
+<link rel="alternate" type="application/rss+xml" title="CyanogenMod &raquo; A New Chapter Comments Feed" href="http://www.cyanogenmod.org/blog/a_new_chapter/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/cyanogenmod.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.2.4"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://cyanogenmod.org/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://cyanogenmod.org/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='This Week in CyanogenMod' href='http://www.cyanogenmod.org/blog/this-week-in-cm-sep-13-2013' />
+<link rel='next' title='This Week in CyanogenMod' href='http://www.cyanogenmod.org/blog/this-week-in-cm-sep-21-2013' />
+<meta name="generator" content="WordPress 4.2.4" />
+<link rel='shortlink' href='http://www.cyanogenmod.org/?p=2372' />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+</head>
+
+<body class="single single-post postid-2372 single-format-standard">
+
+	<div class="menusto hide-on-phones"></div>
+	<!-- Start the main container -->
+	<div id="container" class="container" role="document" style="padding:80px 0 0 0;">
+		
+        
+        <div class="row mobile-header show-on-phones">
+            <div class="nine">
+            	<a href="http://www.cyanogenmod.org" title="CyanogenMod" class="logo-mobile"><img src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/logo-mobile.png" alt=""/></a>
+            </div>
+            <a href="#navigation" class="mobile-menu"><img src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/btn-menu-mobile.png" alt=""/></a>
+        </div>
+        
+		<!-- Row for blog navigation -->
+		<div class="row hide-on-phones">
+			<header class="twelve columns" role="banner">
+				<div class="reverie-header">
+                	<a href="http://www.cyanogenmod.org" title="CyanogenMod" class="logo"><img src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/logo.png" alt=""/></a>
+                    <div id="glavno" class="nav hide-on-phones">
+                        <ul id="glavno">                   
+                            <li><a href="http://wiki.cyanogenmod.org/">Wiki</a></li>
+                            <!--<li><a href="http://cyanogenmod.org/about/features">Features</a></li>-->
+                            <li><a href="http://download.cyanogenmod.org/">Download</a></li>
+                            <li><a href="http://www.cyanogenmod.org/blog/">Blog</a></li>
+                            <li><a href="http://forum.cyanogenmod.org/">Forum</a></li>
+                            <li>
+                            	<a href="http://www.cyanogenmod.org/community">Community</a>
+                                <div style="opacity: 0; display: none; width:100%" class="sub">
+                                    <ul>
+                                    	<div style="width:980px; margin:0 auto; color:#fff;">
+                                        	<div class="contributesub">
+                                            	<h2>Contribute</h2>
+                                                
+                                                <h4><a href="http://review.cyanogenmod.org/">Gerrit Review</a></h4>
+                                                <p>Gerrit is a web based code review system, facilitating online code reviews for projects using the Git version control system.</p>
+                                                    
+                                                <h4><a href="http://wiki.cyanogenmod.org/">Wiki</a></h4>
+                                                <p>Our Wiki is a comprehensive tool for users to find information. This also needs contributions to keep it fresh and relevant.</p>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/community">Join The Team</a></h4>
+                                                <p>We love working with others. You can submit code via Gerrit. If you think there is something else you can help with, get in touch with us on the forums.</p>
+                                            </div>
+                                            
+                                        	<div class="contributesub">
+                                            	<h2>Help</h2>
+                                                
+                                                <h4><a href="http://forum.cyanogenmod.org/">Forum</a></h4>
+                                                <p>Our forums have a wealth of knowledge and resources. All of it is free and accessible from both your desktop and mobile phone.</p>
+                                                    
+                                                <h4><a href="irc://irc.freenode.net/cyanogenmod">IRC</a></h4>
+                                                <p>If you are comfortable with IRC and would like instant help and assistance from both developers and others users alike.</p>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/blog">Blog</a></h4>
+                                                <p>Our blogs will contain the latest news and releases as well as other related news concerning the distribution.</p>
+                                                    
+                                                <h4><a href="http://wiki.cyanogenmod.org/">Wiki</a></h4>
+                                                <p>Our Wiki is a comprehensive tool for users to find information. This also needs contributions to keep it fresh and relevant.</p>
+                                            </div>
+                                            
+                                        	<div class="contributesub">
+                                            	<h2>Information</h2>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/bugs">Bug Tracker</a></h4>
+                                                <p>This is the official Bug Tracker where you can submit and review bugs that users may experience.</p>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/github">Github Repo</a></h4>
+                                                <p>Our source is free and open. you can check the Github page to see what we do and how you can contribute.</p>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/stats">Installation Statistics</a></h4>
+                                                <p>We have an opt-in feature in our ROMS to enable us to gain statistics on users as well as devices used.</p>
+                                            </div>
+                                            
+                                        	<div class="contributesub last">
+                                            	<h2>Support</h2>
+                                                
+                                                <h4><a href="/cdn-cgi/l/email-protection#6f0b0a191d0a032f0c160e0100080a0102000b41001d08">Developer Relations</a></h4>
+                                                <p>If you wish to contact us regarding development contributions, please do so here.</p>
+                                                    
+                                                <h4><a href="/cdn-cgi/l/email-protection#5130353c383f113228303f3e36343f3c3e357f3e2336">Website Support</a></h4>
+                                                <p>This email is dedicated to website, forum, wiki and hosting support. We will not respond to ROM support.</p>
+                                                    
+                                                <h4><a href="/cdn-cgi/l/email-protection#7c1d181115123c1f051d12131b191211131852130e1b">Social Network</a></h4>
+                                                <p>To contact us in relation to our Social media structure.</p>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                    
+                                </div>
+                            </li>
+                      </ul>
+                    </div>
+				</div>
+
+			</header>
+		</div>
+
+		
+		<!-- Row for main content area -->
+		<div id="main" class="row">
+		<!-- Row for main content area -->
+		<div id="content" class="eight columns" role="main">
+	
+			<div class="post-box">
+					<article class="post-2372 post type-post status-publish format-standard hentry category-blog" id="post-2372">
+		<header>
+        	<time class="updated" datetime="2013-09-18T11:59:11+00:00" pubdate>September 18th, 2013 &bull; Written by <a href="http://www.cyanogenmod.org/author/cyanogen" rel="author" class="fn">Steve Kondik</a></time>        	<h2 class="entry-title">A New Chapter</h2>
+					</header>
+		<div class="entry-content">
+			<p>To all CyanogenMod users, contributors, and fans:</p>
+<p>What follows is a true story. No names have been changed to protect the guilty. Let’s take it from the beginning:</p>
+<p>May 25, 2009 was one of those days when something that seemed completely trivial drastically changed the course of my life. It was my first post on XDA Developers, announcing my new ROM for the T-Mobile G1. I’m terrible with names, so I just slapped “mod” onto the end of my handle and ran with it. I was a total noob and fully expecting to be laughed off the forums, but I did it anyway. I was pretty happy with this thing and even though it wasn’t really anything that new, since I was building off the work of the legendary JF, I figured that maybe someone would think it was decent. The response was great. Way better than I imagined. I was hooked, and have spent every free minute since pouring myself into this thing.</p>
+<p>XDA was a great community. I’d upload a new version, and hundreds of people would immediately install it and give feedback every step of the way. “THIS is how you write software”, I thought. I was working as a developer at a small startup in Pittsburgh, and while we were doing really interesting things, being able to actually see the results of your work in real-time like this was amazing. Sometimes I would upload multiple versions in a single day to fix bugs. And the competition was fierce—lots of original work, and also mods of your mod, and mods of your mod’s mod. It was a lot of fun. We all shared the same idea—there was a product we wanted, nobody would make it, so we did it ourselves at any cost. This idea became the ethos of our community.</p>
+<p>Shortly after releasing the first version, I pulled it together and started putting my changes on Github for others to use. I’ve always been a big advocate of open source, so this was the logical next step. A few other people who were also making their own ROMs decided to send patches to me that I quickly merged. Some really great features were born that you couldn’t get anywhere else, and certainly not on any phone you could buy.</p>
+<p><span style="text-decoration: underline;"><strong>A mobile OS by the users, for the users</strong></span></p>
+<p>I woke up one morning and found thousands of follower notifications from Twitter about an account I had never even used. How the hell did these guys find me? Twitter was soon added to my list of addictions.</p>
+<p>Staying up late hacking on something or another was pretty normal behavior for me ever since I was a kid, and fortunately my wife Stacie is awesome and lets me get away with it. One day, our housemate Val came home from work and told me about a couple of guys who were in her coffee shop talking about CM. She said “This is going to be big, dude. I’m serious.” I laughed and shrugged it off. I had no idea how many people were actually using this thing or what it would become, and didn’t even consider that it was spilling over into the “real world”.</p>
+<p>People were coming out of nowhere to work on this project. Google completely decimated an entire sector of industry by releasing Android as open source, and CM became something of an underground revolution fighting against the players in that industry still hanging on to the old-hat idea of trying to sell you a disposable new telephone every couple of years while charging a premium for trivial things. We know these aren’t just phones anymore, they are powerful machines with immense capability, and we could make them work however we wanted.</p>
+<p>The userbase kept growing, we built some infrastructure, fans offered us build servers and download bandwidth, we got a website and our own forums. Then it all came crashing down in October of 2009 when I received a cease-and-desist letter from Google. I was shocked and angry, “how dare they do this to an open source project”! Well, unfortunately we weren’t exactly open-source. We had been bundling those infamous Google Apps which we all know and love without much thought since they were the same thing that was already on your phone. We had something like a quarter of a million users already, so it’s no surprise that they had to do something. There were smaller operations selling super low-end hardware with unlicensed versions of this stuff included, and maybe we got lumped in with them. I’m still not sure. We resolved the situation by just backing these apps up during the install and not including them, and today we view Google as an important partner. The incident had an unintended side-effect though—the enormous amount of press that was generated brought greater awareness to what we were doing. Even though the install process is gruesome, the user base skyrocketed.</p>
+<p><span style="text-decoration: underline;"><strong>Growing our team and user base</strong></span></p>
+<p>More phones were released, mostly variations of the G1’s hardware, and I got CM running on them in short order. At the end of the year, the first Droid came out. It was supposed to be unbreakable, but an infamous copy-and-paste error in the recovery code blew it wide open. I later met Koushik Dutta, who got CM running on it and shared the code. Koush decided that my own recovery module was junk (it was), and wrote a better one that played nice with our build system. Eventually I met Koush in person when I visited Seattle, and he looked like he had hadn’t slept in days. He showed me a rough version of ROM Manager that was only a few hours old. ROM Manager, a tool to help install custom ROMs like CM onto your device, became the top app on the Android Market for quite some time. People really wanted this stuff, and the easier it could be made the better.</p>
+<p>Our own community was quite strong, we wanted to be able to support our product even better. Our group—myself, Chris, Keyan, Jef, Koush, Ricardo, and Abhisek—called ourselves the “core team” and dozens of other people were working on the project coming up with new features or porting CM to new devices. Our user community grew exponentially. Everyone met up at the Big Android BBQ event every year and had a blast. We subdivided into teams working on different parts of the project and tried to stay organized. People came and went, got jobs, became doctors, a few people got rich, and real companies were using our work as their foundation.</p>
+<p>In August 2011 I started a new job at Samsung, causing me to take some leave from the project while my wife and I moved across the country to Seattle to start a new life. I didn’t have much time to work on CM anymore, but I did my best to keep things running. Eventually I found some balance and got back into it. Moving to a new city gives you a fresh perspective on everything, and this was no exception. I really began to see the potential of CM—a mobile OS that was actually designed by and for the people who use it.</p>
+<p>Several million people all over the world were using CM at the time, and countless more using derivative versions. It was getting serious.</p>
+<p><span style="text-decoration: underline;"><strong>Aiming higher: The birth of a company</strong></span></p>
+<p>Fast forward to late 2012, I get an email from Kirt McMaster who has some even wilder ideas about where this could go. It was an eye-opener. Not only were these good ideas, they were exactly in line with what CM is all about. What we have with CM could not have happened any other way—a huge community came together and created something awesome that did not exist before, because it was needed. We have had some serious growing pains though, and scaling with this kind of growth has been incredibly hard. What could we build if all the barriers were removed and we could dedicate our time to it? I asked Koush if he wanted to help me build this thing bigger, and he was onboard. Kirt got us introduced to a number of potential investors in Silicon Valley and we started working on our pitch. The first meeting was set for 12-13-2012 in Palo Alto, and Cyanogen Inc. was born.</p>
+<p>At the same time, my wife was pregnant and due at the beginning of January. My little Emmaline takes after her father when it comes to ETAs (when it’s ready!), and decided that she was going to make her grand appearance to the world sooner, on 12-12-2012 (best birthday ever). This was the best day of my life, but I had to join the first pitch meeting by phone, from the hospital! Chaos! The next few months were a blur of learning how to be a father, working hard at my day job, and meeting with venture capital firms in California. Sleep was not in the cards.</p>
+<p>It was a long process, but the vision became more clear every time we told our story. We chose Benchmark Capital and Redpoint Ventures as our partners, and closed a Series A round in April 2013. “It’s really serious now” (this phrase takes on new meaning when embarking on this kind of thing). I left my job behind for this new venture, and got to work bringing in as many people from the CM team as I could. We signed the lease on an office in downtown Seattle, and a second office in Palo Alto. In true CM spirit, <a href="http://www.cyanogenmod.org/wp-content/uploads/2013/09/steve_painting_2013-06-20.lowres.jpg">we even painted the office ourselves</a>. Since April, 17 of us have been working tirelessly on what we think is the next mobile revolution and today we are finally ready to tell the world.</p>
+<p><span style="text-decoration: underline;"><strong>Bringing the Cyanogen experience to everyone</strong></span></p>
+<p>You have probably seen the pace of development pick up drastically over the past few months. More devices supported, bigger projects such as CM Account, Privacy Guard, Voice+, a new version of Superuser, and secure messaging. We vastly improved our infrastructure. We’re doing more bug fixes, creating more features, and improving our communication. We think that the time has come for your mobile device to truly be yours again, and we want to bring that idea to everybody.</p>
+<p>Our goals today are straightforward:</p>
+<p style="padding-left: 60px;">* Organize, lead, and support our community<br />
+* Create amazing user experience centered around how YOU work<br />
+* Security solutions that really work<br />
+* Stay committed to building the features our users need<br />
+* No junk<br />
+* Constant updates<br />
+* Available on everything, to everyone</p>
+<p>The biggest obstacle we wanted to get out of the way is the hideous installation process. Today there are more open and unlockable devices than ever, but they all have their quirks and wildly different installation procedures. We’ve done our best to document the process for every device we support on our wiki, but it is still a daunting process for mere mortals. This is not sufficient—installation needs to be easy and safe. This is a great deal of complexity to manage when you are talking about almost a hundred different devices, but we decided to tackle it.</p>
+
+		<style type='text/css'>
+			#gallery-1 {
+				margin: auto;
+			}
+			#gallery-1 .gallery-item {
+				float: left;
+				margin-top: 10px;
+				text-align: center;
+				width: 33%;
+			}
+			#gallery-1 img {
+				border: 2px solid #cfcfcf;
+			}
+			#gallery-1 .gallery-caption {
+				margin-left: 0;
+			}
+			/* see gallery_shortcode() in wp-includes/media.php */
+		</style>
+		<div id='gallery-1' class='gallery galleryid-2372 gallery-columns-3 gallery-size-thumbnail'><dl class='gallery-item'>
+			<dt class='gallery-icon landscape'>
+				<a href='http://www.cyanogenmod.org/?attachment_id=2378'><img width="150" height="150" src="http://cyanogenmod.org/wp-content/uploads/2013/09/CMInstaller_1-150x150.png" class="attachment-thumbnail" alt="CMInstaller_1" /></a>
+			</dt></dl><dl class='gallery-item'>
+			<dt class='gallery-icon landscape'>
+				<a href='http://www.cyanogenmod.org/?attachment_id=2379'><img width="150" height="150" src="http://cyanogenmod.org/wp-content/uploads/2013/09/CMInstaller_5-150x150.png" class="attachment-thumbnail" alt="CMInstaller_5" /></a>
+			</dt></dl><dl class='gallery-item'>
+			<dt class='gallery-icon landscape'>
+				<a href='http://www.cyanogenmod.org/?attachment_id=2380'><img width="150" height="150" src="http://cyanogenmod.org/wp-content/uploads/2013/09/CMInstaller_7-150x150.png" class="attachment-thumbnail" alt="CMInstaller_7" /></a>
+			</dt></dl><br style="clear: both" />
+		</div>
+
+<p>Our installer will be available on the Play Store in the coming weeks.</p>
+<p>So what does this all mean for the community? The first thing I wanted to do when I realized we were actually doing this, was tell everyone possible. But when starting a company, you have to think about the larger picture. This meant not announcing until the time was right, our house was in order and we would have something to show.</p>
+<p>I have seen open source projects come and go, some being bought out and closed, others stagnating and falling by the wayside. I don’t want to see this happen with CM.</p>
+<p>In all that chaos there have been projects that do it ‘right’, simultaneously supporting the company and the community—this is where CM will go. Our community is our biggest asset. With any change in structure like this, questions about motives and reason are going to need answered. The new products we have created should give you an idea about our motivation, and where we are going.</p>
+<p>What will change is our capabilities, our speed, and our size. I’m not one to let anything stagnate. The next logical steps for CM were out of reach previously, and the path forward is clear now. I hope you feel the same.</p>
+<p>I realize the questions will outnumber anything I can show you. We will be doing a Reddit AMA later today, so you all will have an opportunity to ask us exactly what is on your mind.</p>
+<p>There is of course more to our story to come, and we have barely begun this new chapter.</p>
+<p>Exciting times are just ahead!</p>
+<p style="text-align: center;"><a href="http://cyngn.com"><img class="aligncenter" title="The team!" alt="Group shot" src="http://www.cyanogenmod.org/wp-content/uploads/2013/09/group_sm.jpg" width="796" height="570" /></a></p>
+		</div>
+
+<div id="disqus_thread">
+            <div id="dsq-content">
+
+            <div class="navigation">
+                <div class="nav-previous">
+                    <span class="meta-nav">&larr;</span>&nbsp;
+                    <a href="http://www.cyanogenmod.org/blog/a_new_chapter/comment-page-4#comments" >Older Comments</a>                </div>
+                <div class="nav-next">
+                                        &nbsp;<span class="meta-nav">&rarr;</span>
+                </div>
+            </div> <!-- .navigation -->
+
+            <ul id="dsq-comments">
+                    <li class="comment even thread-even depth-1" id="dsq-comment-57639">
+        <div id="dsq-comment-header-57639" class="dsq-comment-header">
+            <cite id="dsq-cite-57639">
+                <span id="dsq-author-user-57639">William Votta</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-57639" class="dsq-comment-body">
+            <div id="dsq-comment-message-57639" class="dsq-comment-message"><p>Why can&#8217;t it be peer to peer? </p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-57643">
+        <div id="dsq-comment-header-57643" class="dsq-comment-header">
+            <cite id="dsq-cite-57643">
+http://suttronix.co.uk/                <span id="dsq-author-user-57643">sutt2m</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-57643" class="dsq-comment-body">
+            <div id="dsq-comment-message-57643" class="dsq-comment-message"><p>Wonderful main stream&#8230;. Best of luck I&#8217;ll be back on board when my warranty is up&#8230;ha<br />
+Cyanogenmod = Freedom</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-57649">
+        <div id="dsq-comment-header-57649" class="dsq-comment-header">
+            <cite id="dsq-cite-57649">
+                <span id="dsq-author-user-57649">foxtrott</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-57649" class="dsq-comment-body">
+            <div id="dsq-comment-message-57649" class="dsq-comment-message"><p>As an US based corporation you will have to comply with the NSA, which will mean you will be forced to integrate a backdoor at some point. <img src="http://cyanogenmod.org/wp-includes/images/smilies/frownie.png" alt=":-(" class="wp-smiley" style="height: 1em; max-height: 1em;" /><br />
+I´ve been a huge fan and was glad to donate money towards your cause but now I´m really scared how this will influence cyanogenmod.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-57656">
+        <div id="dsq-comment-header-57656" class="dsq-comment-header">
+            <cite id="dsq-cite-57656">
+                <span id="dsq-author-user-57656">Toronto Fun</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-57656" class="dsq-comment-body">
+            <div id="dsq-comment-message-57656" class="dsq-comment-message"><p>What are you talkin about? CM today _IS_ a platform where Google is not involved any longer. Sure, you can flash the GApps, but you certainly don&#8217;t need to &#8211; thus cutting the wires to Google. Google cannot do s**t since Android is OpenSource. Also &#8211; if that was true: What about the Amazon Kindle?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-57660">
+        <div id="dsq-comment-header-57660" class="dsq-comment-header">
+            <cite id="dsq-cite-57660">
+                <span id="dsq-author-user-57660">Veer Maharaj</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-57660" class="dsq-comment-body">
+            <div id="dsq-comment-message-57660" class="dsq-comment-message"><p>If you guys do not mind, I would like to ask if you all will make roms for specific devices and officially support them. </p>
+<p>I have a S3, N7 and a Acer Iconia a500 (though i dont see much support for the acer). I would be very willing to pay around 10 &#8211; 20 USD per device to install the latest Stable CM OS.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-57661">
+        <div id="dsq-comment-header-57661" class="dsq-comment-header">
+            <cite id="dsq-cite-57661">
+                <span id="dsq-author-user-57661">DillPo313</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-57661" class="dsq-comment-body">
+            <div id="dsq-comment-message-57661" class="dsq-comment-message"><p>THIS&#8230; This is what we need.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-57662">
+        <div id="dsq-comment-header-57662" class="dsq-comment-header">
+            <cite id="dsq-cite-57662">
+                <span id="dsq-author-user-57662">DillPo313</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-57662" class="dsq-comment-body">
+            <div id="dsq-comment-message-57662" class="dsq-comment-message"><p>It&#8217;s not on all phones&#8230; Post your model (if it&#8217;s a official port).</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-57663">
+        <div id="dsq-comment-header-57663" class="dsq-comment-header">
+            <cite id="dsq-cite-57663">
+                <span id="dsq-author-user-57663">Yamado</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-57663" class="dsq-comment-body">
+            <div id="dsq-comment-message-57663" class="dsq-comment-message"><p>The poor girl. You caught her with her eyes closed.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-57664">
+        <div id="dsq-comment-header-57664" class="dsq-comment-header">
+            <cite id="dsq-cite-57664">
+                <span id="dsq-author-user-57664">Sanjay Gaire</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-57664" class="dsq-comment-body">
+            <div id="dsq-comment-message-57664" class="dsq-comment-message"><p>T999V wind mobile Canada</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-57684">
+        <div id="dsq-comment-header-57684" class="dsq-comment-header">
+            <cite id="dsq-cite-57684">
+                <span id="dsq-author-user-57684">facepuke.com</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-57684" class="dsq-comment-body">
+            <div id="dsq-comment-message-57684" class="dsq-comment-message"><p>Do you realize CM is worth 10.2 cyanillion?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-57690">
+        <div id="dsq-comment-header-57690" class="dsq-comment-header">
+            <cite id="dsq-cite-57690">
+                <span id="dsq-author-user-57690">uǝq</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-57690" class="dsq-comment-body">
+            <div id="dsq-comment-message-57690" class="dsq-comment-message"><p>It&#8217;s open source. It would be terribly hard for something like that to go unnoticed. And, with all these different per-device forks, the NSA could easily do it themselves anyway.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-57716">
+        <div id="dsq-comment-header-57716" class="dsq-comment-header">
+            <cite id="dsq-cite-57716">
+                <span id="dsq-author-user-57716">vishvas</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-57716" class="dsq-comment-body">
+            <div id="dsq-comment-message-57716" class="dsq-comment-message"><p>do we have to root the phone to install cynogenmod?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-57719">
+        <div id="dsq-comment-header-57719" class="dsq-comment-header">
+            <cite id="dsq-cite-57719">
+                <span id="dsq-author-user-57719">Harsh Zaveri</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-57719" class="dsq-comment-body">
+            <div id="dsq-comment-message-57719" class="dsq-comment-message"><p>Truly your story is just inspiring. Keep it up!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-57735">
+        <div id="dsq-comment-header-57735" class="dsq-comment-header">
+            <cite id="dsq-cite-57735">
+                <span id="dsq-author-user-57735">Bruno Dorati</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-57735" class="dsq-comment-body">
+            <div id="dsq-comment-message-57735" class="dsq-comment-message"><p>God luck guys, it&#8217;s my rom at a moment.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-60813">
+        <div id="dsq-comment-header-60813" class="dsq-comment-header">
+            <cite id="dsq-cite-60813">
+                <span id="dsq-author-user-60813">swooby</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-60813" class="dsq-comment-body">
+            <div id="dsq-comment-message-60813" class="dsq-comment-message"><p>They are now worth over 11</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-60814">
+        <div id="dsq-comment-header-60814" class="dsq-comment-header">
+            <cite id="dsq-cite-60814">
+                <span id="dsq-author-user-60814">swooby</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-60814" class="dsq-comment-body">
+            <div id="dsq-comment-message-60814" class="dsq-comment-message"><p>I have been wondering the same thing myself ever since I bought one. There are millions of new MTK devices, and growing, and older one that could have new life breathed in to them by CM.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-60815">
+        <div id="dsq-comment-header-60815" class="dsq-comment-header">
+            <cite id="dsq-cite-60815">
+                <span id="dsq-author-user-60815">swooby</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-60815" class="dsq-comment-body">
+            <div id="dsq-comment-message-60815" class="dsq-comment-message"><p>Interesting.<br />
+Cyanogen doesn&#8217;t &#8220;replace&#8221; Android on Androids, it just provides a different flavor of Android.<br />
+iDevices are just ARM, so if they have figured out a way to run CM&#8230; as in Android&#8230;on an I device then&#8230; whoa!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-60816">
+        <div id="dsq-comment-header-60816" class="dsq-comment-header">
+            <cite id="dsq-cite-60816">
+                <span id="dsq-author-user-60816">swooby</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-60816" class="dsq-comment-body">
+            <div id="dsq-comment-message-60816" class="dsq-comment-message"><p>NSA would just put the back door in the device hardware itself.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-61724">
+        <div id="dsq-comment-header-61724" class="dsq-comment-header">
+            <cite id="dsq-cite-61724">
+                <span id="dsq-author-user-61724">Jockim St.bernard</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-61724" class="dsq-comment-body">
+            <div id="dsq-comment-message-61724" class="dsq-comment-message"><p>Is the CM installer ever going to available for blu android phones Eg. Life one,studio,etc</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-65177">
+        <div id="dsq-comment-header-65177" class="dsq-comment-header">
+            <cite id="dsq-cite-65177">
+                <span id="dsq-author-user-65177">Felix Stephen</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-65177" class="dsq-comment-body">
+            <div id="dsq-comment-message-65177" class="dsq-comment-message"><p>Hey, I haven&#8217;t tried Cyanogenmod on my phone. But, I&#8217;ve only heard great comments about people that have the mod on their phone. I was told to wait until Cyanogenmod 12 comes out. Do you guys have a release date planned out by any chance?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+            </ul>
+
+            <div class="navigation">
+                <div class="nav-previous">
+                    <span class="meta-nav">&larr;</span>
+                    &nbsp;<a href="http://www.cyanogenmod.org/blog/a_new_chapter/comment-page-4#comments" >Older Comments</a>                </div>
+                <div class="nav-next">
+                                        &nbsp;<span class="meta-nav">&rarr;</span>
+                </div>
+            </div><!-- .navigation -->
+
+        </div>
+
+    </div>
+
+<script type="text/javascript">
+var disqus_url = 'http://www.cyanogenmod.org/blog/a_new_chapter';
+var disqus_identifier = '2372 http://www.cyanogenmod.org/?p=2372';
+var disqus_container_id = 'disqus_thread';
+var disqus_shortname = 'cyngn';
+var disqus_title = "A New Chapter";
+var disqus_config_custom = window.disqus_config;
+var disqus_config = function () {
+    /*
+    All currently supported events:
+    onReady: fires when everything is ready,
+    onNewComment: fires when a new comment is posted,
+    onIdentify: fires when user is authenticated
+    */
+    
+    
+    this.language = '';
+        this.callbacks.onReady.push(function () {
+
+        // sync comments in the background so we don't block the page
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = '?cf_action=sync_comments&post_id=2372';
+
+        var firstScript = document.getElementsByTagName('script')[0];
+        firstScript.parentNode.insertBefore(script, firstScript);
+    });
+    
+    if (disqus_config_custom) {
+        disqus_config_custom.call(this);
+    }
+};
+
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+
+</article>
+			</div>
+
+		</div><!-- End Content row -->
+		
+		<aside id="sidebar" class="four columns hide-on-phones" role="complementary">
+	<div class="sidebar-box">
+		<article id="recent-comments-4" class="row widget widget_recent_comments"><div class="sidebar-section twelve columns"><h6><strong>Recent Comments</strong></h6><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">Ajanya Kaul</span> on <a href="http://www.cyanogenmod.org/blog/capps-package-for-marshmallow/comment-page-2#comment-72811">Cyanogen Apps Package for Marshmallow</a></li><li class="recentcomments"><span class="comment-author-link">sanjay karki</span> on <a href="http://www.cyanogenmod.org/blog/cm-dev-summit/comment-page-1#comment-72810">CM Dev Summit</a></li><li class="recentcomments"><span class="comment-author-link">Alejandro Perez</span> on <a href="http://www.cyanogenmod.org/blog/cm-13-0-release-znh5y/comment-page-5#comment-72809">CM 13.0 Release &#8211; ZNH5Y</a></li><li class="recentcomments"><span class="comment-author-link">Lee</span> on <a href="http://www.cyanogenmod.org/blog/capps-package-for-marshmallow/comment-page-2#comment-72808">Cyanogen Apps Package for Marshmallow</a></li><li class="recentcomments"><span class="comment-author-link">Saif khan</span> on <a href="http://www.cyanogenmod.org/blog/cm-13-0-release-1/comment-page-11#comment-72807">CM 13.0 Release 1</a></li></ul></div></article>	</div>
+</aside><!-- /#sidebar -->		
+		</div><!-- End Main row -->
+		
+		<footer id="content-info" role="contentinfo" class="hide-on-phones" style="margin:40px 0 0 0;">
+			<div class="row">
+				<article id="nav_menu-4" class="three columns widget widget_nav_menu"><div class="footer-section"><h6><strong>Navigation</strong></h6><div class="menu-main-container"><ul id="menu-main" class="menu"><li id="menu-item-798" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-798"><a href="http://www.cyanogenmod.org/about">About</a></li>
+<li id="menu-item-2403" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2403"><a href="http://wiki.cyanogenmod.org/">Wiki</a></li>
+<li id="menu-item-2404" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2404"><a href="http://download.cyanogenmod.org">Download</a></li>
+<li id="menu-item-825" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-825"><a href="/blog">Blog</a></li>
+<li id="menu-item-904" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-904"><a href="http://forum.cyanogenmod.org">Forum</a></li>
+<li id="menu-item-829" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-829"><a href="http://www.cyanogenmod.org/community">Community</a></li>
+<li id="menu-item-2709" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2709"><a href="http://shop.cyanogenmod.org">Shop</a></li>
+</ul></div></div></article><article id="nav_menu-3" class="three columns widget widget_nav_menu"><div class="footer-section"><h6><strong>Social Networks</strong></h6><div class="menu-social-networks-container"><ul id="menu-social-networks" class="menu"><li id="menu-item-2173" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2173"><a href="https://www.facebook.com/CyanogenMod">Facebook</a></li>
+<li id="menu-item-2174" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2174"><a href="https://twitter.com/CyanogenMod">Twitter</a></li>
+<li id="menu-item-2175" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2175"><a href="https://plus.google.com/+CyanogenMod/posts">Google+</a></li>
+</ul></div></div></article>                                <article class="three columns widget widget widget_nav_menu">
+                                    <div class="footer-section">
+                                        <h6><strong>Sponsored By</strong></h6>
+                                        <a href="http://twilio.com/?utm_source=cyanogenmod&utm_medium=webbadge&utm_campaign=cyanogenverify" style="text: decoration: none; display: inline-block; width: 166px; height: 0; overflow: hidden; padding-top: 31px; background: url(https://www.twilio.com/packages/company/img/logos_icon_poweredbysmall.png) no-repeat;">powered by twilio™</a>
+                                    </div>
+                                </article>
+			</div>
+		</footer>
+        
+      <div id="navigation" class="row mobile-footer show-on-phones">
+			<div class="twelve columns">
+            	<h6>Navigate cyanogenmod.org</h6>
+            	<ul>
+                	<li><a href="/about">About</a></li>
+                    <!--<li><a href="#">Features</a></li>-->
+                    <li><a href="http://wiki.cyanogenmod.org/">Wiki</a></li>
+                    <li><a href="http://download.cyanogenmod.org/">Download</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="http://forum.cyanogenmod.org">Forum</a></li>
+                    <li><a href="/community">Community</a></li>  
+                    <li><a href="http://shop.cyanogenmod.org">Shop</a></li>
+                </ul>
+            </div>
+        </div>
+			
+	</div><!-- Container End -->
+    
+
+	<!-- Included JS Files of Foundation -->
+	<script src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/foundation.js"></script>
+	<script src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/app.js"></script>
+	
+	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+	     chromium.org/developers/how-tos/chrome-frame-getting-started -->
+	<!--[if lt IE 7]>
+		<script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+		<script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+	<![endif]-->
+	
+	        <script type="text/javascript">
+        // <![CDATA[
+        var disqus_shortname = 'cyngn';
+        (function () {
+            var nodes = document.getElementsByTagName('span');
+            for (var i = 0, url; i < nodes.length; i++) {
+                if (nodes[i].className.indexOf('dsq-postid') != -1) {
+                    nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('data-dsqidentifier'));
+                    url = nodes[i].parentNode.href.split('#', 1);
+                    if (url.length == 1) { url = url[0]; }
+                    else { url = url[1]; }
+                    nodes[i].parentNode.href = url + '#disqus_thread';
+                }
+            }
+            var s = document.createElement('script'); 
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+        // ]]>
+        </script>
+        <script type='text/javascript' src='http://cyanogenmod.org/wp-includes/js/comment-reply.min.js?ver=4.2.4'></script>
+<script type="text/javascript">/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+ Served from: www.cyanogenmod.org @ 2016-10-27 20:43:09 by W3 Total Cache -->

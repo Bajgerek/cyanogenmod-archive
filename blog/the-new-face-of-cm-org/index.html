@@ -1,0 +1,930 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+
+	<title>The New Face of CyanogenMod.org | CyanogenMod</title>
+	
+	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	
+	<!-- Included Foundation CSS Files -->
+	<link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/css/foundation.css">
+	<link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/css/app.css">
+    <link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/tipTip.css">
+    <link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/fonts/style.css">
+    <link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/css/flexslider.css" type="text/css" media="screen" />
+	
+	<link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/style.css">
+	
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/css/ie.css">
+	<![endif]-->
+	
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<!-- Favicon and Feed -->
+	<link rel="shortcut icon" type="image/png" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/favicon.ico">
+	<link rel="alternate" type="application/rss+xml" title="CyanogenMod Feed" href="http://www.cyanogenmod.org/feed/">
+	
+	<!--  iPhone Web App Home Screen Icon -->
+	<link rel="apple-touch-icon" sizes="72x72" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-icon-ipad.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-icon-retina.png" />
+	<link rel="apple-touch-icon" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-icon.png" />
+	
+	<!-- Enable Startup Image for iOS Home Screen Web App -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link rel="apple-touch-startup-image" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/mobile-load.png" />
+
+	<!-- Startup Image iPad Landscape (748x1024) -->
+	<link rel="apple-touch-startup-image" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-load-ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)" />
+	<!-- Startup Image iPad Portrait (768x1004) -->
+	<link rel="apple-touch-startup-image" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-load-ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)" />
+	<!-- Startup Image iPhone (320x460) -->
+	<link rel="apple-touch-startup-image" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-load.png" media="screen and (max-device-width: 320px)" />
+	
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.min.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.jparallax.min.js" ></script>
+  <script defer type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.featureList-1.0.0.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.tipTip.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/easySlider1.7.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/modernizr.foundation.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.flexslider-min.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/custom.js"></script>
+  
+  <script type="text/javascript">
+    $(document).load(function(){
+
+	  // The slider being synced must be initialized first
+	  $('.flexslider').flexslider({
+		animation: "slide",
+		controlNav: false,
+	  });
+	  
+    });
+  </script>
+  
+  	
+<!-- All in One SEO Pack 2.2.7.1 by Michael Torbert of Semper Fi Web Design[493,533] -->
+<meta name="description"  content="Out with the old, in with the new - today we are launching the much needed refresh for our homepage. Taking some inspiration from the Holo-light UI, the team" />
+
+<link rel="canonical" href="http://www.cyanogenmod.org/blog/the-new-face-of-cm-org" />
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-39737599-3']);
+		  _gaq.push(['_trackPageview']);
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
+<!-- /all in one seo pack -->
+<link rel="alternate" type="application/rss+xml" title="CyanogenMod &raquo; The New Face of CyanogenMod.org Comments Feed" href="http://www.cyanogenmod.org/blog/the-new-face-of-cm-org/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/cyanogenmod.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.2.4"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://cyanogenmod.org/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://cyanogenmod.org/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='This Week in CyanogenMod – June 21, 2013' href='http://www.cyanogenmod.org/blog/this-week-in-cm-june-21-2013' />
+<link rel='next' title='CyanogenMod 10.1.0 Release' href='http://www.cyanogenmod.org/blog/cyanogenmod-10-1-0-release' />
+<meta name="generator" content="WordPress 4.2.4" />
+<link rel='shortlink' href='http://www.cyanogenmod.org/?p=2261' />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+</head>
+
+<body class="single single-post postid-2261 single-format-standard">
+
+	<div class="menusto hide-on-phones"></div>
+	<!-- Start the main container -->
+	<div id="container" class="container" role="document" style="padding:80px 0 0 0;">
+		
+        
+        <div class="row mobile-header show-on-phones">
+            <div class="nine">
+            	<a href="http://www.cyanogenmod.org" title="CyanogenMod" class="logo-mobile"><img src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/logo-mobile.png" alt=""/></a>
+            </div>
+            <a href="#navigation" class="mobile-menu"><img src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/btn-menu-mobile.png" alt=""/></a>
+        </div>
+        
+		<!-- Row for blog navigation -->
+		<div class="row hide-on-phones">
+			<header class="twelve columns" role="banner">
+				<div class="reverie-header">
+                	<a href="http://www.cyanogenmod.org" title="CyanogenMod" class="logo"><img src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/logo.png" alt=""/></a>
+                    <div id="glavno" class="nav hide-on-phones">
+                        <ul id="glavno">                   
+                            <li><a href="http://wiki.cyanogenmod.org/">Wiki</a></li>
+                            <!--<li><a href="http://cyanogenmod.org/about/features">Features</a></li>-->
+                            <li><a href="http://download.cyanogenmod.org/">Download</a></li>
+                            <li><a href="http://www.cyanogenmod.org/blog/">Blog</a></li>
+                            <li><a href="http://forum.cyanogenmod.org/">Forum</a></li>
+                            <li>
+                            	<a href="http://www.cyanogenmod.org/community">Community</a>
+                                <div style="opacity: 0; display: none; width:100%" class="sub">
+                                    <ul>
+                                    	<div style="width:980px; margin:0 auto; color:#fff;">
+                                        	<div class="contributesub">
+                                            	<h2>Contribute</h2>
+                                                
+                                                <h4><a href="http://review.cyanogenmod.org/">Gerrit Review</a></h4>
+                                                <p>Gerrit is a web based code review system, facilitating online code reviews for projects using the Git version control system.</p>
+                                                    
+                                                <h4><a href="http://wiki.cyanogenmod.org/">Wiki</a></h4>
+                                                <p>Our Wiki is a comprehensive tool for users to find information. This also needs contributions to keep it fresh and relevant.</p>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/community">Join The Team</a></h4>
+                                                <p>We love working with others. You can submit code via Gerrit. If you think there is something else you can help with, get in touch with us on the forums.</p>
+                                            </div>
+                                            
+                                        	<div class="contributesub">
+                                            	<h2>Help</h2>
+                                                
+                                                <h4><a href="http://forum.cyanogenmod.org/">Forum</a></h4>
+                                                <p>Our forums have a wealth of knowledge and resources. All of it is free and accessible from both your desktop and mobile phone.</p>
+                                                    
+                                                <h4><a href="irc://irc.freenode.net/cyanogenmod">IRC</a></h4>
+                                                <p>If you are comfortable with IRC and would like instant help and assistance from both developers and others users alike.</p>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/blog">Blog</a></h4>
+                                                <p>Our blogs will contain the latest news and releases as well as other related news concerning the distribution.</p>
+                                                    
+                                                <h4><a href="http://wiki.cyanogenmod.org/">Wiki</a></h4>
+                                                <p>Our Wiki is a comprehensive tool for users to find information. This also needs contributions to keep it fresh and relevant.</p>
+                                            </div>
+                                            
+                                        	<div class="contributesub">
+                                            	<h2>Information</h2>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/bugs">Bug Tracker</a></h4>
+                                                <p>This is the official Bug Tracker where you can submit and review bugs that users may experience.</p>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/github">Github Repo</a></h4>
+                                                <p>Our source is free and open. you can check the Github page to see what we do and how you can contribute.</p>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/stats">Installation Statistics</a></h4>
+                                                <p>We have an opt-in feature in our ROMS to enable us to gain statistics on users as well as devices used.</p>
+                                            </div>
+                                            
+                                        	<div class="contributesub last">
+                                            	<h2>Support</h2>
+                                                
+                                                <h4><a href="/cdn-cgi/l/email-protection#96f2f3e0e4f3fad6f5eff7f8f9f1f3f8fbf9f2b8f9e4f1">Developer Relations</a></h4>
+                                                <p>If you wish to contact us regarding development contributions, please do so here.</p>
+                                                    
+                                                <h4><a href="/cdn-cgi/l/email-protection#1c7d787175725c7f657d72737b797271737832736e7b">Website Support</a></h4>
+                                                <p>This email is dedicated to website, forum, wiki and hosting support. We will not respond to ROM support.</p>
+                                                    
+                                                <h4><a href="/cdn-cgi/l/email-protection#dbbabfb6b2b59bb8a2bab5b4bcbeb5b6b4bff5b4a9bc">Social Network</a></h4>
+                                                <p>To contact us in relation to our Social media structure.</p>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                    
+                                </div>
+                            </li>
+                      </ul>
+                    </div>
+				</div>
+
+			</header>
+		</div>
+
+		
+		<!-- Row for main content area -->
+		<div id="main" class="row">
+		<!-- Row for main content area -->
+		<div id="content" class="eight columns" role="main">
+	
+			<div class="post-box">
+					<article class="post-2261 post type-post status-publish format-standard hentry category-blog" id="post-2261">
+		<header>
+        	<time class="updated" datetime="2013-06-23T23:35:12+00:00" pubdate>June 23rd, 2013 &bull; Written by <a href="http://www.cyanogenmod.org/author/chrissoyars" rel="author" class="fn">ChrisSoyars</a></time>        	<h2 class="entry-title">The New Face of CyanogenMod.org</h2>
+					</header>
+		<div class="entry-content">
+			<p dir="ltr">Out with the old, in with the new &#8211; today we are launching the much needed refresh for our homepage.</p>
+<p dir="ltr">Taking some inspiration from the Holo-light UI, the team at Glitch Agency (<a href="http://www.glitchagency.com/">www.GlitchAgency.com</a>) has come up with the clean, fluid and modern site that you see. This design also adds a much needed dynamic layout for easier navigation and reading while mobile.</p>
+<p dir="ltr">Keeping in tradition with how the Android ecosystem functions, their team is open to community suggestions on how to further improve the user experience on the new Cyanogenmod.org. Leave a comment below with your thoughts and suggestions.</p>
+<p dir="ltr">If you would like to reach out to their team directly, they can be reached at <a href="/cdn-cgi/l/email-protection#7f161119103f1813160b1c171e181a111c06511c1012"><span class="__cf_email__" data-cfemail="c5acaba3aa85a2a9acb1a6ada4a2a0aba6bceba6aaa8">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a>.</p>
+<p dir="ltr">This is our second time working with the folks at Glitch Agency; they were the team behind our previous layout as well. Their team has always been a blast to work with and are super supportive of CyanogenMod.</p>
+<p dir="ltr">Suffice it to say, we are very happy with the new look.</p>
+<p dir="ltr">-The CyanogenMod Team</p>
+		</div>
+
+<div id="disqus_thread">
+            <div id="dsq-content">
+
+
+            <ul id="dsq-comments">
+                    <li class="comment even thread-even depth-1" id="dsq-comment-56607">
+        <div id="dsq-comment-header-56607" class="dsq-comment-header">
+            <cite id="dsq-cite-56607">
+http://www.epicaaron.com/                <span id="dsq-author-user-56607">Aaron</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56607" class="dsq-comment-body">
+            <div id="dsq-comment-message-56607" class="dsq-comment-message"><p>Awesome job guys, site looks sweet.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-56608">
+        <div id="dsq-comment-header-56608" class="dsq-comment-header">
+            <cite id="dsq-cite-56608">
+http://hughisaacs2.googlepages.com/                <span id="dsq-author-user-56608">Hugh Isaacs II</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56608" class="dsq-comment-body">
+            <div id="dsq-comment-message-56608" class="dsq-comment-message"><p>This design is beautiful and much easier to use too. +1 to Glitch Agency.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-56609">
+        <div id="dsq-comment-header-56609" class="dsq-comment-header">
+            <cite id="dsq-cite-56609">
+                <span id="dsq-author-user-56609">aNYthing6</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56609" class="dsq-comment-body">
+            <div id="dsq-comment-message-56609" class="dsq-comment-message"><p>Very clean. Nice work, guys.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-56610">
+        <div id="dsq-comment-header-56610" class="dsq-comment-header">
+            <cite id="dsq-cite-56610">
+http://www.akorshunov.ru                <span id="dsq-author-user-56610">akorshunow</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56610" class="dsq-comment-body">
+            <div id="dsq-comment-message-56610" class="dsq-comment-message"><p>Perfect view. But font of this article on grey background is ugly. Oh, my eyes&#8230;</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-56611">
+        <div id="dsq-comment-header-56611" class="dsq-comment-header">
+            <cite id="dsq-cite-56611">
+                <span id="dsq-author-user-56611">Nathan Bryant</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56611" class="dsq-comment-body">
+            <div id="dsq-comment-message-56611" class="dsq-comment-message"><p>Nice! Much needed.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-56613">
+        <div id="dsq-comment-header-56613" class="dsq-comment-header">
+            <cite id="dsq-cite-56613">
+                <span id="dsq-author-user-56613">David Margolin</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56613" class="dsq-comment-body">
+            <div id="dsq-comment-message-56613" class="dsq-comment-message"><p>#holoyolo</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-56614">
+        <div id="dsq-comment-header-56614" class="dsq-comment-header">
+            <cite id="dsq-cite-56614">
+http://sikilmis.blogspot.com/                <span id="dsq-author-user-56614">frontsideair</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56614" class="dsq-comment-body">
+            <div id="dsq-comment-message-56614" class="dsq-comment-message"><p>Great design, there&#8217;s just one thing. When viewing on mobile,  the top right navigation button takes you to the bottom of the page. A &#8216;back to the top&#8217; button there would be much needed. Thanks!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-56615">
+        <div id="dsq-comment-header-56615" class="dsq-comment-header">
+            <cite id="dsq-cite-56615">
+                <span id="dsq-author-user-56615">Kenn Lisudza</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56615" class="dsq-comment-body">
+            <div id="dsq-comment-message-56615" class="dsq-comment-message"><p>Lean and clean deign. Perfect</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-56616">
+        <div id="dsq-comment-header-56616" class="dsq-comment-header">
+            <cite id="dsq-cite-56616">
+                <span id="dsq-author-user-56616">Franz</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56616" class="dsq-comment-body">
+            <div id="dsq-comment-message-56616" class="dsq-comment-message"><p>Simplicity meets functionality. The definition of CyanogenMod, and now it reflects upon the website! Great work to all!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-56618">
+        <div id="dsq-comment-header-56618" class="dsq-comment-header">
+            <cite id="dsq-cite-56618">
+                <span id="dsq-author-user-56618">WinSuk</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56618" class="dsq-comment-body">
+            <div id="dsq-comment-message-56618" class="dsq-comment-message"><p>Looks nice!<br />
+I think the Community/About/Forum spinner (mid right of the front page) changes too often, and the images on the phone are slightly too low (there&#8217;s a gap between the status bar, and the nav buttons get overlapped a bit)</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-56620">
+        <div id="dsq-comment-header-56620" class="dsq-comment-header">
+            <cite id="dsq-cite-56620">
+                <span id="dsq-author-user-56620">Athi Sananikone</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56620" class="dsq-comment-body">
+            <div id="dsq-comment-message-56620" class="dsq-comment-message"><p>i like!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-56624">
+        <div id="dsq-comment-header-56624" class="dsq-comment-header">
+            <cite id="dsq-cite-56624">
+                <span id="dsq-author-user-56624">joser116</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56624" class="dsq-comment-body">
+            <div id="dsq-comment-message-56624" class="dsq-comment-message"><p>Switch to G+ comments.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-56628">
+        <div id="dsq-comment-header-56628" class="dsq-comment-header">
+            <cite id="dsq-cite-56628">
+                <span id="dsq-author-user-56628">mikeym0p</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56628" class="dsq-comment-body">
+            <div id="dsq-comment-message-56628" class="dsq-comment-message"><p>Love it! it needed a Holo refresh, can&#8217;t wait for 10.1 to finalize. You guys rock.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-56629">
+        <div id="dsq-comment-header-56629" class="dsq-comment-header">
+            <cite id="dsq-cite-56629">
+                <span id="dsq-author-user-56629">Konshu</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56629" class="dsq-comment-body">
+            <div id="dsq-comment-message-56629" class="dsq-comment-message"><p>Fuck yeah, love it!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-56630">
+        <div id="dsq-comment-header-56630" class="dsq-comment-header">
+            <cite id="dsq-cite-56630">
+                <span id="dsq-author-user-56630">josteinjostein</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56630" class="dsq-comment-body">
+            <div id="dsq-comment-message-56630" class="dsq-comment-message"><p>Why? So that Cyanogenmod too forces people to join a social network nobody really likes?</p>
+<p>I&#8217;ll take disqus any day. It works, it doesn&#8217;t add 5MB of javascript which I have to load over mobile, and then crash and not work, like G+ does.</p>
+<p>Jesus christ I hate G+. I&#8217;m considering getting rid of my Google-account and Gmail because of it.</p>
+<p>So yeah. Keep disqus if you don&#8217;t hate your users. Disqus is great.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-56631">
+        <div id="dsq-comment-header-56631" class="dsq-comment-header">
+            <cite id="dsq-cite-56631">
+http://yohanesmario.com                <span id="dsq-author-user-56631">Yohanes Mario Chandra</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56631" class="dsq-comment-body">
+            <div id="dsq-comment-message-56631" class="dsq-comment-message"><p>Great job guys! Fits my style really well.. 😀</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-56632">
+        <div id="dsq-comment-header-56632" class="dsq-comment-header">
+            <cite id="dsq-cite-56632">
+                <span id="dsq-author-user-56632">ChrisSoyars</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56632" class="dsq-comment-body">
+            <div id="dsq-comment-message-56632" class="dsq-comment-message"><p>I completely agree.  I just changed the delay on the Community/About/Forum spinner to 6s, it was 3s.</p>
+<p>I also removed the gap from the phone images.  Nice catch!</p>
+<p>You won&#8217;t see the changes right away, I&#8217;ll need to deploy them sometime tomorrow, but they are coming.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-56633">
+        <div id="dsq-comment-header-56633" class="dsq-comment-header">
+            <cite id="dsq-cite-56633">
+                <span id="dsq-author-user-56633">ChrisSoyars</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56633" class="dsq-comment-body">
+            <div id="dsq-comment-message-56633" class="dsq-comment-message"><p>While most of our community does use Google+, Disqus is nice because it does not force a sign-on method for people to comment.  If we switched to Google+, people would *have* to have a Google account to post comments.  Disqus gives us Facebook, Twitter, *and* Google sign-in.</p>
+<p>While most everyone commenting on this blog more than likely has a Google account, as they are using Android, I like the fact that using Disqus does not force our commenters to have a Google+ profile.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-56634">
+        <div id="dsq-comment-header-56634" class="dsq-comment-header">
+            <cite id="dsq-cite-56634">
+                <span id="dsq-author-user-56634">Javed Khan</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56634" class="dsq-comment-body">
+            <div id="dsq-comment-message-56634" class="dsq-comment-message"><p>Really liking this minimalist look. Keep it up guys.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-56635">
+        <div id="dsq-comment-header-56635" class="dsq-comment-header">
+            <cite id="dsq-cite-56635">
+http://www.phonekr.com/                <span id="dsq-author-user-56635">NovaDNG</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56635" class="dsq-comment-body">
+            <div id="dsq-comment-message-56635" class="dsq-comment-message"><p>New look is awesome!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-56637">
+        <div id="dsq-comment-header-56637" class="dsq-comment-header">
+            <cite id="dsq-cite-56637">
+http://silopolis.wordpress.com                <span id="dsq-author-user-56637">SILOPOLIS</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56637" class="dsq-comment-body">
+            <div id="dsq-comment-message-56637" class="dsq-comment-message"><p>So clear, so clean&#8230; so well done !</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-56638">
+        <div id="dsq-comment-header-56638" class="dsq-comment-header">
+            <cite id="dsq-cite-56638">
+                <span id="dsq-author-user-56638">Christian Kopp</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56638" class="dsq-comment-body">
+            <div id="dsq-comment-message-56638" class="dsq-comment-message"><p>looks great! really love the design already.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-56639">
+        <div id="dsq-comment-header-56639" class="dsq-comment-header">
+            <cite id="dsq-cite-56639">
+                <span id="dsq-author-user-56639">Patrice FERLET</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56639" class="dsq-comment-body">
+            <div id="dsq-comment-message-56639" class="dsq-comment-message"><p>Simple, clean, I love</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-56641">
+        <div id="dsq-comment-header-56641" class="dsq-comment-header">
+            <cite id="dsq-cite-56641">
+                <span id="dsq-author-user-56641">c3vzn</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56641" class="dsq-comment-body">
+            <div id="dsq-comment-message-56641" class="dsq-comment-message"><p>So you guys put a Nexus One on the page, when the Nexus S was out last time you redesigned and now you put a Galaxy Nexus when the Nexus 4 is out?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-56642">
+        <div id="dsq-comment-header-56642" class="dsq-comment-header">
+            <cite id="dsq-cite-56642">
+http://iron2000.blogspot.com/                <span id="dsq-author-user-56642">iron2000</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56642" class="dsq-comment-body">
+            <div id="dsq-comment-message-56642" class="dsq-comment-message"><p>Looking good.</p>
+<p>Bright, open, clean and minimal.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-56643">
+        <div id="dsq-comment-header-56643" class="dsq-comment-header">
+            <cite id="dsq-cite-56643">
+http://blog.thecoderin.me/                <span id="dsq-author-user-56643">Naz Mir</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56643" class="dsq-comment-body">
+            <div id="dsq-comment-message-56643" class="dsq-comment-message"><p>IMO fonts can be improved. In a few places they are too thin to be legible. EDIT: I&#8217;m browsing the site on MBP+Chrome.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-56644">
+        <div id="dsq-comment-header-56644" class="dsq-comment-header">
+            <cite id="dsq-cite-56644">
+                <span id="dsq-author-user-56644">Brian Oswald</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56644" class="dsq-comment-body">
+            <div id="dsq-comment-message-56644" class="dsq-comment-message"><p>Much better. Great work, guys!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-56645">
+        <div id="dsq-comment-header-56645" class="dsq-comment-header">
+            <cite id="dsq-cite-56645">
+                <span id="dsq-author-user-56645">Dave</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56645" class="dsq-comment-body">
+            <div id="dsq-comment-message-56645" class="dsq-comment-message"><p>Love the new design and great to see people within the Android community taking design seriously.  As a graphic designer and an Android fan, iOS gets far too much love.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-56646">
+        <div id="dsq-comment-header-56646" class="dsq-comment-header">
+            <cite id="dsq-cite-56646">
+http://suttronix.co.uk/                <span id="dsq-author-user-56646">sutt2m</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56646" class="dsq-comment-body">
+            <div id="dsq-comment-message-56646" class="dsq-comment-message"><p>Good good good!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-56647">
+        <div id="dsq-comment-header-56647" class="dsq-comment-header">
+            <cite id="dsq-cite-56647">
+                <span id="dsq-author-user-56647">Fco.Daniel Ramírez</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56647" class="dsq-comment-body">
+            <div id="dsq-comment-message-56647" class="dsq-comment-message"><p>Muy sobria la pagina!!! los felicito!!! aqui desde Costa Rica</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-56648">
+        <div id="dsq-comment-header-56648" class="dsq-comment-header">
+            <cite id="dsq-cite-56648">
+                <span id="dsq-author-user-56648">Jeremy Birdwell</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56648" class="dsq-comment-body">
+            <div id="dsq-comment-message-56648" class="dsq-comment-message"><p>I&#8217;m a big fan of clean web design, and I&#8217;m a big fan of the new look of Android. Fantastic. <img src="http://cyanogenmod.org/wp-includes/images/smilies/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-56649">
+        <div id="dsq-comment-header-56649" class="dsq-comment-header">
+            <cite id="dsq-cite-56649">
+                <span id="dsq-author-user-56649">Pjflo</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56649" class="dsq-comment-body">
+            <div id="dsq-comment-message-56649" class="dsq-comment-message"><p>The fonts a bit iffy. Could just be Fedora though.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-56650">
+        <div id="dsq-comment-header-56650" class="dsq-comment-header">
+            <cite id="dsq-cite-56650">
+                <span id="dsq-author-user-56650">Matt Peeples</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56650" class="dsq-comment-body">
+            <div id="dsq-comment-message-56650" class="dsq-comment-message"><p>looks awesome guys keep up the good work!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-56653">
+        <div id="dsq-comment-header-56653" class="dsq-comment-header">
+            <cite id="dsq-cite-56653">
+                <span id="dsq-author-user-56653">Nicholas &#8220;Lavacano&#8221; O&#8217;Connor</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56653" class="dsq-comment-body">
+            <div id="dsq-comment-message-56653" class="dsq-comment-message"><p>looks alright to me on Win7</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-56654">
+        <div id="dsq-comment-header-56654" class="dsq-comment-header">
+            <cite id="dsq-cite-56654">
+                <span id="dsq-author-user-56654">Nicholas &#8220;Lavacano&#8221; O&#8217;Connor</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56654" class="dsq-comment-body">
+            <div id="dsq-comment-message-56654" class="dsq-comment-message"><p>Is it possible to allow OpenID signins from people who don&#8217;t necessarily want to log into one of the Big Three social networks?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-56655">
+        <div id="dsq-comment-header-56655" class="dsq-comment-header">
+            <cite id="dsq-cite-56655">
+                <span id="dsq-author-user-56655">ChrisSoyars</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56655" class="dsq-comment-body">
+            <div id="dsq-comment-message-56655" class="dsq-comment-message"><p>Disqus used to support OpenID login from any provider, but unfortunately, not any more.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-56657">
+        <div id="dsq-comment-header-56657" class="dsq-comment-header">
+            <cite id="dsq-cite-56657">
+                <span id="dsq-author-user-56657">Nicholas &#8220;Lavacano&#8221; O&#8217;Connor</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56657" class="dsq-comment-body">
+            <div id="dsq-comment-message-56657" class="dsq-comment-message"><p>oh that was Disqus dropping it? LAME. I might pick a new comments provider next time I set up a blog or something.</p>
+<p>Oh well, thanks for replying.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-56666">
+        <div id="dsq-comment-header-56666" class="dsq-comment-header">
+            <cite id="dsq-cite-56666">
+                <span id="dsq-author-user-56666">joser116</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56666" class="dsq-comment-body">
+            <div id="dsq-comment-message-56666" class="dsq-comment-message"><p>Agreed</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-56668">
+        <div id="dsq-comment-header-56668" class="dsq-comment-header">
+            <cite id="dsq-cite-56668">
+                <span id="dsq-author-user-56668">joser116</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56668" class="dsq-comment-body">
+            <div id="dsq-comment-message-56668" class="dsq-comment-message"><p>I was just gonna say that.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-56669">
+        <div id="dsq-comment-header-56669" class="dsq-comment-header">
+            <cite id="dsq-cite-56669">
+                <span id="dsq-author-user-56669">joser116</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56669" class="dsq-comment-body">
+            <div id="dsq-comment-message-56669" class="dsq-comment-message"><p>Speak for yourself</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-56784">
+        <div id="dsq-comment-header-56784" class="dsq-comment-header">
+            <cite id="dsq-cite-56784">
+                <span id="dsq-author-user-56784">Harsh Doshi</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56784" class="dsq-comment-body">
+            <div id="dsq-comment-message-56784" class="dsq-comment-message"><p>Awesome ! 😀</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-56815">
+        <div id="dsq-comment-header-56815" class="dsq-comment-header">
+            <cite id="dsq-cite-56815">
+http://blog.kylemanna.com/                <span id="dsq-author-user-56815">Kyle</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56815" class="dsq-comment-body">
+            <div id="dsq-comment-message-56815" class="dsq-comment-message"><p>Looks slick, I like it!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-56846">
+        <div id="dsq-comment-header-56846" class="dsq-comment-header">
+            <cite id="dsq-cite-56846">
+                <span id="dsq-author-user-56846">kevk60</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56846" class="dsq-comment-body">
+            <div id="dsq-comment-message-56846" class="dsq-comment-message"><p>Great new layout. Clean and simple. Awesome job.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-56850">
+        <div id="dsq-comment-header-56850" class="dsq-comment-header">
+            <cite id="dsq-cite-56850">
+                <span id="dsq-author-user-56850">Nuno Carvalho</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56850" class="dsq-comment-body">
+            <div id="dsq-comment-message-56850" class="dsq-comment-message"><p>Cool, yeaps much easier and easy on eyes. +1!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-57212">
+        <div id="dsq-comment-header-57212" class="dsq-comment-header">
+            <cite id="dsq-cite-57212">
+http://www.bestnindia.com/Mangalore/Restaurants                <span id="dsq-author-user-57212">Restaurants in Mangalore</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-57212" class="dsq-comment-body">
+            <div id="dsq-comment-message-57212" class="dsq-comment-message"><p>Excellent site! Magnificent project! Thank you for your work!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+            </ul>
+
+
+        </div>
+
+    </div>
+
+<script type="text/javascript">
+var disqus_url = 'http://www.cyanogenmod.org/blog/the-new-face-of-cm-org';
+var disqus_identifier = '2261 http://www.cyanogenmod.org/?p=2261';
+var disqus_container_id = 'disqus_thread';
+var disqus_shortname = 'cyngn';
+var disqus_title = "The New Face of CyanogenMod.org";
+var disqus_config_custom = window.disqus_config;
+var disqus_config = function () {
+    /*
+    All currently supported events:
+    onReady: fires when everything is ready,
+    onNewComment: fires when a new comment is posted,
+    onIdentify: fires when user is authenticated
+    */
+    
+    
+    this.language = '';
+        this.callbacks.onReady.push(function () {
+
+        // sync comments in the background so we don't block the page
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = '?cf_action=sync_comments&post_id=2261';
+
+        var firstScript = document.getElementsByTagName('script')[0];
+        firstScript.parentNode.insertBefore(script, firstScript);
+    });
+    
+    if (disqus_config_custom) {
+        disqus_config_custom.call(this);
+    }
+};
+
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+
+</article>
+			</div>
+
+		</div><!-- End Content row -->
+		
+		<aside id="sidebar" class="four columns hide-on-phones" role="complementary">
+	<div class="sidebar-box">
+		<article id="recent-comments-4" class="row widget widget_recent_comments"><div class="sidebar-section twelve columns"><h6><strong>Recent Comments</strong></h6><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">Hans van den Bogert</span> on <a href="http://www.cyanogenmod.org/blog/cm-13-0-release-1/comment-page-6#comment-71625">CM 13.0 Release 1</a></li><li class="recentcomments"><span class="comment-author-link">Ivan Bogush</span> on <a href="http://www.cyanogenmod.org/blog/cm-13-0-release-1/comment-page-6#comment-71624">CM 13.0 Release 1</a></li><li class="recentcomments"><span class="comment-author-link">JohnnyBravo</span> on <a href="http://www.cyanogenmod.org/blog/cm-13-0-release-1/comment-page-6#comment-71623">CM 13.0 Release 1</a></li><li class="recentcomments"><span class="comment-author-link">Aliudin Mohamed Salleh</span> on <a href="http://www.cyanogenmod.org/blog/cm-13-0-release-1/comment-page-6#comment-71622">CM 13.0 Release 1</a></li><li class="recentcomments"><span class="comment-author-link">ibrahim hamdan</span> on <a href="http://www.cyanogenmod.org/blog/a-marshmallowy-cm/comment-page-11#comment-71621">A Marshmallowy CM</a></li></ul></div></article>	</div>
+</aside><!-- /#sidebar -->		
+		</div><!-- End Main row -->
+		
+		<footer id="content-info" role="contentinfo" class="hide-on-phones" style="margin:40px 0 0 0;">
+			<div class="row">
+				<article id="nav_menu-4" class="three columns widget widget_nav_menu"><div class="footer-section"><h6><strong>Navigation</strong></h6><div class="menu-main-container"><ul id="menu-main" class="menu"><li id="menu-item-798" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-798"><a href="http://www.cyanogenmod.org/about">About</a></li>
+<li id="menu-item-2403" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2403"><a href="http://wiki.cyanogenmod.org/">Wiki</a></li>
+<li id="menu-item-2404" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2404"><a href="http://download.cyanogenmod.org">Download</a></li>
+<li id="menu-item-825" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-825"><a href="/blog">Blog</a></li>
+<li id="menu-item-904" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-904"><a href="http://forum.cyanogenmod.org">Forum</a></li>
+<li id="menu-item-829" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-829"><a href="http://www.cyanogenmod.org/community">Community</a></li>
+<li id="menu-item-2709" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2709"><a href="http://shop.cyanogenmod.org">Shop</a></li>
+</ul></div></div></article><article id="nav_menu-3" class="three columns widget widget_nav_menu"><div class="footer-section"><h6><strong>Social Networks</strong></h6><div class="menu-social-networks-container"><ul id="menu-social-networks" class="menu"><li id="menu-item-2173" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2173"><a href="https://www.facebook.com/CyanogenMod">Facebook</a></li>
+<li id="menu-item-2174" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2174"><a href="https://twitter.com/CyanogenMod">Twitter</a></li>
+<li id="menu-item-2175" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2175"><a href="https://plus.google.com/+CyanogenMod/posts">Google+</a></li>
+</ul></div></div></article>                                <article class="three columns widget widget widget_nav_menu">
+                                    <div class="footer-section">
+                                        <h6><strong>Sponsored By</strong></h6>
+                                        <a href="http://twilio.com/?utm_source=cyanogenmod&utm_medium=webbadge&utm_campaign=cyanogenverify" style="text: decoration: none; display: inline-block; width: 166px; height: 0; overflow: hidden; padding-top: 31px; background: url(https://www.twilio.com/packages/company/img/logos_icon_poweredbysmall.png) no-repeat;">powered by twilio™</a>
+                                    </div>
+                                </article>
+			</div>
+		</footer>
+        
+      <div id="navigation" class="row mobile-footer show-on-phones">
+			<div class="twelve columns">
+            	<h6>Navigate cyanogenmod.org</h6>
+            	<ul>
+                	<li><a href="/about">About</a></li>
+                    <!--<li><a href="#">Features</a></li>-->
+                    <li><a href="http://wiki.cyanogenmod.org/">Wiki</a></li>
+                    <li><a href="http://download.cyanogenmod.org/">Download</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="http://forum.cyanogenmod.org">Forum</a></li>
+                    <li><a href="/community">Community</a></li>  
+                    <li><a href="http://shop.cyanogenmod.org">Shop</a></li>
+                </ul>
+            </div>
+        </div>
+			
+	</div><!-- Container End -->
+    
+
+	<!-- Included JS Files of Foundation -->
+	<script src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/foundation.js"></script>
+	<script src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/app.js"></script>
+	
+	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+	     chromium.org/developers/how-tos/chrome-frame-getting-started -->
+	<!--[if lt IE 7]>
+		<script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+		<script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+	<![endif]-->
+	
+	        <script type="text/javascript">
+        // <![CDATA[
+        var disqus_shortname = 'cyngn';
+        (function () {
+            var nodes = document.getElementsByTagName('span');
+            for (var i = 0, url; i < nodes.length; i++) {
+                if (nodes[i].className.indexOf('dsq-postid') != -1) {
+                    nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('data-dsqidentifier'));
+                    url = nodes[i].parentNode.href.split('#', 1);
+                    if (url.length == 1) { url = url[0]; }
+                    else { url = url[1]; }
+                    nodes[i].parentNode.href = url + '#disqus_thread';
+                }
+            }
+            var s = document.createElement('script'); 
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+        // ]]>
+        </script>
+        <script type='text/javascript' src='http://cyanogenmod.org/wp-includes/js/comment-reply.min.js?ver=4.2.4'></script>
+<script type="text/javascript">/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+ Served from: www.cyanogenmod.org @ 2016-04-02 10:49:04 by W3 Total Cache -->

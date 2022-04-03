@@ -1,0 +1,656 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+
+	<title>CM Installer OTA: Issue Identified with d2 and jf | CyanogenMod</title>
+	
+	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	
+	<!-- Included Foundation CSS Files -->
+	<link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/css/foundation.css">
+	<link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/css/app.css">
+    <link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/tipTip.css">
+    <link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/fonts/style.css">
+    <link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/css/flexslider.css" type="text/css" media="screen" />
+	
+	<link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/style.css">
+	
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/css/ie.css">
+	<![endif]-->
+	
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<!-- Favicon and Feed -->
+	<link rel="shortcut icon" type="image/png" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/favicon.ico">
+	<link rel="alternate" type="application/rss+xml" title="CyanogenMod Feed" href="http://www.cyanogenmod.org/feed/">
+	
+	<!--  iPhone Web App Home Screen Icon -->
+	<link rel="apple-touch-icon" sizes="72x72" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-icon-ipad.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-icon-retina.png" />
+	<link rel="apple-touch-icon" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-icon.png" />
+	
+	<!-- Enable Startup Image for iOS Home Screen Web App -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link rel="apple-touch-startup-image" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/mobile-load.png" />
+
+	<!-- Startup Image iPad Landscape (748x1024) -->
+	<link rel="apple-touch-startup-image" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-load-ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)" />
+	<!-- Startup Image iPad Portrait (768x1004) -->
+	<link rel="apple-touch-startup-image" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-load-ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)" />
+	<!-- Startup Image iPhone (320x460) -->
+	<link rel="apple-touch-startup-image" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-load.png" media="screen and (max-device-width: 320px)" />
+	
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.min.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.jparallax.min.js" ></script>
+  <script defer type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.featureList-1.0.0.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.tipTip.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/easySlider1.7.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/modernizr.foundation.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.flexslider-min.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/custom.js"></script>
+  
+  <script type="text/javascript">
+    $(document).load(function(){
+
+	  // The slider being synced must be initialized first
+	  $('.flexslider').flexslider({
+		animation: "slide",
+		controlNav: false,
+	  });
+	  
+    });
+  </script>
+  
+  	
+<!-- All in One SEO Pack 2.2.7.1 by Michael Torbert of Semper Fi Web Design[493,551] -->
+<link rel="author" href="http://google.com/+AbhisekDevkota" />
+<meta name="description"  content="Users who took the most recent update for the CM Installer channel for d2 (Galaxy S3) and jf (Galaxy S4) devices may have seen their devices reboot into a" />
+
+<link rel="canonical" href="http://www.cyanogenmod.org/blog/cm-installer-ota-issue-identified-with-d2-and-jf" />
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-39737599-3']);
+		  _gaq.push(['_trackPageview']);
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
+<!-- /all in one seo pack -->
+<link rel="alternate" type="application/rss+xml" title="CyanogenMod &raquo; CM Installer OTA: Issue Identified with d2 and jf Comments Feed" href="http://www.cyanogenmod.org/blog/cm-installer-ota-issue-identified-with-d2-and-jf/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/cyanogenmod.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.2.4"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://cyanogenmod.org/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://cyanogenmod.org/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Unified builds &#8211; Motorola G and more' href='http://www.cyanogenmod.org/blog/motorola-g-and-more' />
+<link rel='next' title='CyanogenMod 11.0 M4 Release' href='http://www.cyanogenmod.org/blog/cyanogenmod-11-0-m4-release' />
+<meta name="generator" content="WordPress 4.2.4" />
+<link rel='shortlink' href='http://www.cyanogenmod.org/?p=2590' />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+</head>
+
+<body class="single single-post postid-2590 single-format-standard">
+
+	<div class="menusto hide-on-phones"></div>
+	<!-- Start the main container -->
+	<div id="container" class="container" role="document" style="padding:80px 0 0 0;">
+		
+        
+        <div class="row mobile-header show-on-phones">
+            <div class="nine">
+            	<a href="http://www.cyanogenmod.org" title="CyanogenMod" class="logo-mobile"><img src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/logo-mobile.png" alt=""/></a>
+            </div>
+            <a href="#navigation" class="mobile-menu"><img src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/btn-menu-mobile.png" alt=""/></a>
+        </div>
+        
+		<!-- Row for blog navigation -->
+		<div class="row hide-on-phones">
+			<header class="twelve columns" role="banner">
+				<div class="reverie-header">
+                	<a href="http://www.cyanogenmod.org" title="CyanogenMod" class="logo"><img src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/logo.png" alt=""/></a>
+                    <div id="glavno" class="nav hide-on-phones">
+                        <ul id="glavno">                   
+                            <li><a href="http://wiki.cyanogenmod.org/">Wiki</a></li>
+                            <!--<li><a href="http://cyanogenmod.org/about/features">Features</a></li>-->
+                            <li><a href="http://download.cyanogenmod.org/">Download</a></li>
+                            <li><a href="http://www.cyanogenmod.org/blog/">Blog</a></li>
+                            <li><a href="http://forum.cyanogenmod.org/">Forum</a></li>
+                            <li>
+                            	<a href="http://www.cyanogenmod.org/community">Community</a>
+                                <div style="opacity: 0; display: none; width:100%" class="sub">
+                                    <ul>
+                                    	<div style="width:980px; margin:0 auto; color:#fff;">
+                                        	<div class="contributesub">
+                                            	<h2>Contribute</h2>
+                                                
+                                                <h4><a href="http://review.cyanogenmod.org/">Gerrit Review</a></h4>
+                                                <p>Gerrit is a web based code review system, facilitating online code reviews for projects using the Git version control system.</p>
+                                                    
+                                                <h4><a href="http://wiki.cyanogenmod.org/">Wiki</a></h4>
+                                                <p>Our Wiki is a comprehensive tool for users to find information. This also needs contributions to keep it fresh and relevant.</p>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/community">Join The Team</a></h4>
+                                                <p>We love working with others. You can submit code via Gerrit. If you think there is something else you can help with, get in touch with us on the forums.</p>
+                                            </div>
+                                            
+                                        	<div class="contributesub">
+                                            	<h2>Help</h2>
+                                                
+                                                <h4><a href="http://forum.cyanogenmod.org/">Forum</a></h4>
+                                                <p>Our forums have a wealth of knowledge and resources. All of it is free and accessible from both your desktop and mobile phone.</p>
+                                                    
+                                                <h4><a href="irc://irc.freenode.net/cyanogenmod">IRC</a></h4>
+                                                <p>If you are comfortable with IRC and would like instant help and assistance from both developers and others users alike.</p>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/blog">Blog</a></h4>
+                                                <p>Our blogs will contain the latest news and releases as well as other related news concerning the distribution.</p>
+                                                    
+                                                <h4><a href="http://wiki.cyanogenmod.org/">Wiki</a></h4>
+                                                <p>Our Wiki is a comprehensive tool for users to find information. This also needs contributions to keep it fresh and relevant.</p>
+                                            </div>
+                                            
+                                        	<div class="contributesub">
+                                            	<h2>Information</h2>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/bugs">Bug Tracker</a></h4>
+                                                <p>This is the official Bug Tracker where you can submit and review bugs that users may experience.</p>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/github">Github Repo</a></h4>
+                                                <p>Our source is free and open. you can check the Github page to see what we do and how you can contribute.</p>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/stats">Installation Statistics</a></h4>
+                                                <p>We have an opt-in feature in our ROMS to enable us to gain statistics on users as well as devices used.</p>
+                                            </div>
+                                            
+                                        	<div class="contributesub last">
+                                            	<h2>Support</h2>
+                                                
+                                                <h4><a href="/cdn-cgi/l/email-protection#3753524145525b77544e5659585052595a585319584550">Developer Relations</a></h4>
+                                                <p>If you wish to contact us regarding development contributions, please do so here.</p>
+                                                    
+                                                <h4><a href="/cdn-cgi/l/email-protection#bfdedbd2d6d1ffdcc6ded1d0d8dad1d2d0db91d0cdd8">Website Support</a></h4>
+                                                <p>This email is dedicated to website, forum, wiki and hosting support. We will not respond to ROM support.</p>
+                                                    
+                                                <h4><a href="/cdn-cgi/l/email-protection#3051545d595e705349515e5f57555e5d5f541e5f4257">Social Network</a></h4>
+                                                <p>To contact us in relation to our Social media structure.</p>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                    
+                                </div>
+                            </li>
+                      </ul>
+                    </div>
+				</div>
+
+			</header>
+		</div>
+
+		
+		<!-- Row for main content area -->
+		<div id="main" class="row">
+		<!-- Row for main content area -->
+		<div id="content" class="eight columns" role="main">
+	
+			<div class="post-box">
+					<article class="post-2590 post type-post status-publish format-standard hentry category-blog" id="post-2590">
+		<header>
+        	<time class="updated" datetime="2014-02-25T04:10:34+00:00" pubdate>February 25th, 2014 &bull; Written by <a href="http://www.cyanogenmod.org/author/ciwrl" rel="author" class="fn">ciwrl</a></time>        	<h2 class="entry-title">CM Installer OTA: Issue Identified with d2 and jf</h2>
+					</header>
+		<div class="entry-content">
+			<p>Users who took the most recent update for the CM Installer channel for d2 (Galaxy S3) and jf (Galaxy S4) devices may have seen their devices reboot into a broken state. We take full responsibility for this issue. Items such as non-boots are to be expected to occur in nightly or &#8216;experimental&#8217; builds, not the stable channel of the installer &#8211; the issues were simply unacceptable.</p>
+<p><span style="text-decoration: underline;">What happened?</span></p>
+<p>Last week, we made the preparations to generate new incremental over the air updates (OTAs) and full builds for the CM installer release channel. Test builds were generated early in the week and QA tested against all of the Nexus devices and a couple other devices. Builds were cleared for release and regenerated on Friday, for a roll-out on Saturday.</p>
+<p>The failures seen arise from unaccounted for repercussions of the recent effort to unify the <a href="http://www.cyanogenmod.org/blog/unified-builds">d2 and jf device trees</a>. The unification process itself was a success, the need for variant builds has been eliminated on these devices. When we went to roll the builds for release on Friday, we took into account that the unification process was still new, only being tested against the nightlies for 3 days at that point; as such the CM Installer releases generated on Friday were on the non-unified type (ie, individual builds for each d2 and jf variant).</p>
+<p>This all should have been perfectly fine and is representative of our previous installer rollouts. However, due to the unification process, the special system files that allow your phone to boot shifted locations in a way our Installer buildbot failed to account for &#8211; essentially making the d2 and jf builds that went out to users non-bootable.</p>
+<p>On Monday, when user feedback of these issues came pouring in, we took immediate action to remove the affected builds and address the root cause in both our source (to prevent this in the future) and to enhance our QA and release processes.</p>
+<p>No one wants to see this happen again and we are embarrassed that did in the first place.</p>
+<p><span style="text-decoration: underline;">I&#8217;m affected, what now?</span></p>
+<p>Our support staff on the forums has jumped into action and provided manual and automated fixes for those affected. The simplest solution is to use the &#8216;adb sideload&#8217; tool to flash a working build. As the installer itself is meant for non-technical users, we have created standalone executables (.exe) for each affected device. For those more keen on flashing the fix themselves, individual zips are also available.</p>
+<p>Instructions and downloads for the fixes are available on our <a href="http://forum.cyanogenmod.com/topic/88951-sideload-fix-for-recent-s3-and-s4-ota-update-issue/">Forum support page for this issue</a>.</p>
+<p>Our deepest apologies for all the trouble that this has caused those affected, it won&#8217;t happen again.</p>
+		</div>
+
+<div id="disqus_thread">
+            <div id="dsq-content">
+
+            <div class="navigation">
+                <div class="nav-previous">
+                    <span class="meta-nav">&larr;</span>&nbsp;
+                    <a href="http://www.cyanogenmod.org/blog/cm-installer-ota-issue-identified-with-d2-and-jf/comment-page-1#comments" >Older Comments</a>                </div>
+                <div class="nav-next">
+                                        &nbsp;<span class="meta-nav">&rarr;</span>
+                </div>
+            </div> <!-- .navigation -->
+
+            <ul id="dsq-comments">
+                    <li class="comment even thread-even depth-1" id="dsq-comment-60245">
+        <div id="dsq-comment-header-60245" class="dsq-comment-header">
+            <cite id="dsq-cite-60245">
+                <span id="dsq-author-user-60245">derb2k2</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-60245" class="dsq-comment-body">
+            <div id="dsq-comment-message-60245" class="dsq-comment-message"><p>i&#8217;d suggest downloading the zip and going from there. Don&#8217;t install the OTA. I haven&#8217;t seen any clearance from the cyanogenmod team.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-60248">
+        <div id="dsq-comment-header-60248" class="dsq-comment-header">
+            <cite id="dsq-cite-60248">
+                <span id="dsq-author-user-60248">Howard Z</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-60248" class="dsq-comment-body">
+            <div id="dsq-comment-message-60248" class="dsq-comment-message"><p>It appears someone came up with this idea to unify S3 and S4 cyanogenmods &#8211; and the idea fixes nothing, is not needed, and continues to cause major issues (if you care to read XDA threads).  </p>
+<p>Thanks for your hard work.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-60250">
+        <div id="dsq-comment-header-60250" class="dsq-comment-header">
+            <cite id="dsq-cite-60250">
+                <span id="dsq-author-user-60250">Jason Heller</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-60250" class="dsq-comment-body">
+            <div id="dsq-comment-message-60250" class="dsq-comment-message"><p>Cm rocks&#8230;.you guys are awesome.<br />
+Someone please help me updating to the new unified build&#8230;.I&#8217;m on d2vzw cm11 217 want to update to the newest unified d2lte but every time I flash it I lose connectivity&#8230;.no signal&#8230;no sms&#8230;no mms&#8230;.I had mms issues when I first flashed cm11 d2vzw but I figured it out&#8230;.can&#8217;t seem figure out why my service goes with the unified build..Any help would be much appreciated&#8230;I clean flash every time also no cminstaller&#8230;.and I have the latest cwm&#8230;.it boots and runs really nice but no data or service&#8230;I&#8217;ve gotten into mobile settings and put everything were it is supposed to be&#8230;I don&#8217;t know what to do&#8230;.it&#8217;s driving me insane&#8230;.I love cm&#8230;help <img src="http://cyanogenmod.org/wp-includes/images/smilies/simple-smile.png" alt=":-)" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-60251">
+        <div id="dsq-comment-header-60251" class="dsq-comment-header">
+            <cite id="dsq-cite-60251">
+                <span id="dsq-author-user-60251">Jason Heller</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-60251" class="dsq-comment-body">
+            <div id="dsq-comment-message-60251" class="dsq-comment-message"><p>Once you have a custom recovery installed and super user you can install any rom you want as long as it&#8217;s for your specific device </p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-60255">
+        <div id="dsq-comment-header-60255" class="dsq-comment-header">
+            <cite id="dsq-cite-60255">
+                <span id="dsq-author-user-60255">dnard</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-60255" class="dsq-comment-body">
+            <div id="dsq-comment-message-60255" class="dsq-comment-message"><p>No it didn&#8217;t. This is a specific issue with galaxy s 3 and 4. Not nexus.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-60256">
+        <div id="dsq-comment-header-60256" class="dsq-comment-header">
+            <cite id="dsq-cite-60256">
+                <span id="dsq-author-user-60256">Trill316</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-60256" class="dsq-comment-body">
+            <div id="dsq-comment-message-60256" class="dsq-comment-message"><p>Thanks well i had similar issue when i did the update.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-60258">
+        <div id="dsq-comment-header-60258" class="dsq-comment-header">
+            <cite id="dsq-cite-60258">
+                <span id="dsq-author-user-60258">leide</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-60258" class="dsq-comment-body">
+            <div id="dsq-comment-message-60258" class="dsq-comment-message"><p>How can I get updates to my samsung i9300? I&#8217;ve got cm10.2 with cyanogenmod installer, but I don&#8217;t have an option like &#8220;update system&#8221; in &#8220;about phone&#8221;.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-60259">
+        <div id="dsq-comment-header-60259" class="dsq-comment-header">
+            <cite id="dsq-cite-60259">
+                <span id="dsq-author-user-60259">Matthew Grochowalski</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-60259" class="dsq-comment-body">
+            <div id="dsq-comment-message-60259" class="dsq-comment-message"><p>Sounds like something that happened before for a d2vzw RC. In that case, TheMuppets updated the location of thermald configs, leaving then out of the RC. That repo should be baselines like the rest of CM for the stable releases.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-60265">
+        <div id="dsq-comment-header-60265" class="dsq-comment-header">
+            <cite id="dsq-cite-60265">
+                <span id="dsq-author-user-60265">Trill316</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-60265" class="dsq-comment-body">
+            <div id="dsq-comment-message-60265" class="dsq-comment-message"><p>i asked the same question and got a rude reply from one of the members.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-60268">
+        <div id="dsq-comment-header-60268" class="dsq-comment-header">
+            <cite id="dsq-cite-60268">
+                <span id="dsq-author-user-60268">Luigi Puno</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-60268" class="dsq-comment-body">
+            <div id="dsq-comment-message-60268" class="dsq-comment-message"><p>i just installed it i have the latest cwn recovery and now i am using cm 11 nightly on jflte  i just asking if i can download other rom and installed is that possible? even i use cm installer to root my phone and install cwm recovery that way</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-60269">
+        <div id="dsq-comment-header-60269" class="dsq-comment-header">
+            <cite id="dsq-cite-60269">
+                <span id="dsq-author-user-60269">armen71</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-60269" class="dsq-comment-body">
+            <div id="dsq-comment-message-60269" class="dsq-comment-message"><p>hi guys, i am new to the CM, just wanted to thank the CM team for their great effort developing the CM11, which dramatically changed how i use my phone, first of all i had this heavy battery draining when i was on Samsung 4.3, my battery was draining in 3 hours, now after installing CM11, my battery is lasting aroung 16 to 18 hours, including 3G usage and playing games.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-60272">
+        <div id="dsq-comment-header-60272" class="dsq-comment-header">
+            <cite id="dsq-cite-60272">
+                <span id="dsq-author-user-60272">Reid</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-60272" class="dsq-comment-body">
+            <div id="dsq-comment-message-60272" class="dsq-comment-message"><p>Thank you for spending the time to make your users whole again.  I think a lot of people did end up getting it fixed one way or another because of the excellent user community that is the forums, but I&#8217;m sure some non-technical users didn&#8217;t.  Thanks again.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-60273">
+        <div id="dsq-comment-header-60273" class="dsq-comment-header">
+            <cite id="dsq-cite-60273">
+                <span id="dsq-author-user-60273">Ryan Weber</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-60273" class="dsq-comment-body">
+            <div id="dsq-comment-message-60273" class="dsq-comment-message"><p>Is this the reason they haven&#8217;t had any nightlies for the S3 or S4 since Feb 17th?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-60274">
+        <div id="dsq-comment-header-60274" class="dsq-comment-header">
+            <cite id="dsq-cite-60274">
+                <span id="dsq-author-user-60274">The Big Eazy</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-60274" class="dsq-comment-body">
+            <div id="dsq-comment-message-60274" class="dsq-comment-message"><p>So is the installer mod okay now if I do my wifes international gs3? </p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-60276">
+        <div id="dsq-comment-header-60276" class="dsq-comment-header">
+            <cite id="dsq-cite-60276">
+                <span id="dsq-author-user-60276">Jason Heller</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-60276" class="dsq-comment-body">
+            <div id="dsq-comment-message-60276" class="dsq-comment-message"><p>just boot into your recovery and install it from there&#8230;..you can install any rom that way&#8230;.I don&#8217;t get why you want to use cm installer to install other roms&#8230;.are you having trouble booting into recovery or something</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-60437">
+        <div id="dsq-comment-header-60437" class="dsq-comment-header">
+            <cite id="dsq-cite-60437">
+                <span id="dsq-author-user-60437">Luigi Puno</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-60437" class="dsq-comment-body">
+            <div id="dsq-comment-message-60437" class="dsq-comment-message"><p>no i am just asking because my phone was rooted and install cwn recovery and my 1st custom rom using cm installer . i am just asking if i can install other custom</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-60495">
+        <div id="dsq-comment-header-60495" class="dsq-comment-header">
+            <cite id="dsq-cite-60495">
+                <span id="dsq-author-user-60495">Jason Heller</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-60495" class="dsq-comment-body">
+            <div id="dsq-comment-message-60495" class="dsq-comment-message"><p>Yes u can bro</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-60555">
+        <div id="dsq-comment-header-60555" class="dsq-comment-header">
+            <cite id="dsq-cite-60555">
+                <span id="dsq-author-user-60555">derb2k2</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-60555" class="dsq-comment-body">
+            <div id="dsq-comment-message-60555" class="dsq-comment-message"><p>check the forums. I still haven&#8217;t seen that the OTA is reparied. After I got the loop, I unbricked and used the CM Installer to get back to cm11, then I downloaded the appropriate zip of M3 for my phone and manually went into recovery to install.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-60556">
+        <div id="dsq-comment-header-60556" class="dsq-comment-header">
+            <cite id="dsq-cite-60556">
+                <span id="dsq-author-user-60556">Luigi Puno</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-60556" class="dsq-comment-body">
+            <div id="dsq-comment-message-60556" class="dsq-comment-message"><p>tnx for the help sir!!!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-60616">
+        <div id="dsq-comment-header-60616" class="dsq-comment-header">
+            <cite id="dsq-cite-60616">
+                <span id="dsq-author-user-60616">Tech Hung</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-60616" class="dsq-comment-body">
+            <div id="dsq-comment-message-60616" class="dsq-comment-message"><p>Hi guys. Can some one advise if the exe files downloaded on the laptop need to be executed just by plugging in the device or we need some application / program on the computer to run these to install the correct updates one the device. </p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-60625">
+        <div id="dsq-comment-header-60625" class="dsq-comment-header">
+            <cite id="dsq-cite-60625">
+                <span id="dsq-author-user-60625">Luigi Puno</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-60625" class="dsq-comment-body">
+            <div id="dsq-comment-message-60625" class="dsq-comment-message"><p>sir can i ask a question is there a posibility of changing my clokcword recovery to TWRP on my s4 i installed cm11 and recovery via the cm 11 installer can i change the recovery to TWRP?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+            </ul>
+
+            <div class="navigation">
+                <div class="nav-previous">
+                    <span class="meta-nav">&larr;</span>
+                    &nbsp;<a href="http://www.cyanogenmod.org/blog/cm-installer-ota-issue-identified-with-d2-and-jf/comment-page-1#comments" >Older Comments</a>                </div>
+                <div class="nav-next">
+                                        &nbsp;<span class="meta-nav">&rarr;</span>
+                </div>
+            </div><!-- .navigation -->
+
+        </div>
+
+    </div>
+
+<script type="text/javascript">
+var disqus_url = 'http://www.cyanogenmod.org/blog/cm-installer-ota-issue-identified-with-d2-and-jf';
+var disqus_identifier = '2590 http://www.cyanogenmod.org/?p=2590';
+var disqus_container_id = 'disqus_thread';
+var disqus_shortname = 'cyngn';
+var disqus_title = "CM Installer OTA: Issue Identified with d2 and jf";
+var disqus_config_custom = window.disqus_config;
+var disqus_config = function () {
+    /*
+    All currently supported events:
+    onReady: fires when everything is ready,
+    onNewComment: fires when a new comment is posted,
+    onIdentify: fires when user is authenticated
+    */
+    
+    
+    this.language = '';
+        this.callbacks.onReady.push(function () {
+
+        // sync comments in the background so we don't block the page
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = '?cf_action=sync_comments&post_id=2590';
+
+        var firstScript = document.getElementsByTagName('script')[0];
+        firstScript.parentNode.insertBefore(script, firstScript);
+    });
+    
+    if (disqus_config_custom) {
+        disqus_config_custom.call(this);
+    }
+};
+
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+
+</article>
+			</div>
+
+		</div><!-- End Content row -->
+		
+		<aside id="sidebar" class="four columns hide-on-phones" role="complementary">
+	<div class="sidebar-box">
+		<article id="recent-comments-4" class="row widget widget_recent_comments"><div class="sidebar-section twelve columns"><h6><strong>Recent Comments</strong></h6><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">Nabil Ihza Ambariyono</span> on <a href="http://www.cyanogenmod.org/blog/cm-13-0-release-znh5y/comment-page-5#comment-72736">CM 13.0 Release &#8211; ZNH5Y</a></li><li class="recentcomments"><span class="comment-author-link">Mrinmoy Roy</span> on <a href="http://www.cyanogenmod.org/blog/cm-13-0-release-znh5y/comment-page-5#comment-72735">CM 13.0 Release &#8211; ZNH5Y</a></li><li class="recentcomments"><span class="comment-author-link">Akiva</span> on <a href="http://www.cyanogenmod.org/blog/capps-package-for-marshmallow/comment-page-2#comment-72734">Cyanogen Apps Package for Marshmallow</a></li><li class="recentcomments"><span class="comment-author-link">Akiva</span> on <a href="http://www.cyanogenmod.org/blog/capps-package-for-marshmallow/comment-page-2#comment-72733">Cyanogen Apps Package for Marshmallow</a></li><li class="recentcomments"><span class="comment-author-link">Aashish bhatia</span> on <a href="http://www.cyanogenmod.org/blog/cm-dev-summit/comment-page-1#comment-72732">CM Dev Summit</a></li></ul></div></article>	</div>
+</aside><!-- /#sidebar -->		
+		</div><!-- End Main row -->
+		
+		<footer id="content-info" role="contentinfo" class="hide-on-phones" style="margin:40px 0 0 0;">
+			<div class="row">
+				<article id="nav_menu-4" class="three columns widget widget_nav_menu"><div class="footer-section"><h6><strong>Navigation</strong></h6><div class="menu-main-container"><ul id="menu-main" class="menu"><li id="menu-item-798" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-798"><a href="http://www.cyanogenmod.org/about">About</a></li>
+<li id="menu-item-2403" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2403"><a href="http://wiki.cyanogenmod.org/">Wiki</a></li>
+<li id="menu-item-2404" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2404"><a href="http://download.cyanogenmod.org">Download</a></li>
+<li id="menu-item-825" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-825"><a href="/blog">Blog</a></li>
+<li id="menu-item-904" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-904"><a href="http://forum.cyanogenmod.org">Forum</a></li>
+<li id="menu-item-829" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-829"><a href="http://www.cyanogenmod.org/community">Community</a></li>
+<li id="menu-item-2709" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2709"><a href="http://shop.cyanogenmod.org">Shop</a></li>
+</ul></div></div></article><article id="nav_menu-3" class="three columns widget widget_nav_menu"><div class="footer-section"><h6><strong>Social Networks</strong></h6><div class="menu-social-networks-container"><ul id="menu-social-networks" class="menu"><li id="menu-item-2173" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2173"><a href="https://www.facebook.com/CyanogenMod">Facebook</a></li>
+<li id="menu-item-2174" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2174"><a href="https://twitter.com/CyanogenMod">Twitter</a></li>
+<li id="menu-item-2175" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2175"><a href="https://plus.google.com/+CyanogenMod/posts">Google+</a></li>
+</ul></div></div></article>                                <article class="three columns widget widget widget_nav_menu">
+                                    <div class="footer-section">
+                                        <h6><strong>Sponsored By</strong></h6>
+                                        <a href="http://twilio.com/?utm_source=cyanogenmod&utm_medium=webbadge&utm_campaign=cyanogenverify" style="text: decoration: none; display: inline-block; width: 166px; height: 0; overflow: hidden; padding-top: 31px; background: url(https://www.twilio.com/packages/company/img/logos_icon_poweredbysmall.png) no-repeat;">powered by twilio™</a>
+                                    </div>
+                                </article>
+			</div>
+		</footer>
+        
+      <div id="navigation" class="row mobile-footer show-on-phones">
+			<div class="twelve columns">
+            	<h6>Navigate cyanogenmod.org</h6>
+            	<ul>
+                	<li><a href="/about">About</a></li>
+                    <!--<li><a href="#">Features</a></li>-->
+                    <li><a href="http://wiki.cyanogenmod.org/">Wiki</a></li>
+                    <li><a href="http://download.cyanogenmod.org/">Download</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="http://forum.cyanogenmod.org">Forum</a></li>
+                    <li><a href="/community">Community</a></li>  
+                    <li><a href="http://shop.cyanogenmod.org">Shop</a></li>
+                </ul>
+            </div>
+        </div>
+			
+	</div><!-- Container End -->
+    
+
+	<!-- Included JS Files of Foundation -->
+	<script src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/foundation.js"></script>
+	<script src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/app.js"></script>
+	
+	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+	     chromium.org/developers/how-tos/chrome-frame-getting-started -->
+	<!--[if lt IE 7]>
+		<script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+		<script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+	<![endif]-->
+	
+	        <script type="text/javascript">
+        // <![CDATA[
+        var disqus_shortname = 'cyngn';
+        (function () {
+            var nodes = document.getElementsByTagName('span');
+            for (var i = 0, url; i < nodes.length; i++) {
+                if (nodes[i].className.indexOf('dsq-postid') != -1) {
+                    nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('data-dsqidentifier'));
+                    url = nodes[i].parentNode.href.split('#', 1);
+                    if (url.length == 1) { url = url[0]; }
+                    else { url = url[1]; }
+                    nodes[i].parentNode.href = url + '#disqus_thread';
+                }
+            }
+            var s = document.createElement('script'); 
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+        // ]]>
+        </script>
+        <script type='text/javascript' src='http://cyanogenmod.org/wp-includes/js/comment-reply.min.js?ver=4.2.4'></script>
+<script type="text/javascript">/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+ Served from: www.cyanogenmod.org @ 2016-09-12 02:20:19 by W3 Total Cache -->

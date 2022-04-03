@@ -1,0 +1,1055 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+
+	<title>Introducing the Cyanogen Apps Package | CyanogenMod</title>
+	
+	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	
+	<!-- Included Foundation CSS Files -->
+	<link rel="stylesheet" href="https://cyanogenmod.org/wp-content/themes/cyanogenmodv3/css/foundation.css">
+	<link rel="stylesheet" href="https://cyanogenmod.org/wp-content/themes/cyanogenmodv3/css/app.css">
+    <link rel="stylesheet" href="https://cyanogenmod.org/wp-content/themes/cyanogenmodv3/tipTip.css">
+    <link rel="stylesheet" href="https://cyanogenmod.org/wp-content/themes/cyanogenmodv3/fonts/style.css">
+    <link rel="stylesheet" href="https://cyanogenmod.org/wp-content/themes/cyanogenmodv3/css/flexslider.css" type="text/css" media="screen"/>
+	
+	<link rel="stylesheet" href="https://cyanogenmod.org/wp-content/themes/cyanogenmodv3/style.css">
+	
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/css/ie.css">
+	<![endif]-->
+	
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<!-- Favicon and Feed -->
+	<link rel="shortcut icon" type="image/png" href="https://cyanogenmod.org/wp-content/themes/cyanogenmodv3/favicon.ico">
+	<link rel="alternate" type="application/rss+xml" title="CyanogenMod Feed" href="http://www.cyanogenmod.org/feed/">
+	
+	<!--  iPhone Web App Home Screen Icon -->
+	<link rel="apple-touch-icon" sizes="72x72" href="https://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-icon-ipad.png"/>
+	<link rel="apple-touch-icon" sizes="114x114" href="https://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-icon-retina.png"/>
+	<link rel="apple-touch-icon" href="https://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-icon.png"/>
+	
+	<!-- Enable Startup Image for iOS Home Screen Web App -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link rel="apple-touch-startup-image" href="https://cyanogenmod.org/wp-content/themes/cyanogenmodv3/mobile-load.png"/>
+
+	<!-- Startup Image iPad Landscape (748x1024) -->
+	<link rel="apple-touch-startup-image" href="https://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-load-ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)"/>
+	<!-- Startup Image iPad Portrait (768x1004) -->
+	<link rel="apple-touch-startup-image" href="https://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-load-ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)"/>
+	<!-- Startup Image iPhone (320x460) -->
+	<link rel="apple-touch-startup-image" href="https://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-load.png" media="screen and (max-device-width: 320px)"/>
+	
+  <script type="text/javascript" src="https://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.jparallax.min.js"></script>
+  <script defer type="text/javascript" src="https://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="https://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.featureList-1.0.0.js"></script>
+  <script type="text/javascript" src="https://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.tipTip.js"></script>
+  <script type="text/javascript" src="https://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/easySlider1.7.js"></script>
+  <script type="text/javascript" src="https://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/modernizr.foundation.js"></script>
+  <script type="text/javascript" src="https://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.flexslider-min.js"></script>
+  <script type="text/javascript" src="https://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/custom.js"></script>
+  
+  <script type="text/javascript">
+    $(document).load(function(){
+
+	  // The slider being synced must be initialized first
+	  $('.flexslider').flexslider({
+		animation: "slide",
+		controlNav: false,
+	  });
+	  
+    });
+  </script>
+  
+  	
+<!-- All in One SEO Pack 2.2.7.1 by Michael Torbert of Semper Fi Web Design[493,539] -->
+<meta name="description"  content="Many CM community users may be familiar with Cyanogen OS, the certified commercial version that comes preloaded on retail smartphones such as the OnePlus One," />
+
+<link rel="canonical" href="http://www.cyanogenmod.org/blog/introducing-the-cyanogen-apps-package" />
+<meta property="og:title" content="Introducing the Cyanogen Apps Package | CyanogenMod" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.cyanogenmod.org/blog/introducing-the-cyanogen-apps-package" />
+<meta property="og:image" content="http://cyanogenmod.org/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png" />
+<meta property="og:site_name" content="CyanogenMod" />
+<meta property="og:description" content="Many CM community users may be familiar with Cyanogen OS, the certified commercial version that comes preloaded on retail smartphones such as the OnePlus One, WileyFox, ZUK Z1, Andromax Q, and YU branded devices.  Cyanogen OS includes a variety of apps and services that leverage CyanogenMod’s open platform. As CM users, these apps were previously unavailable to you unless you bought a Cyanogen OS powered retail phone. Starting today, we’re announcing the release of the Cyanogen Apps Package (C-Apps). C-Apps is being offered as an optional download and will not be preinstalled on CyanogenMod releases. This package will allow you to take your existing devices running CM 12.1, and make them more like the Cyanogen OS experience. The latest version of CM 12.1 is required for C-Apps to run properly. Download and wiki instructions are located at the bottom of this post. The following features are included in the initial C-Apps Package:  Theme Chooser with per-app theming Theme Store AudioFX" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="Many CM community users may be familiar with Cyanogen OS, the certified commercial version that comes preloaded on retail smartphones such as the OnePlus One, WileyFox, ZUK Z1, Andromax Q, and YU branded devices.  Cyanogen OS includes a variety of apps and services that leverage CyanogenMod’s open platform. As CM users, these apps were previously unavailable to you unless you bought a Cyanogen OS powered retail phone. Starting today, we’re announcing the release of the Cyanogen Apps Package (C-Apps). C-Apps is being offered as an optional download and will not be preinstalled on CyanogenMod releases. This package will allow you to take your existing devices running CM 12.1, and make them more like the Cyanogen OS experience. The latest version of CM 12.1 is required for C-Apps to run properly. Download and wiki instructions are located at the bottom of this post. The following features are included in the initial C-Apps Package:  Theme Chooser with per-app theming Theme Store AudioFX" />
+<meta itemprop="image" content="http://cyanogenmod.org/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png" />
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-39737599-3']);
+		  _gaq.push(['_trackPageview']);
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
+<!-- /all in one seo pack -->
+<link rel="alternate" type="application/rss+xml" title="CyanogenMod &raquo; Introducing the Cyanogen Apps Package Comments Feed" href="http://www.cyanogenmod.org/blog/introducing-the-cyanogen-apps-package/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/cyanogenmod.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.2.4"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://cyanogenmod.org/xmlrpc.php?rsd"/>
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://cyanogenmod.org/wp-includes/wlwmanifest.xml"/> 
+<link rel='prev' title='Android Security Bulletin &#8211; October 5th update' href='http://www.cyanogenmod.org/blog/android-security-bulletin-october-5th-update' />
+<link rel='next' title='A Marshmallowy CM' href='http://www.cyanogenmod.org/blog/a-marshmallowy-cm' />
+<meta name="generator" content="WordPress 4.2.4" />
+<link rel='shortlink' href='http://www.cyanogenmod.org/?p=3108' />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+</head>
+
+<body class="single single-post postid-3108 single-format-standard">
+
+	<div class="menusto hide-on-phones"></div>
+	<!-- Start the main container -->
+	<div id="container" class="container" role="document" style="padding:80px 0 0 0;">
+		
+        
+        <div class="row mobile-header show-on-phones">
+            <div class="nine">
+            	<a href="http://www.cyanogenmod.org" title="CyanogenMod" class="logo-mobile"><img src="https://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/logo-mobile.png" alt/></a>
+            </div>
+            <a href="#navigation" class="mobile-menu"><img src="https://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/btn-menu-mobile.png" alt/></a>
+        </div>
+        
+		<!-- Row for blog navigation -->
+		<div class="row hide-on-phones">
+			<header class="twelve columns" role="banner">
+				<div class="reverie-header">
+                	<a href="http://www.cyanogenmod.org" title="CyanogenMod" class="logo"><img src="https://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/logo.png" alt/></a>
+                    <div id="glavno" class="nav hide-on-phones">
+                        <ul id="glavno">                   
+                            <li><a href="https://wiki.cyanogenmod.org/">Wiki</a></li>
+                            <!--<li><a href="http://cyanogenmod.org/about/features">Features</a></li>-->
+                            <li><a href="https://download.cyanogenmod.org/">Download</a></li>
+                            <li><a href="http://www.cyanogenmod.org/blog/">Blog</a></li>
+                            <li><a href="https://forum.cyanogenmod.org/">Forum</a></li>
+                            <li>
+                            	<a href="http://www.cyanogenmod.org/community">Community</a>
+                                <div style="opacity: 0; display: none; width:100%" class="sub">
+                                    <ul>
+                                    	<div style="width:980px; margin:0 auto; color:#fff;">
+                                        	<div class="contributesub">
+                                            	<h2>Contribute</h2>
+                                                
+                                                <h4><a href="https://review.cyanogenmod.org/">Gerrit Review</a></h4>
+                                                <p>Gerrit is a web based code review system, facilitating online code reviews for projects using the Git version control system.</p>
+                                                    
+                                                <h4><a href="https://wiki.cyanogenmod.org/">Wiki</a></h4>
+                                                <p>Our Wiki is a comprehensive tool for users to find information. This also needs contributions to keep it fresh and relevant.</p>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/community">Join The Team</a></h4>
+                                                <p>We love working with others. You can submit code via Gerrit. If you think there is something else you can help with, get in touch with us on the forums.</p>
+                                            </div>
+                                            
+                                        	<div class="contributesub">
+                                            	<h2>Help</h2>
+                                                
+                                                <h4><a href="https://forum.cyanogenmod.org/">Forum</a></h4>
+                                                <p>Our forums have a wealth of knowledge and resources. All of it is free and accessible from both your desktop and mobile phone.</p>
+                                                    
+                                                <h4><a href="irc://irc.freenode.net/cyanogenmod">IRC</a></h4>
+                                                <p>If you are comfortable with IRC and would like instant help and assistance from both developers and others users alike.</p>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/blog">Blog</a></h4>
+                                                <p>Our blogs will contain the latest news and releases as well as other related news concerning the distribution.</p>
+                                                    
+                                                <h4><a href="https://wiki.cyanogenmod.org/">Wiki</a></h4>
+                                                <p>Our Wiki is a comprehensive tool for users to find information. This also needs contributions to keep it fresh and relevant.</p>
+                                            </div>
+                                            
+                                        	<div class="contributesub">
+                                            	<h2>Information</h2>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/bugs">Bug Tracker</a></h4>
+                                                <p>This is the official Bug Tracker where you can submit and review bugs that users may experience.</p>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/github">Github Repo</a></h4>
+                                                <p>Our source is free and open. you can check the Github page to see what we do and how you can contribute.</p>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/stats">Installation Statistics</a></h4>
+                                                <p>We have an opt-in feature in our ROMS to enable us to gain statistics on users as well as devices used.</p>
+                                            </div>
+                                            
+                                        	<div class="contributesub last">
+                                            	<h2>Support</h2>
+                                                
+                                                <h4><a href="/cdn-cgi/l/email-protection#f296978480979eb2918b939c9d95979c9f9d96dc9d8095">Developer Relations</a></h4>
+                                                <p>If you wish to contact us regarding development contributions, please do so here.</p>
+                                                    
+                                                <h4><a href="/cdn-cgi/l/email-protection#4120252c282f012238202f2e26242f2c2e256f2e3326">Website Support</a></h4>
+                                                <p>This email is dedicated to website, forum, wiki and hosting support. We will not respond to ROM support.</p>
+                                                    
+                                                <h4><a href="/cdn-cgi/l/email-protection#abcacfc6c2c5ebc8d2cac5c4cccec5c6c4cf85c4d9cc">Social Network</a></h4>
+                                                <p>To contact us in relation to our Social media structure.</p>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                    
+                                </div>
+                            </li>
+                      </ul>
+                    </div>
+				</div>
+
+			</header>
+		</div>
+
+		
+		<!-- Row for main content area -->
+		<div id="main" class="row">
+		<!-- Row for main content area -->
+		<div id="content" class="eight columns" role="main">
+	
+			<div class="post-box">
+					<article class="post-3108 post type-post status-publish format-standard hentry category-blog" id="post-3108">
+		<header>
+        	<time class="updated" datetime="2015-11-10T19:20:37+00:00" pubdate>November 10th, 2015 &bull; Written by <a href="http://www.cyanogenmod.org/author/bsxtn" rel="author" class="fn">bsxtn</a></time>        	<h2 class="entry-title">Introducing the Cyanogen Apps Package</h2>
+					</header>
+		<div class="entry-content">
+			<p><span style="font-weight: 400;">Many CM community users may be familiar with Cyanogen OS, the certified commercial version that comes preloaded on retail smartphones such as the OnePlus One, WileyFox, ZUK Z1, Andromax Q, and YU branded devices. </span></p>
+<p><span style="font-weight: 400;">Cyanogen OS includes a variety of apps and services that leverage CyanogenMod’s open platform. As CM users, these apps were previously unavailable to you unless you bought a Cyanogen OS powered retail phone. Starting today, we’re announcing the release of the Cyanogen Apps Package (C-Apps).</span></p>
+<p><span style="font-weight: 400;">C-Apps is being offered as an </span><i><span style="font-weight: 400;">optional</span></i><span style="font-weight: 400;"> download and will not be preinstalled on CyanogenMod releases. This package will allow you to take your existing devices running CM 12.1, and make them more like the Cyanogen OS experience. The latest version of CM 12.1 is required for C-Apps to run properly.</span></p>
+<p><span style="font-weight: 400;">Download and wiki instructions are located at the bottom of this post. The following features are included in the initial C-Apps Package:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Theme Chooser with per-app theming</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Theme Store</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">AudioFX</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Cyanogen Accounts</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Gallery </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Dialer with TrueCaller integration</span></li>
+<li style="font-weight: 400;">Email powered by Boxer</li>
+</ul>
+<p><strong>Audio FX</strong></p>
+<figure><a href="http://www.cyanogenmod.org/wp-content/uploads/2015/09/AudioFX_Rock1.png"><img class="alignnone" src="http://www.cyanogenmod.org/wp-content/uploads/2015/09/AudioFX_Rock1-169x300.png" alt="AudioFX_Rock" /> </a><a href="http://www.cyanogenmod.org/wp-content/uploads/2015/09/AudioFX_Classical1.png"><img class="alignnone" src="http://www.cyanogenmod.org/wp-content/uploads/2015/09/AudioFX_Classical1-169x300.png" alt="AudioFX_Classical" /></a> <a href="http://www.cyanogenmod.org/wp-content/uploads/2015/09/AudioFX_Custom1.png"><img class="alignnone" src="http://www.cyanogenmod.org/wp-content/uploads/2015/09/AudioFX_Custom1-169x300.png" alt="AudioFX_Custom" /></a></figure>
+<p>Audio FX is our answer to the need of great audio tweaks and controls. With an intuitive and simple design, Audio FX can be used to switch between audio presets and custom settings created by the user.</p>
+<p>AudioFX gives you unmatched customization and quality for your music. AudioFX delivers 24-bit High-Res Lossless Audio with bass boost, surround, reverb, and 13 preset configurations.</p>
+<p><strong>Theme Chooser</strong></p>
+<figure><a href="http://www.cyanogenmod.org/wp-content/uploads/2015/09/themes_chooser.png"><img class="alignnone" src="http://www.cyanogenmod.org/wp-content/uploads/2015/09/themes_chooser-169x300.png" alt="themes_chooser" /></a> <a href="http://www.cyanogenmod.org/wp-content/uploads/2015/09/themes_chooser_customize.png"><img class="alignnone" src="http://www.cyanogenmod.org/wp-content/uploads/2015/09/themes_chooser_customize-169x300.png" alt="themes_chooser_customize" /></a></figure>
+<p>Theme Chooser is designed for you and how you want your device to look. We are making this available to help enhance how you live your mobile life.</p>
+<p>You can use the Theme Chooser to mix and match all the different parts of any theme—so you can create a theme that’s truly your own.</p>
+<p><strong>Theme Store</strong></p>
+<figure><a href="http://www.cyanogenmod.org/wp-content/uploads/2015/09/themes_store_detail.png"><img class="alignnone" src="http://www.cyanogenmod.org/wp-content/uploads/2015/09/themes_store_detail-169x300.png" alt="themes_store_detail" /></a> <a href="http://www.cyanogenmod.org/wp-content/uploads/2015/09/themes_store-1.png"><img class="alignnone" src="http://www.cyanogenmod.org/wp-content/uploads/2015/09/themes_store-1-169x300.png" alt="themes_store (1)" /></a></figure>
+<p><span style="font-weight: 400;">The Cyanogen Theme Store is the place to browse and download any number of themes. Choose from more than 200 themes, with more themes added regularly.</span></p>
+<p><strong style="line-height: 1.5;">Gallery</strong></p>
+<figure><a href="http://www.cyanogenmod.org/wp-content/uploads/2015/09/Gallery-1.jpg"><img class="alignnone" src="http://www.cyanogenmod.org/wp-content/uploads/2015/09/Gallery-1-169x300.jpg" alt="Gallery-(1)" /></a> <a href="http://www.cyanogenmod.org/wp-content/uploads/2015/09/gallery_Drawer-1.png"><img class="alignnone" src="http://www.cyanogenmod.org/wp-content/uploads/2015/09/gallery_Drawer-1-169x300.png" alt="gallery_Drawer (1)" /></a></figure>
+<p>Our Integrated Gallery brings together all your photos from multiple different services, automatically sorting them and removing duplicates.</p>
+<p><strong>Cyanogen Dialer with Integrated Truecaller</strong></p>
+<figure><a href="https://cyanogenmod.org/wp-content/uploads/2015/11/dialer_TrueCaller-First-Time-User-Dialog-Opt-Out.png"><img class="alignnone" src="https://cyanogenmod.org/wp-content/uploads/2015/11/dialer_TrueCaller-First-Time-User-Dialog-Opt-Out-169x300.png" alt="dialer_TrueCaller - First Time User Dialog Opt Out"/></a> <a href="https://cyanogenmod.org/wp-content/uploads/2015/11/dialer_TrueCaller-Incomiing-Call-Spam-Caller-Block-Caller-1.png"><img class="alignnone" src="https://cyanogenmod.org/wp-content/uploads/2015/11/dialer_TrueCaller-Incomiing-Call-Spam-Caller-Block-Caller-1-169x300.png" alt="dialer_TrueCaller - Incomiing Call - Spam Caller - Block Caller (1)"/></a></figure>
+<p><span style="font-weight: 400;">With more than 1.7 billion contacts worldwide, the robust caller ID included in Truecaller Integrated Dialer allows you to identify and block incoming spam right from your heads up notification. </span><i><span style="font-weight: 400;">(A Cyanogen Account is required to enable.)</span></i></p>
+<p><strong>Email powered by Boxer</strong></p>
+<figure><a href="https://cyanogenmod.org/wp-content/uploads/2015/11/email_Boxer-Email-Drawer.png"><img class="alignnone" src="https://cyanogenmod.org/wp-content/uploads/2015/11/email_Boxer-Email-Drawer-169x300.png" alt="email_Boxer - Email - Drawer"/></a> <a href="https://cyanogenmod.org/wp-content/uploads/2015/11/email_Boxer-Email-Bulk-Actions.png"><img class="alignnone" src="https://cyanogenmod.org/wp-content/uploads/2015/11/email_Boxer-Email-Bulk-Actions-169x300.png" alt="email_Boxer - Email - Bulk Actions"/></a> <a href="https://cyanogenmod.org/wp-content/uploads/2015/11/email_Boxer-Email-OOBE.png"><img class="alignnone" src="https://cyanogenmod.org/wp-content/uploads/2015/11/email_Boxer-Email-OOBE-169x300.png" alt="email_Boxer - Email - OOBE"/></a></figure>
+<p><span style="font-weight: 400;">Email, powered by Boxer, helps you stay organized and connected by syncing multiple email accounts into one.</span></p>
+<p><b>Cyanogen Account</b></p>
+<p><span style="font-weight: 400;">Creating a Cyanogen Account gives you access to the Theme Store, the ability to locate your device, remote lock and remote wipe it, and enable the TrueCaller functionality. After signing up for your Cyanogen account online, you can manage your account and device at <a href="https://account.cyngn.com">account.cyngn.com</a>.</span></p>
+<p><strong>For download, please visit the Cyanogen Inc. <a href="https://cyngn.com/c-apps">page for Cyanogen apps</a>. </strong>For detailed installation instructions, please visit our wiki located on the <a href="https://wiki.cyanogenmod.org/w/C-apps">CyanogenMod C-Apps</a> page.</p>
+		</div>
+
+<div id="disqus_thread">
+            <div id="dsq-content">
+
+            <div class="navigation">
+                <div class="nav-previous">
+                    <span class="meta-nav">&larr;</span>&nbsp;
+                    <a href="http://www.cyanogenmod.org/blog/introducing-the-cyanogen-apps-package/comment-page-4#comments" >Older Comments</a>                </div>
+                <div class="nav-next">
+                    <a href="http://www.cyanogenmod.org/blog/introducing-the-cyanogen-apps-package#comments" >Newer Comments</a>                    &nbsp;<span class="meta-nav">&rarr;</span>
+                </div>
+            </div> <!-- .navigation -->
+
+            <ul id="dsq-comments">
+                    <li class="comment even thread-even depth-1" id="dsq-comment-70763">
+        <div id="dsq-comment-header-70763" class="dsq-comment-header">
+            <cite id="dsq-cite-70763">
+                <span id="dsq-author-user-70763">sammiller</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-70763" class="dsq-comment-body">
+            <div id="dsq-comment-message-70763" class="dsq-comment-message"><p>Much appreciated! Are all the c-apps open-source, hence transparent?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-70769">
+        <div id="dsq-comment-header-70769" class="dsq-comment-header">
+            <cite id="dsq-cite-70769">
+                <span id="dsq-author-user-70769">Gabriel Almeida N</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-70769" class="dsq-comment-body">
+            <div id="dsq-comment-message-70769" class="dsq-comment-message"><p>also found errors in the dialer cm13 (serranoltexx) with cyanogen Apps package</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-70776">
+        <div id="dsq-comment-header-70776" class="dsq-comment-header">
+            <cite id="dsq-cite-70776">
+                <span id="dsq-author-user-70776">moralesnery</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-70776" class="dsq-comment-body">
+            <div id="dsq-comment-message-70776" class="dsq-comment-message"><p>I hope OneNote and Office gets added to this pack.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-70777">
+        <div id="dsq-comment-header-70777" class="dsq-comment-header">
+            <cite id="dsq-cite-70777">
+                <span id="dsq-author-user-70777">Ferry</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-70777" class="dsq-comment-body">
+            <div id="dsq-comment-message-70777" class="dsq-comment-message"><p>When I install through recovery I get E:failed to verify whole file signature and the E: signature verification failed .. Whats up with that?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-70791">
+        <div id="dsq-comment-header-70791" class="dsq-comment-header">
+            <cite id="dsq-cite-70791">
+                <span id="dsq-author-user-70791">samhith srivatsa</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-70791" class="dsq-comment-body">
+            <div id="dsq-comment-message-70791" class="dsq-comment-message"><p>where is the package for cm13??????????</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-70798">
+        <div id="dsq-comment-header-70798" class="dsq-comment-header">
+            <cite id="dsq-cite-70798">
+                <span id="dsq-author-user-70798">Vinita Baheti</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-70798" class="dsq-comment-body">
+            <div id="dsq-comment-message-70798" class="dsq-comment-message"><p>when would be these apps ported to work on cm 13 capable devices</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-70805">
+        <div id="dsq-comment-header-70805" class="dsq-comment-header">
+            <cite id="dsq-cite-70805">
+                <span id="dsq-author-user-70805">samhith srivatsa</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-70805" class="dsq-comment-body">
+            <div id="dsq-comment-message-70805" class="dsq-comment-message"><p>what is with you????you released cm13 and even after a ton of nightlies you only support this for cm12.1 ,,,,, wierd</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-70808">
+        <div id="dsq-comment-header-70808" class="dsq-comment-header">
+            <cite id="dsq-cite-70808">
+                <span id="dsq-author-user-70808">Hanevit March</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-70808" class="dsq-comment-body">
+            <div id="dsq-comment-message-70808" class="dsq-comment-message"><p>You have to remove it from the updater script too</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-70821">
+        <div id="dsq-comment-header-70821" class="dsq-comment-header">
+            <cite id="dsq-cite-70821">
+                <span id="dsq-author-user-70821">Jase Whipp</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-70821" class="dsq-comment-body">
+            <div id="dsq-comment-message-70821" class="dsq-comment-message"><p>Same&#8230;totally nukes the dialer and you can&#8217;t make or recieve phone calls.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-70824">
+        <div id="dsq-comment-header-70824" class="dsq-comment-header">
+            <cite id="dsq-cite-70824">
+                <span id="dsq-author-user-70824">Akshay Maldhure</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-70824" class="dsq-comment-body">
+            <div id="dsq-comment-message-70824" class="dsq-comment-message"><p>Installing the C-Apps package on my Mi3 running CM13.1 build removed my existing Phone app and did not install any other Dialer app. As a result, there was no such app in my phone and the phone kept on rebooting every time I got a phone call. 😀 lol</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-70839">
+        <div id="dsq-comment-header-70839" class="dsq-comment-header">
+            <cite id="dsq-cite-70839">
+                <span id="dsq-author-user-70839">samhith srivatsa</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-70839" class="dsq-comment-body">
+            <div id="dsq-comment-message-70839" class="dsq-comment-message"><p>srsly</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-70842">
+        <div id="dsq-comment-header-70842" class="dsq-comment-header">
+            <cite id="dsq-cite-70842">
+                <span id="dsq-author-user-70842">BassVix</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-70842" class="dsq-comment-body">
+            <div id="dsq-comment-message-70842" class="dsq-comment-message"><p>Eu também, Gabriel.</p>
+<p>Destruiu a instalação do meu CM 13 no S4 mini (como o seu), entra num loop infinito que já era.</p>
+<p>Voltei para o CM 12.1, pior é que a última versão, do dia 21, não está mais disponível e o snapshot é do dia 17.<br />
+Mas foi bom, vou esperar o root funcionar no CM13.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-70854">
+        <div id="dsq-comment-header-70854" class="dsq-comment-header">
+            <cite id="dsq-cite-70854">
+                <span id="dsq-author-user-70854">MotoDev</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-70854" class="dsq-comment-body">
+            <div id="dsq-comment-message-70854" class="dsq-comment-message"><p>Dialer is not working Keep crashing if we make call &#8220;True Dialer need to be fixed now&#8221;</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-70955">
+        <div id="dsq-comment-header-70955" class="dsq-comment-header">
+            <cite id="dsq-cite-70955">
+                <span id="dsq-author-user-70955">U_SAF</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-70955" class="dsq-comment-body">
+            <div id="dsq-comment-message-70955" class="dsq-comment-message"><p>There was huge issue with phone dialer, the smooth sailing LG G2 got so many troubles to make or receive calls. I tried replacing the dialer but couldn&#8217;t so had to hard reset and install everything again.<br />
+There must be option to install individual apps like Themes etc. I just need the Themes and may be Cyanogen account.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-70964">
+        <div id="dsq-comment-header-70964" class="dsq-comment-header">
+            <cite id="dsq-cite-70964">
+                <span id="dsq-author-user-70964">iiku</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-70964" class="dsq-comment-body">
+            <div id="dsq-comment-message-70964" class="dsq-comment-message"><p>can we use these on cm13?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-70969">
+        <div id="dsq-comment-header-70969" class="dsq-comment-header">
+            <cite id="dsq-cite-70969">
+                <span id="dsq-author-user-70969">Giacomo</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-70969" class="dsq-comment-body">
+            <div id="dsq-comment-message-70969" class="dsq-comment-message"><p>This zip is updated now for cm13??</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-70970">
+        <div id="dsq-comment-header-70970" class="dsq-comment-header">
+            <cite id="dsq-cite-70970">
+                <span id="dsq-author-user-70970">Luca</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-70970" class="dsq-comment-body">
+            <div id="dsq-comment-message-70970" class="dsq-comment-message"><p>How can I update these apps? </p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-71007">
+        <div id="dsq-comment-header-71007" class="dsq-comment-header">
+            <cite id="dsq-cite-71007">
+                <span id="dsq-author-user-71007">Chun Wang Ho</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71007" class="dsq-comment-body">
+            <div id="dsq-comment-message-71007" class="dsq-comment-message"><p>Everything is perfect except the dialer. How can I go back to Google dialer? Flash Gapps again?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-71008">
+        <div id="dsq-comment-header-71008" class="dsq-comment-header">
+            <cite id="dsq-cite-71008">
+                <span id="dsq-author-user-71008">Vaibhav Shah</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71008" class="dsq-comment-body">
+            <div id="dsq-comment-message-71008" class="dsq-comment-message"><p>True caller is utter crap! Other than that, the other apps are pretty decent. It is possible to live with Gapps except for things like voice dictation and features like Google now which I find to be gimmicky anyway.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-71028">
+        <div id="dsq-comment-header-71028" class="dsq-comment-header">
+            <cite id="dsq-cite-71028">
+                <span id="dsq-author-user-71028">Jade Carl Patrick Rivera</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71028" class="dsq-comment-body">
+            <div id="dsq-comment-message-71028" class="dsq-comment-message"><p>Please respond to my problem. After I installed Cyanogen 12.1 my Menu and Back button touchpad wont interact anymore but it produce lights everytime I open my phone anyway my phone is from Qatar please send me link for proper ROM to install to my phone. Thanks for the ROM. And I cant install Minecraft Pocket Edition 0.14.0 does it support Minecraft apk it always says &#8220;app not installed&#8221; on some apk and some playstore games.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-71034">
+        <div id="dsq-comment-header-71034" class="dsq-comment-header">
+            <cite id="dsq-cite-71034">
+                <span id="dsq-author-user-71034">Rohit Roy</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71034" class="dsq-comment-body">
+            <div id="dsq-comment-message-71034" class="dsq-comment-message"><p>Hi. I just bought an YU Yuphoria, with manufacturing date of november 2015. How can i install the Cyanogen mod app package? i tried downloading the package from my computer as per instructions, but whenever i try to tarnsfer it from the computer to my phone, it says that the phone will not allow sucha file to be transferred and gets cancelled automatically. i have created a cyanogen account from my computer. I really want to try out the apps package. Can anyone help?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-71068">
+        <div id="dsq-comment-header-71068" class="dsq-comment-header">
+            <cite id="dsq-cite-71068">
+                <span id="dsq-author-user-71068">Fernando Arroyo Jr</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71068" class="dsq-comment-body">
+            <div id="dsq-comment-message-71068" class="dsq-comment-message"><p>Does anyone know if these apps will work with the latest release of the Oxygen OS? </p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-71099">
+        <div id="dsq-comment-header-71099" class="dsq-comment-header">
+            <cite id="dsq-cite-71099">
+                <span id="dsq-author-user-71099">ronnie12888</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71099" class="dsq-comment-body">
+            <div id="dsq-comment-message-71099" class="dsq-comment-message"><p>May i have c apps for cm 10???</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-71481">
+        <div id="dsq-comment-header-71481" class="dsq-comment-header">
+            <cite id="dsq-cite-71481">
+                <span id="dsq-author-user-71481">Simonation 7</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71481" class="dsq-comment-body">
+            <div id="dsq-comment-message-71481" class="dsq-comment-message"><p>theme store dosent work on cm13</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-71549">
+        <div id="dsq-comment-header-71549" class="dsq-comment-header">
+            <cite id="dsq-cite-71549">
+                <span id="dsq-author-user-71549">Utsav Dhar</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71549" class="dsq-comment-body">
+            <div id="dsq-comment-message-71549" class="dsq-comment-message"><p>Any chances of the Capps package getting passed on cm 13 ROMs&#8230; A huge fan of this and desperately waiting for this&#8230;. </p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-71564">
+        <div id="dsq-comment-header-71564" class="dsq-comment-header">
+            <cite id="dsq-cite-71564">
+                <span id="dsq-author-user-71564">Dhruva Darshan</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71564" class="dsq-comment-body">
+            <div id="dsq-comment-message-71564" class="dsq-comment-message"><p>When will you release c-apps for CM 13?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-71600">
+        <div id="dsq-comment-header-71600" class="dsq-comment-header">
+            <cite id="dsq-cite-71600">
+                <span id="dsq-author-user-71600">Umberto Saiani</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71600" class="dsq-comment-body">
+            <div id="dsq-comment-message-71600" class="dsq-comment-message"><p>Hey I have a Samsung galaxy s5&#8230; I flashed CM13 nightly some days ago and it was all ok until today when I decided to flash this package! It completely ruined my phone! Constant crashes on theme store and&#8230;. believe it or not&#8230;. DIALER! Is there a way to revert to the factory cm13 beta c-apps?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-71614">
+        <div id="dsq-comment-header-71614" class="dsq-comment-header">
+            <cite id="dsq-cite-71614">
+                <span id="dsq-author-user-71614">Andika Yudianto</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71614" class="dsq-comment-body">
+            <div id="dsq-comment-message-71614" class="dsq-comment-message"><p>Im using cm 12.1 rendang for my andromax Q.<br />
+I have problem, if i send picture and take foto from whatsapp application.<br />
+My problem is camera take picture is bad, picture blur, noise in my picture. </p>
+<p>Someone can help me please&#8230;.</p>
+<p>Sorry my bad english.</p>
+<p>Thank&#8217;s</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-71618">
+        <div id="dsq-comment-header-71618" class="dsq-comment-header">
+            <cite id="dsq-cite-71618">
+                <span id="dsq-author-user-71618">Roberto Carlos Beltran Delgado</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71618" class="dsq-comment-body">
+            <div id="dsq-comment-message-71618" class="dsq-comment-message"><p>hi guys,have a Fx0 with Os firefox,can put cyanogen in this phone?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-71647">
+        <div id="dsq-comment-header-71647" class="dsq-comment-header">
+            <cite id="dsq-cite-71647">
+https://plus.google.com/+ZelectroKarZRTM                <span id="dsq-author-user-71647">Karthik Sandeep Vempati</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71647" class="dsq-comment-body">
+            <div id="dsq-comment-message-71647" class="dsq-comment-message"><p>Are we ever going to get C-Apps for CyanogenMod 13?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-71658">
+        <div id="dsq-comment-header-71658" class="dsq-comment-header">
+            <cite id="dsq-cite-71658">
+                <span id="dsq-author-user-71658">Shivam Miglani</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71658" class="dsq-comment-body">
+            <div id="dsq-comment-message-71658" class="dsq-comment-message"><p>I flashed the zip and that truecaller dialer is force closing what should I do to get stock dialer back?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-71663">
+        <div id="dsq-comment-header-71663" class="dsq-comment-header">
+            <cite id="dsq-cite-71663">
+                <span id="dsq-author-user-71663">Willy Torres</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71663" class="dsq-comment-body">
+            <div id="dsq-comment-message-71663" class="dsq-comment-message"><p>Phone App stop i cant make or receive calls<br />
+whit cm 13, how can i uninstall or make it work?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-71727">
+        <div id="dsq-comment-header-71727" class="dsq-comment-header">
+            <cite id="dsq-cite-71727">
+                <span id="dsq-author-user-71727">ѦՊԻ</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71727" class="dsq-comment-body">
+            <div id="dsq-comment-message-71727" class="dsq-comment-message"><p>I wish I could have read your comment before trying to flash that ZIP file <img src="https://cyanogenmod.org/wp-includes/images/smilies/frownie.png" alt=":(" class="wp-smiley" style="height: 1em; max-height: 1em;"/><br />
+Now I&#8217;m stuck . I can&#8217;t make any calls <img src="https://cyanogenmod.org/wp-includes/images/smilies/frownie.png" alt=":(" class="wp-smiley" style="height: 1em; max-height: 1em;"/></p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-71861">
+        <div id="dsq-comment-header-71861" class="dsq-comment-header">
+            <cite id="dsq-cite-71861">
+                <span id="dsq-author-user-71861">gonzalo</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71861" class="dsq-comment-body">
+            <div id="dsq-comment-message-71861" class="dsq-comment-message"><p>Hola &#8230;. como hago para pedir una room para un equipo nuevo?<br />
+Me compre hace poco un EXO Spanky a58<br />
+Viene con android  4.4.4 y es pesima la room. :'(<br />
+Bueno desde ya gracias.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-71876">
+        <div id="dsq-comment-header-71876" class="dsq-comment-header">
+            <cite id="dsq-cite-71876">
+                <span id="dsq-author-user-71876">Amir Soyel</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71876" class="dsq-comment-body">
+            <div id="dsq-comment-message-71876" class="dsq-comment-message"><p>I have installed c apps then my start reporting error all the time&#8230;I have installed cm13&#8230;please include cm package in your next update of cm 13 nightly version</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-71942">
+        <div id="dsq-comment-header-71942" class="dsq-comment-header">
+            <cite id="dsq-cite-71942">
+                <span id="dsq-author-user-71942">Apoorv Pandey</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71942" class="dsq-comment-body">
+            <div id="dsq-comment-message-71942" class="dsq-comment-message"><p>True dialer. Get stopped if i clear all call history !!!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-72005">
+        <div id="dsq-comment-header-72005" class="dsq-comment-header">
+            <cite id="dsq-cite-72005">
+https://disqus.com/by/deadwolfqcgamer/                <span id="dsq-author-user-72005">DeadWolfQc</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-72005" class="dsq-comment-body">
+            <div id="dsq-comment-message-72005" class="dsq-comment-message"><p>idk why people complain i have none of these problem whith cm13, well idk if its the same as everyone or cm13 just came out, anyway i have no problem with it, it work perfecly fine exept that they still didn&#8217;t find a way to make Google Play Services work proprely&#8230;</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-72020">
+        <div id="dsq-comment-header-72020" class="dsq-comment-header">
+            <cite id="dsq-cite-72020">
+                <span id="dsq-author-user-72020">Rohit</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-72020" class="dsq-comment-body">
+            <div id="dsq-comment-message-72020" class="dsq-comment-message"><p>Theme app is not working correctly. Fix ASAP.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-72027">
+        <div id="dsq-comment-header-72027" class="dsq-comment-header">
+            <cite id="dsq-cite-72027">
+                <span id="dsq-author-user-72027">igorescu04 @XDA</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-72027" class="dsq-comment-body">
+            <div id="dsq-comment-message-72027" class="dsq-comment-message"><p>Hi there,<br />
+I have a question , does the C-Apps remail after flashing a new nigtly?  If not is there any possibility to include it?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-72033">
+        <div id="dsq-comment-header-72033" class="dsq-comment-header">
+            <cite id="dsq-cite-72033">
+                <span id="dsq-author-user-72033">Kaotte2</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-72033" class="dsq-comment-body">
+            <div id="dsq-comment-message-72033" class="dsq-comment-message"><p>Doesn&#8217;t work for cm13 nightly</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-72055">
+        <div id="dsq-comment-header-72055" class="dsq-comment-header">
+            <cite id="dsq-cite-72055">
+http://instagram.com/gioalphadev                <span id="dsq-author-user-72055">GioAlphaDev</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-72055" class="dsq-comment-body">
+            <div id="dsq-comment-message-72055" class="dsq-comment-message"><p>Cyanogen OS 13.1 Apps</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-72070">
+        <div id="dsq-comment-header-72070" class="dsq-comment-header">
+            <cite id="dsq-cite-72070">
+                <span id="dsq-author-user-72070">Samuel Antony</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-72070" class="dsq-comment-body">
+            <div id="dsq-comment-message-72070" class="dsq-comment-message"><p>c apps not working in cm 13 when i flashed it</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-72124">
+        <div id="dsq-comment-header-72124" class="dsq-comment-header">
+            <cite id="dsq-cite-72124">
+                <span id="dsq-author-user-72124">Sarat Rajan</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-72124" class="dsq-comment-body">
+            <div id="dsq-comment-message-72124" class="dsq-comment-message"><p>It is supported from last week I guess. Works fine for me with 10-Jul nightly for cancro!!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-72125">
+        <div id="dsq-comment-header-72125" class="dsq-comment-header">
+            <cite id="dsq-cite-72125">
+                <span id="dsq-author-user-72125">Sarat Rajan</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-72125" class="dsq-comment-body">
+            <div id="dsq-comment-message-72125" class="dsq-comment-message"><p>It is supported from last week I guess. Works fine for me with 10-Jul nightly for cancro!! On which build are u on?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-72128">
+        <div id="dsq-comment-header-72128" class="dsq-comment-header">
+            <cite id="dsq-cite-72128">
+                <span id="dsq-author-user-72128">Kaotte2</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-72128" class="dsq-comment-body">
+            <div id="dsq-comment-message-72128" class="dsq-comment-message"><p>Im on nightly from 09.07. Device: ham(Zuk Z1)</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-72131">
+        <div id="dsq-comment-header-72131" class="dsq-comment-header">
+            <cite id="dsq-cite-72131">
+                <span id="dsq-author-user-72131">Vijay Roy Thykuttathil</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-72131" class="dsq-comment-body">
+            <div id="dsq-comment-message-72131" class="dsq-comment-message"><p>Hi there!<br />
+I am using a Oneplus One and it runs sultanxda cm13 rom.</p>
+<p>I flashed this package and also did the verification with truecaller in the dialler.</p>
+<p>But whenever i call an unknown number and true caller is unable to locate it and says true caller is unable to be reached.</p>
+<p>If someone knows how to fix this, please let me know.</p>
+<p>Thanks.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-72136">
+        <div id="dsq-comment-header-72136" class="dsq-comment-header">
+            <cite id="dsq-cite-72136">
+                <span id="dsq-author-user-72136">dequan carr</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-72136" class="dsq-comment-body">
+            <div id="dsq-comment-message-72136" class="dsq-comment-message"><p>So I instaled the CM 12.1 and the sound was working fine, the next day it just would not play anything and youtube,vidios,or music won&#8217;t play. Do anyone knows how to fix this?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-72248">
+        <div id="dsq-comment-header-72248" class="dsq-comment-header">
+            <cite id="dsq-cite-72248">
+                <span id="dsq-author-user-72248">Gokul Raj</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-72248" class="dsq-comment-body">
+            <div id="dsq-comment-message-72248" class="dsq-comment-message"><p>Will it work on non cm based custom ROMs?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-72258">
+        <div id="dsq-comment-header-72258" class="dsq-comment-header">
+            <cite id="dsq-cite-72258">
+                <span id="dsq-author-user-72258">kinglur</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-72258" class="dsq-comment-body">
+            <div id="dsq-comment-message-72258" class="dsq-comment-message"><p>i agree with you</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-72276">
+        <div id="dsq-comment-header-72276" class="dsq-comment-header">
+            <cite id="dsq-cite-72276">
+                <span id="dsq-author-user-72276">Shabaz Sheikh</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-72276" class="dsq-comment-body">
+            <div id="dsq-comment-message-72276" class="dsq-comment-message"><p>not able install capps for cm13.0&#8230;error while flashing</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+            </ul>
+
+            <div class="navigation">
+                <div class="nav-previous">
+                    <span class="meta-nav">&larr;</span>
+                    &nbsp;<a href="http://www.cyanogenmod.org/blog/introducing-the-cyanogen-apps-package/comment-page-4#comments" >Older Comments</a>                </div>
+                <div class="nav-next">
+                    <a href="http://www.cyanogenmod.org/blog/introducing-the-cyanogen-apps-package#comments" >Newer Comments</a>                    &nbsp;<span class="meta-nav">&rarr;</span>
+                </div>
+            </div><!-- .navigation -->
+
+        </div>
+
+    </div>
+
+<script type="text/javascript">
+var disqus_url = 'http://www.cyanogenmod.org/blog/introducing-the-cyanogen-apps-package';
+var disqus_identifier = '3108 http://www.cyanogenmod.org/?p=3108';
+var disqus_container_id = 'disqus_thread';
+var disqus_shortname = 'cyngn';
+var disqus_title = "Introducing the Cyanogen Apps Package";
+var disqus_config_custom = window.disqus_config;
+var disqus_config = function () {
+    /*
+    All currently supported events:
+    onReady: fires when everything is ready,
+    onNewComment: fires when a new comment is posted,
+    onIdentify: fires when user is authenticated
+    */
+    
+    
+    this.language = '';
+        this.callbacks.onReady.push(function () {
+
+        // sync comments in the background so we don't block the page
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = '?cf_action=sync_comments&post_id=3108';
+
+        var firstScript = document.getElementsByTagName('script')[0];
+        firstScript.parentNode.insertBefore(script, firstScript);
+    });
+    
+    if (disqus_config_custom) {
+        disqus_config_custom.call(this);
+    }
+};
+
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+
+</article>
+			</div>
+
+		</div><!-- End Content row -->
+		
+		<aside id="sidebar" class="four columns hide-on-phones" role="complementary">
+	<div class="sidebar-box">
+		<article id="recent-comments-4" class="row widget widget_recent_comments"><div class="sidebar-section twelve columns"><h6><strong>Recent Comments</strong></h6><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">llamadog</span> on <a href="http://www.cyanogenmod.org/blog/cm14-is-landing/comment-page-12#comment-73567">CM14 is landing</a></li><li class="recentcomments"><span class="comment-author-link">LurkerInTheDark</span> on <a href="http://www.cyanogenmod.org/blog/cm14-is-landing/comment-page-12#comment-73566">CM14 is landing</a></li><li class="recentcomments"><span class="comment-author-link">Muhammad Ryan Fauzan</span> on <a href="http://www.cyanogenmod.org/blog/cm14-is-landing/comment-page-12#comment-73565">CM14 is landing</a></li><li class="recentcomments"><span class="comment-author-link">Ronaldini</span> on <a href="http://www.cyanogenmod.org/blog/cm14-is-landing/comment-page-12#comment-73564">CM14 is landing</a></li><li class="recentcomments"><span class="comment-author-link">Laxman Gutte</span> on <a href="http://www.cyanogenmod.org/blog/cm14-is-landing/comment-page-12#comment-73563">CM14 is landing</a></li></ul></div></article>	</div>
+</aside><!-- /#sidebar -->		
+		</div><!-- End Main row -->
+		
+		<footer id="content-info" role="contentinfo" class="hide-on-phones" style="margin:40px 0 0 0;">
+			<div class="row">
+				<article id="nav_menu-4" class="three columns widget widget_nav_menu"><div class="footer-section"><h6><strong>Navigation</strong></h6><div class="menu-main-container"><ul id="menu-main" class="menu"><li id="menu-item-798" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-798"><a href="http://www.cyanogenmod.org/about">About</a></li>
+<li id="menu-item-2403" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2403"><a href="https://wiki.cyanogenmod.org/">Wiki</a></li>
+<li id="menu-item-2404" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2404"><a href="https://download.cyanogenmod.org">Download</a></li>
+<li id="menu-item-825" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-825"><a href="/blog">Blog</a></li>
+<li id="menu-item-904" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-904"><a href="https://forum.cyanogenmod.org">Forum</a></li>
+<li id="menu-item-829" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-829"><a href="http://www.cyanogenmod.org/community">Community</a></li>
+<li id="menu-item-2709" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2709"><a href="http://shop.cyanogenmod.org">Shop</a></li>
+</ul></div></div></article><article id="nav_menu-3" class="three columns widget widget_nav_menu"><div class="footer-section"><h6><strong>Social Networks</strong></h6><div class="menu-social-networks-container"><ul id="menu-social-networks" class="menu"><li id="menu-item-2173" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2173"><a href="https://www.facebook.com/CyanogenMod">Facebook</a></li>
+<li id="menu-item-2174" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2174"><a href="https://twitter.com/CyanogenMod">Twitter</a></li>
+<li id="menu-item-2175" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2175"><a href="https://plus.google.com/+CyanogenMod/posts">Google+</a></li>
+</ul></div></div></article>                                <article class="three columns widget widget widget_nav_menu">
+                                    <div class="footer-section">
+                                        <h6><strong>Sponsored By</strong></h6>
+                                        <a href="https://twilio.com/?utm_source=cyanogenmod&utm_medium=webbadge&utm_campaign=cyanogenverify" style="text: decoration: none; display: inline-block; width: 166px; height: 0; overflow: hidden; padding-top: 31px; background: url(https://www.twilio.com/packages/company/img/logos_icon_poweredbysmall.png) no-repeat;">powered by twilio™</a>
+                                    </div>
+                                </article>
+			</div>
+		</footer>
+        
+      <div id="navigation" class="row mobile-footer show-on-phones">
+			<div class="twelve columns">
+            	<h6>Navigate cyanogenmod.org</h6>
+            	<ul>
+                	<li><a href="/about">About</a></li>
+                    <!--<li><a href="#">Features</a></li>-->
+                    <li><a href="https://wiki.cyanogenmod.org/">Wiki</a></li>
+                    <li><a href="https://download.cyanogenmod.org/">Download</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="https://forum.cyanogenmod.org">Forum</a></li>
+                    <li><a href="/community">Community</a></li>  
+                    <li><a href="http://shop.cyanogenmod.org">Shop</a></li>
+                </ul>
+            </div>
+        </div>
+			
+	</div><!-- Container End -->
+    
+
+	<!-- Included JS Files of Foundation -->
+	<script src="https://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/foundation.js"></script>
+	<script src="https://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/app.js"></script>
+	
+	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+	     chromium.org/developers/how-tos/chrome-frame-getting-started -->
+	<!--[if lt IE 7]>
+		<script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+		<script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+	<![endif]-->
+	
+	        <script type="text/javascript">
+        // <![CDATA[
+        var disqus_shortname = 'cyngn';
+        (function () {
+            var nodes = document.getElementsByTagName('span');
+            for (var i = 0, url; i < nodes.length; i++) {
+                if (nodes[i].className.indexOf('dsq-postid') != -1) {
+                    nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('data-dsqidentifier'));
+                    url = nodes[i].parentNode.href.split('#', 1);
+                    if (url.length == 1) { url = url[0]; }
+                    else { url = url[1]; }
+                    nodes[i].parentNode.href = url + '#disqus_thread';
+                }
+            }
+            var s = document.createElement('script'); 
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+        // ]]>
+        </script>
+        <script type='text/javascript' src="https://cyanogenmod.org/wp-includes/js/comment-reply.min.js?ver=4.2.4"></script>
+<script type="text/javascript">/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+ Served from: www.cyanogenmod.org @ 2016-11-21 13:00:02 by W3 Total Cache -->

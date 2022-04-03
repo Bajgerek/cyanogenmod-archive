@@ -1,0 +1,1026 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+
+	<title>CyanogenMod 6.1.0 Release Candidates | CyanogenMod</title>
+	
+	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	
+	<!-- Included Foundation CSS Files -->
+	<link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/css/foundation.css">
+	<link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/css/app.css">
+    <link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/tipTip.css">
+    <link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/fonts/style.css">
+    <link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/css/flexslider.css" type="text/css" media="screen" />
+	
+	<link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/style.css">
+	
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/css/ie.css">
+	<![endif]-->
+	
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<!-- Favicon and Feed -->
+	<link rel="shortcut icon" type="image/png" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/favicon.ico">
+	<link rel="alternate" type="application/rss+xml" title="CyanogenMod Feed" href="http://www.cyanogenmod.org/feed/">
+	
+	<!--  iPhone Web App Home Screen Icon -->
+	<link rel="apple-touch-icon" sizes="72x72" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-icon-ipad.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-icon-retina.png" />
+	<link rel="apple-touch-icon" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-icon.png" />
+	
+	<!-- Enable Startup Image for iOS Home Screen Web App -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link rel="apple-touch-startup-image" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/mobile-load.png" />
+
+	<!-- Startup Image iPad Landscape (748x1024) -->
+	<link rel="apple-touch-startup-image" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-load-ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)" />
+	<!-- Startup Image iPad Portrait (768x1004) -->
+	<link rel="apple-touch-startup-image" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-load-ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)" />
+	<!-- Startup Image iPhone (320x460) -->
+	<link rel="apple-touch-startup-image" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-load.png" media="screen and (max-device-width: 320px)" />
+	
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.min.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.jparallax.min.js" ></script>
+  <script defer type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.featureList-1.0.0.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.tipTip.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/easySlider1.7.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/modernizr.foundation.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.flexslider-min.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/custom.js"></script>
+  
+  <script type="text/javascript">
+    $(document).load(function(){
+
+	  // The slider being synced must be initialized first
+	  $('.flexslider').flexslider({
+		animation: "slide",
+		controlNav: false,
+	  });
+	  
+    });
+  </script>
+  
+  	
+<!-- All in One SEO Pack 2.2.7.1 by Michael Torbert of Semper Fi Web Design[493,538] -->
+<meta name="description"  content="We've just released the latest iteration of CM, 6.1.0-RC1! This is a release candidate, but it's definitely capable of being your daily driver and we are very" />
+
+<link rel="canonical" href="http://www.cyanogenmod.org/blog/cyanogenmod-6-1-0-release-candidates" />
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-39737599-3']);
+		  _gaq.push(['_trackPageview']);
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
+<!-- /all in one seo pack -->
+<link rel="alternate" type="application/rss+xml" title="CyanogenMod &raquo; CyanogenMod 6.1.0 Release Candidates Comments Feed" href="http://www.cyanogenmod.org/blog/cyanogenmod-6-1-0-release-candidates/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/cyanogenmod.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.2.4"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://cyanogenmod.org/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://cyanogenmod.org/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='What&#8217;s up with CM?' href='http://www.cyanogenmod.org/blog/whats-up-with-cm' />
+<link rel='next' title='[IDEA] Official CyanogenMod Forum App' href='http://www.cyanogenmod.org/blog/idea-official-cyanogenmod-forum-app' />
+<meta name="generator" content="WordPress 4.2.4" />
+<link rel='shortlink' href='http://www.cyanogenmod.org/?p=734' />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+</head>
+
+<body class="single single-post postid-734 single-format-standard">
+
+	<div class="menusto hide-on-phones"></div>
+	<!-- Start the main container -->
+	<div id="container" class="container" role="document" style="padding:80px 0 0 0;">
+		
+        
+        <div class="row mobile-header show-on-phones">
+            <div class="nine">
+            	<a href="http://www.cyanogenmod.org" title="CyanogenMod" class="logo-mobile"><img src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/logo-mobile.png" alt=""/></a>
+            </div>
+            <a href="#navigation" class="mobile-menu"><img src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/btn-menu-mobile.png" alt=""/></a>
+        </div>
+        
+		<!-- Row for blog navigation -->
+		<div class="row hide-on-phones">
+			<header class="twelve columns" role="banner">
+				<div class="reverie-header">
+                	<a href="http://www.cyanogenmod.org" title="CyanogenMod" class="logo"><img src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/logo.png" alt=""/></a>
+                    <div id="glavno" class="nav hide-on-phones">
+                        <ul id="glavno">                   
+                            <li><a href="http://wiki.cyanogenmod.org/">Wiki</a></li>
+                            <!--<li><a href="http://cyanogenmod.org/about/features">Features</a></li>-->
+                            <li><a href="http://download.cyanogenmod.org/">Download</a></li>
+                            <li><a href="http://www.cyanogenmod.org/blog/">Blog</a></li>
+                            <li><a href="http://forum.cyanogenmod.org/">Forum</a></li>
+                            <li>
+                            	<a href="http://www.cyanogenmod.org/community">Community</a>
+                                <div style="opacity: 0; display: none; width:100%" class="sub">
+                                    <ul>
+                                    	<div style="width:980px; margin:0 auto; color:#fff;">
+                                        	<div class="contributesub">
+                                            	<h2>Contribute</h2>
+                                                
+                                                <h4><a href="http://review.cyanogenmod.org/">Gerrit Review</a></h4>
+                                                <p>Gerrit is a web based code review system, facilitating online code reviews for projects using the Git version control system.</p>
+                                                    
+                                                <h4><a href="http://wiki.cyanogenmod.org/">Wiki</a></h4>
+                                                <p>Our Wiki is a comprehensive tool for users to find information. This also needs contributions to keep it fresh and relevant.</p>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/community">Join The Team</a></h4>
+                                                <p>We love working with others. You can submit code via Gerrit. If you think there is something else you can help with, get in touch with us on the forums.</p>
+                                            </div>
+                                            
+                                        	<div class="contributesub">
+                                            	<h2>Help</h2>
+                                                
+                                                <h4><a href="http://forum.cyanogenmod.org/">Forum</a></h4>
+                                                <p>Our forums have a wealth of knowledge and resources. All of it is free and accessible from both your desktop and mobile phone.</p>
+                                                    
+                                                <h4><a href="irc://irc.freenode.net/cyanogenmod">IRC</a></h4>
+                                                <p>If you are comfortable with IRC and would like instant help and assistance from both developers and others users alike.</p>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/blog">Blog</a></h4>
+                                                <p>Our blogs will contain the latest news and releases as well as other related news concerning the distribution.</p>
+                                                    
+                                                <h4><a href="http://wiki.cyanogenmod.org/">Wiki</a></h4>
+                                                <p>Our Wiki is a comprehensive tool for users to find information. This also needs contributions to keep it fresh and relevant.</p>
+                                            </div>
+                                            
+                                        	<div class="contributesub">
+                                            	<h2>Information</h2>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/bugs">Bug Tracker</a></h4>
+                                                <p>This is the official Bug Tracker where you can submit and review bugs that users may experience.</p>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/github">Github Repo</a></h4>
+                                                <p>Our source is free and open. you can check the Github page to see what we do and how you can contribute.</p>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/stats">Installation Statistics</a></h4>
+                                                <p>We have an opt-in feature in our ROMS to enable us to gain statistics on users as well as devices used.</p>
+                                            </div>
+                                            
+                                        	<div class="contributesub last">
+                                            	<h2>Support</h2>
+                                                
+                                                <h4><a href="/cdn-cgi/l/email-protection#2044455652454c604359414e4f47454e4d4f440e4f5247">Developer Relations</a></h4>
+                                                <p>If you wish to contact us regarding development contributions, please do so here.</p>
+                                                    
+                                                <h4><a href="/cdn-cgi/l/email-protection#97f6f3fafef9d7f4eef6f9f8f0f2f9faf8f3b9f8e5f0">Website Support</a></h4>
+                                                <p>This email is dedicated to website, forum, wiki and hosting support. We will not respond to ROM support.</p>
+                                                    
+                                                <h4><a href="/cdn-cgi/l/email-protection#1170757c787f517268707f7e76747f7c7e753f7e6376">Social Network</a></h4>
+                                                <p>To contact us in relation to our Social media structure.</p>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                    
+                                </div>
+                            </li>
+                      </ul>
+                    </div>
+				</div>
+
+			</header>
+		</div>
+
+		
+		<!-- Row for main content area -->
+		<div id="main" class="row">
+		<!-- Row for main content area -->
+		<div id="content" class="eight columns" role="main">
+	
+			<div class="post-box">
+					<article class="post-734 post type-post status-publish format-standard hentry category-blog" id="post-734">
+		<header>
+        	<time class="updated" datetime="2010-10-28T06:26:39+00:00" pubdate>October 28th, 2010 &bull; Written by <a href="http://www.cyanogenmod.org/author/cyanogen" rel="author" class="fn">Steve Kondik</a></time>        	<h2 class="entry-title">CyanogenMod 6.1.0 Release Candidates</h2>
+					</header>
+		<div class="entry-content">
+			<p>We&#8217;ve just released the latest iteration of CM, 6.1.0-RC1! This is a release candidate, but it&#8217;s definitely capable of being your daily driver and we are very focused on fixing bugs quickly.</p>
+<p>You&#8217;ll find some really great features in this release like Pedlar&#8217;s notification powerbar, insane performance boosts on all platforms (install SetCPU if you want to take it further), powerful new features in the camera app, new email features, FM radio support (contributed by the <a href="http://miui.com">MIUI team</a>, and <a href="http://github.com/CyanogenMod/android_vendor_cyanogen/blob/froyo/CHANGELOG.mkdn">a whole lot of other great stuff!</a></p>
+<p>As always, this was a great collaboration between a lot of people and we are only as good as the community. This is <strong>your</strong> ROM, so help make it the best it can be!</p>
+<p>You can get the latest via ROM Manager, or head over to the forums for full installation info. New RC builds will be available in the experimental forum for each device as it hits the mirrors.</p>
+		</div>
+
+<div id="disqus_thread">
+            <div id="dsq-content">
+
+            <div class="navigation">
+                <div class="nav-previous">
+                    <span class="meta-nav">&larr;</span>&nbsp;
+                    <a href="http://www.cyanogenmod.org/blog/cyanogenmod-6-1-0-release-candidates/comment-page-4#comments" >Older Comments</a>                </div>
+                <div class="nav-next">
+                    <a href="http://www.cyanogenmod.org/blog/cyanogenmod-6-1-0-release-candidates#comments" >Newer Comments</a>                    &nbsp;<span class="meta-nav">&rarr;</span>
+                </div>
+            </div> <!-- .navigation -->
+
+            <ul id="dsq-comments">
+                    <li class="comment even thread-even depth-1" id="dsq-comment-25228">
+        <div id="dsq-comment-header-25228" class="dsq-comment-header">
+            <cite id="dsq-cite-25228">
+                <span id="dsq-author-user-25228">Marco</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-25228" class="dsq-comment-body">
+            <div id="dsq-comment-message-25228" class="dsq-comment-message"><p>Great work guys.<br />
+On my htc magic a great overall performance boost and finally the gallery work fine.<br />
+Why are Google&#8217;s apps in english while my default locale is italian ?</p>
+<p>Thank you.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-25269">
+        <div id="dsq-comment-header-25269" class="dsq-comment-header">
+            <cite id="dsq-cite-25269">
+http://www.48hourprint.com                <span id="dsq-author-user-25269">jenness</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-25269" class="dsq-comment-body">
+            <div id="dsq-comment-message-25269" class="dsq-comment-message"><p>Looks like RC4 just hit the wires!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-25455">
+        <div id="dsq-comment-header-25455" class="dsq-comment-header">
+            <cite id="dsq-cite-25455">
+                <span id="dsq-author-user-25455">scott.ragan</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-25455" class="dsq-comment-body">
+            <div id="dsq-comment-message-25455" class="dsq-comment-message"><p>Used RC1 for about a week (g1 rooted with Aman Ra&#8217;s Boot loader, currently running Cyanogens 6.0.0 DS) ran amazing for about a day, than i got non stop FC&#8217;s on everything from Facebook to the Market, phone started running like crap over all, wiped and went back to 6.0.0 and everythings fine again, got the same issue with my wifes MT3G (both phones running aman ra&#8217;s instead of clockwork mod)</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-25460">
+        <div id="dsq-comment-header-25460" class="dsq-comment-header">
+            <cite id="dsq-cite-25460">
+                <span id="dsq-author-user-25460">Chris</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-25460" class="dsq-comment-body">
+            <div id="dsq-comment-message-25460" class="dsq-comment-message"><p>So I&#8217;ve been loving 6.1.0 a lot. I was running RC3 for a while, but when I updated to RC4, I encountered a major problem. I can&#8217;t connect to the internet without using wifi. I can&#8217;t get internet off the network anymore. I can still send texts and all that, so I know the whole network isn&#8217;t down or anything. Has anyon else encountered this problem?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-25463">
+        <div id="dsq-comment-header-25463" class="dsq-comment-header">
+            <cite id="dsq-cite-25463">
+                <span id="dsq-author-user-25463">jedi</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-25463" class="dsq-comment-body">
+            <div id="dsq-comment-message-25463" class="dsq-comment-message"><p>having issues formatting microSD on 6.1 rc<br />
+using a 16gb kingston, class 4 (tested class 6 in phone) formatting inside OS is problem. formatting from recovery works though, loses a small (.02gb) bit of storage that way. maybe just my card though, just got it today.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-25513">
+        <div id="dsq-comment-header-25513" class="dsq-comment-header">
+            <cite id="dsq-cite-25513">
+                <span id="dsq-author-user-25513">Daniel</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-25513" class="dsq-comment-body">
+            <div id="dsq-comment-message-25513" class="dsq-comment-message"><p>Hey guys have been using the 6.0 stable mod for my HTC Aria for a while and decided to download the 6.1 RC for the Aria and its amazing as usual, so many great things I love now and you were right it can be used as an everyday driver and greatly appreciate it. Just wanted to say that I will continue to support yall and good luck. </p>
+<p>BTW the battery is phenomenal since downloading the ROM with conjunction with Set CPU and Juice Defender its amazing.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-25552">
+        <div id="dsq-comment-header-25552" class="dsq-comment-header">
+            <cite id="dsq-cite-25552">
+                <span id="dsq-author-user-25552">tof</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-25552" class="dsq-comment-body">
+            <div id="dsq-comment-message-25552" class="dsq-comment-message"><p>it&#8217;s a realy great job but i have the installation in english and gmail, etc&#8230;. but rom is in french, i hope you work on this bug so momently i use luo rom.<br />
+I have htc magic 32b<br />
+think you</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-25563">
+        <div id="dsq-comment-header-25563" class="dsq-comment-header">
+            <cite id="dsq-cite-25563">
+                <span id="dsq-author-user-25563">imoves61</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-25563" class="dsq-comment-body">
+            <div id="dsq-comment-message-25563" class="dsq-comment-message"><p>Great Work, stable and fast on my HTC Magic 32B, everything works &#8230;. but it seems that Latitude is only working if the GoogleMap-Applikation is active. </p>
+<p>Thnx, Gerhart</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-25644">
+        <div id="dsq-comment-header-25644" class="dsq-comment-header">
+            <cite id="dsq-cite-25644">
+                <span id="dsq-author-user-25644">tonygrip</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-25644" class="dsq-comment-body">
+            <div id="dsq-comment-message-25644" class="dsq-comment-message"><p>I have reinstalled CM6.1.0 RC1 on my Hero CDMA and now my bluetooth Voice dial doesn’t work.<br />
+It comes up but you can’t here the voice message ask you to make a selection ie. (speak now,<br />
+just silence. Could someone post something on a fix for this PLEASE?</p>
+<p>Thanks,</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-25652">
+        <div id="dsq-comment-header-25652" class="dsq-comment-header">
+            <cite id="dsq-cite-25652">
+                <span id="dsq-author-user-25652">Massimiliano</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-25652" class="dsq-comment-body">
+            <div id="dsq-comment-message-25652" class="dsq-comment-message"><p>@Marco: which applications you&#8217;ve got in Italian, and where did you get the apps?<br />
+I installed this one: &#8220;Google Addon MDPI-Tiny-20101020&#8243;, and &#8220;voice search&#8221; is in english, &#8220;calendar&#8221; is in italian, google maps/navigator is in italian (but it gets updated time by time), &#8220;music&#8221; is in italian, calculator is in italian&#8230;.<br />
+As I sed only few apps are in english.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-25689">
+        <div id="dsq-comment-header-25689" class="dsq-comment-header">
+            <cite id="dsq-cite-25689">
+                <span id="dsq-author-user-25689">madhatter</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-25689" class="dsq-comment-body">
+            <div id="dsq-comment-message-25689" class="dsq-comment-message"><p>Having trouble with blue-tooth on 6.1 RC4 anyone else? Turning it on but it never turns on.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-25722">
+        <div id="dsq-comment-header-25722" class="dsq-comment-header">
+            <cite id="dsq-cite-25722">
+                <span id="dsq-author-user-25722">shin</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-25722" class="dsq-comment-body">
+            <div id="dsq-comment-message-25722" class="dsq-comment-message"><p>i&#8217;m using Nexus one and have the same issue with SD card, it can&#8217;t be seen. It&#8217;s a sandisk 16GB.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-25767">
+        <div id="dsq-comment-header-25767" class="dsq-comment-header">
+            <cite id="dsq-cite-25767">
+                <span id="dsq-author-user-25767">Avh</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-25767" class="dsq-comment-body">
+            <div id="dsq-comment-message-25767" class="dsq-comment-message"><p>The new mod is somehow killing the battery of my htc magic. It basically lasts for 1-2 hours in idle mode. I almost can look at it and see it being drained.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-25859">
+        <div id="dsq-comment-header-25859" class="dsq-comment-header">
+            <cite id="dsq-cite-25859">
+                <span id="dsq-author-user-25859">EricEvo</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-25859" class="dsq-comment-body">
+            <div id="dsq-comment-message-25859" class="dsq-comment-message"><p>Just something I noticed. I have a 3500mah battery that requires overcharging. And for some reason as soon as the phone reads 100% power seems to be cut off completely. I have evo. And normally the led goes from orange while charging to green when charged but still plugged in. Since flashing cm6, just goes from orange to nothing.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-25879">
+        <div id="dsq-comment-header-25879" class="dsq-comment-header">
+            <cite id="dsq-cite-25879">
+http://tapcomputerservices.com                <span id="dsq-author-user-25879">tylor</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-25879" class="dsq-comment-body">
+            <div id="dsq-comment-message-25879" class="dsq-comment-message"><p>On the mt3gs it fails to download the google apps when downloading the new rom.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-25926">
+        <div id="dsq-comment-header-25926" class="dsq-comment-header">
+            <cite id="dsq-cite-25926">
+                <span id="dsq-author-user-25926">cad13</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-25926" class="dsq-comment-body">
+            <div id="dsq-comment-message-25926" class="dsq-comment-message"><p>Is FRG83D included in the last nightly version ?<br />
+Is it possible to apply this patch from CM 6.0 ?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-26008">
+        <div id="dsq-comment-header-26008" class="dsq-comment-header">
+            <cite id="dsq-cite-26008">
+                <span id="dsq-author-user-26008">markov</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-26008" class="dsq-comment-body">
+            <div id="dsq-comment-message-26008" class="dsq-comment-message"><p>Fast with lots of problems.</p>
+<p>1) The ROM  gets very unstable and reboots often when the SD space is small. (i.e. too many apps installed)<br />
+2) Sometimes the SD card can&#8217;t mount properly</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-26089">
+        <div id="dsq-comment-header-26089" class="dsq-comment-header">
+            <cite id="dsq-cite-26089">
+                <span id="dsq-author-user-26089">Eric</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-26089" class="dsq-comment-body">
+            <div id="dsq-comment-message-26089" class="dsq-comment-message"><p>I love this Rom. I rooted my phone two days ago and love it. I have one question about the camera. I did the software update 2 mouths ago and after having he phone for a year I finally got quality pictures, now I flashed this Rom and the pictures are not so great. Is there something I can do in the settings or is that just the way it will be?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-26117">
+        <div id="dsq-comment-header-26117" class="dsq-comment-header">
+            <cite id="dsq-cite-26117">
+                <span id="dsq-author-user-26117">schooney</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-26117" class="dsq-comment-body">
+            <div id="dsq-comment-message-26117" class="dsq-comment-message"><p>just installed 6.1 rc1 and when i get to the first screen with the android touch to begin i touch the android and nothing happens rooted g1 with clockwork recovery with rom manager premium help</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-26201">
+        <div id="dsq-comment-header-26201" class="dsq-comment-header">
+            <cite id="dsq-cite-26201">
+                <span id="dsq-author-user-26201">brettgrosso</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-26201" class="dsq-comment-body">
+            <div id="dsq-comment-message-26201" class="dsq-comment-message"><p>I am having trouble updating to rc4.. I am currently running rc3 on my Droid, but wanted to update and it seems to be having trouble mounting the SD card and/or finding the file upon install. Any suggestions?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-26329">
+        <div id="dsq-comment-header-26329" class="dsq-comment-header">
+            <cite id="dsq-cite-26329">
+                <span id="dsq-author-user-26329">Andrew</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-26329" class="dsq-comment-body">
+            <div id="dsq-comment-message-26329" class="dsq-comment-message"><p>Defiantly keeping this on my phone for a RC it runs really nicely on the MT3g. This is making me regret ordering an iphone 4.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-26354">
+        <div id="dsq-comment-header-26354" class="dsq-comment-header">
+            <cite id="dsq-cite-26354">
+                <span id="dsq-author-user-26354">Sugar</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-26354" class="dsq-comment-body">
+            <div id="dsq-comment-message-26354" class="dsq-comment-message"><p>Just a heads up that launcher pro keeps DC on RC4. Not sure what&#8217;s triggering it though.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-26369">
+        <div id="dsq-comment-header-26369" class="dsq-comment-header">
+            <cite id="dsq-cite-26369">
+                <span id="dsq-author-user-26369">daniel</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-26369" class="dsq-comment-body">
+            <div id="dsq-comment-message-26369" class="dsq-comment-message"><p>Hi Guys. I&#8217;m new to all this, so any help is welcome and probably needed. I rooted my hero gsm earlier, now running clockwork with rom manager. i installed the rom from sd card everything went ok, after the phone rebooted all I can &#8220;fusion ! rom&#8221;. I&#8217;m hoping it&#8217;s still loading, but the screen has been on for around 10 mins. HELP please.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-26373">
+        <div id="dsq-comment-header-26373" class="dsq-comment-header">
+            <cite id="dsq-cite-26373">
+                <span id="dsq-author-user-26373">daniel</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-26373" class="dsq-comment-body">
+            <div id="dsq-comment-message-26373" class="dsq-comment-message"><p>make that two hours. i really need help with this.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-26416">
+        <div id="dsq-comment-header-26416" class="dsq-comment-header">
+            <cite id="dsq-cite-26416">
+                <span id="dsq-author-user-26416">billy26</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-26416" class="dsq-comment-body">
+            <div id="dsq-comment-message-26416" class="dsq-comment-message"><p>hi loving the update, just a few minor errors,, i can not turn ofinternet on my htc hero gsm,, another is the led notification lkight is no longer working.. how can i go about making any of these issue work.. tried using handcent but no luk..</p>
+<p>any ideas..</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-26593">
+        <div id="dsq-comment-header-26593" class="dsq-comment-header">
+            <cite id="dsq-cite-26593">
+                <span id="dsq-author-user-26593">phil2577</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-26593" class="dsq-comment-body">
+            <div id="dsq-comment-message-26593" class="dsq-comment-message"><p>what a great rom for htc evo(sprint)i also have the snapv7.6 kernel wow guys your work is amazing easily doubled my evo&#8217;s performance comming from omj 2.2 rom so still kinda used to sence but everything else is great although i have issues with voicemail i get a message(text)rarther then the voicemail im accoustomed to i installed a voicemail app from the market and now i get two text messages but i then get a visual voicemail any suggestions would be great thanks and keep up the great work im lovin it</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-26743">
+        <div id="dsq-comment-header-26743" class="dsq-comment-header">
+            <cite id="dsq-cite-26743">
+                <span id="dsq-author-user-26743">TJ</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-26743" class="dsq-comment-body">
+            <div id="dsq-comment-message-26743" class="dsq-comment-message"><p>6.1 rc2 works great on the mt3g slide. Battery seems to last longer. The notification led does not work.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-26779">
+        <div id="dsq-comment-header-26779" class="dsq-comment-header">
+            <cite id="dsq-cite-26779">
+                <span id="dsq-author-user-26779">Benton</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-26779" class="dsq-comment-body">
+            <div id="dsq-comment-message-26779" class="dsq-comment-message"><p>BUG REPORT: Motorola Droid</p>
+<p>Hey buddy, love the new releases. That being said, just going to let you know that I was having some problems with the camera auto focusing on RC4. The camera would try to auto focus like it did in RC3, but it would never turn green indicating that it was focused and ready to take the picture, nor did it beep. But even though the picture was blurry during the focus it always seemed to take a good picture. It was just kind of hard to tell when it was actually ready to take. That&#8217;s about the only bug that I spotted. I went back to RC3 and it started working properly again. Thanks for all your hard work. Expect a donation when 6.1 stable is available.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-26844">
+        <div id="dsq-comment-header-26844" class="dsq-comment-header">
+            <cite id="dsq-cite-26844">
+                <span id="dsq-author-user-26844">Kelvi</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-26844" class="dsq-comment-body">
+            <div id="dsq-comment-message-26844" class="dsq-comment-message"><p>I am loving the new upadate but i the one problem i noticed right away is that i don&#8217;t have the android store on the phone anymore how can i get on my HTC Magic(mytouch 3g)</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-27401">
+        <div id="dsq-comment-header-27401" class="dsq-comment-header">
+            <cite id="dsq-cite-27401">
+                <span id="dsq-author-user-27401">Nate5o</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-27401" class="dsq-comment-body">
+            <div id="dsq-comment-message-27401" class="dsq-comment-message"><p>Downloaded 6.1.0 rc4.  Threw on p3droids overclocking kernel 125—1250 for fun on a moto droid. Set cpu at 1000.  I use launcher pro.  Launcher pro had a bit of lag returning to the home screen. This new build has greatly reduced that issue. Web pages are loading noticably faster. No problems so far.  Loving this build.  Thnx for the hard work.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-27805">
+        <div id="dsq-comment-header-27805" class="dsq-comment-header">
+            <cite id="dsq-cite-27805">
+                <span id="dsq-author-user-27805">Andrew</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-27805" class="dsq-comment-body">
+            <div id="dsq-comment-message-27805" class="dsq-comment-message"><p>RC5 is cool! I dig the new phone/messaging slide on the lockscreen. Great work guys!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-27841">
+        <div id="dsq-comment-header-27841" class="dsq-comment-header">
+            <cite id="dsq-cite-27841">
+                <span id="dsq-author-user-27841">Rob</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-27841" class="dsq-comment-body">
+            <div id="dsq-comment-message-27841" class="dsq-comment-message"><p>Where can I download cyanogen 2.2 for BEHOLD 2, and how did I install. Also how to install without bricking my phone??????????????!!!!!!!!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-27846">
+        <div id="dsq-comment-header-27846" class="dsq-comment-header">
+            <cite id="dsq-cite-27846">
+                <span id="dsq-author-user-27846">Ed</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-27846" class="dsq-comment-body">
+            <div id="dsq-comment-message-27846" class="dsq-comment-message"><p>I got a few issues w/ CM6.0 and now w/ CM6.1.0RC4 &amp; RC5. the issues I&#8217;m having is when I close an app the icons &amp; widgets on &#8220;all&#8221; the screens (not just the home screen) r gone and sometimes takes a few mins to come back so I can use my phone, this is going on w/ CM 6.0 as well as the 6.1.0RC 4-5. When I have to reboot or pull the battery, The better keyboard turns off and the skin is changed. 5 widgets on 2 different screens always have a sign saying &#8220;Problem Loading Widget.&#8221; when i go to fix them, the r not in the widget screen. I have to restore them from titanium back-up. the widgets r typo clock &amp; weather, sms unread count, e-mail unread count, slacker radio, and screen mode widget. if u know how to fix these issues play let me know&#8230; thanks Ed.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-27944">
+        <div id="dsq-comment-header-27944" class="dsq-comment-header">
+            <cite id="dsq-cite-27944">
+                <span id="dsq-author-user-27944">dtg</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-27944" class="dsq-comment-body">
+            <div id="dsq-comment-message-27944" class="dsq-comment-message"><p>Ed, if you move apps to SD that have a widget, that widget wont work. Try moving the apps you are having problems with to internal memory.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-28041">
+        <div id="dsq-comment-header-28041" class="dsq-comment-header">
+            <cite id="dsq-cite-28041">
+http://451278#$                <span id="dsq-author-user-28041">raiza</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-28041" class="dsq-comment-body">
+            <div id="dsq-comment-message-28041" class="dsq-comment-message"><p>451278#$</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-28159">
+        <div id="dsq-comment-header-28159" class="dsq-comment-header">
+            <cite id="dsq-cite-28159">
+                <span id="dsq-author-user-28159">Guru</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-28159" class="dsq-comment-body">
+            <div id="dsq-comment-message-28159" class="dsq-comment-message"><p>any news on the release date ? <img src="http://cyanogenmod.org/wp-includes/images/smilies/simple-smile.png" alt=":-)" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-28197">
+        <div id="dsq-comment-header-28197" class="dsq-comment-header">
+            <cite id="dsq-cite-28197">
+http://www.kaleidoscope.pl                <span id="dsq-author-user-28197">MarcinZ</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-28197" class="dsq-comment-body">
+            <div id="dsq-comment-message-28197" class="dsq-comment-message"><p>Hi.</p>
+<p>After flashing the 6.1 ROM I&#8217;ve lost BT sync (last dialed numbers, last calls, etc) with my hands free set.<br />
+It&#8217;s definitely caused by the ROM &#8211; after flashing back to 6.0 the sync is back.</p>
+<p>The other issue is a battery drain &#8211; with 6.1 sometimes battery lasted only 6-7 hours. It&#8217;s half a time with 6.0</p>
+<p>On the other hand: 6.1 is much faster. And the power widget located in the notification bar is awesome!</p>
+<p>rgs.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-28221">
+        <div id="dsq-comment-header-28221" class="dsq-comment-header">
+            <cite id="dsq-cite-28221">
+                <span id="dsq-author-user-28221">nuttymac</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-28221" class="dsq-comment-body">
+            <div id="dsq-comment-message-28221" class="dsq-comment-message"><p>Wifi connection issue. However, found that when enabling GPS the problem is solved. It&#8217;s just that I don&#8217;t like using GPS, because of extra battery use, and I like being covert.</p>
+<p>HTC EVO 2.2 froyo. Cyanogenmod v6.1, stock baseband.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-28257">
+        <div id="dsq-comment-header-28257" class="dsq-comment-header">
+            <cite id="dsq-cite-28257">
+                <span id="dsq-author-user-28257">billy26</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-28257" class="dsq-comment-body">
+            <div id="dsq-comment-message-28257" class="dsq-comment-message"><p>6.1 rc1 for htc hero works gr8 !! just 1 error,, the lked blinking does not work for sms and missed call.. please help as i miss it ..</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-28264">
+        <div id="dsq-comment-header-28264" class="dsq-comment-header">
+            <cite id="dsq-cite-28264">
+                <span id="dsq-author-user-28264">James</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-28264" class="dsq-comment-body">
+            <div id="dsq-comment-message-28264" class="dsq-comment-message"><p>My market is not showing up assistance would be greatly appreciated<br />
+Nexus One</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-28323">
+        <div id="dsq-comment-header-28323" class="dsq-comment-header">
+            <cite id="dsq-cite-28323">
+                <span id="dsq-author-user-28323">Josh</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-28323" class="dsq-comment-body">
+            <div id="dsq-comment-message-28323" class="dsq-comment-message"><p>Thanks to all who continue to work hard programming!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-28364">
+        <div id="dsq-comment-header-28364" class="dsq-comment-header">
+            <cite id="dsq-cite-28364">
+                <span id="dsq-author-user-28364">Guru</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-28364" class="dsq-comment-body">
+            <div id="dsq-comment-message-28364" class="dsq-comment-message"><p>I tried the latest CM&#8230; installation goes fine. But, I would like to know if it takes a long time for the first boot &#8230;. The screen stays at the CM logo and never goes past that point.</p>
+<p>Plz help</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-28374">
+        <div id="dsq-comment-header-28374" class="dsq-comment-header">
+            <cite id="dsq-cite-28374">
+                <span id="dsq-author-user-28374">Sean</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-28374" class="dsq-comment-body">
+            <div id="dsq-comment-message-28374" class="dsq-comment-message"><p>Wow, using this on my HTC DREAM from the previous 6.0.0 and the improvements are pretty significant! Thanks for all the effort!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-28406">
+        <div id="dsq-comment-header-28406" class="dsq-comment-header">
+            <cite id="dsq-cite-28406">
+                <span id="dsq-author-user-28406">Nate</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-28406" class="dsq-comment-body">
+            <div id="dsq-comment-message-28406" class="dsq-comment-message"><p>No Gmail app or market app?  I&#8217;m stuck!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-28509">
+        <div id="dsq-comment-header-28509" class="dsq-comment-header">
+            <cite id="dsq-cite-28509">
+                <span id="dsq-author-user-28509">Ronaldo</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-28509" class="dsq-comment-body">
+            <div id="dsq-comment-message-28509" class="dsq-comment-message"><p>Hi,</p>
+<p>When will you be releasing CM for the Samsung Galaxy S (i9000)?</p>
+<p>Thanks.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-28811">
+        <div id="dsq-comment-header-28811" class="dsq-comment-header">
+            <cite id="dsq-cite-28811">
+                <span id="dsq-author-user-28811">dthfckr</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-28811" class="dsq-comment-body">
+            <div id="dsq-comment-message-28811" class="dsq-comment-message"><p>@ guru &amp; and anyone who wishes to offer assistance:  yeah, i&#8217;m in the same boot screen loop, too, trying to install 6.1.0&#8230;not that the little blue android isn&#8217;t cute as hell, but how long does it loop like this?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-28948">
+        <div id="dsq-comment-header-28948" class="dsq-comment-header">
+            <cite id="dsq-cite-28948">
+                <span id="dsq-author-user-28948">ionutmd</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-28948" class="dsq-comment-body">
+            <div id="dsq-comment-message-28948" class="dsq-comment-message"><p>Nexus One with CM 6.1.0 RC 2, installed after wipe.<br />
+Works great, thanks all the devs for effort.<br />
+Would like to report a gallery bug: After taking a video clip, watching it in the gallery and subsequently deleting it, the following clip that will be recorded will have the same thumbnail as the deleted one. Issue not solved by clearing the thumbs cache, reboots, or any other attempts to change this behavior.<br />
+has anyone encountered this as well, and what would be the fix for it?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-28961">
+        <div id="dsq-comment-header-28961" class="dsq-comment-header">
+            <cite id="dsq-cite-28961">
+                <span id="dsq-author-user-28961">guru</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-28961" class="dsq-comment-body">
+            <div id="dsq-comment-message-28961" class="dsq-comment-message"><p>@dthfckr .. its stays there for a while. If you really would like to know what&#8217;s happening, you can try looking at the debug message via USB. Or, try redoing the install manually &#8220;http://wiki.cyanogenmod.com/index.php?title=Full_Update_Guide_-_HTC_Desire_(GSM)#Second_Method_.28via_Recovery.29&#8243; (follow the recovery method). This worked for me. But, I would like to tell u that there are few rendering issues when u try to scroll.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-28971">
+        <div id="dsq-comment-header-28971" class="dsq-comment-header">
+            <cite id="dsq-cite-28971">
+                <span id="dsq-author-user-28971">BRO-D</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-28971" class="dsq-comment-body">
+            <div id="dsq-comment-message-28971" class="dsq-comment-message"><p>Works really well on my HTC Hero CDMA &#8211; so glad to be rid of all that Sprint crapware.</p>
+<p>One TINY issue I&#8217;ve noticed is the email widget doesn&#8217;t work.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-29221">
+        <div id="dsq-comment-header-29221" class="dsq-comment-header">
+            <cite id="dsq-cite-29221">
+                <span id="dsq-author-user-29221">david</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-29221" class="dsq-comment-body">
+            <div id="dsq-comment-message-29221" class="dsq-comment-message"><p>nexus one. when the screen is locked, occasionally it doesnt wake up when pressing the power button. it requires a couple presses.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+            </ul>
+
+            <div class="navigation">
+                <div class="nav-previous">
+                    <span class="meta-nav">&larr;</span>
+                    &nbsp;<a href="http://www.cyanogenmod.org/blog/cyanogenmod-6-1-0-release-candidates/comment-page-4#comments" >Older Comments</a>                </div>
+                <div class="nav-next">
+                    <a href="http://www.cyanogenmod.org/blog/cyanogenmod-6-1-0-release-candidates#comments" >Newer Comments</a>                    &nbsp;<span class="meta-nav">&rarr;</span>
+                </div>
+            </div><!-- .navigation -->
+
+        </div>
+
+    </div>
+
+<script type="text/javascript">
+var disqus_url = 'http://www.cyanogenmod.org/blog/cyanogenmod-6-1-0-release-candidates';
+var disqus_identifier = '734 http://www.cyanogenmod.com/?p=734';
+var disqus_container_id = 'disqus_thread';
+var disqus_shortname = 'cyngn';
+var disqus_title = "CyanogenMod 6.1.0 Release Candidates";
+var disqus_config_custom = window.disqus_config;
+var disqus_config = function () {
+    /*
+    All currently supported events:
+    onReady: fires when everything is ready,
+    onNewComment: fires when a new comment is posted,
+    onIdentify: fires when user is authenticated
+    */
+    
+    
+    this.language = '';
+        this.callbacks.onReady.push(function () {
+
+        // sync comments in the background so we don't block the page
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = '?cf_action=sync_comments&post_id=734';
+
+        var firstScript = document.getElementsByTagName('script')[0];
+        firstScript.parentNode.insertBefore(script, firstScript);
+    });
+    
+    if (disqus_config_custom) {
+        disqus_config_custom.call(this);
+    }
+};
+
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+
+</article>
+			</div>
+
+		</div><!-- End Content row -->
+		
+		<aside id="sidebar" class="four columns hide-on-phones" role="complementary">
+	<div class="sidebar-box">
+		<article id="recent-comments-4" class="row widget widget_recent_comments"><div class="sidebar-section twelve columns"><h6><strong>Recent Comments</strong></h6><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">tayson</span> on <a href="http://www.cyanogenmod.org/blog/cm-13-0-release-1/comment-page-10#comment-72304">CM 13.0 Release 1</a></li><li class="recentcomments"><span class="comment-author-link"><a href='http://www.androidsage.com/' rel='external nofollow' class='url'>Sarang</a></span> on <a href="http://www.cyanogenmod.org/blog/capps-package-for-marshmallow/comment-page-1#comment-72303">Cyanogen Apps Package for Marshmallow</a></li><li class="recentcomments"><span class="comment-author-link">harsh</span> on <a href="http://www.cyanogenmod.org/blog/a-marshmallowy-cm/comment-page-12#comment-72302">A Marshmallowy CM</a></li><li class="recentcomments"><span class="comment-author-link">harsh</span> on <a href="http://www.cyanogenmod.org/blog/cm-13-0-release-1/comment-page-10#comment-72301">CM 13.0 Release 1</a></li><li class="recentcomments"><span class="comment-author-link">harsh</span> on <a href="http://www.cyanogenmod.org/blog/cm-13-0-release-1/comment-page-10#comment-72300">CM 13.0 Release 1</a></li></ul></div></article>	</div>
+</aside><!-- /#sidebar -->		
+		</div><!-- End Main row -->
+		
+		<footer id="content-info" role="contentinfo" class="hide-on-phones" style="margin:40px 0 0 0;">
+			<div class="row">
+				<article id="nav_menu-4" class="three columns widget widget_nav_menu"><div class="footer-section"><h6><strong>Navigation</strong></h6><div class="menu-main-container"><ul id="menu-main" class="menu"><li id="menu-item-798" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-798"><a href="http://www.cyanogenmod.org/about">About</a></li>
+<li id="menu-item-2403" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2403"><a href="http://wiki.cyanogenmod.org/">Wiki</a></li>
+<li id="menu-item-2404" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2404"><a href="http://download.cyanogenmod.org">Download</a></li>
+<li id="menu-item-825" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-825"><a href="/blog">Blog</a></li>
+<li id="menu-item-904" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-904"><a href="http://forum.cyanogenmod.org">Forum</a></li>
+<li id="menu-item-829" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-829"><a href="http://www.cyanogenmod.org/community">Community</a></li>
+<li id="menu-item-2709" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2709"><a href="http://shop.cyanogenmod.org">Shop</a></li>
+</ul></div></div></article><article id="nav_menu-3" class="three columns widget widget_nav_menu"><div class="footer-section"><h6><strong>Social Networks</strong></h6><div class="menu-social-networks-container"><ul id="menu-social-networks" class="menu"><li id="menu-item-2173" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2173"><a href="https://www.facebook.com/CyanogenMod">Facebook</a></li>
+<li id="menu-item-2174" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2174"><a href="https://twitter.com/CyanogenMod">Twitter</a></li>
+<li id="menu-item-2175" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2175"><a href="https://plus.google.com/+CyanogenMod/posts">Google+</a></li>
+</ul></div></div></article>                                <article class="three columns widget widget widget_nav_menu">
+                                    <div class="footer-section">
+                                        <h6><strong>Sponsored By</strong></h6>
+                                        <a href="http://twilio.com/?utm_source=cyanogenmod&utm_medium=webbadge&utm_campaign=cyanogenverify" style="text: decoration: none; display: inline-block; width: 166px; height: 0; overflow: hidden; padding-top: 31px; background: url(https://www.twilio.com/packages/company/img/logos_icon_poweredbysmall.png) no-repeat;">powered by twilio™</a>
+                                    </div>
+                                </article>
+			</div>
+		</footer>
+        
+      <div id="navigation" class="row mobile-footer show-on-phones">
+			<div class="twelve columns">
+            	<h6>Navigate cyanogenmod.org</h6>
+            	<ul>
+                	<li><a href="/about">About</a></li>
+                    <!--<li><a href="#">Features</a></li>-->
+                    <li><a href="http://wiki.cyanogenmod.org/">Wiki</a></li>
+                    <li><a href="http://download.cyanogenmod.org/">Download</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="http://forum.cyanogenmod.org">Forum</a></li>
+                    <li><a href="/community">Community</a></li>  
+                    <li><a href="http://shop.cyanogenmod.org">Shop</a></li>
+                </ul>
+            </div>
+        </div>
+			
+	</div><!-- Container End -->
+    
+
+	<!-- Included JS Files of Foundation -->
+	<script src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/foundation.js"></script>
+	<script src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/app.js"></script>
+	
+	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+	     chromium.org/developers/how-tos/chrome-frame-getting-started -->
+	<!--[if lt IE 7]>
+		<script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+		<script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+	<![endif]-->
+	
+	        <script type="text/javascript">
+        // <![CDATA[
+        var disqus_shortname = 'cyngn';
+        (function () {
+            var nodes = document.getElementsByTagName('span');
+            for (var i = 0, url; i < nodes.length; i++) {
+                if (nodes[i].className.indexOf('dsq-postid') != -1) {
+                    nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('data-dsqidentifier'));
+                    url = nodes[i].parentNode.href.split('#', 1);
+                    if (url.length == 1) { url = url[0]; }
+                    else { url = url[1]; }
+                    nodes[i].parentNode.href = url + '#disqus_thread';
+                }
+            }
+            var s = document.createElement('script'); 
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+        // ]]>
+        </script>
+        <script type='text/javascript' src='http://cyanogenmod.org/wp-includes/js/comment-reply.min.js?ver=4.2.4'></script>
+<script type="text/javascript">/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+ Served from: www.cyanogenmod.org @ 2016-08-12 22:45:22 by W3 Total Cache -->
