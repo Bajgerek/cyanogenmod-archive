@@ -30,6 +30,11 @@ body{
     width: 200px;
 }
 
+.photo{
+    width: 325px;
+    text-align: center;
+}
+
 .nav_links{
     list-style: none;
 }
@@ -76,4 +81,41 @@ body{
     font-size: 19px;
     text-align: center;
 }
+
+.button1 {
+    color: #ffffff;
+    background-color: #2d63c8;
+    font-size: 19px;
+    border: 1px solid #2d63c8;
+    border-radius: 20px;
+    padding: 15px 50px;
+    cursor: pointer
+}
+.button1:hover {
+    color: #2d63c8;
+    background-color: #ffffff;
+}
+
+.button2 {
+    color: #ffffff;
+    background-color: #006eff;
+    font-size: 19px;
+    border: 1px solid #2d63c8;
+    border-radius: 20px;
+    padding: 15px 50px;
+    cursor: pointer
+
+}
+
+.button2:hover {
+    color: #2d63c8;
+    background-color: #ffffff;
+}
+
+.soon {
+color: #ffffff
+
+
+}
+
 
