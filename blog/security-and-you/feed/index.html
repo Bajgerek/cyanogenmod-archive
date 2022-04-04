@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments on: Security and You</title>
+	<atom:link href="http://www.cyanogenmod.org/blog/security-and-you/feed" rel="self" type="application/rss+xml" />
+	<link>http://www.cyanogenmod.org/blog/security-and-you</link>
+	<description>CyanogenMod Android ROM</description>
+	<lastBuildDate>Sun, 31 Jul 2016 14:02:00 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=4.2.4</generator>
+	<item>
+		<title>By: Adam Katav</title>
+		<link>http://www.cyanogenmod.org/blog/security-and-you/comment-page-1#comment-66996</link>
+		<dc:creator><![CDATA[Adam Katav]]></dc:creator>
+		<pubDate>Wed, 25 Mar 2015 17:02:00 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cyanogenmod.com/?p=1634#comment-66996</guid>
+		<description><![CDATA[Where can I report a potential security problem?]]></description>
+		<content:encoded><![CDATA[<p>Where can I report a potential security problem?</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: George Davey</title>
+		<link>http://www.cyanogenmod.org/blog/security-and-you/comment-page-1#comment-66046</link>
+		<dc:creator><![CDATA[George Davey]]></dc:creator>
+		<pubDate>Thu, 08 Jan 2015 18:36:00 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cyanogenmod.com/?p=1634#comment-66046</guid>
+		<description><![CDATA[A protected recovery would simply serve so if a novice finds your phone they cannot utilize the custom recovery without reinstalling the custom recovery because they don&#039;t have the password to invoke the commands.  Taking that one step further is a protected boot loader. They cannot restore back to factory or boot into the recovery without the password.  It would reside in the boot loader. In terms of hardware abstraction what I would like to see is a more standardized structuring for boot loaders that removes some of this hardware variability whenever possible.
+Maybe legislation to get a password option forced into every boot loader as a first branch option to prevent unauthorized recovery of phones. Of course it would not be enabled by default.  It is for people to be able to turn on that can actually understand it.
+If the reset vector hits a ROM boot loader that has only two branches one with a password and one without and that is set only by the post booted machine, this might work. It is a way to brick your phone for everyone but you, including all developers of the phone.  This is what I want.]]></description>
+		<content:encoded><![CDATA[<p>A protected recovery would simply serve so if a novice finds your phone they cannot utilize the custom recovery without reinstalling the custom recovery because they don&#8217;t have the password to invoke the commands.  Taking that one step further is a protected boot loader. They cannot restore back to factory or boot into the recovery without the password.  It would reside in the boot loader. In terms of hardware abstraction what I would like to see is a more standardized structuring for boot loaders that removes some of this hardware variability whenever possible.<br />
+Maybe legislation to get a password option forced into every boot loader as a first branch option to prevent unauthorized recovery of phones. Of course it would not be enabled by default.  It is for people to be able to turn on that can actually understand it.<br />
+If the reset vector hits a ROM boot loader that has only two branches one with a password and one without and that is set only by the post booted machine, this might work. It is a way to brick your phone for everyone but you, including all developers of the phone.  This is what I want.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: messiah</title>
+		<link>http://www.cyanogenmod.org/blog/security-and-you/comment-page-1#comment-66013</link>
+		<dc:creator><![CDATA[messiah]]></dc:creator>
+		<pubDate>Thu, 08 Jan 2015 09:15:00 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cyanogenmod.com/?p=1634#comment-66013</guid>
+		<description><![CDATA[Protected recovery can possibly be secure only after the bootlader 
+itself had been secured. So until there is a way to secure the 
+bootloader, there is no reason to go for a &quot;protected recovery&quot;. The bootloader is highly device- and vendor-dependent and as such it is barely touchable by the end user, let alone aftermarket OS developer.]]></description>
+		<content:encoded><![CDATA[<p>Protected recovery can possibly be secure only after the bootlader<br />
+itself had been secured. So until there is a way to secure the<br />
+bootloader, there is no reason to go for a &#8220;protected recovery&#8221;. The bootloader is highly device- and vendor-dependent and as such it is barely touchable by the end user, let alone aftermarket OS developer.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: George Davey</title>
+		<link>http://www.cyanogenmod.org/blog/security-and-you/comment-page-1#comment-63992</link>
+		<dc:creator><![CDATA[George Davey]]></dc:creator>
+		<pubDate>Thu, 02 Oct 2014 19:54:00 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cyanogenmod.com/?p=1634#comment-63992</guid>
+		<description><![CDATA[I would like to see a protected recovery that requires a strong password to run any of the restore commands.  You can select to enable a command tree password.  As you toggle down the list of commands everything seems normal, but when you elect to select &quot;flash data partition&quot; for example&quot;, it would prompt for a password.  The password would be stored and compared as a SHA2 hash, for instance.
+Anyone working on such a thing?
+If one combined this with a protected boot loader you would have a rooted phone that only the original rooter with the original password could recover.
+Alternatively making a branch in the boot loader to ask for a password before allowing recovery mode would do the same thing in a better way.]]></description>
+		<content:encoded><![CDATA[<p>I would like to see a protected recovery that requires a strong password to run any of the restore commands.  You can select to enable a command tree password.  As you toggle down the list of commands everything seems normal, but when you elect to select &#8220;flash data partition&#8221; for example&#8221;, it would prompt for a password.  The password would be stored and compared as a SHA2 hash, for instance.<br />
+Anyone working on such a thing?<br />
+If one combined this with a protected boot loader you would have a rooted phone that only the original rooter with the original password could recover.<br />
+Alternatively making a branch in the boot loader to ask for a password before allowing recovery mode would do the same thing in a better way.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Thiago Prado</title>
+		<link>http://www.cyanogenmod.org/blog/security-and-you/comment-page-1#comment-57334</link>
+		<dc:creator><![CDATA[Thiago Prado]]></dc:creator>
+		<pubDate>Sun, 08 Sep 2013 01:20:00 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cyanogenmod.com/?p=1634#comment-57334</guid>
+		<description><![CDATA[I had the same issue with my Galaxy S2.
+Them I found out that you can reenable the Superuser button trough developer options.
+To do it go to &quot;About the phone&quot; then click 5 or 6 times on &quot;Version Number field&quot;, after that , developers mode will be enabled.
+Inside of developers you will see &quot;Root Acess&quot;, just change it and the button will appear again.]]></description>
+		<content:encoded><![CDATA[<p>I had the same issue with my Galaxy S2.<br />
+Them I found out that you can reenable the Superuser button trough developer options.<br />
+To do it go to &#8220;About the phone&#8221; then click 5 or 6 times on &#8220;Version Number field&#8221;, after that , developers mode will be enabled.<br />
+Inside of developers you will see &#8220;Root Acess&#8221;, just change it and the button will appear again.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: vitor rubio</title>
+		<link>http://www.cyanogenmod.org/blog/security-and-you/comment-page-1#comment-56057</link>
+		<dc:creator><![CDATA[vitor rubio]]></dc:creator>
+		<pubDate>Sun, 03 Mar 2013 01:49:00 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cyanogenmod.com/?p=1634#comment-56057</guid>
+		<description><![CDATA[i need root do do this http://forum.xda-developers.com/showthread.php?t=1544063
+Enable wifi tethering (Either Wifi, BT or USB)
+Enter Terminal emulator
+Type &quot;su root&quot;
+Type &quot;iptables -P FORWARD ACCEPT&quot;
+Type &quot;iptables -t nat -A POSTROUTING -o rmnet0 -j MASQUERADE&quot;in order to use wifi tether, how can i do it?]]></description>
+		<content:encoded><![CDATA[<p>i need root do do this http://forum.xda-developers.com/showthread.php?t=1544063<br />
+Enable wifi tethering (Either Wifi, BT or USB)<br />
+Enter Terminal emulator<br />
+Type &#8220;su root&#8221;<br />
+Type &#8220;iptables -P FORWARD ACCEPT&#8221;<br />
+Type &#8220;iptables -t nat -A POSTROUTING -o rmnet0 -j MASQUERADE&#8221;in order to use wifi tether, how can i do it?</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Mdjango</title>
+		<link>http://www.cyanogenmod.org/blog/security-and-you/comment-page-1#comment-52290</link>
+		<dc:creator><![CDATA[Mdjango]]></dc:creator>
+		<pubDate>Tue, 26 Jun 2012 16:36:00 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cyanogenmod.com/?p=1634#comment-52290</guid>
+		<description><![CDATA[Hey, do you plan to implement these changes into CyanogenMod 7.x as well?]]></description>
+		<content:encoded><![CDATA[<p>Hey, do you plan to implement these changes into CyanogenMod 7.x as well?</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Caspertone2003</title>
+		<link>http://www.cyanogenmod.org/blog/security-and-you/comment-page-1#comment-51844</link>
+		<dc:creator><![CDATA[Caspertone2003]]></dc:creator>
+		<pubDate>Sat, 28 Apr 2012 23:07:00 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cyanogenmod.com/?p=1634#comment-51844</guid>
+		<description><![CDATA[I will insist on the convenience of a password for the recovery. Yes, the best is that the device is not lost/stolen but ... it happens.
+Although not perfect, it is another barrier.
+CT]]></description>
+		<content:encoded><![CDATA[<p>I will insist on the convenience of a password for the recovery. Yes, the best is that the device is not lost/stolen but &#8230; it happens.<br />
+Although not perfect, it is another barrier.<br />
+CT</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Guest</title>
+		<link>http://www.cyanogenmod.org/blog/security-and-you/comment-page-1#comment-51472</link>
+		<dc:creator><![CDATA[Guest]]></dc:creator>
+		<pubDate>Mon, 19 Mar 2012 08:42:00 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cyanogenmod.com/?p=1634#comment-51472</guid>
+		<description><![CDATA[I like the direction where this is going. I am (was perhaps now) seriously thinking about flashing my phone with the vendor OS again (from CM 7.1) because of the root issue. I&#039;d like to have password managers or similar apps on my phone and feel unconfortable if my phone provides a method to become root, which i cannot really control.]]></description>
+		<content:encoded><![CDATA[<p>I like the direction where this is going. I am (was perhaps now) seriously thinking about flashing my phone with the vendor OS again (from CM 7.1) because of the root issue. I&#8217;d like to have password managers or similar apps on my phone and feel unconfortable if my phone provides a method to become root, which i cannot really control.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Chinpokomon</title>
+		<link>http://www.cyanogenmod.org/blog/security-and-you/comment-page-1#comment-51422</link>
+		<dc:creator><![CDATA[Chinpokomon]]></dc:creator>
+		<pubDate>Sun, 18 Mar 2012 00:50:00 +0000</pubDate>
+		<guid isPermaLink="false">http://www.cyanogenmod.com/?p=1634#comment-51422</guid>
+		<description><![CDATA[You mean like how SuperUser does already? I mean, we basically white list our own applications in that way. If there is a system level white list, who should we trust to maintain that list? If you need root access today, the current SuperUser method provides a good security balance. For many mainstream users, they just don&#039;t need root to begin with. I think this s a reasonable compromise. ]]></description>
+		<content:encoded><![CDATA[<p>You mean like how SuperUser does already? I mean, we basically white list our own applications in that way. If there is a system level white list, who should we trust to maintain that list? If you need root access today, the current SuperUser method provides a good security balance. For many mainstream users, they just don&#8217;t need root to begin with. I think this s a reasonable compromise. </p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+ Served from: www.cyanogenmod.org @ 2016-07-31 22:31:20 by W3 Total Cache -->

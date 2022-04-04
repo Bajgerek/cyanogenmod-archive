@@ -1,0 +1,1205 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+
+	<title>Call for response: Messaging Redesign | CyanogenMod</title>
+	
+	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	
+	<!-- Included Foundation CSS Files -->
+	<link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/css/foundation.css">
+	<link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/css/app.css">
+    <link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/tipTip.css">
+    <link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/fonts/style.css">
+    <link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/css/flexslider.css" type="text/css" media="screen" />
+	
+	<link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/style.css">
+	
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/css/ie.css">
+	<![endif]-->
+	
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<!-- Favicon and Feed -->
+	<link rel="shortcut icon" type="image/png" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/favicon.ico">
+	<link rel="alternate" type="application/rss+xml" title="CyanogenMod Feed" href="http://www.cyanogenmod.org/feed/">
+	
+	<!--  iPhone Web App Home Screen Icon -->
+	<link rel="apple-touch-icon" sizes="72x72" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-icon-ipad.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-icon-retina.png" />
+	<link rel="apple-touch-icon" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-icon.png" />
+	
+	<!-- Enable Startup Image for iOS Home Screen Web App -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link rel="apple-touch-startup-image" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/mobile-load.png" />
+
+	<!-- Startup Image iPad Landscape (748x1024) -->
+	<link rel="apple-touch-startup-image" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-load-ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)" />
+	<!-- Startup Image iPad Portrait (768x1004) -->
+	<link rel="apple-touch-startup-image" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-load-ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)" />
+	<!-- Startup Image iPhone (320x460) -->
+	<link rel="apple-touch-startup-image" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-load.png" media="screen and (max-device-width: 320px)" />
+	
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.min.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.jparallax.min.js" ></script>
+  <script defer type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.featureList-1.0.0.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.tipTip.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/easySlider1.7.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/modernizr.foundation.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.flexslider-min.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/custom.js"></script>
+  
+  <script type="text/javascript">
+    $(document).load(function(){
+
+	  // The slider being synced must be initialized first
+	  $('.flexslider').flexslider({
+		animation: "slide",
+		controlNav: false,
+	  });
+	  
+    });
+  </script>
+  
+  	
+<!-- All in One SEO Pack 2.2.7.1 by Michael Torbert of Semper Fi Web Design[493,539] -->
+<link rel="author" href="http://google.com/+AbhisekDevkota" />
+<meta name="description"  content="Thursday, bsxtn gave you an introduction to the Cyanogen Design team. Today, they would like to present their vision for a Messaging app redesign, and want your" />
+
+<link rel="canonical" href="http://www.cyanogenmod.org/blog/messaging-redesign" />
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-39737599-3']);
+		  _gaq.push(['_trackPageview']);
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
+<!-- /all in one seo pack -->
+<link rel="alternate" type="application/rss+xml" title="CyanogenMod &raquo; Call for response: Messaging Redesign Comments Feed" href="http://www.cyanogenmod.org/blog/messaging-redesign/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/cyanogenmod.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.2.4"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://cyanogenmod.org/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://cyanogenmod.org/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Thread Throwdown Winner Announcement' href='http://www.cyanogenmod.org/blog/thread-throwdown-winner-announcement' />
+<link rel='next' title='Call for response: Dialer Instant Contact Card' href='http://www.cyanogenmod.org/blog/contact-card' />
+<meta name="generator" content="WordPress 4.2.4" />
+<link rel='shortlink' href='http://www.cyanogenmod.org/?p=2949' />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+</head>
+
+<body class="single single-post postid-2949 single-format-standard">
+
+	<div class="menusto hide-on-phones"></div>
+	<!-- Start the main container -->
+	<div id="container" class="container" role="document" style="padding:80px 0 0 0;">
+		
+        
+        <div class="row mobile-header show-on-phones">
+            <div class="nine">
+            	<a href="http://www.cyanogenmod.org" title="CyanogenMod" class="logo-mobile"><img src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/logo-mobile.png" alt=""/></a>
+            </div>
+            <a href="#navigation" class="mobile-menu"><img src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/btn-menu-mobile.png" alt=""/></a>
+        </div>
+        
+		<!-- Row for blog navigation -->
+		<div class="row hide-on-phones">
+			<header class="twelve columns" role="banner">
+				<div class="reverie-header">
+                	<a href="http://www.cyanogenmod.org" title="CyanogenMod" class="logo"><img src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/logo.png" alt=""/></a>
+                    <div id="glavno" class="nav hide-on-phones">
+                        <ul id="glavno">                   
+                            <li><a href="http://wiki.cyanogenmod.org/">Wiki</a></li>
+                            <!--<li><a href="http://cyanogenmod.org/about/features">Features</a></li>-->
+                            <li><a href="http://download.cyanogenmod.org/">Download</a></li>
+                            <li><a href="http://www.cyanogenmod.org/blog/">Blog</a></li>
+                            <li><a href="http://forum.cyanogenmod.org/">Forum</a></li>
+                            <li>
+                            	<a href="http://www.cyanogenmod.org/community">Community</a>
+                                <div style="opacity: 0; display: none; width:100%" class="sub">
+                                    <ul>
+                                    	<div style="width:980px; margin:0 auto; color:#fff;">
+                                        	<div class="contributesub">
+                                            	<h2>Contribute</h2>
+                                                
+                                                <h4><a href="http://review.cyanogenmod.org/">Gerrit Review</a></h4>
+                                                <p>Gerrit is a web based code review system, facilitating online code reviews for projects using the Git version control system.</p>
+                                                    
+                                                <h4><a href="http://wiki.cyanogenmod.org/">Wiki</a></h4>
+                                                <p>Our Wiki is a comprehensive tool for users to find information. This also needs contributions to keep it fresh and relevant.</p>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/community">Join The Team</a></h4>
+                                                <p>We love working with others. You can submit code via Gerrit. If you think there is something else you can help with, get in touch with us on the forums.</p>
+                                            </div>
+                                            
+                                        	<div class="contributesub">
+                                            	<h2>Help</h2>
+                                                
+                                                <h4><a href="http://forum.cyanogenmod.org/">Forum</a></h4>
+                                                <p>Our forums have a wealth of knowledge and resources. All of it is free and accessible from both your desktop and mobile phone.</p>
+                                                    
+                                                <h4><a href="irc://irc.freenode.net/cyanogenmod">IRC</a></h4>
+                                                <p>If you are comfortable with IRC and would like instant help and assistance from both developers and others users alike.</p>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/blog">Blog</a></h4>
+                                                <p>Our blogs will contain the latest news and releases as well as other related news concerning the distribution.</p>
+                                                    
+                                                <h4><a href="http://wiki.cyanogenmod.org/">Wiki</a></h4>
+                                                <p>Our Wiki is a comprehensive tool for users to find information. This also needs contributions to keep it fresh and relevant.</p>
+                                            </div>
+                                            
+                                        	<div class="contributesub">
+                                            	<h2>Information</h2>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/bugs">Bug Tracker</a></h4>
+                                                <p>This is the official Bug Tracker where you can submit and review bugs that users may experience.</p>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/github">Github Repo</a></h4>
+                                                <p>Our source is free and open. you can check the Github page to see what we do and how you can contribute.</p>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/stats">Installation Statistics</a></h4>
+                                                <p>We have an opt-in feature in our ROMS to enable us to gain statistics on users as well as devices used.</p>
+                                            </div>
+                                            
+                                        	<div class="contributesub last">
+                                            	<h2>Support</h2>
+                                                
+                                                <h4><a href="/cdn-cgi/l/email-protection#fc98998a8e9990bc9f859d92939b9992919398d2938e9b">Developer Relations</a></h4>
+                                                <p>If you wish to contact us regarding development contributions, please do so here.</p>
+                                                    
+                                                <h4><a href="/cdn-cgi/l/email-protection#345550595d5a74574d555a5b53515a595b501a5b4653">Website Support</a></h4>
+                                                <p>This email is dedicated to website, forum, wiki and hosting support. We will not respond to ROM support.</p>
+                                                    
+                                                <h4><a href="/cdn-cgi/l/email-protection#9cfdf8f1f5f2dcffe5fdf2f3fbf9f2f1f3f8b2f3eefb">Social Network</a></h4>
+                                                <p>To contact us in relation to our Social media structure.</p>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                    
+                                </div>
+                            </li>
+                      </ul>
+                    </div>
+				</div>
+
+			</header>
+		</div>
+
+		
+		<!-- Row for main content area -->
+		<div id="main" class="row">
+		<!-- Row for main content area -->
+		<div id="content" class="eight columns" role="main">
+	
+			<div class="post-box">
+					<article class="post-2949 post type-post status-publish format-standard hentry category-blog" id="post-2949">
+		<header>
+        	<time class="updated" datetime="2015-06-15T14:42:38+00:00" pubdate>June 15th, 2015 &bull; Written by <a href="http://www.cyanogenmod.org/author/ciwrl" rel="author" class="fn">ciwrl</a></time>        	<h2 class="entry-title">Call for response: Messaging Redesign</h2>
+					</header>
+		<div class="entry-content">
+			<p><em><a href="http://www.cyanogenmod.org/blog/developer-spotlight-the-cyanogen-design-team">Thursday</a>, bsxtn gave you an introduction to the Cyanogen Design team. Today, they would like to present their vision for a Messaging app redesign, and want your opinion on the direction.</em></p>
+<p>We want to build a refresh of the Messaging app which will be included in the CyanogenMod project. The Messaging app will handle SMS, MMS, and Group messages, while providing integration to a relaunched WhisperPush Service. Optionally, Cyanogen OS users will be able to use the TrueCaller integration to view caller ID information and block spammers.</p>
+<p><strong>Background:</strong> In November, we conducted a survey of our users on Google+ and Facebook. Of our CyanogenMod users, 66% reported sending at least one SMS message per day. Moreover, SalesForce via a commissioned study, reported that 90% of users in the US sent at least one SMS message per day. In the same Cyanogen Messaging Survey, 32% of our users reported using either the stock messaging app and 60% reported using Google Hangouts. In addition, “having a fun and fresh design” was listed by 41% of respondents as being the most important feature in an SMS app. The second most asked for feature was being able to text across platforms at 24% of users reporting.</p>
+<p>Messaging is obviously an important part of the smartphone experience. Our current Messaging solution is looking dated with many community members stating that it looks like “KitKat with a FAB”. Moreover, with devices averaging 5.5 inches many operations are incorrectly placed on the screen. For example, the attachment entry point is at the top of the screen.</p>
+<p>The first version of the Messaging redesign project will focus on building the base for the app so that later features can easily be added to it. For this reason, we will implement redesigns in 1) Messaging Conversation List, 2) Messaging Detail View, 3) Message Compose, and 4) Messaging Settings.</p>
+<p>Once the first version is complete we will begin to focus on feature additions including 1) Attachment keyboard with mini-camera, mini-gallery, and mini-voice recorder in Message Compose, 2) Inline attachment previews in the Message Conversation List, 3) In-message media player for attachments (video, audio) in the Message Detail View, and 4) Swipe to delete in Message Conversation List. We are sharing these designs with the community in hopes that someone may want to pick up this week to see these features faster than we can build them.</p>
+<p>Below are screen mocks for the first and second phases of the Messaging redesign. We welcome your feedback and look forward to having a productive conversation.</p>
+<p>Please feel free to comment with any questions or concerns that you may have.</p>
+<p><strong>Edit: </strong>Getting reports of images being weird on mobile devices &#8211; if this includes you please see the alternative Gallery:
+		<style type='text/css'>
+			#gallery-1 {
+				margin: auto;
+			}
+			#gallery-1 .gallery-item {
+				float: left;
+				margin-top: 10px;
+				text-align: center;
+				width: 33%;
+			}
+			#gallery-1 img {
+				border: 2px solid #cfcfcf;
+			}
+			#gallery-1 .gallery-caption {
+				margin-left: 0;
+			}
+			/* see gallery_shortcode() in wp-includes/media.php */
+		</style>
+		<div id='gallery-1' class='gallery galleryid-2949 gallery-columns-3 gallery-size-thumbnail'><dl class='gallery-item'>
+			<dt class='gallery-icon portrait'>
+				<a href='http://www.cyanogenmod.org/blog/messaging-redesign/attachment/1-1-1-message-list-overflow-menu'><img width="150" height="150" src="http://cyanogenmod.org/wp-content/uploads/2015/06/1.1.1-Message-List-Overflow-Menu-150x150.png" class="attachment-thumbnail" alt="V1 - Message Conversation List" aria-describedby="gallery-1-2966" /></a>
+			</dt>
+				<dd class='wp-caption-text gallery-caption' id='gallery-1-2966'>
+				V1 &#8211; Message Conversation List
+				</dd></dl><dl class='gallery-item'>
+			<dt class='gallery-icon portrait'>
+				<a href='http://www.cyanogenmod.org/blog/messaging-redesign/attachment/1-2-0-message-list-bulk-select'><img width="150" height="150" src="http://cyanogenmod.org/wp-content/uploads/2015/06/1.2.0-Message-List-Bulk-Select-150x150.png" class="attachment-thumbnail" alt="V1 - Message Conversation List" aria-describedby="gallery-1-2967" /></a>
+			</dt>
+				<dd class='wp-caption-text gallery-caption' id='gallery-1-2967'>
+				V1 &#8211; Message Conversation List
+				</dd></dl><dl class='gallery-item'>
+			<dt class='gallery-icon portrait'>
+				<a href='http://www.cyanogenmod.org/blog/messaging-redesign/attachment/1-2-1-message-list-bulk-select-undo-toast'><img width="150" height="150" src="http://cyanogenmod.org/wp-content/uploads/2015/06/1.2.1-Message-List-Bulk-Select-Undo-Toast-150x150.png" class="attachment-thumbnail" alt="V1 - Message Conversation List" aria-describedby="gallery-1-2968" /></a>
+			</dt>
+				<dd class='wp-caption-text gallery-caption' id='gallery-1-2968'>
+				V1 &#8211; Message Conversation List
+				</dd></dl><br style="clear: both" /><dl class='gallery-item'>
+			<dt class='gallery-icon portrait'>
+				<a href='http://www.cyanogenmod.org/blog/messaging-redesign/attachment/pngbase64f8f840fed8038f95'><img width="150" height="150" src="http://cyanogenmod.org/wp-content/uploads/2015/06/pngbase64f8f840fed8038f95-150x150.png" class="attachment-thumbnail" alt="V1 - Message Detail View" aria-describedby="gallery-1-2978" /></a>
+			</dt>
+				<dd class='wp-caption-text gallery-caption' id='gallery-1-2978'>
+				V1 &#8211; Message Detail View
+				</dd></dl><dl class='gallery-item'>
+			<dt class='gallery-icon portrait'>
+				<a href='http://www.cyanogenmod.org/blog/messaging-redesign/attachment/pngbase646757ce2f24c04518'><img width="150" height="150" src="http://cyanogenmod.org/wp-content/uploads/2015/06/pngbase646757ce2f24c04518-150x150.png" class="attachment-thumbnail" alt="V1 - Message Detail View" aria-describedby="gallery-1-2982" /></a>
+			</dt>
+				<dd class='wp-caption-text gallery-caption' id='gallery-1-2982'>
+				V1 &#8211; Message Detail View
+				</dd></dl><dl class='gallery-item'>
+			<dt class='gallery-icon portrait'>
+				<a href='http://www.cyanogenmod.org/blog/messaging-redesign/attachment/0-0-1-whisperpush-message-states-secure-message'><img width="150" height="150" src="http://cyanogenmod.org/wp-content/uploads/2015/06/0.0.1-WhisperPush-Message-States-Secure-Message-150x150.png" class="attachment-thumbnail" alt="V1 - Message Detail View" aria-describedby="gallery-1-2963" /></a>
+			</dt>
+				<dd class='wp-caption-text gallery-caption' id='gallery-1-2963'>
+				V1 &#8211; Message Detail View
+				</dd></dl><br style="clear: both" /><dl class='gallery-item'>
+			<dt class='gallery-icon portrait'>
+				<a href='http://www.cyanogenmod.org/blog/messaging-redesign/attachment/pngbase641d6afea965402a1b'><img width="150" height="150" src="http://cyanogenmod.org/wp-content/uploads/2015/06/pngbase641d6afea965402a1b-150x150.png" class="attachment-thumbnail" alt="V1 - Message Detail View" aria-describedby="gallery-1-2980" /></a>
+			</dt>
+				<dd class='wp-caption-text gallery-caption' id='gallery-1-2980'>
+				V1 &#8211; Message Detail View
+				</dd></dl><dl class='gallery-item'>
+			<dt class='gallery-icon portrait'>
+				<a href='http://www.cyanogenmod.org/blog/messaging-redesign/attachment/pngbase649114129f6bbf6bfb'><img width="150" height="150" src="http://cyanogenmod.org/wp-content/uploads/2015/06/pngbase649114129f6bbf6bfb-150x150.png" class="attachment-thumbnail" alt="V1 - Message Compose View" aria-describedby="gallery-1-2983" /></a>
+			</dt>
+				<dd class='wp-caption-text gallery-caption' id='gallery-1-2983'>
+				V1 &#8211; Message Compose View
+				</dd></dl><dl class='gallery-item'>
+			<dt class='gallery-icon portrait'>
+				<a href='http://www.cyanogenmod.org/blog/messaging-redesign/attachment/pngbase645111aa54e4e7ee3'><img width="150" height="150" src="http://cyanogenmod.org/wp-content/uploads/2015/06/pngbase645111aa54e4e7ee3-150x150.png" class="attachment-thumbnail" alt="V1 - Message Compose View" aria-describedby="gallery-1-2981" /></a>
+			</dt>
+				<dd class='wp-caption-text gallery-caption' id='gallery-1-2981'>
+				V1 &#8211; Message Compose View
+				</dd></dl><br style="clear: both" /><dl class='gallery-item'>
+			<dt class='gallery-icon portrait'>
+				<a href='http://www.cyanogenmod.org/blog/messaging-redesign/attachment/1-0-0-in-message-attachments-center-page'><img width="150" height="150" src="http://cyanogenmod.org/wp-content/uploads/2015/06/1.0.0-In-Message-Attachments-Center-Page-150x150.png" class="attachment-thumbnail" alt="V2 - Attachment keyboard with mini-camera, mini-gallery, and mini-voice recorder in Message Compose" aria-describedby="gallery-1-2964" /></a>
+			</dt>
+				<dd class='wp-caption-text gallery-caption' id='gallery-1-2964'>
+				V2 &#8211; Attachment keyboard with mini-camera, mini-gallery, and mini-voice recorder in Message Compose
+				</dd></dl><dl class='gallery-item'>
+			<dt class='gallery-icon portrait'>
+				<a href='http://www.cyanogenmod.org/blog/messaging-redesign/attachment/1-1-0-in-message-attachments-quick-message'><img width="150" height="150" src="http://cyanogenmod.org/wp-content/uploads/2015/06/1.1.0-In-Message-Attachments-Quick-Message-150x150.png" class="attachment-thumbnail" alt="V2 - Attachment keyboard with mini-camera, mini-gallery, and mini-voice recorder in Message Compose" aria-describedby="gallery-1-2965" /></a>
+			</dt>
+				<dd class='wp-caption-text gallery-caption' id='gallery-1-2965'>
+				V2 &#8211; Attachment keyboard with mini-camera, mini-gallery, and mini-voice recorder in Message Compose
+				</dd></dl><dl class='gallery-item'>
+			<dt class='gallery-icon portrait'>
+				<a href='http://www.cyanogenmod.org/blog/messaging-redesign/attachment/3-0-0-in-message-attachments-gallery'><img width="150" height="150" src="http://cyanogenmod.org/wp-content/uploads/2015/06/3.0.0-In-Message-Attachments-Gallery-150x150.png" class="attachment-thumbnail" alt="V2 - Attachment keyboard with mini-camera, mini-gallery, and mini-voice recorder in Message Compose" aria-describedby="gallery-1-2974" /></a>
+			</dt>
+				<dd class='wp-caption-text gallery-caption' id='gallery-1-2974'>
+				V2 &#8211; Attachment keyboard with mini-camera, mini-gallery, and mini-voice recorder in Message Compose
+				</dd></dl><br style="clear: both" /><dl class='gallery-item'>
+			<dt class='gallery-icon portrait'>
+				<a href='http://www.cyanogenmod.org/blog/messaging-redesign/attachment/3-0-1-in-message-attachments-photos-queued'><img width="150" height="150" src="http://cyanogenmod.org/wp-content/uploads/2015/06/3.0.1-In-Message-Attachments-Photos-Queued-150x150.png" class="attachment-thumbnail" alt="V2 - Attachment keyboard with mini-camera, mini-gallery, and mini-voice recorder in Message Compose" aria-describedby="gallery-1-2975" /></a>
+			</dt>
+				<dd class='wp-caption-text gallery-caption' id='gallery-1-2975'>
+				V2 &#8211; Attachment keyboard with mini-camera, mini-gallery, and mini-voice recorder in Message Compose
+				</dd></dl><dl class='gallery-item'>
+			<dt class='gallery-icon portrait'>
+				<a href='http://www.cyanogenmod.org/blog/messaging-redesign/attachment/4-0-0-in-message-attachments-camera'><img width="150" height="150" src="http://cyanogenmod.org/wp-content/uploads/2015/06/4.0.0-In-Message-Attachments-Camera-150x150.png" class="attachment-thumbnail" alt="V2 - Attachment keyboard with mini-camera, mini-gallery, and mini-voice recorder in Message Compose" aria-describedby="gallery-1-2976" /></a>
+			</dt>
+				<dd class='wp-caption-text gallery-caption' id='gallery-1-2976'>
+				V2 &#8211; Attachment keyboard with mini-camera, mini-gallery, and mini-voice recorder in Message Compose
+				</dd></dl><dl class='gallery-item'>
+			<dt class='gallery-icon portrait'>
+				<a href='http://www.cyanogenmod.org/blog/messaging-redesign/attachment/4-2-0-in-message-attachments-photo-video-queue'><img width="150" height="150" src="http://cyanogenmod.org/wp-content/uploads/2015/06/4.2.0-In-Message-Attachments-Photo-Video-Queue-150x150.png" class="attachment-thumbnail" alt="V2 - Attachment keyboard with mini-camera, mini-gallery, and mini-voice recorder in Message Compose" aria-describedby="gallery-1-2977" /></a>
+			</dt>
+				<dd class='wp-caption-text gallery-caption' id='gallery-1-2977'>
+				V2 &#8211; Attachment keyboard with mini-camera, mini-gallery, and mini-voice recorder in Message Compose
+				</dd></dl><br style="clear: both" /><dl class='gallery-item'>
+			<dt class='gallery-icon portrait'>
+				<a href='http://www.cyanogenmod.org/blog/messaging-redesign/attachment/2-0-1-in-message-attachments-audio-recording'><img width="150" height="150" src="http://cyanogenmod.org/wp-content/uploads/2015/06/2.0.1-In-Message-Attachments-Audio-Recording-150x150.png" class="attachment-thumbnail" alt="V2 - Attachment keyboard with mini-camera, mini-gallery, and mini-voice recorder in Message Compose" aria-describedby="gallery-1-2970" /></a>
+			</dt>
+				<dd class='wp-caption-text gallery-caption' id='gallery-1-2970'>
+				V2 &#8211; Attachment keyboard with mini-camera, mini-gallery, and mini-voice recorder in Message Compose
+				</dd></dl><dl class='gallery-item'>
+			<dt class='gallery-icon portrait'>
+				<a href='http://www.cyanogenmod.org/blog/messaging-redesign/attachment/2-1-0-in-message-attachments-audio-added'><img width="150" height="150" src="http://cyanogenmod.org/wp-content/uploads/2015/06/2.1.0-In-Message-Attachments-Audio-Added-150x150.png" class="attachment-thumbnail" alt="V2 - Attachment keyboard with mini-camera, mini-gallery, and mini-voice recorder in Message Compose" aria-describedby="gallery-1-2971" /></a>
+			</dt>
+				<dd class='wp-caption-text gallery-caption' id='gallery-1-2971'>
+				V2 &#8211; Attachment keyboard with mini-camera, mini-gallery, and mini-voice recorder in Message Compose
+				</dd></dl><dl class='gallery-item'>
+			<dt class='gallery-icon portrait'>
+				<a href='http://www.cyanogenmod.org/blog/messaging-redesign/attachment/0-0-0-message-list-states'><img width="150" height="150" src="http://cyanogenmod.org/wp-content/uploads/2015/06/0.0.0-Message-List-States-150x150.png" class="attachment-thumbnail" alt="V2- Inline attachment previews in the Message Conversation List" aria-describedby="gallery-1-2962" /></a>
+			</dt>
+				<dd class='wp-caption-text gallery-caption' id='gallery-1-2962'>
+				V2- Inline attachment previews in the Message Conversation List
+				</dd></dl><br style="clear: both" /><dl class='gallery-item'>
+			<dt class='gallery-icon portrait'>
+				<a href='http://www.cyanogenmod.org/blog/messaging-redesign/attachment/pngbase641cdbaa1084484de1'><img width="150" height="150" src="http://cyanogenmod.org/wp-content/uploads/2015/06/pngbase641cdbaa1084484de1-150x150.png" class="attachment-thumbnail" alt="V2- In-message media player for attachments (video, audio) in the Message Detail View" aria-describedby="gallery-1-2979" /></a>
+			</dt>
+				<dd class='wp-caption-text gallery-caption' id='gallery-1-2979'>
+				V2- In-message media player for attachments (video, audio) in the Message Detail View
+				</dd></dl><dl class='gallery-item'>
+			<dt class='gallery-icon portrait'>
+				<a href='http://www.cyanogenmod.org/blog/messaging-redesign/attachment/2-2-0-message-list-swipe-left'><img width="150" height="150" src="http://cyanogenmod.org/wp-content/uploads/2015/06/2.2.0-Message-List-Swipe-Left-150x150.png" class="attachment-thumbnail" alt="V2 -Swipe to delete in Message Conversation List" aria-describedby="gallery-1-2972" /></a>
+			</dt>
+				<dd class='wp-caption-text gallery-caption' id='gallery-1-2972'>
+				V2 -Swipe to delete in Message Conversation List
+				</dd></dl><dl class='gallery-item'>
+			<dt class='gallery-icon portrait'>
+				<a href='http://www.cyanogenmod.org/blog/messaging-redesign/attachment/2-2-1-message-list-swipe-left-delete-undo-toast'><img width="150" height="150" src="http://cyanogenmod.org/wp-content/uploads/2015/06/2.2.1-Message-List-Swipe-Left-Delete-Undo-Toast-150x150.png" class="attachment-thumbnail" alt="V2 -Swipe to delete in Message Conversation List" aria-describedby="gallery-1-2973" /></a>
+			</dt>
+				<dd class='wp-caption-text gallery-caption' id='gallery-1-2973'>
+				V2 -Swipe to delete in Message Conversation List
+				</dd></dl><br style="clear: both" /><dl class='gallery-item'>
+			<dt class='gallery-icon portrait'>
+				<a href='http://www.cyanogenmod.org/blog/messaging-redesign/attachment/2-0-0-message-list-swipe-right'><img width="150" height="150" src="http://cyanogenmod.org/wp-content/uploads/2015/06/2.0.0-Message-List-Swipe-Right-150x150.png" class="attachment-thumbnail" alt="V2 -Swipe to mark read/unread in Message Conversation List" aria-describedby="gallery-1-2969" /></a>
+			</dt>
+				<dd class='wp-caption-text gallery-caption' id='gallery-1-2969'>
+				V2 -Swipe to mark read/unread in Message Conversation List
+				</dd></dl>
+			<br style='clear: both' />
+		</div>
+</p>
+<p dir="ltr"><strong>V1 &#8211; Message Conversation List</strong></p>
+<p><strong> <img alt="" src="https://lh5.googleusercontent.com/0YEAR8T5cBFsoICGeuGSGVEoJf0SGv6c39r6nYIzSUpYk9Ucqzzwz7sZ1RDrLgJzMcMOpn1hlnMG3lVx4Ws8sjYPDLoB9PmJVZFFibzUO9PDq_miosQxbb-skYi0dexlf59Zujc" width="300px;" height="534px;" />     <img alt="" src="https://lh3.googleusercontent.com/SdUn4v1Zk4Q7R637IQsT63OcvcZZ6KI5y4wRTvK-momHQ437HQSxYsaAcBbYyZsu0KQBL5cI6zZLrPJxh6013LXNRu5aGPDAJKMRqc7FaMcYYckztpI3sqBGoQIssDVYJRA4qYQ" width="301px;" height="532px;" /></strong></p>
+<figure><img alt="" src="https://lh3.googleusercontent.com/4QHi62jrxRJ5gLwatbbXKj51Vyz_tkMdvA898zJpbSi9lxD_KlTUV3rL5I2s72O6usV5uRca4qkEDZmNNFR24vkzDIrBlSRkv0WACYQQ2yvC4-C510nuYAeWf-m9CrBWVBWrkO8" width="335px;" height="596px;" /></figure>
+<p dir="ltr"><strong>V1 &#8211; Message Detail View</strong></p>
+<p><strong> <img alt="" src="https://lh3.googleusercontent.com/0rGxjk5KYdKgGVkFUpSwTwv4RSYYSjvW3iSaFj9rCuJKpf55jdzyq4uk1iqTZfmgUg-rf4rXnL6oiahMgTdhAwMovYLtg7Ec0DKbz7bcX2LoTNU-OtKRiOMnNU1QJpKy6YnQiLM" width="300px;" height="532px;" />    <img alt="" src="https://lh3.googleusercontent.com/iDS94EXGPNz5ScDer8jh1GmiaefB6HD70jYjNDja8wh3DKBKo3XgBZ76cMFJLCUKjLdSvb_rpzNE7OUA7h9GT7kbSSUJXTT9OYOZD9Mt6qS5pf2EXAh3DPAb0cOQqCD0xcsUCUo" width="301px;" height="532px;" /></strong></p>
+<figure><img alt="" src="https://lh4.googleusercontent.com/HUFjUwlvi62W1gzKqHbrbeeX74EhEmVagFVh5Dyc7x5Y479AiyOFjWFCew3E-fW-88zob_AFNtofh9jx8-UcB7PHDobUUHahVVyUiWgWaIJpE_mbO78nxSt7FgATe6l-Mt1MCrA" width="255px;" height="350px;" />    <img alt="" src="https://lh5.googleusercontent.com/8Y9pd1iKbiFVVqz5k9GOpLGrMXzDhcuqMCXj8hv0kXg-VbIEwpglxUnOQEXMkWHyPgEr-ZbA-ZZ4Qmeb9_ch8gBWibu7__UOW-UcRJ_SaUysd97Q9fliRmaSkmiV0A3zota2Sts" width="299px;" height="531px;" /></figure>
+<p dir="ltr"><strong>V1 &#8211; Message Compose View</strong></p>
+<p><strong> <img alt="" src="https://lh3.googleusercontent.com/2Wt_GkYqXztSVbZyAKQDYFDSPnslOj0a8xAFNLKudOKIcgW5FakglqAbyrDwwoMul5TdT5TbCYtIdHZHpg0P1PM9I2QDoRrCPF-Qvggarc1SnkHTcAnv-qrDOZ1dAV7XTA63zjU" width="301px;" height="533px;" />    <img alt="" src="https://lh6.googleusercontent.com/YQnXTCSDue5UD7ksvpSHfgiJoAPAymFI9h1ZzFsxAaNcj7Ds1zfuOM4KNR3haLXLnfqw47HXAZtNtTk5QjyXcVRwEt9NsOenJdvBMIrHra9HnAsnZD-yrD-Csd6Hzn0APHesZIw" width="300px;" height="533px;" /></strong></p>
+<p><strong>V2 &#8211; Attachment keyboard with mini-camera, mini-gallery, and mini-voice recorder in Message Compose</strong></p>
+<p><strong><img alt="" src="https://lh6.googleusercontent.com/6KTi0nI0SLDb_2aHCI3votkaNg573l3gxNKwvMkoMkpqfkwxkfkNb4yjQz1DVVRc7WUgWlwgIr7wY-ubd94Hlu2if9R6lldjoRE59hqcFRgzDQRC6I8nwui_d0a9Ph2bZoO__s8" width="297px;" height="528px;" />    <img alt="" src="https://lh3.googleusercontent.com/DMOi_lV8PjR-vhjadD99D9l0RvZ1MMd6h8oVC8f3Uw0lI9fvTw2DlkUjkQl67hj5yh27EItzFgVMYppe7mT8DMBjGFEKMZCJ86dpbzLU6i2muwzsCY7iJuqJktaczZ_74iE8BAM" width="295px;" height="526px;" /></strong></p>
+<figure><img alt="" src="https://lh6.googleusercontent.com/XDlCRr94gEHhiq2EXrWWr1N3SBg3hCzAsvgnRWS0Jl6MEXpdeySyKwIJVsoUJ3hrHDVNmzolfQyU7VrjrQmp0K1HnsosKwg3QgL_VepDzUNMMPWVOdC8vKslQo6hA6WbIfUTSSg" width="297px;" height="531px;" />    <img alt="" src="https://lh3.googleusercontent.com/7Cp-dYGPDowDVmXxumg93DSKmi7WTMOSRRmsmdTpIdwd9-tnxObnKdPdSjBSRYJuhu1RuyJwic_CI8PEY7j7WtLDAV4HeCsNxO4pCdrQuf_OafbcIJ2JyKsNPRM38t2yYDXSOKw" width="299px;" height="531px;" /></figure>
+<figure><img alt="" src="https://lh3.googleusercontent.com/JvXgJGdArl_vUQmsSte6M4VGrovr67PRb-89o5zv0ETG3axBXtA4I63P71CaruedUZI1V5oaInheaTQO7XDlYQGxJPAaWIQOYMVXDirdbH-VriJWR2M0XVvDDo6ZuLAc5KxU7iA" width="300px;" height="532px;" />    <img alt="" src="https://lh3.googleusercontent.com/8G9IcmuVyoXGuUvHKaKiQn3kwHJYfP3CBkzqlFUuS2kic-MnsPq3Wvq5ICmdF_vFKHOe_7GDoPMrqU4rHpwaSLWWiXEsFaZMO8GbQ_1Fq8OxUAJM5b08rGol9-dmBqnoDPVq0pI" width="298px;" height="531px;" /></figure>
+<figure><img alt="" src="https://lh5.googleusercontent.com/pwqfw3tupJY2hmsl0DBd1dEK4oeqfIJi2dyIzVfg_axWm10YAvtIuB81w6uk37Z0FX9RYqNAPr6_J1fcIicrQa6kD0B7ZGnVsE_Go1Saz3rji-tcMGK70pdUOXL-1kdKdop3Fhs" width="295px;" height="524px;" />    <img alt="" src="https://lh3.googleusercontent.com/Av1A-xJzD7vigaSM0WD4PBgkg3Jqo3ZyilmvV_LbaBQsGGil03n5BKlualSENmbZfWFtlyFXTUassM2ry9fUa4QP9Nv1SUWn_-fkLSItotcQxy1ioHekC33awVZR6JzVrvrs3YI" width="293px;" height="522px;" /></figure>
+<p><strong>V2- Inline attachment previews in the Message Conversation List</strong></p>
+<figure><img alt="" src="https://lh4.googleusercontent.com/k-2YD_vWDgdlCc8cMEFcCw06EbzTBir-CC5Av85eEYhizma6J82pqDjI5gM_0fZirBJjBv3ZpVM_Gjj9POhDWlB0n1ncWmsdhlrPBOsAS3b3n-LQwlPcQSVJijDe143gQrgBaac" width="149px;" height="947px;" /></figure>
+<p><strong>V2- In-message media player for attachments (video, audio) in the Message Detail View</strong></p>
+<figure><img alt="" src="https://lh3.googleusercontent.com/cDfJoe7WCSZ1UPnD1TG34rmG8IwIslDXweU7OatGqkWACfkpuAW8IVWo2zR97DlHGt8wlA5MisVIBrx6_Bcf8ndQdPz0Xn7lUl8yTSaRRdyK9qvuOthC12z72FROmYIL8pgh3U0" width="183px;" height="848px;" /></figure>
+<p><strong>V2 -Swipe to delete in Message Conversation List</strong></p>
+<figure><img alt="" src="https://lh4.googleusercontent.com/NUzjUhq-yH_yInKiuT19U1treX0f3l2kvB2SdPwgouxJMVWLG3tKdEYlFE6xuVfNuhBs5Q5sDzKCTG4B619_Uf_1WIWyl4QXtABopZZfvUmQcNHAELhpjFVym4j44zPsio57gj4" width="300px;" height="533px;" />    <img alt="" src="https://lh4.googleusercontent.com/iEsPZtD5tkKP_hD4mRIpa5VQUAEdzxuGvyJ2EdyX8dAU19ht2MTcAmNc5O-YU3krThUPddEQ-HYs6LHweNBDYNWC-v_mkyDhfkBHkjvA7kGqmXJ_7fOKTM-DTU5xWtRXO3gezRI" width="301px;" height="533px;" /></figure>
+<figure><img alt="" src="https://lh6.googleusercontent.com/ROkNmbTiVnbLpNJkv91VZ5jPnp4_O4TkIAbDWqTUcx2lj1J3EDYU3AXJ3pJMHbC5xyv8OjIZcE84qgGrDa8ZxRey1xwUYtMspVWo4_KqvDKzQEdPad7bHiJYOcw9A8snMS3o5Qw" width="324px;" height="578px;" /></figure>
+<p>&nbsp;</p>
+		</div>
+
+<div id="disqus_thread">
+            <div id="dsq-content">
+
+            <div class="navigation">
+                <div class="nav-previous">
+                    <span class="meta-nav">&larr;</span>&nbsp;
+                    <a href="http://www.cyanogenmod.org/blog/messaging-redesign/comment-page-1#comments" >Older Comments</a>                </div>
+                <div class="nav-next">
+                    <a href="http://www.cyanogenmod.org/blog/messaging-redesign#comments" >Newer Comments</a>                    &nbsp;<span class="meta-nav">&rarr;</span>
+                </div>
+            </div> <!-- .navigation -->
+
+            <ul id="dsq-comments">
+                    <li class="comment even thread-even depth-1" id="dsq-comment-68173">
+        <div id="dsq-comment-header-68173" class="dsq-comment-header">
+            <cite id="dsq-cite-68173">
+                <span id="dsq-author-user-68173">KyleVPirate</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68173" class="dsq-comment-body">
+            <div id="dsq-comment-message-68173" class="dsq-comment-message"><p>Of course it is not the best os. Community and market research determining that is complete bull. Only a niche community even knows about Cyanogenmod so must&#8217;ve a very exclusive group. Furthermore it is a subjective statement not objective so no kt isn&#8217;t the best OS out there. Better roms and better operating exist. </p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-68178">
+        <div id="dsq-comment-header-68178" class="dsq-comment-header">
+            <cite id="dsq-cite-68178">
+                <span id="dsq-author-user-68178">Rich Jones</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68178" class="dsq-comment-body">
+            <div id="dsq-comment-message-68178" class="dsq-comment-message"><p>Textra would be great, I like their ability to set custom notifications</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-68179">
+        <div id="dsq-comment-header-68179" class="dsq-comment-header">
+            <cite id="dsq-cite-68179">
+                <span id="dsq-author-user-68179">Algus</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68179" class="dsq-comment-body">
+            <div id="dsq-comment-message-68179" class="dsq-comment-message"><p>Get a phone that runs cyanogenmod well, like Nexus 5 or 6 or any(?) Motorola phone. More Nexuses will come this year &#8211; also an option if you are waiting.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-68180">
+        <div id="dsq-comment-header-68180" class="dsq-comment-header">
+            <cite id="dsq-cite-68180">
+                <span id="dsq-author-user-68180">cgioconda</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68180" class="dsq-comment-body">
+            <div id="dsq-comment-message-68180" class="dsq-comment-message"><p>If it&#8217;s possible, can the amount of white space between messages in the list view and single message view be condensed? I&#8217;d like to see more texts on a single screen. Thank you and keep up the good work! </p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-68181">
+        <div id="dsq-comment-header-68181" class="dsq-comment-header">
+            <cite id="dsq-cite-68181">
+                <span id="dsq-author-user-68181">Luke Glover</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68181" class="dsq-comment-body">
+            <div id="dsq-comment-message-68181" class="dsq-comment-message"><p>Personally, I really like the way the Google Messenger app looks. Unfortunately, it lacks some of the features of the CyanogenMod messaging app (such as the incredibly useful notification buttons). </p>
+<p>Hopefully, someone will just make a theme for it though&#8230;</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-68182">
+        <div id="dsq-comment-header-68182" class="dsq-comment-header">
+            <cite id="dsq-cite-68182">
+                <span id="dsq-author-user-68182">Giupy 99</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68182" class="dsq-comment-body">
+            <div id="dsq-comment-message-68182" class="dsq-comment-message"><p>Was about to say that XD</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-68183">
+        <div id="dsq-comment-header-68183" class="dsq-comment-header">
+            <cite id="dsq-cite-68183">
+                <span id="dsq-author-user-68183">Matt Booth</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68183" class="dsq-comment-body">
+            <div id="dsq-comment-message-68183" class="dsq-comment-message"><p>Just copy Google Messenger. It has a good design that works.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-68184">
+        <div id="dsq-comment-header-68184" class="dsq-comment-header">
+            <cite id="dsq-cite-68184">
+                <span id="dsq-author-user-68184">Snaken</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68184" class="dsq-comment-body">
+            <div id="dsq-comment-message-68184" class="dsq-comment-message"><p>Good news! I had to instal textra to send MMS (CM12.1)</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-68185">
+        <div id="dsq-comment-header-68185" class="dsq-comment-header">
+            <cite id="dsq-cite-68185">
+                <span id="dsq-author-user-68185">mark</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68185" class="dsq-comment-body">
+            <div id="dsq-comment-message-68185" class="dsq-comment-message"><p>The various IP based messaging services are good for contacting your friends who you message regularly, but I know I can send an SMS message to anyone with a mobile phone number. If I want to send a message to the builder working on my house I don&#8217;t have to ask him what messaging software he uses, install  it and set up an account with the right service, I just send a message. While the majority of messages sent are over IP, and this proportion will continue to grow, there is still a very important place for SMS and it&#8217;s not going to go away in the near future.</p>
+<p>It probably won&#8217;t last for ever, but I&#8217;d bet on it outlasting any one of the current IP messaging services.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-68186">
+        <div id="dsq-comment-header-68186" class="dsq-comment-header">
+            <cite id="dsq-cite-68186">
+                <span id="dsq-author-user-68186">mark</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68186" class="dsq-comment-body">
+            <div id="dsq-comment-message-68186" class="dsq-comment-message"><p>What has happened to the date/time stamps on the individual messages? These are absolutely essential and I can&#8217;t think why you would have got rid of them</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-68187">
+        <div id="dsq-comment-header-68187" class="dsq-comment-header">
+            <cite id="dsq-cite-68187">
+                <span id="dsq-author-user-68187">Monroe</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68187" class="dsq-comment-body">
+            <div id="dsq-comment-message-68187" class="dsq-comment-message"><p>Nobody had thought (maybe one person) of the possibility of making an app with synchronization of normal sms and those with ip something like google hangouts</p>
+<p>P.S additional options to sync with the cloud contacts. (just in case) #_#</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-68188">
+        <div id="dsq-comment-header-68188" class="dsq-comment-header">
+            <cite id="dsq-cite-68188">
+                <span id="dsq-author-user-68188">Vincenzo Romano</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68188" class="dsq-comment-body">
+            <div id="dsq-comment-message-68188" class="dsq-comment-message"><p>While I can agree in the specific cases you mention, the big picture is different.<br />
+SMS and voice is declining, data is ramping up steadily.<br />
+I am not pushing for a complete ditch of SMSes and voice calls. I am suggesting to put more efforts in the IP communication hub as CyanogenMod needs to stay on the edge in order to be a leader and a timely one.<br />
+SMS application works just (almost) fine, just like the dialer.<br />
+That&#8217;s just my possibly wrong opinion.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-68189">
+        <div id="dsq-comment-header-68189" class="dsq-comment-header">
+            <cite id="dsq-cite-68189">
+                <span id="dsq-author-user-68189">Vincenzo Romano</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68189" class="dsq-comment-body">
+            <div id="dsq-comment-message-68189" class="dsq-comment-message"><p>I think you can forget about that. As M will arrive also 12.1 will be dumped in favor of CM13, just like CM12 and CM11.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-68190">
+        <div id="dsq-comment-header-68190" class="dsq-comment-header">
+            <cite id="dsq-cite-68190">
+                <span id="dsq-author-user-68190">Benoit</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68190" class="dsq-comment-body">
+            <div id="dsq-comment-message-68190" class="dsq-comment-message"><p>before that, end first the snapshot 12.1 please.</p>
+<p>i think you must give us a milestone or snapshot every week !!!!!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-68192">
+        <div id="dsq-comment-header-68192" class="dsq-comment-header">
+            <cite id="dsq-cite-68192">
+                <span id="dsq-author-user-68192">mrmessma</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68192" class="dsq-comment-body">
+            <div id="dsq-comment-message-68192" class="dsq-comment-message"><p>I also like the delayed sending as it lets me catch a mispelling.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-68193">
+        <div id="dsq-comment-header-68193" class="dsq-comment-header">
+            <cite id="dsq-cite-68193">
+                <span id="dsq-author-user-68193">mrmessma</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68193" class="dsq-comment-body">
+            <div id="dsq-comment-message-68193" class="dsq-comment-message"><p>Keep the delayed sending option, quick read, quick reply, and find the source of the &#8220;message not sent&#8221; bug that has prevailed in the stock app since 2013, commonly occurring when sending group MMS&#8217;s. Also, dark themes and a more dense message conversation list.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-68194">
+        <div id="dsq-comment-header-68194" class="dsq-comment-header">
+            <cite id="dsq-cite-68194">
+                <span id="dsq-author-user-68194">Joseph Buchta</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68194" class="dsq-comment-body">
+            <div id="dsq-comment-message-68194" class="dsq-comment-message"><p>A few more answers to questions:<br />
+1.  Our plan right now is to open source this.  Also, if anyone wants to work on some features and see this faster then Ciwrl can definitly hook you up with some redlines.  As we stated above, V1 will be the main refresh and V2 will add additional features.  We can make this happen faster with more help.  While we are a company, we are still a very, very small company attempting to build a rock solid platform.  Its a big job.  BTW, did I mention we are hiring ?<br />
+2.  I like the area of Texta and Telegram protocols.  Its up to those teams if they want to work with us.  I would love to build an app that offers as many protocols as possible.<br />
+3.  Truecaller is and always will be optional.  We are about choice.  Currently, we only ship this on Cyanogen OS but if there is demand we could chat with TC about CyanogenMod.<br />
+4. +1 to choosing the contact color.  At launch it will be random, but IMO it would be great to choose either across the app or on a per contact basis.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-68195">
+        <div id="dsq-comment-header-68195" class="dsq-comment-header">
+            <cite id="dsq-cite-68195">
+                <span id="dsq-author-user-68195">amandra</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68195" class="dsq-comment-body">
+            <div id="dsq-comment-message-68195" class="dsq-comment-message"><p>My two cents are that nothing would get me to use something other than hangouts. Single app for all messaging including your Google voice number is irreplaceable.  In my case work on the messaging app is ill placed, though my use case might be rare.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-68197">
+        <div id="dsq-comment-header-68197" class="dsq-comment-header">
+            <cite id="dsq-cite-68197">
+http://fauzieweb.com/                <span id="dsq-author-user-68197">Fauzie</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68197" class="dsq-comment-body">
+            <div id="dsq-comment-message-68197" class="dsq-comment-message"><p>Exactly the first thing that came to my mind when I saw the screenshots.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-68198">
+        <div id="dsq-comment-header-68198" class="dsq-comment-header">
+            <cite id="dsq-cite-68198">
+                <span id="dsq-author-user-68198">Shane Robertson</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68198" class="dsq-comment-body">
+            <div id="dsq-comment-message-68198" class="dsq-comment-message"><p>I&#8217;ve switched all my devices. Lg g3/mine. Xt912 son / lg g2 wife / and tablets all 5 to cymod.   In truth I use the Verizon message app due to the sync accross all device. Text retention. Simy because I blow things up a lot with tinkering and I enjoy not loosing important text.  If this is a feature that could be added.  PS I do make nanos but when you want a fresh install due to lost backups / kids wiping sd and internal etc it would be nice to have that sort of service. Yes I&#8217;m asking for a premium non open source monthly charge softwArepAckage from ohmygerd vZ ????   But perhaps it&#8217;s a good idea for revenue cymod cloud backup ??  I&#8217;d pay for that.  Smack my leg and call me Liberace!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-68199">
+        <div id="dsq-comment-header-68199" class="dsq-comment-header">
+            <cite id="dsq-cite-68199">
+                <span id="dsq-author-user-68199">Thamsanqa Mvayo</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68199" class="dsq-comment-body">
+            <div id="dsq-comment-message-68199" class="dsq-comment-message"><p>I like it this way, just get in archiving. I like to save some treads while keeping the folder clean.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-68201">
+        <div id="dsq-comment-header-68201" class="dsq-comment-header">
+            <cite id="dsq-cite-68201">
+                <span id="dsq-author-user-68201">Jeff Meyer</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68201" class="dsq-comment-body">
+            <div id="dsq-comment-message-68201" class="dsq-comment-message"><p>The only thing I want from Messaging is a dark mode. It&#8217;s been a broken option in Settings since CM6. That&#8217;s right 6 versions of Cyanogen with a empty promise sitting there. Made me sad with each version I  flashed. As a night texter and amoled user I would be so happy to have a functioning dark mode. </p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-68202">
+        <div id="dsq-comment-header-68202" class="dsq-comment-header">
+            <cite id="dsq-cite-68202">
+                <span id="dsq-author-user-68202">tony solinan</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68202" class="dsq-comment-body">
+            <div id="dsq-comment-message-68202" class="dsq-comment-message"><p>Good news for a as I have been using android device&#8217;s the last few year&#8217;s, and am going to wait until august to see the new nexus5 models, and the new moto X 201,also the one+ 2 when they are out on the market!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-68203">
+        <div id="dsq-comment-header-68203" class="dsq-comment-header">
+            <cite id="dsq-cite-68203">
+                <span id="dsq-author-user-68203">DavidSmith</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68203" class="dsq-comment-body">
+            <div id="dsq-comment-message-68203" class="dsq-comment-message"><p>I think it would cool if CyanogenMod Messaging didn&#8217;t require the Google Play Store in order to register for WhisperPush to enable encrypted SMS. When I installed CM12.1 on my Nexus 6 I was looking forward to (essentially) built in TextSecure. I&#8217;m rolling without Google Apps for privacy reasons. But unfortunately, TextSecure requires Google Play Services in order to register, similar to WhisperPush for CM Messaging. However, I ended up copying TextSecure over from my old device as a workaround. Anyway, I might be the only person looking for a feature like this, however, it sure would be awesome. I hope my opinion is taken into consideration. Thanks.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-68204">
+        <div id="dsq-comment-header-68204" class="dsq-comment-header">
+            <cite id="dsq-cite-68204">
+                <span id="dsq-author-user-68204">David Brasser</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68204" class="dsq-comment-body">
+            <div id="dsq-comment-message-68204" class="dsq-comment-message"><p>The picture of the user next to the new message text box is an unnecessary waste of space. I know what I look like and I know I am the one sending the message.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-68205">
+        <div id="dsq-comment-header-68205" class="dsq-comment-header">
+            <cite id="dsq-cite-68205">
+                <span id="dsq-author-user-68205">Linh Nguyen</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68205" class="dsq-comment-body">
+            <div id="dsq-comment-message-68205" class="dsq-comment-message"><p>why cm update cm 12 for new sp first while they also have updated from their own oem, why?????? and cm left old device behind, i dont want to be stucked on old android version<br />
+p/s: i just say it, pls bring cm 12.1 to my old device p1 and offcial sp for my device sm-g7102<br />
+pls make it happen</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-68206">
+        <div id="dsq-comment-header-68206" class="dsq-comment-header">
+            <cite id="dsq-cite-68206">
+                <span id="dsq-author-user-68206">Nathan Jensen</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68206" class="dsq-comment-body">
+            <div id="dsq-comment-message-68206" class="dsq-comment-message"><p>You should make it so you can assign a color to a contact and when said contact opens, it changes the color of the top and status bar.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-68208">
+        <div id="dsq-comment-header-68208" class="dsq-comment-header">
+            <cite id="dsq-cite-68208">
+                <span id="dsq-author-user-68208">Jace Paxton</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68208" class="dsq-comment-body">
+            <div id="dsq-comment-message-68208" class="dsq-comment-message"><p>When should we expect the release?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-68216">
+        <div id="dsq-comment-header-68216" class="dsq-comment-header">
+            <cite id="dsq-cite-68216">
+                <span id="dsq-author-user-68216">Loïc dorio</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68216" class="dsq-comment-body">
+            <div id="dsq-comment-message-68216" class="dsq-comment-message"><p>bonjour a tous je dois avouer que les screenshot donnent un rendu de l&#8217;application plutôt intéressante avez vous une date de sortie pour cette application ? merci de vôtre réponse <img src="http://cyanogenmod.org/wp-includes/images/smilies/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-68217">
+        <div id="dsq-comment-header-68217" class="dsq-comment-header">
+            <cite id="dsq-cite-68217">
+                <span id="dsq-author-user-68217">poploock</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68217" class="dsq-comment-body">
+            <div id="dsq-comment-message-68217" class="dsq-comment-message"><p>I like it<br />
+Shouldn&#8217;t the advertisement message automatic move in special folder and don&#8217;t show in main message ?<br />
+Go SMS app already use this property</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-68218">
+        <div id="dsq-comment-header-68218" class="dsq-comment-header">
+            <cite id="dsq-cite-68218">
+                <span id="dsq-author-user-68218">iamkeeler</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68218" class="dsq-comment-body">
+            <div id="dsq-comment-message-68218" class="dsq-comment-message"><p>Hi Joseph,  We&#8217;re a start-up working on a SMS/MMS messaging that let&#8217;s you recall a text before the recipient receives it. I&#8217;d love to chat about if we could partner up and help cyanogenmod out with messaging. </p>
+<p>FYI love the project and been using it since for a few years now. </p>
+<p>shoot me a note at <a href="/cdn-cgi/l/email-protection#2c6b4d5e556c43425f494f434248584443594b4458024f43"><span class="__cf_email__" data-cfemail="fabd9b8883ba9594899f9995949e8e92958f9d928ed49995">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a></p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-68220">
+        <div id="dsq-comment-header-68220" class="dsq-comment-header">
+            <cite id="dsq-cite-68220">
+                <span id="dsq-author-user-68220">jasom</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68220" class="dsq-comment-body">
+            <div id="dsq-comment-message-68220" class="dsq-comment-message"><p>Is possible in default SMS &amp; MMS application limit shown messages?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-68231">
+        <div id="dsq-comment-header-68231" class="dsq-comment-header">
+            <cite id="dsq-cite-68231">
+http://www.WeboLobby.com/                <span id="dsq-author-user-68231">Aniruddh D</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68231" class="dsq-comment-body">
+            <div id="dsq-comment-message-68231" class="dsq-comment-message"><p>Any plans to offer WhisperPush support for dual sim devices? As it currently provides only one key for one phone number.</p>
+<p>Running on YU Yureka Cynogen OS 12.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-68252">
+        <div id="dsq-comment-header-68252" class="dsq-comment-header">
+            <cite id="dsq-cite-68252">
+                <span id="dsq-author-user-68252">Artagen</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68252" class="dsq-comment-body">
+            <div id="dsq-comment-message-68252" class="dsq-comment-message"><p>Couple of suggestions: you have swipe to delete and Mark unread. Personally I&#8217;d rather have a swipe call contact instead of Mark unread in conversation list. It would be something I&#8217;d se more often and I&#8217;m sure Mark unread will also be in the overflow menu. Also, the ability to resize conversation list to see more conversations with smaller text and previews</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-68254">
+        <div id="dsq-comment-header-68254" class="dsq-comment-header">
+            <cite id="dsq-cite-68254">
+                <span id="dsq-author-user-68254">Joseph Buchta</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68254" class="dsq-comment-body">
+            <div id="dsq-comment-message-68254" class="dsq-comment-message"><p>To answer some more questions:<br />
+1.  Whisperpush uses push messaging so we do have a dependency on Google.  More to come on this in the future.<br />
+2.  Unified Messaging is a holy grail.  I know several people don&#8217;t think design is important but our data says otherwise.  Moreover, if you were WhatsApp would you want to integrate to a stale experience.  We also have to convince partners to work with us.  No easy feat.  As customers continue to tell your app makers that you want integrations and send them my way.<br />
+3.IP Messaging is big in emerging markets.  In the states, SMS/MMS is still the way since our carriers didn&#8217;t hit us with crazy fees.  CM is a global device so we aim to please as many as can.  Plus, we need the IP Messaging app makers to want to work with us.  Almost all of their protocols are closed to third party integration.<br />
+4.  Multi-SIM support is something we think about and continue to evaluate.  We have plans just need more help.  Reach out to Leigh or me if you want to write some features and we can supply the design assets and redlines.  We are still a small company but the community is large and we need your help.<br />
+5.  I cannot comment on exact timing since our company is fluid.  I hope V1 in the next couple of months.  V2 can come after if some developers want to help us out.<br />
+6.  All options:  We strive to build apps that are highly customizable; however CM became one of the most customizable ROMs out there by users seeing a need, adding the feature/setting, and checking it back in for the world to use.  Our hope is that this occurs with our new MessagingApp.  Look at us as supplying the canvas and the community as adding the detail.</p>
+<p>Sorry if I missed anyone.  Thank for the feedback.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-68262">
+        <div id="dsq-comment-header-68262" class="dsq-comment-header">
+            <cite id="dsq-cite-68262">
+                <span id="dsq-author-user-68262">Muhammad Tello</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68262" class="dsq-comment-body">
+            <div id="dsq-comment-message-68262" class="dsq-comment-message"><p>Totally.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-68263">
+        <div id="dsq-comment-header-68263" class="dsq-comment-header">
+            <cite id="dsq-cite-68263">
+                <span id="dsq-author-user-68263">Muhammad Tello</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68263" class="dsq-comment-body">
+            <div id="dsq-comment-message-68263" class="dsq-comment-message"><p>Yeah <img src="http://cyanogenmod.org/wp-includes/images/smilies/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" /> I essentially wish for their app to be a little like Telegram.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-68264">
+        <div id="dsq-comment-header-68264" class="dsq-comment-header">
+            <cite id="dsq-cite-68264">
+                <span id="dsq-author-user-68264">Muhammad Tello</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68264" class="dsq-comment-body">
+            <div id="dsq-comment-message-68264" class="dsq-comment-message"><p>Totally!!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-68306">
+        <div id="dsq-comment-header-68306" class="dsq-comment-header">
+            <cite id="dsq-cite-68306">
+                <span id="dsq-author-user-68306">disqus_I7XvbMPBKi</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68306" class="dsq-comment-body">
+            <div id="dsq-comment-message-68306" class="dsq-comment-message"><p>The green &#8220;unread&#8221; marker (for Juliana Ereño, last mockup), is irritating. Why not use a green background for her picture instead? (Green background for the text might make it unreadable, but a background to the picture creates no problem.) Additionally put a small unread mail envelope icon nex to the name and time (like the attachment icon for Dana Miller).</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-68369">
+        <div id="dsq-comment-header-68369" class="dsq-comment-header">
+            <cite id="dsq-cite-68369">
+                <span id="dsq-author-user-68369">Feles</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68369" class="dsq-comment-body">
+            <div id="dsq-comment-message-68369" class="dsq-comment-message"><p>Please, if you can add support to postponed messaging. Support to set date/time when message will sent.<br />
+Thank you a lot.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-68423">
+        <div id="dsq-comment-header-68423" class="dsq-comment-header">
+            <cite id="dsq-cite-68423">
+                <span id="dsq-author-user-68423">wrenhal2010</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68423" class="dsq-comment-body">
+            <div id="dsq-comment-message-68423" class="dsq-comment-message"><p>I&#8217;m kind of late to the party here, but is the size of font in the message listview something I should talk to you about?  It seems rather small compared to say Google Messenger. If you want screenshots, just let me know.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-68429">
+        <div id="dsq-comment-header-68429" class="dsq-comment-header">
+            <cite id="dsq-cite-68429">
+                <span id="dsq-author-user-68429">Joseph Buchta</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68429" class="dsq-comment-body">
+            <div id="dsq-comment-message-68429" class="dsq-comment-message"><p>Have you tried to load the screens on your device.  Usually thats how I guage text size.  Its really hard to do on a PC.</p>
+<p>In either event, we have taken an action item to allow users to change the size of the font.  This way we please the most people.</p>
+<p>Keep the good feedback coming.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-68430">
+        <div id="dsq-comment-header-68430" class="dsq-comment-header">
+            <cite id="dsq-cite-68430">
+                <span id="dsq-author-user-68430">wrenhal2010</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68430" class="dsq-comment-body">
+            <div id="dsq-comment-message-68430" class="dsq-comment-message"><p>I understand what you are saying, but I&#8217;m talking about in the current Messaging app in the 12.1 nightly I&#8217;m running on my Samsung S3.    If there is a way for you to get me your email I&#8217;ll send you screenshots of the two programs with the same conversation loaded for comparison.  I do like the ideas of dark theme and of variable font size.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-68513">
+        <div id="dsq-comment-header-68513" class="dsq-comment-header">
+            <cite id="dsq-cite-68513">
+                <span id="dsq-author-user-68513">bfIhd0vq</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68513" class="dsq-comment-body">
+            <div id="dsq-comment-message-68513" class="dsq-comment-message"><p>Any chance of an archive for messages?  I like to keep an empty inbox, moving messages to an archive or read items folder when I&#8217;m done, but not deleting them.  Swipe to archive would be nice, too.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-68571">
+        <div id="dsq-comment-header-68571" class="dsq-comment-header">
+            <cite id="dsq-cite-68571">
+                <span id="dsq-author-user-68571">Jim Peterkin</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68571" class="dsq-comment-body">
+            <div id="dsq-comment-message-68571" class="dsq-comment-message"><p>Sorry I&#8217;m relatively late to this party. My request is to please try to incorporate Google Voice capability into the Messaging app. I really don&#8217;t care for Google Hangouts and am only using it to text via my GV number. I&#8217;d rather use something built-in. I suspect I&#8217;m not alone.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-68656">
+        <div id="dsq-comment-header-68656" class="dsq-comment-header">
+            <cite id="dsq-cite-68656">
+                <span id="dsq-author-user-68656">Pasha</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68656" class="dsq-comment-body">
+            <div id="dsq-comment-message-68656" class="dsq-comment-message"><p>I&#8217;m guessing emojis will be part of the design.  Please change the emojis or give the options for smileys (yes,  standard faces,  think Y!  Messenger) and sizes.  As it stands now the emojis are (to me)  weird shaped and ugly,  but worse and most important is when received in a text,  they are so small the faces aren&#8217;t  distinguishable (on my huge screen!) Any smiley apps I&#8217;ve  downloaded  won&#8217;t replace these things,  and trying to attach them into texts&#8230;   Ugh&#8230; </p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-68680">
+        <div id="dsq-comment-header-68680" class="dsq-comment-header">
+            <cite id="dsq-cite-68680">
+                <span id="dsq-author-user-68680">Frank Bx</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68680" class="dsq-comment-body">
+            <div id="dsq-comment-message-68680" class="dsq-comment-message"><p>Could you please include XMPP? This would be SO awesome!<br />
+And yes, dark mode!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-68827">
+        <div id="dsq-comment-header-68827" class="dsq-comment-header">
+            <cite id="dsq-cite-68827">
+                <span id="dsq-author-user-68827">Pasha</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68827" class="dsq-comment-body">
+            <div id="dsq-comment-message-68827" class="dsq-comment-message"><p>Girl bitching?  I take offense to that.  Besides,  you&#8217;re just as bad a whiner for acknowledging and responding that way.  Guess it takes one to know one. </p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-68829">
+        <div id="dsq-comment-header-68829" class="dsq-comment-header">
+            <cite id="dsq-cite-68829">
+                <span id="dsq-author-user-68829">infected_</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68829" class="dsq-comment-body">
+            <div id="dsq-comment-message-68829" class="dsq-comment-message"><p>ever saw a post or comment of mine, asking for ETA&#8217;s or anything related to that? you have not. first because you don&#8217;t know me, and second because i don&#8217;t do that. THERE&#8217;S NO ETA&#8217;S OR ASKING &#8220;IS IT READY YET?!&#8221; on Android Development&#8230; Android is Open Source, the developers don&#8217;t have a salary for doing ROM&#8217;s for us. THEY DO IT FOR FREE&#8230;. So lets have common sense, and dont say shits like; &#8220;hey its almost a year without a full release&#8221; &#8230; Regards.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-68841">
+        <div id="dsq-comment-header-68841" class="dsq-comment-header">
+            <cite id="dsq-cite-68841">
+                <span id="dsq-author-user-68841">Internet User</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-68841" class="dsq-comment-body">
+            <div id="dsq-comment-message-68841" class="dsq-comment-message"><p>Falcon SMS supports this already.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+            </ul>
+
+            <div class="navigation">
+                <div class="nav-previous">
+                    <span class="meta-nav">&larr;</span>
+                    &nbsp;<a href="http://www.cyanogenmod.org/blog/messaging-redesign/comment-page-1#comments" >Older Comments</a>                </div>
+                <div class="nav-next">
+                    <a href="http://www.cyanogenmod.org/blog/messaging-redesign#comments" >Newer Comments</a>                    &nbsp;<span class="meta-nav">&rarr;</span>
+                </div>
+            </div><!-- .navigation -->
+
+        </div>
+
+    </div>
+
+<script type="text/javascript">
+var disqus_url = 'http://www.cyanogenmod.org/blog/messaging-redesign';
+var disqus_identifier = '2949 http://www.cyanogenmod.org/?p=2949';
+var disqus_container_id = 'disqus_thread';
+var disqus_shortname = 'cyngn';
+var disqus_title = "Call for response: Messaging Redesign";
+var disqus_config_custom = window.disqus_config;
+var disqus_config = function () {
+    /*
+    All currently supported events:
+    onReady: fires when everything is ready,
+    onNewComment: fires when a new comment is posted,
+    onIdentify: fires when user is authenticated
+    */
+    
+    
+    this.language = '';
+        this.callbacks.onReady.push(function () {
+
+        // sync comments in the background so we don't block the page
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = '?cf_action=sync_comments&post_id=2949';
+
+        var firstScript = document.getElementsByTagName('script')[0];
+        firstScript.parentNode.insertBefore(script, firstScript);
+    });
+    
+    if (disqus_config_custom) {
+        disqus_config_custom.call(this);
+    }
+};
+
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+
+</article>
+			</div>
+
+		</div><!-- End Content row -->
+		
+		<aside id="sidebar" class="four columns hide-on-phones" role="complementary">
+	<div class="sidebar-box">
+		<article id="recent-comments-4" class="row widget widget_recent_comments"><div class="sidebar-section twelve columns"><h6><strong>Recent Comments</strong></h6><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">Dimmer</span> on <a href="http://www.cyanogenmod.org/blog/plug-play-weather/comment-page-1#comment-71851">Plug &#038; Play Weather</a></li><li class="recentcomments"><span class="comment-author-link">niranjan deshpande</span> on <a href="http://www.cyanogenmod.org/blog/cm-13-0-release-1/comment-page-8#comment-71850">CM 13.0 Release 1</a></li><li class="recentcomments"><span class="comment-author-link">niranjan deshpande</span> on <a href="http://www.cyanogenmod.org/blog/cm-13-0-release-1/comment-page-8#comment-71849">CM 13.0 Release 1</a></li><li class="recentcomments"><span class="comment-author-link">Mark Baldacchino</span> on <a href="http://www.cyanogenmod.org/blog/cm-13-0-release-1/comment-page-8#comment-71848">CM 13.0 Release 1</a></li><li class="recentcomments"><span class="comment-author-link">Manuel Fotoschlampe Hornsteine</span> on <a href="http://www.cyanogenmod.org/blog/plug-play-weather/comment-page-1#comment-71847">Plug &#038; Play Weather</a></li></ul></div></article>	</div>
+</aside><!-- /#sidebar -->		
+		</div><!-- End Main row -->
+		
+		<footer id="content-info" role="contentinfo" class="hide-on-phones" style="margin:40px 0 0 0;">
+			<div class="row">
+				<article id="nav_menu-4" class="three columns widget widget_nav_menu"><div class="footer-section"><h6><strong>Navigation</strong></h6><div class="menu-main-container"><ul id="menu-main" class="menu"><li id="menu-item-798" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-798"><a href="http://www.cyanogenmod.org/about">About</a></li>
+<li id="menu-item-2403" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2403"><a href="http://wiki.cyanogenmod.org/">Wiki</a></li>
+<li id="menu-item-2404" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2404"><a href="http://download.cyanogenmod.org">Download</a></li>
+<li id="menu-item-825" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-825"><a href="/blog">Blog</a></li>
+<li id="menu-item-904" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-904"><a href="http://forum.cyanogenmod.org">Forum</a></li>
+<li id="menu-item-829" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-829"><a href="http://www.cyanogenmod.org/community">Community</a></li>
+<li id="menu-item-2709" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2709"><a href="http://shop.cyanogenmod.org">Shop</a></li>
+</ul></div></div></article><article id="nav_menu-3" class="three columns widget widget_nav_menu"><div class="footer-section"><h6><strong>Social Networks</strong></h6><div class="menu-social-networks-container"><ul id="menu-social-networks" class="menu"><li id="menu-item-2173" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2173"><a href="https://www.facebook.com/CyanogenMod">Facebook</a></li>
+<li id="menu-item-2174" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2174"><a href="https://twitter.com/CyanogenMod">Twitter</a></li>
+<li id="menu-item-2175" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2175"><a href="https://plus.google.com/+CyanogenMod/posts">Google+</a></li>
+</ul></div></div></article>                                <article class="three columns widget widget widget_nav_menu">
+                                    <div class="footer-section">
+                                        <h6><strong>Sponsored By</strong></h6>
+                                        <a href="http://twilio.com/?utm_source=cyanogenmod&utm_medium=webbadge&utm_campaign=cyanogenverify" style="text: decoration: none; display: inline-block; width: 166px; height: 0; overflow: hidden; padding-top: 31px; background: url(https://www.twilio.com/packages/company/img/logos_icon_poweredbysmall.png) no-repeat;">powered by twilio™</a>
+                                    </div>
+                                </article>
+			</div>
+		</footer>
+        
+      <div id="navigation" class="row mobile-footer show-on-phones">
+			<div class="twelve columns">
+            	<h6>Navigate cyanogenmod.org</h6>
+            	<ul>
+                	<li><a href="/about">About</a></li>
+                    <!--<li><a href="#">Features</a></li>-->
+                    <li><a href="http://wiki.cyanogenmod.org/">Wiki</a></li>
+                    <li><a href="http://download.cyanogenmod.org/">Download</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="http://forum.cyanogenmod.org">Forum</a></li>
+                    <li><a href="/community">Community</a></li>  
+                    <li><a href="http://shop.cyanogenmod.org">Shop</a></li>
+                </ul>
+            </div>
+        </div>
+			
+	</div><!-- Container End -->
+    
+
+	<!-- Included JS Files of Foundation -->
+	<script src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/foundation.js"></script>
+	<script src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/app.js"></script>
+	
+	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+	     chromium.org/developers/how-tos/chrome-frame-getting-started -->
+	<!--[if lt IE 7]>
+		<script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+		<script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+	<![endif]-->
+	
+	        <script type="text/javascript">
+        // <![CDATA[
+        var disqus_shortname = 'cyngn';
+        (function () {
+            var nodes = document.getElementsByTagName('span');
+            for (var i = 0, url; i < nodes.length; i++) {
+                if (nodes[i].className.indexOf('dsq-postid') != -1) {
+                    nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('data-dsqidentifier'));
+                    url = nodes[i].parentNode.href.split('#', 1);
+                    if (url.length == 1) { url = url[0]; }
+                    else { url = url[1]; }
+                    nodes[i].parentNode.href = url + '#disqus_thread';
+                }
+            }
+            var s = document.createElement('script'); 
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+        // ]]>
+        </script>
+        <script type='text/javascript' src='http://cyanogenmod.org/wp-includes/js/comment-reply.min.js?ver=4.2.4'></script>
+<script type="text/javascript">/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+ Served from: www.cyanogenmod.org @ 2016-05-05 23:16:07 by W3 Total Cache -->

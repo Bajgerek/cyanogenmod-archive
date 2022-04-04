@@ -1,0 +1,1032 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+
+	<title>Plug &#038; Play Weather | CyanogenMod</title>
+	
+	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	
+	<!-- Included Foundation CSS Files -->
+	<link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/css/foundation.css">
+	<link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/css/app.css">
+    <link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/tipTip.css">
+    <link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/fonts/style.css">
+    <link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/css/flexslider.css" type="text/css" media="screen" />
+	
+	<link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/style.css">
+	
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/css/ie.css">
+	<![endif]-->
+	
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<!-- Favicon and Feed -->
+	<link rel="shortcut icon" type="image/png" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/favicon.ico">
+	<link rel="alternate" type="application/rss+xml" title="CyanogenMod Feed" href="http://www.cyanogenmod.org/feed/">
+	
+	<!--  iPhone Web App Home Screen Icon -->
+	<link rel="apple-touch-icon" sizes="72x72" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-icon-ipad.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-icon-retina.png" />
+	<link rel="apple-touch-icon" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-icon.png" />
+	
+	<!-- Enable Startup Image for iOS Home Screen Web App -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link rel="apple-touch-startup-image" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/mobile-load.png" />
+
+	<!-- Startup Image iPad Landscape (748x1024) -->
+	<link rel="apple-touch-startup-image" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-load-ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)" />
+	<!-- Startup Image iPad Portrait (768x1004) -->
+	<link rel="apple-touch-startup-image" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-load-ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)" />
+	<!-- Startup Image iPhone (320x460) -->
+	<link rel="apple-touch-startup-image" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-load.png" media="screen and (max-device-width: 320px)" />
+	
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.min.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.jparallax.min.js" ></script>
+  <script defer type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.featureList-1.0.0.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.tipTip.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/easySlider1.7.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/modernizr.foundation.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.flexslider-min.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/custom.js"></script>
+  
+  <script type="text/javascript">
+    $(document).load(function(){
+
+	  // The slider being synced must be initialized first
+	  $('.flexslider').flexslider({
+		animation: "slide",
+		controlNav: false,
+	  });
+	  
+    });
+  </script>
+  
+  	
+<!-- All in One SEO Pack 2.2.7.1 by Michael Torbert of Semper Fi Web Design[493,525] -->
+<link rel="author" href="http://google.com/+AbhisekDevkota" />
+<meta name="description"  content="For a few weeks now, users of 13.0 nightlies have stumbled across a 'Weather' category in their Settings dashboard, and rightfully wondered what it was (and why" />
+
+<link rel="canonical" href="http://www.cyanogenmod.org/blog/plug-play-weather" />
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-39737599-3']);
+		  _gaq.push(['_trackPageview']);
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
+<!-- /all in one seo pack -->
+<link rel="alternate" type="application/rss+xml" title="CyanogenMod &raquo; Plug &amp; Play Weather Comments Feed" href="http://www.cyanogenmod.org/blog/plug-play-weather/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/cyanogenmod.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.2.4"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://cyanogenmod.org/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://cyanogenmod.org/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='CM 13.0 Release 1' href='http://www.cyanogenmod.org/blog/cm-13-0-release-1' />
+<link rel='next' title='Developer Spotlight: A Moment with Michael &#8216;mikeioannina&#8217; Bestas' href='http://www.cyanogenmod.org/blog/a-moment-with-mbestas' />
+<meta name="generator" content="WordPress 4.2.4" />
+<link rel='shortlink' href='http://www.cyanogenmod.org/?p=3197' />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+</head>
+
+<body class="single single-post postid-3197 single-format-standard">
+
+	<div class="menusto hide-on-phones"></div>
+	<!-- Start the main container -->
+	<div id="container" class="container" role="document" style="padding:80px 0 0 0;">
+		
+        
+        <div class="row mobile-header show-on-phones">
+            <div class="nine">
+            	<a href="http://www.cyanogenmod.org" title="CyanogenMod" class="logo-mobile"><img src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/logo-mobile.png" alt=""/></a>
+            </div>
+            <a href="#navigation" class="mobile-menu"><img src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/btn-menu-mobile.png" alt=""/></a>
+        </div>
+        
+		<!-- Row for blog navigation -->
+		<div class="row hide-on-phones">
+			<header class="twelve columns" role="banner">
+				<div class="reverie-header">
+                	<a href="http://www.cyanogenmod.org" title="CyanogenMod" class="logo"><img src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/logo.png" alt=""/></a>
+                    <div id="glavno" class="nav hide-on-phones">
+                        <ul id="glavno">                   
+                            <li><a href="http://wiki.cyanogenmod.org/">Wiki</a></li>
+                            <!--<li><a href="http://cyanogenmod.org/about/features">Features</a></li>-->
+                            <li><a href="http://download.cyanogenmod.org/">Download</a></li>
+                            <li><a href="http://www.cyanogenmod.org/blog/">Blog</a></li>
+                            <li><a href="http://forum.cyanogenmod.org/">Forum</a></li>
+                            <li>
+                            	<a href="http://www.cyanogenmod.org/community">Community</a>
+                                <div style="opacity: 0; display: none; width:100%" class="sub">
+                                    <ul>
+                                    	<div style="width:980px; margin:0 auto; color:#fff;">
+                                        	<div class="contributesub">
+                                            	<h2>Contribute</h2>
+                                                
+                                                <h4><a href="http://review.cyanogenmod.org/">Gerrit Review</a></h4>
+                                                <p>Gerrit is a web based code review system, facilitating online code reviews for projects using the Git version control system.</p>
+                                                    
+                                                <h4><a href="http://wiki.cyanogenmod.org/">Wiki</a></h4>
+                                                <p>Our Wiki is a comprehensive tool for users to find information. This also needs contributions to keep it fresh and relevant.</p>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/community">Join The Team</a></h4>
+                                                <p>We love working with others. You can submit code via Gerrit. If you think there is something else you can help with, get in touch with us on the forums.</p>
+                                            </div>
+                                            
+                                        	<div class="contributesub">
+                                            	<h2>Help</h2>
+                                                
+                                                <h4><a href="http://forum.cyanogenmod.org/">Forum</a></h4>
+                                                <p>Our forums have a wealth of knowledge and resources. All of it is free and accessible from both your desktop and mobile phone.</p>
+                                                    
+                                                <h4><a href="irc://irc.freenode.net/cyanogenmod">IRC</a></h4>
+                                                <p>If you are comfortable with IRC and would like instant help and assistance from both developers and others users alike.</p>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/blog">Blog</a></h4>
+                                                <p>Our blogs will contain the latest news and releases as well as other related news concerning the distribution.</p>
+                                                    
+                                                <h4><a href="http://wiki.cyanogenmod.org/">Wiki</a></h4>
+                                                <p>Our Wiki is a comprehensive tool for users to find information. This also needs contributions to keep it fresh and relevant.</p>
+                                            </div>
+                                            
+                                        	<div class="contributesub">
+                                            	<h2>Information</h2>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/bugs">Bug Tracker</a></h4>
+                                                <p>This is the official Bug Tracker where you can submit and review bugs that users may experience.</p>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/github">Github Repo</a></h4>
+                                                <p>Our source is free and open. you can check the Github page to see what we do and how you can contribute.</p>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/stats">Installation Statistics</a></h4>
+                                                <p>We have an opt-in feature in our ROMS to enable us to gain statistics on users as well as devices used.</p>
+                                            </div>
+                                            
+                                        	<div class="contributesub last">
+                                            	<h2>Support</h2>
+                                                
+                                                <h4><a href="/cdn-cgi/l/email-protection#5236372420373e12312b333c3d35373c3f3d367c3d2035">Developer Relations</a></h4>
+                                                <p>If you wish to contact us regarding development contributions, please do so here.</p>
+                                                    
+                                                <h4><a href="/cdn-cgi/l/email-protection#89e8ede4e0e7c9eaf0e8e7e6eeece7e4e6eda7e6fbee">Website Support</a></h4>
+                                                <p>This email is dedicated to website, forum, wiki and hosting support. We will not respond to ROM support.</p>
+                                                    
+                                                <h4><a href="/cdn-cgi/l/email-protection#a8c9ccc5c1c6e8cbd1c9c6c7cfcdc6c5c7cc86c7dacf">Social Network</a></h4>
+                                                <p>To contact us in relation to our Social media structure.</p>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                    
+                                </div>
+                            </li>
+                      </ul>
+                    </div>
+				</div>
+
+			</header>
+		</div>
+
+		
+		<!-- Row for main content area -->
+		<div id="main" class="row">
+		<!-- Row for main content area -->
+		<div id="content" class="eight columns" role="main">
+	
+			<div class="post-box">
+					<article class="post-3197 post type-post status-publish format-standard hentry category-blog" id="post-3197">
+		<header>
+        	<time class="updated" datetime="2016-04-27T12:55:01+00:00" pubdate>April 27th, 2016 &bull; Written by <a href="http://www.cyanogenmod.org/author/ciwrl" rel="author" class="fn">ciwrl</a></time>        	<h2 class="entry-title">Plug &#038; Play Weather</h2>
+					</header>
+		<div class="entry-content">
+			<p>For a few weeks now, users of 13.0 nightlies have stumbled across a &#8216;Weather&#8217; category in their Settings dashboard, and rightfully wondered what it was (and why it&#8217;s empty). We&#8217;re now ready to provide some exposition on our newest feature to our mainline code.</p>
+<p>Historically, we&#8217;ve used Yahoo! Weather and OpenWeatherMap to power the weather in the status bar or with our weather widget. Like most things these have had their pros and cons.</p>
+<p>Yahoo! has been our default for some time, but they have made some recent changes to their API and policies, causing many bug reports of weather no longer working. Maintaining API compatibility is usually a trivial maintenence task, but Yahoo! Weather now requests every weather query go through an OAUTH implementation, and since these are traceable, counts against a quota limit 100k requests daily (which our millions of users quickly exceed even via previously anonymous requests) should we have just tried to use one static key. The quota and OAUTH changes make it so Yahoo! Weather no longer &#8216;just works&#8217; out of the box without user intervention.</p>
+<p>Around the same 6 month timeframe that Yahoo! Weather made these changes, we were asked by OpenWeatherMap to start using tokenized calls for our requests &#8211; but without a limit at that time &#8211; and we obliged. In doing their research, it was no surprise that our userbase quickly exceeded what a normal &#8216;developer&#8217; account would reasonably use. Their pricing structure is not condusive of our use case, and as such we agreed to move away from our usage pattern of their platform.</p>
+<p>This left an unfortuante gap, but also an opportunity. Our install base will exceed any weather provider&#8217;s caps for free, open-source or developer tiers if reported as all coming from one entity. However, each individual phone is usually making 12-24 requests a day (on average) and well below personal limits. With that in mind, we&#8217;ve built a pluggable model for our weather functionality, and through our platform SDK, one that can be repurposed by other apps or use cases beyond just our own.</p>
+<p>As of nightlies April 17th and forward, you can download your own weather provider and have it seamlessly power the features mentioned above. This allows us to not have to worry about API limits and the like, as each user is reported independently. The first such weather provider is on the Play Store now (we are looking into FDroid and APK Mirror deployment for those that prefer that route) &#8211; <a href="https://play.google.com/store/apps/details?id=org.cyanogenmod.wundergroundcmweatherprovider">WeatherUnderground CM Weather Provider</a>.</p>
+<p>We&#8217;d like to emphasize this is the just first of many that will be compatible, and work for a sample OpenWeatherMap app under this new model is already under way. Likewise, developers worldwide have the capability to create and upload their own providers for regions and areas where our sample apps aren&#8217;t well suited.</p>
+<p>Looking at our first sample, let&#8217;s answer a few questions preemptively.</p>
+<p style="padding-left: 30px;">1) Do I have to pay for your apps?<br />
+No &#8211; our samples are free (and the code is open sourced).</p>
+<p style="padding-left: 30px;">2) WeatherUnderground is saying there is a fee for signup?<br />
+The pricing structure of our samples all allow for a free ($0.00) developer account for personal usage. You do not have to pay to use this functionality with the providers we are starting with.</p>
+<p style="padding-left: 30px;">3) The UX (user flow) is clunky!<br />
+Unfortunately, as the pain points in the post above describe, we can&#8217;t seed an API token into the OS, meaning there is some user setup involved. We&#8217;d love to avoid this, and provide one that &#8216;just works&#8217;, but the folks that power these things have a right to establish their own rules for usage.</p>
+<p style="padding-left: 30px;">4) Will I have to pay in the future?<br />
+For CyanogenMod uploaded samples, no. However, since this is now a public API for anyone to develop against, it&#8217;s up to individual publishers to set their pricing &#8211; just like any other app on the store.</p>
+<p style="padding-left: 30px;">5) Where is the source code for these samples?<br />
+<a href="https://github.com/cyanogenmod?utf8=%E2%9C%93&amp;query=Weather">On our Github of course</a>!</p>
+<p style="padding-left: 30px;">6) I don&#8217;t like/trust the information from your WeatherUnderground app, what about other samples?<br />
+We&#8217;re working through other samples (eg OpenWeatherMap) and other developers can upload their own as well.</p>
+<p style="padding-left: 30px;">7) Why not just bundle these into the OS?<br />
+For starters, the UX leaves a lot to be desired, especially since there is no solid out of the box working state with zero user setup. Additionally, more apks equate to larger zip downloads, and since you would only need one provider setup &amp; selected, any others would be a waste of space and bandwidth. Finally, in the event of API breakage or compatibility needs, this gives us an opportunity to fix issues without requiring end users to update their OS version to a newer build.</p>
+		</div>
+
+<div id="disqus_thread">
+            <div id="dsq-content">
+
+            <div class="navigation">
+                <div class="nav-previous">
+                    <span class="meta-nav">&larr;</span>&nbsp;
+                                    </div>
+                <div class="nav-next">
+                    <a href="http://www.cyanogenmod.org/blog/plug-play-weather#comments" >Newer Comments</a>                    &nbsp;<span class="meta-nav">&rarr;</span>
+                </div>
+            </div> <!-- .navigation -->
+
+            <ul id="dsq-comments">
+                    <li class="comment even thread-even depth-1" id="dsq-comment-71743">
+        <div id="dsq-comment-header-71743" class="dsq-comment-header">
+            <cite id="dsq-cite-71743">
+                <span id="dsq-author-user-71743">CrystalBeam</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71743" class="dsq-comment-body">
+            <div id="dsq-comment-message-71743" class="dsq-comment-message"><p>Awesome</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-71745">
+        <div id="dsq-comment-header-71745" class="dsq-comment-header">
+            <cite id="dsq-cite-71745">
+http://www.tuttoandroid.net/author/marcusoptimus/                <span id="dsq-author-user-71745">Marco</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71745" class="dsq-comment-body">
+            <div id="dsq-comment-message-71745" class="dsq-comment-message"><p>CyanogenMod 13 for OnePlus 2, please! <img src="http://cyanogenmod.org/wp-includes/images/smilies/frownie.png" alt=":(" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-71746">
+        <div id="dsq-comment-header-71746" class="dsq-comment-header">
+            <cite id="dsq-cite-71746">
+http://cyanogenmod.org/                <span id="dsq-author-user-71746">ciwrl</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71746" class="dsq-comment-body">
+            <div id="dsq-comment-message-71746" class="dsq-comment-message"><p>In progress &#8211; <a href="https://github.com/CyanogenMod/android_device_oneplus_oneplus2/commits/cm-13.0" rel="nofollow">https://github.com/CyanogenMod/android_device_oneplus_oneplus2/commits/cm-13.0</a></p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-71747">
+        <div id="dsq-comment-header-71747" class="dsq-comment-header">
+            <cite id="dsq-cite-71747">
+                <span id="dsq-author-user-71747">blabla blabla</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71747" class="dsq-comment-body">
+            <div id="dsq-comment-message-71747" class="dsq-comment-message"><p>That (and DU&#8217;s damn cool Pulse) is what made me get out of CM13. BRB.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-71748">
+        <div id="dsq-comment-header-71748" class="dsq-comment-header">
+            <cite id="dsq-cite-71748">
+                <span id="dsq-author-user-71748">CyberPelotilla Andereño Webs</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71748" class="dsq-comment-body">
+            <div id="dsq-comment-message-71748" class="dsq-comment-message"><p>I have installed weather provider.<br />
+Now, how can I change clock in order to use this new provider? Only yahoo weather and openweather services are listed in clock option?? </p>
+<p>I&#8217;m on a 24/4 nightly&#8230; (I&#8217;ve been able to install and configure key for weather provider)&#8230; </p>
+<p>Regards </p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-71749">
+        <div id="dsq-comment-header-71749" class="dsq-comment-header">
+            <cite id="dsq-cite-71749">
+                <span id="dsq-author-user-71749">Peter</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71749" class="dsq-comment-body">
+            <div id="dsq-comment-message-71749" class="dsq-comment-message"><p>Please share the apk. In Germany I&#8217;ve a region lock 🤔</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-71750">
+        <div id="dsq-comment-header-71750" class="dsq-comment-header">
+            <cite id="dsq-cite-71750">
+                <span id="dsq-author-user-71750">sri charan</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71750" class="dsq-comment-body">
+            <div id="dsq-comment-message-71750" class="dsq-comment-message"><p>Expected release date for stable CM 13 for Zenfone 2????</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-71751">
+        <div id="dsq-comment-header-71751" class="dsq-comment-header">
+            <cite id="dsq-cite-71751">
+                <span id="dsq-author-user-71751">Bruno Martins</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71751" class="dsq-comment-body">
+            <div id="dsq-comment-message-71751" class="dsq-comment-message"><p>Is it possible to add a weather widget to the lockscreen?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-71752">
+        <div id="dsq-comment-header-71752" class="dsq-comment-header">
+            <cite id="dsq-cite-71752">
+                <span id="dsq-author-user-71752">Bruno Martins</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71752" class="dsq-comment-body">
+            <div id="dsq-comment-message-71752" class="dsq-comment-message"><p>You probably need 27/4 nigthly.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-71753">
+        <div id="dsq-comment-header-71753" class="dsq-comment-header">
+            <cite id="dsq-cite-71753">
+                <span id="dsq-author-user-71753">CyberPelotilla Andereño Webs</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71753" class="dsq-comment-body">
+            <div id="dsq-comment-message-71753" class="dsq-comment-message"><p>Ok. Yes. I see the commit for clock application.<br />
+Regards </p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-71754">
+        <div id="dsq-comment-header-71754" class="dsq-comment-header">
+            <cite id="dsq-cite-71754">
+                <span id="dsq-author-user-71754">Shekhar Singh Katheria</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71754" class="dsq-comment-body">
+            <div id="dsq-comment-message-71754" class="dsq-comment-message"><p>Any ETA ?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-71755">
+        <div id="dsq-comment-header-71755" class="dsq-comment-header">
+            <cite id="dsq-cite-71755">
+                <span id="dsq-author-user-71755">M.C.</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71755" class="dsq-comment-body">
+            <div id="dsq-comment-message-71755" class="dsq-comment-message"><p>Thanks!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-71756">
+        <div id="dsq-comment-header-71756" class="dsq-comment-header">
+            <cite id="dsq-cite-71756">
+                <span id="dsq-author-user-71756">Alexander Kio</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71756" class="dsq-comment-body">
+            <div id="dsq-comment-message-71756" class="dsq-comment-message"><p>1) They don&#8217;t do stables anymore&#8230; I think you&#8217;re looking for snapshot. 2) ETAs don&#8217;t ever get answered (because you aren&#8217;t supposed to ask). 3) If you wanted to ask for an ETA maybe try the maintainer?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-71757">
+        <div id="dsq-comment-header-71757" class="dsq-comment-header">
+            <cite id="dsq-cite-71757">
+http://www.tuttoandroid.net/author/marcusoptimus/                <span id="dsq-author-user-71757">Marco</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71757" class="dsq-comment-body">
+            <div id="dsq-comment-message-71757" class="dsq-comment-message"><p>Thanks. 😉</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-71758">
+        <div id="dsq-comment-header-71758" class="dsq-comment-header">
+            <cite id="dsq-cite-71758">
+http://www.malsum.org/                <span id="dsq-author-user-71758">Eric Côté</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71758" class="dsq-comment-body">
+            <div id="dsq-comment-message-71758" class="dsq-comment-message"><p>Hi,</p>
+<p>Play store &#8216;decided&#8217; that my s4 mini isn&#8217;t compatible with WU weather provider.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-71759">
+        <div id="dsq-comment-header-71759" class="dsq-comment-header">
+            <cite id="dsq-cite-71759">
+                <span id="dsq-author-user-71759">herbert78</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71759" class="dsq-comment-body">
+            <div id="dsq-comment-message-71759" class="dsq-comment-message"><p>CyanogenMod for Sony devices has become such a disaster. No release<br />
+since end of 2014 for any Sony device. Since then only nightly builds,<br />
+but the developers don&#8217;t care about stability any more. They change some<br />
+ critical functions like WLAN, then it&#8217;s broken in the next nightly<br />
+version and stays broken for weeks. The developers don&#8217;t even test their<br />
+ code on the actual device. This was confirmed by CyanogenMod developers<br />
+ at the forum. This is such a sadness. Sony is a very community-friendly<br />
+ manufacturer. They provide you access to kernels and so on, give users<br />
+the opportunity to unlock the bootloader easily. But this great<br />
+potential vanishes as CyanogenMod for Sony devices gets less and less<br />
+attention and becomes more and more unstable.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-71760">
+        <div id="dsq-comment-header-71760" class="dsq-comment-header">
+            <cite id="dsq-cite-71760">
+                <span id="dsq-author-user-71760">Lukas</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71760" class="dsq-comment-body">
+            <div id="dsq-comment-message-71760" class="dsq-comment-message"><p>Check my reply to another comment above.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-71761">
+        <div id="dsq-comment-header-71761" class="dsq-comment-header">
+            <cite id="dsq-cite-71761">
+                <span id="dsq-author-user-71761">Brøssøvítçh</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71761" class="dsq-comment-body">
+            <div id="dsq-comment-message-71761" class="dsq-comment-message"><p>So, it doesn&#8217;t work? Signed up, set up an API, API is verified in settings..<br />
+But still not working rebooted, nothing. Anyone help? I have been using WUnderground app exclusively for years this would be a welcomed change, of it ever works.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-71762">
+        <div id="dsq-comment-header-71762" class="dsq-comment-header">
+            <cite id="dsq-cite-71762">
+                <span id="dsq-author-user-71762">Durger</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71762" class="dsq-comment-body">
+            <div id="dsq-comment-message-71762" class="dsq-comment-message"><p>I hope some enterprising developer makes a CM weather provider that is better for Finland than Yahoo and OpenWeatherMap have sometimes been.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-71763">
+        <div id="dsq-comment-header-71763" class="dsq-comment-header">
+            <cite id="dsq-cite-71763">
+                <span id="dsq-author-user-71763">Rob Thorley</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71763" class="dsq-comment-body">
+            <div id="dsq-comment-message-71763" class="dsq-comment-message"><p>Oh lordy, what a horrible process to go through to set this up. This is certainly not consumer-ready; what were you thinking? Also, &#8220;partly cloudy&#8221; results in a pic of a moon with &#8220;N/A&#8221; plastered across it. Woop!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-71764">
+        <div id="dsq-comment-header-71764" class="dsq-comment-header">
+            <cite id="dsq-cite-71764">
+                <span id="dsq-author-user-71764">Rob Thorley</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71764" class="dsq-comment-body">
+            <div id="dsq-comment-message-71764" class="dsq-comment-message"><p>with vClouds iconset, that is&#8230;</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-71765">
+        <div id="dsq-comment-header-71765" class="dsq-comment-header">
+            <cite id="dsq-cite-71765">
+                <span id="dsq-author-user-71765">Adnan Begovic</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71765" class="dsq-comment-body">
+            <div id="dsq-comment-message-71765" class="dsq-comment-message"><p>Its not consumer ready, you&#8217;re right. Its meant for nightlies which are, like linux mainline, bleeding edge. The plugin is a sample that is meant for developers.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-71766">
+        <div id="dsq-comment-header-71766" class="dsq-comment-header">
+            <cite id="dsq-cite-71766">
+                <span id="dsq-author-user-71766">Rob Thorley</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71766" class="dsq-comment-body">
+            <div id="dsq-comment-message-71766" class="dsq-comment-message"><p>Okay, but it&#8217;s not only developers who use nightlies. Weather Underground is the only option. I can see there being a lot of drop-off during the sign-up process, and maybe people just won&#8217;t use the Clock app any more&#8230;</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-71767">
+        <div id="dsq-comment-header-71767" class="dsq-comment-header">
+            <cite id="dsq-cite-71767">
+                <span id="dsq-author-user-71767">Adnan Begovic</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71767" class="dsq-comment-body">
+            <div id="dsq-comment-message-71767" class="dsq-comment-message"><p>There will hopefully be more plugins written by external developers or the community.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-71768">
+        <div id="dsq-comment-header-71768" class="dsq-comment-header">
+            <cite id="dsq-cite-71768">
+                <span id="dsq-author-user-71768">Andrei Iancu</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71768" class="dsq-comment-body">
+            <div id="dsq-comment-message-71768" class="dsq-comment-message"><p>I really hope you guys will fix this weather thing soon.<br />
+By the way, and sorry for this question, will there ever be a CM13 build for Galaxy Note 2? S3 got it and N2 can handle it better. N7100 is only runing CM11 and it got some problems with the new PlayStore because it crashes when downloading apps.<br />
+Thank you!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-71770">
+        <div id="dsq-comment-header-71770" class="dsq-comment-header">
+            <cite id="dsq-cite-71770">
+                <span id="dsq-author-user-71770">Sonel Prabhakaran</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71770" class="dsq-comment-body">
+            <div id="dsq-comment-message-71770" class="dsq-comment-message"><p>The sign up process is very long and you cannot change the metric system. My cLock shows Celsius but my drag down menu shows Fahrenheit. Hope this will be fixed.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-71771">
+        <div id="dsq-comment-header-71771" class="dsq-comment-header">
+            <cite id="dsq-cite-71771">
+                <span id="dsq-author-user-71771">vndergrovnd</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71771" class="dsq-comment-body">
+            <div id="dsq-comment-message-71771" class="dsq-comment-message"><p>Im having problems with the new WU add on. I cant seem to find my location or even input Canada and have it display my weather in the notification bar. Any way to fix this?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-71772">
+        <div id="dsq-comment-header-71772" class="dsq-comment-header">
+            <cite id="dsq-cite-71772">
+                <span id="dsq-author-user-71772">李为嘉</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71772" class="dsq-comment-body">
+            <div id="dsq-comment-message-71772" class="dsq-comment-message"><p>hope to support china soon~thanks</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-71773">
+        <div id="dsq-comment-header-71773" class="dsq-comment-header">
+            <cite id="dsq-cite-71773">
+                <span id="dsq-author-user-71773">Eric Chan</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71773" class="dsq-comment-body">
+            <div id="dsq-comment-message-71773" class="dsq-comment-message"><p>awesome &#8230;.i still waiting more awesome &#8221; mod &#8220;(c-App)  to my CM13 !</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-71774">
+        <div id="dsq-comment-header-71774" class="dsq-comment-header">
+            <cite id="dsq-cite-71774">
+                <span id="dsq-author-user-71774">m-p{3}</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71774" class="dsq-comment-body">
+            <div id="dsq-comment-message-71774" class="dsq-comment-message"><p>It&#8217;s kinda hard to test a specific device if you can&#8217;t afford or have access to one. Not an excuse for all the issues, just the reality of volunteers trying to make the best of what the have.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-71775">
+        <div id="dsq-comment-header-71775" class="dsq-comment-header">
+            <cite id="dsq-cite-71775">
+                <span id="dsq-author-user-71775">m-p{3}</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71775" class="dsq-comment-body">
+            <div id="dsq-comment-message-71775" class="dsq-comment-message"><p>Thankfully you only have to go through this process only once.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-71776">
+        <div id="dsq-comment-header-71776" class="dsq-comment-header">
+            <cite id="dsq-cite-71776">
+                <span id="dsq-author-user-71776">m-p{3}</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71776" class="dsq-comment-body">
+            <div id="dsq-comment-message-71776" class="dsq-comment-message"><p>There&#8217;s never any ETA with CM other than &#8220;when it&#8217;s ready&#8221;.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-71777">
+        <div id="dsq-comment-header-71777" class="dsq-comment-header">
+            <cite id="dsq-cite-71777">
+                <span id="dsq-author-user-71777">Siddique Nagarkar</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71777" class="dsq-comment-body">
+            <div id="dsq-comment-message-71777" class="dsq-comment-message"><p>ME TOO CM LISTEN TO US :333 C-APPS ! :33</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-71778">
+        <div id="dsq-comment-header-71778" class="dsq-comment-header">
+            <cite id="dsq-cite-71778">
+                <span id="dsq-author-user-71778">p devraj</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71778" class="dsq-comment-body">
+            <div id="dsq-comment-message-71778" class="dsq-comment-message"><p>When cyanogen 13 is releasing for YU yureka</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-71780">
+        <div id="dsq-comment-header-71780" class="dsq-comment-header">
+            <cite id="dsq-cite-71780">
+                <span id="dsq-author-user-71780">Zhao Wei Liew</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71780" class="dsq-comment-body">
+            <div id="dsq-comment-message-71780" class="dsq-comment-message"><p>You need to be on the latest nightlies.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-71781">
+        <div id="dsq-comment-header-71781" class="dsq-comment-header">
+            <cite id="dsq-cite-71781">
+                <span id="dsq-author-user-71781">SupermanCiccio</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71781" class="dsq-comment-body">
+            <div id="dsq-comment-message-71781" class="dsq-comment-message"><p>When the CyanogenMod 13 Snapshot will be available for Galaxy S4 (jfltexx)? I&#8217;m waiting for it!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-71789">
+        <div id="dsq-comment-header-71789" class="dsq-comment-header">
+            <cite id="dsq-cite-71789">
+                <span id="dsq-author-user-71789">m-p{3}</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71789" class="dsq-comment-body">
+            <div id="dsq-comment-message-71789" class="dsq-comment-message"><p>I managed to get it up and running with the WUnderground plugin, and now I see the weather in the notification shade (top-right). However I am not very familiar with Farenheit and I&#8217;d prefer to see weather shown in Celsius. I don&#8217;t see any settings on my device, and my WUnderground account is set to Celsius. Anything else I can do?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-71798">
+        <div id="dsq-comment-header-71798" class="dsq-comment-header">
+            <cite id="dsq-cite-71798">
+                <span id="dsq-author-user-71798">Raj</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71798" class="dsq-comment-body">
+            <div id="dsq-comment-message-71798" class="dsq-comment-message"><p>Never</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-71799">
+        <div id="dsq-comment-header-71799" class="dsq-comment-header">
+            <cite id="dsq-cite-71799">
+                <span id="dsq-author-user-71799">Raj</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71799" class="dsq-comment-body">
+            <div id="dsq-comment-message-71799" class="dsq-comment-message"><p>Blasphemy! </p>
+<p>How dare you ask for ETAs?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-71805">
+        <div id="dsq-comment-header-71805" class="dsq-comment-header">
+            <cite id="dsq-cite-71805">
+                <span id="dsq-author-user-71805">SupermanCiccio</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71805" class="dsq-comment-body">
+            <div id="dsq-comment-message-71805" class="dsq-comment-message"><p>Why?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-71807">
+        <div id="dsq-comment-header-71807" class="dsq-comment-header">
+            <cite id="dsq-cite-71807">
+                <span id="dsq-author-user-71807">Ταξίαρχος</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71807" class="dsq-comment-body">
+            <div id="dsq-comment-message-71807" class="dsq-comment-message"><p>Works great with Chronus but temperature in the drop down bar is in Fahrenheit and I use metric system.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-71808">
+        <div id="dsq-comment-header-71808" class="dsq-comment-header">
+            <cite id="dsq-cite-71808">
+                <span id="dsq-author-user-71808">Sowad</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71808" class="dsq-comment-body">
+            <div id="dsq-comment-message-71808" class="dsq-comment-message"><p>The weather widget seemed to stop working just when I upgraded to CM13 on bacon. Currently using Chronus as an alternative but not a 100% happy with it. Will wait for the good news.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-71809">
+        <div id="dsq-comment-header-71809" class="dsq-comment-header">
+            <cite id="dsq-cite-71809">
+                <span id="dsq-author-user-71809">Lucas Picchi</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71809" class="dsq-comment-body">
+            <div id="dsq-comment-message-71809" class="dsq-comment-message"><p>So you can consider donating CM an unlimited access token from any weather provider so they can bundle it in a consumer-ready style. Hehe</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-71816">
+        <div id="dsq-comment-header-71816" class="dsq-comment-header">
+            <cite id="dsq-cite-71816">
+                <span id="dsq-author-user-71816">freedom</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71816" class="dsq-comment-body">
+            <div id="dsq-comment-message-71816" class="dsq-comment-message"><p>I have problem with yahoo weather ,it do not update </p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-71817">
+        <div id="dsq-comment-header-71817" class="dsq-comment-header">
+            <cite id="dsq-cite-71817">
+                <span id="dsq-author-user-71817">phil anderson</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71817" class="dsq-comment-body">
+            <div id="dsq-comment-message-71817" class="dsq-comment-message"><p>I&#8217;m still waiting for Cyanogenmod to be ported to my Bakelite 312. any ETA?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-71819">
+        <div id="dsq-comment-header-71819" class="dsq-comment-header">
+            <cite id="dsq-cite-71819">
+                <span id="dsq-author-user-71819">吴梓伟</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71819" class="dsq-comment-body">
+            <div id="dsq-comment-message-71819" class="dsq-comment-message"><p>why China not allow to get the key</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-71826">
+        <div id="dsq-comment-header-71826" class="dsq-comment-header">
+            <cite id="dsq-cite-71826">
+http://remixedcat.blogspot.com                <span id="dsq-author-user-71826">RemixedCat</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71826" class="dsq-comment-body">
+            <div id="dsq-comment-message-71826" class="dsq-comment-message"><p>I&#8217;d like to know that as well</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-71829">
+        <div id="dsq-comment-header-71829" class="dsq-comment-header">
+            <cite id="dsq-cite-71829">
+                <span id="dsq-author-user-71829">fax</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71829" class="dsq-comment-body">
+            <div id="dsq-comment-message-71829" class="dsq-comment-message"><p>Hi, what about CM12.1 users ?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-71833">
+        <div id="dsq-comment-header-71833" class="dsq-comment-header">
+            <cite id="dsq-cite-71833">
+                <span id="dsq-author-user-71833">Andrey Seleznov</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71833" class="dsq-comment-body">
+            <div id="dsq-comment-message-71833" class="dsq-comment-message"><p>Does not let me install this on my OnePlusOne, I have the recent OTA Cyanogen v13</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-71835">
+        <div id="dsq-comment-header-71835" class="dsq-comment-header">
+            <cite id="dsq-cite-71835">
+                <span id="dsq-author-user-71835">Henry</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-71835" class="dsq-comment-body">
+            <div id="dsq-comment-message-71835" class="dsq-comment-message"><p>It&#8217;s really awful. Really I need to fill a API Key request form in Weather Underground just to get a weather widget? Uhuhuhuh, please release other providers.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+            </ul>
+
+            <div class="navigation">
+                <div class="nav-previous">
+                    <span class="meta-nav">&larr;</span>
+                    &nbsp;                </div>
+                <div class="nav-next">
+                    <a href="http://www.cyanogenmod.org/blog/plug-play-weather#comments" >Newer Comments</a>                    &nbsp;<span class="meta-nav">&rarr;</span>
+                </div>
+            </div><!-- .navigation -->
+
+        </div>
+
+    </div>
+
+<script type="text/javascript">
+var disqus_url = 'http://www.cyanogenmod.org/blog/plug-play-weather';
+var disqus_identifier = '3197 http://www.cyanogenmod.org/?p=3197';
+var disqus_container_id = 'disqus_thread';
+var disqus_shortname = 'cyngn';
+var disqus_title = "Plug &#038; Play Weather";
+var disqus_config_custom = window.disqus_config;
+var disqus_config = function () {
+    /*
+    All currently supported events:
+    onReady: fires when everything is ready,
+    onNewComment: fires when a new comment is posted,
+    onIdentify: fires when user is authenticated
+    */
+    
+    
+    this.language = '';
+        this.callbacks.onReady.push(function () {
+
+        // sync comments in the background so we don't block the page
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = '?cf_action=sync_comments&post_id=3197';
+
+        var firstScript = document.getElementsByTagName('script')[0];
+        firstScript.parentNode.insertBefore(script, firstScript);
+    });
+    
+    if (disqus_config_custom) {
+        disqus_config_custom.call(this);
+    }
+};
+
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+
+</article>
+			</div>
+
+		</div><!-- End Content row -->
+		
+		<aside id="sidebar" class="four columns hide-on-phones" role="complementary">
+	<div class="sidebar-box">
+		<article id="recent-comments-4" class="row widget widget_recent_comments"><div class="sidebar-section twelve columns"><h6><strong>Recent Comments</strong></h6><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">Alejandro Perez</span> on <a href="http://www.cyanogenmod.org/blog/cm-13-0-release-znh5y/comment-page-5#comment-72809">CM 13.0 Release &#8211; ZNH5Y</a></li><li class="recentcomments"><span class="comment-author-link">Lee</span> on <a href="http://www.cyanogenmod.org/blog/capps-package-for-marshmallow/comment-page-2#comment-72808">Cyanogen Apps Package for Marshmallow</a></li><li class="recentcomments"><span class="comment-author-link">Saif khan</span> on <a href="http://www.cyanogenmod.org/blog/cm-13-0-release-1/comment-page-11#comment-72807">CM 13.0 Release 1</a></li><li class="recentcomments"><span class="comment-author-link">Saif khan</span> on <a href="http://www.cyanogenmod.org/blog/cm-13-0-release-1/comment-page-11#comment-72806">CM 13.0 Release 1</a></li><li class="recentcomments"><span class="comment-author-link">Rahul Patil</span> on <a href="http://www.cyanogenmod.org/blog/capps-package-for-marshmallow/comment-page-2#comment-72805">Cyanogen Apps Package for Marshmallow</a></li></ul></div></article>	</div>
+</aside><!-- /#sidebar -->		
+		</div><!-- End Main row -->
+		
+		<footer id="content-info" role="contentinfo" class="hide-on-phones" style="margin:40px 0 0 0;">
+			<div class="row">
+				<article id="nav_menu-4" class="three columns widget widget_nav_menu"><div class="footer-section"><h6><strong>Navigation</strong></h6><div class="menu-main-container"><ul id="menu-main" class="menu"><li id="menu-item-798" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-798"><a href="http://www.cyanogenmod.org/about">About</a></li>
+<li id="menu-item-2403" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2403"><a href="http://wiki.cyanogenmod.org/">Wiki</a></li>
+<li id="menu-item-2404" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2404"><a href="http://download.cyanogenmod.org">Download</a></li>
+<li id="menu-item-825" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-825"><a href="/blog">Blog</a></li>
+<li id="menu-item-904" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-904"><a href="http://forum.cyanogenmod.org">Forum</a></li>
+<li id="menu-item-829" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-829"><a href="http://www.cyanogenmod.org/community">Community</a></li>
+<li id="menu-item-2709" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2709"><a href="http://shop.cyanogenmod.org">Shop</a></li>
+</ul></div></div></article><article id="nav_menu-3" class="three columns widget widget_nav_menu"><div class="footer-section"><h6><strong>Social Networks</strong></h6><div class="menu-social-networks-container"><ul id="menu-social-networks" class="menu"><li id="menu-item-2173" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2173"><a href="https://www.facebook.com/CyanogenMod">Facebook</a></li>
+<li id="menu-item-2174" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2174"><a href="https://twitter.com/CyanogenMod">Twitter</a></li>
+<li id="menu-item-2175" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2175"><a href="https://plus.google.com/+CyanogenMod/posts">Google+</a></li>
+</ul></div></div></article>                                <article class="three columns widget widget widget_nav_menu">
+                                    <div class="footer-section">
+                                        <h6><strong>Sponsored By</strong></h6>
+                                        <a href="http://twilio.com/?utm_source=cyanogenmod&utm_medium=webbadge&utm_campaign=cyanogenverify" style="text: decoration: none; display: inline-block; width: 166px; height: 0; overflow: hidden; padding-top: 31px; background: url(https://www.twilio.com/packages/company/img/logos_icon_poweredbysmall.png) no-repeat;">powered by twilio™</a>
+                                    </div>
+                                </article>
+			</div>
+		</footer>
+        
+      <div id="navigation" class="row mobile-footer show-on-phones">
+			<div class="twelve columns">
+            	<h6>Navigate cyanogenmod.org</h6>
+            	<ul>
+                	<li><a href="/about">About</a></li>
+                    <!--<li><a href="#">Features</a></li>-->
+                    <li><a href="http://wiki.cyanogenmod.org/">Wiki</a></li>
+                    <li><a href="http://download.cyanogenmod.org/">Download</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="http://forum.cyanogenmod.org">Forum</a></li>
+                    <li><a href="/community">Community</a></li>  
+                    <li><a href="http://shop.cyanogenmod.org">Shop</a></li>
+                </ul>
+            </div>
+        </div>
+			
+	</div><!-- Container End -->
+    
+
+	<!-- Included JS Files of Foundation -->
+	<script src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/foundation.js"></script>
+	<script src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/app.js"></script>
+	
+	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+	     chromium.org/developers/how-tos/chrome-frame-getting-started -->
+	<!--[if lt IE 7]>
+		<script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+		<script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+	<![endif]-->
+	
+	        <script type="text/javascript">
+        // <![CDATA[
+        var disqus_shortname = 'cyngn';
+        (function () {
+            var nodes = document.getElementsByTagName('span');
+            for (var i = 0, url; i < nodes.length; i++) {
+                if (nodes[i].className.indexOf('dsq-postid') != -1) {
+                    nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('data-dsqidentifier'));
+                    url = nodes[i].parentNode.href.split('#', 1);
+                    if (url.length == 1) { url = url[0]; }
+                    else { url = url[1]; }
+                    nodes[i].parentNode.href = url + '#disqus_thread';
+                }
+            }
+            var s = document.createElement('script'); 
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+        // ]]>
+        </script>
+        <script type='text/javascript' src='http://cyanogenmod.org/wp-includes/js/comment-reply.min.js?ver=4.2.4'></script>
+<script type="text/javascript">/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+ Served from: www.cyanogenmod.org @ 2016-10-23 16:01:53 by W3 Total Cache -->

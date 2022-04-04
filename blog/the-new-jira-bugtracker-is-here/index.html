@@ -1,0 +1,771 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+
+	<title>The new Jira bugtracker is here | CyanogenMod</title>
+	
+	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	
+	<!-- Included Foundation CSS Files -->
+	<link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/css/foundation.css">
+	<link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/css/app.css">
+    <link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/tipTip.css">
+    <link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/fonts/style.css">
+    <link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/css/flexslider.css" type="text/css" media="screen" />
+	
+	<link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/style.css">
+	
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/css/ie.css">
+	<![endif]-->
+	
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<!-- Favicon and Feed -->
+	<link rel="shortcut icon" type="image/png" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/favicon.ico">
+	<link rel="alternate" type="application/rss+xml" title="CyanogenMod Feed" href="http://www.cyanogenmod.org/feed/">
+	
+	<!--  iPhone Web App Home Screen Icon -->
+	<link rel="apple-touch-icon" sizes="72x72" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-icon-ipad.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-icon-retina.png" />
+	<link rel="apple-touch-icon" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-icon.png" />
+	
+	<!-- Enable Startup Image for iOS Home Screen Web App -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link rel="apple-touch-startup-image" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/mobile-load.png" />
+
+	<!-- Startup Image iPad Landscape (748x1024) -->
+	<link rel="apple-touch-startup-image" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-load-ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)" />
+	<!-- Startup Image iPad Portrait (768x1004) -->
+	<link rel="apple-touch-startup-image" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-load-ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)" />
+	<!-- Startup Image iPhone (320x460) -->
+	<link rel="apple-touch-startup-image" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-load.png" media="screen and (max-device-width: 320px)" />
+	
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.min.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.jparallax.min.js" ></script>
+  <script defer type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.featureList-1.0.0.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.tipTip.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/easySlider1.7.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/modernizr.foundation.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.flexslider-min.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/custom.js"></script>
+  
+  <script type="text/javascript">
+    $(document).load(function(){
+
+	  // The slider being synced must be initialized first
+	  $('.flexslider').flexslider({
+		animation: "slide",
+		controlNav: false,
+	  });
+	  
+    });
+  </script>
+  
+  	
+<!-- All in One SEO Pack 2.2.7.1 by Michael Torbert of Semper Fi Web Design[493,533] -->
+<meta name="description"  content="CyanogenMod has been due for a new issue tracker for a while now. The existing Google Code tracker was started when we only supported 2 devices and Cyanogen" />
+
+<link rel="canonical" href="http://www.cyanogenmod.org/blog/the-new-jira-bugtracker-is-here" />
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-39737599-3']);
+		  _gaq.push(['_trackPageview']);
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
+<!-- /all in one seo pack -->
+<link rel="alternate" type="application/rss+xml" title="CyanogenMod &raquo; The new Jira bugtracker is here Comments Feed" href="http://www.cyanogenmod.org/blog/the-new-jira-bugtracker-is-here/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/cyanogenmod.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.2.4"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://cyanogenmod.org/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://cyanogenmod.org/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='CM-10.1 M-Series Builds Have Arrived' href='http://www.cyanogenmod.org/blog/cm-10-1-m-series-builds-have-arrived' />
+<link rel='next' title='CyanogenMod 10.1 &#8211; M2 Release' href='http://www.cyanogenmod.org/blog/cyanogenmod-10-1-m2-release' />
+<meta name="generator" content="WordPress 4.2.4" />
+<link rel='shortlink' href='http://www.cyanogenmod.org/?p=2124' />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+</head>
+
+<body class="single single-post postid-2124 single-format-standard">
+
+	<div class="menusto hide-on-phones"></div>
+	<!-- Start the main container -->
+	<div id="container" class="container" role="document" style="padding:80px 0 0 0;">
+		
+        
+        <div class="row mobile-header show-on-phones">
+            <div class="nine">
+            	<a href="http://www.cyanogenmod.org" title="CyanogenMod" class="logo-mobile"><img src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/logo-mobile.png" alt=""/></a>
+            </div>
+            <a href="#navigation" class="mobile-menu"><img src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/btn-menu-mobile.png" alt=""/></a>
+        </div>
+        
+		<!-- Row for blog navigation -->
+		<div class="row hide-on-phones">
+			<header class="twelve columns" role="banner">
+				<div class="reverie-header">
+                	<a href="http://www.cyanogenmod.org" title="CyanogenMod" class="logo"><img src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/logo.png" alt=""/></a>
+                    <div id="glavno" class="nav hide-on-phones">
+                        <ul id="glavno">                   
+                            <li><a href="http://wiki.cyanogenmod.org/">Wiki</a></li>
+                            <!--<li><a href="http://cyanogenmod.org/about/features">Features</a></li>-->
+                            <li><a href="http://download.cyanogenmod.org/">Download</a></li>
+                            <li><a href="http://www.cyanogenmod.org/blog/">Blog</a></li>
+                            <li><a href="http://forum.cyanogenmod.org/">Forum</a></li>
+                            <li>
+                            	<a href="http://www.cyanogenmod.org/community">Community</a>
+                                <div style="opacity: 0; display: none; width:100%" class="sub">
+                                    <ul>
+                                    	<div style="width:980px; margin:0 auto; color:#fff;">
+                                        	<div class="contributesub">
+                                            	<h2>Contribute</h2>
+                                                
+                                                <h4><a href="http://review.cyanogenmod.org/">Gerrit Review</a></h4>
+                                                <p>Gerrit is a web based code review system, facilitating online code reviews for projects using the Git version control system.</p>
+                                                    
+                                                <h4><a href="http://wiki.cyanogenmod.org/">Wiki</a></h4>
+                                                <p>Our Wiki is a comprehensive tool for users to find information. This also needs contributions to keep it fresh and relevant.</p>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/community">Join The Team</a></h4>
+                                                <p>We love working with others. You can submit code via Gerrit. If you think there is something else you can help with, get in touch with us on the forums.</p>
+                                            </div>
+                                            
+                                        	<div class="contributesub">
+                                            	<h2>Help</h2>
+                                                
+                                                <h4><a href="http://forum.cyanogenmod.org/">Forum</a></h4>
+                                                <p>Our forums have a wealth of knowledge and resources. All of it is free and accessible from both your desktop and mobile phone.</p>
+                                                    
+                                                <h4><a href="irc://irc.freenode.net/cyanogenmod">IRC</a></h4>
+                                                <p>If you are comfortable with IRC and would like instant help and assistance from both developers and others users alike.</p>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/blog">Blog</a></h4>
+                                                <p>Our blogs will contain the latest news and releases as well as other related news concerning the distribution.</p>
+                                                    
+                                                <h4><a href="http://wiki.cyanogenmod.org/">Wiki</a></h4>
+                                                <p>Our Wiki is a comprehensive tool for users to find information. This also needs contributions to keep it fresh and relevant.</p>
+                                            </div>
+                                            
+                                        	<div class="contributesub">
+                                            	<h2>Information</h2>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/bugs">Bug Tracker</a></h4>
+                                                <p>This is the official Bug Tracker where you can submit and review bugs that users may experience.</p>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/github">Github Repo</a></h4>
+                                                <p>Our source is free and open. you can check the Github page to see what we do and how you can contribute.</p>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/stats">Installation Statistics</a></h4>
+                                                <p>We have an opt-in feature in our ROMS to enable us to gain statistics on users as well as devices used.</p>
+                                            </div>
+                                            
+                                        	<div class="contributesub last">
+                                            	<h2>Support</h2>
+                                                
+                                                <h4><a href="/cdn-cgi/l/email-protection#7014150602151c301309111e1f17151e1d1f145e1f0217">Developer Relations</a></h4>
+                                                <p>If you wish to contact us regarding development contributions, please do so here.</p>
+                                                    
+                                                <h4><a href="/cdn-cgi/l/email-protection#83e2e7eeeaedc3e0fae2edece4e6edeeece7adecf1e4">Website Support</a></h4>
+                                                <p>This email is dedicated to website, forum, wiki and hosting support. We will not respond to ROM support.</p>
+                                                    
+                                                <h4><a href="/cdn-cgi/l/email-protection#1372777e7a7d53706a727d7c74767d7e7c773d7c6174">Social Network</a></h4>
+                                                <p>To contact us in relation to our Social media structure.</p>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                    
+                                </div>
+                            </li>
+                      </ul>
+                    </div>
+				</div>
+
+			</header>
+		</div>
+
+		
+		<!-- Row for main content area -->
+		<div id="main" class="row">
+		<!-- Row for main content area -->
+		<div id="content" class="eight columns" role="main">
+	
+			<div class="post-box">
+					<article class="post-2124 post type-post status-publish format-standard hentry category-blog" id="post-2124">
+		<header>
+        	<time class="updated" datetime="2013-01-29T13:17:32+00:00" pubdate>January 29th, 2013 &bull; Written by <a href="http://www.cyanogenmod.org/author/jeagoss" rel="author" class="fn">jeagoss</a></time>        	<h2 class="entry-title">The new Jira bugtracker is here</h2>
+					</header>
+		<div class="entry-content">
+			<p>CyanogenMod has been due for a new issue tracker for a while now.</p>
+<p>The existing Google Code tracker was started when we only supported 2 devices and Cyanogen was the only developer. Now we have about 150 devices and almost as many developers/maintainers, across 3 major versions of Android. There are almost 500 open issues on the tracker and nearing 7000 submitted in the last 3 years. The logcats and screenshots (and the occasional mp3 or video) attached to all the issues take over a gigabyte of space, and each increase in that quota has to be asked for manually. Google recently silently removed the RSS feed for all project updates, making issue tracking a bit harder for me.</p>
+<p>The last two points there indicate the need for our own hosted solution. As several project members have worked with it before, JIRA was chosen. They provide a free licence for open-source projects (just like Google Code) and provide for a much better bug submission form and overall workflow.</p>
+<p>If you have ever submitted a bug to a bugzilla or trac issue tracker, JIRA should be easily useable. Instead of the Google Code single-textarea form that is easily blanked, there are text boxes for each piece of required data with descriptions below. The bug searching should be better than Google Code’s, and the need for me to hand-tag every issue will be reduced (if not largely eliminated). In addition, we have loaded a plugin that ties our issue tracker to gerrit, better tracking when bugs are solved.</p>
+<p>Utkanos, our wonderful new Wiki overlord, has rewritten my (admittedly bad) “<a title="How to use the issue tracker" href="http://wiki.cyanogenmod.org/w/Jira" target="_blank">How to use the issue tracker</a>” page both for clarity and to correspond to JIRA.</p>
+<p>But, and this is a big ‘but’, there are no pre-existing ways to transfer Google Code issues en-masse to JIRA. JIRA supports importing from several other trackers, as well as CSV files, but not Google Code. Meanwhile, Google Code doesn’t have any easy export options (the CSV download offered on the main issue list is only the summary/tags, not the complete text and comments) and the Google Data (gdata) XML interface can pull either the initial submitted report for all issues or comments for one. I haven’t found any good xml-to-csv converters that can handle the data, and writing one by hand has proved problematic at best.</p>
+<p>So we will need you, the community, to re-submit your bugs to JIRA. For me to manually copy/paste everything by hand would be hours, if not days, of work. For each one of you that has submitted a bug or enhancement request to move your report to JIRA should only take a few moments.</p>
+<p>This blog post will coincide with a bulk update of all open issues (except ‘shouldbefixed’ ones already handled). I would request that only the original submitter copy their issue into the new tracker. When doing so, they should include a link back to the original googlecode submission so I can close it. Alternatively, a link on googlecode to the new JIRA bug will suffice.</p>
+<p>As of right now, new issues will NOT be accepted on the Google Code tracker, users should begin submitting bug reports to the JIRA instance at jira.cyanogenmod.org. Existing issues will be closed as they are moved to JIRA. In a couple weeks, I will close any remaining issues on the Google Code tracker. After that point, anything reported on JIRA will be treated as a new issue, and the google code tracker will be closed and shut down.</p>
+<p>[An added bonus to the move to Jira is the ability for you as end users to better communicate what you’d like to see included in CyanogenMod. A new form and tag for ‘feature request’ has been added. As with bug submissions, you should search to see if your request or one similar to it has already been submitted. Duplicates, or perceived duplicates, will be merged. Please understand, unlike bugs (where we shipped something in a broken state) we are under no such obligation to fulfill requests. The sheer number of you out there compared to those available to code instantly eliminates our ability to fulfill every request. That said, if we spot a good idea that also interests us (and that’s the key stipulation here), we will work towards it.]</p>
+<p>This has and will be a lot of work for everyone, but ultimately we will have complete control of our bug tracker and hopefully a better experience for users and developers going forward.</p>
+<p>-PsychoI3oy, your CyanogenMod BugMonkey</p>
+		</div>
+
+<div id="disqus_thread">
+            <div id="dsq-content">
+
+
+            <ul id="dsq-comments">
+                    <li class="comment even thread-even depth-1" id="dsq-comment-55900">
+        <div id="dsq-comment-header-55900" class="dsq-comment-header">
+            <cite id="dsq-cite-55900">
+                <span id="dsq-author-user-55900">anon</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-55900" class="dsq-comment-body">
+            <div id="dsq-comment-message-55900" class="dsq-comment-message"><p>When adding a new issue, I&#8217;m getting &#8220;Model: Model is required.&#8221;</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-55901">
+        <div id="dsq-comment-header-55901" class="dsq-comment-header">
+            <cite id="dsq-cite-55901">
+                <span id="dsq-author-user-55901">Evan Widger</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-55901" class="dsq-comment-body">
+            <div id="dsq-comment-message-55901" class="dsq-comment-message"><p> Pick the model of the device you&#8217;re reporting on, it&#8217;s the 3rd field down. </p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-55902">
+        <div id="dsq-comment-header-55902" class="dsq-comment-header">
+            <cite id="dsq-cite-55902">
+                <span id="dsq-author-user-55902">infogulch</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-55902" class="dsq-comment-body">
+            <div id="dsq-comment-message-55902" class="dsq-comment-message"><p>Psychol3oy, you sir are a machine. How you keep your cool while being inundated by brain-dead &#8220;bug reports&#8221; (not excluding myself here&#8230;) day in and day out is beyond me.</p>
+<p>You are awesome. Keep up the unicorns. That is all.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-55903">
+        <div id="dsq-comment-header-55903" class="dsq-comment-header">
+            <cite id="dsq-cite-55903">
+                <span id="dsq-author-user-55903">anon</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-55903" class="dsq-comment-body">
+            <div id="dsq-comment-message-55903" class="dsq-comment-message"><p>That field wasn&#8217;t there when I reported the issue. It is now appearing and works.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-55904">
+        <div id="dsq-comment-header-55904" class="dsq-comment-header">
+            <cite id="dsq-cite-55904">
+                <span id="dsq-author-user-55904">Felix Herzog</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-55904" class="dsq-comment-body">
+            <div id="dsq-comment-message-55904" class="dsq-comment-message"><p>Great.<br />
+I am a professional and advanced Jira administrator. If you need help, assistance or consulting in how to manage that tool, just contact me. (snoopotic on issue tracker)</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-55905">
+        <div id="dsq-comment-header-55905" class="dsq-comment-header">
+            <cite id="dsq-cite-55905">
+                <span id="dsq-author-user-55905">androidhax0r</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-55905" class="dsq-comment-body">
+            <div id="dsq-comment-message-55905" class="dsq-comment-message"><p>this is all lie!</p>
+<p>we all know CyanogenMod is so awesome it doesn&#8217;t contain any bugs!<br />
+(they are all features of course&#8230; )</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-55906">
+        <div id="dsq-comment-header-55906" class="dsq-comment-header">
+            <cite id="dsq-cite-55906">
+                <span id="dsq-author-user-55906">Jase</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-55906" class="dsq-comment-body">
+            <div id="dsq-comment-message-55906" class="dsq-comment-message"><p>Google code allows you to export at CSV and with a little tweaking I am sure you could pull this into JIRA.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-55907">
+        <div id="dsq-comment-header-55907" class="dsq-comment-header">
+            <cite id="dsq-cite-55907">
+                <span id="dsq-author-user-55907">Evan Widger</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-55907" class="dsq-comment-body">
+            <div id="dsq-comment-message-55907" class="dsq-comment-message"><p>Have you looked at the csv it exports? It&#8217;s just the table of numbers/status/summary/stars that you get looking at the list. It has none of the important information from the body of the reports, attachments, etc. </p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-55909">
+        <div id="dsq-comment-header-55909" class="dsq-comment-header">
+            <cite id="dsq-cite-55909">
+http://www.flickr.com/stuffbox                <span id="dsq-author-user-55909">DuduMaroja</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-55909" class="dsq-comment-body">
+            <div id="dsq-comment-message-55909" class="dsq-comment-message"><p>there are no bugs in Cyanongenmod, there are only easter eggs to see if users are paying atention! </p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-55911">
+        <div id="dsq-comment-header-55911" class="dsq-comment-header">
+            <cite id="dsq-cite-55911">
+                <span id="dsq-author-user-55911">Eyad (formerly CTownOL)</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-55911" class="dsq-comment-body">
+            <div id="dsq-comment-message-55911" class="dsq-comment-message"><p>This sounds great. Will there be a short url like how the downloads section has &#8220;get.cm&#8221;; &#8220;review.cm&#8221; for the Gerrit instance and &#8220;bugs.cm&#8221; for the Jira instance could work&#8230;</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-55912">
+        <div id="dsq-comment-header-55912" class="dsq-comment-header">
+            <cite id="dsq-cite-55912">
+http://twitter.com/hkdennis2k                <span id="dsq-author-user-55912">Dennis</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-55912" class="dsq-comment-body">
+            <div id="dsq-comment-message-55912" class="dsq-comment-message"><p>Are you a programmer?? You need not to &#8220;manually copy/paste everything by hand would be hours&#8221;, but need somebody to wrote a script.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-55913">
+        <div id="dsq-comment-header-55913" class="dsq-comment-header">
+            <cite id="dsq-cite-55913">
+                <span id="dsq-author-user-55913">Md. Mahbubur Rahman</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-55913" class="dsq-comment-body">
+            <div id="dsq-comment-message-55913" class="dsq-comment-message"><p>before i install this custom rom my lg optimus black was radio paly option, afetr that i couldn&#8217;t find it, you should add &#8220;redio play option&#8221; on lg optimus black p970.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-55924">
+        <div id="dsq-comment-header-55924" class="dsq-comment-header">
+            <cite id="dsq-cite-55924">
+                <span id="dsq-author-user-55924">meijuh</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-55924" class="dsq-comment-body">
+            <div id="dsq-comment-message-55924" class="dsq-comment-message"><p>Jira sure works well. Release notes and such are quite awesome. Nasty thing is that performing a force push screws up comments on an issue. So a git push &#8211;force is not really recommended when using Jira.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-55925">
+        <div id="dsq-comment-header-55925" class="dsq-comment-header">
+            <cite id="dsq-cite-55925">
+                <span id="dsq-author-user-55925">Nutskid</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-55925" class="dsq-comment-body">
+            <div id="dsq-comment-message-55925" class="dsq-comment-message"><p>villec2 we staying without cm rom this is almost rasism</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-55930">
+        <div id="dsq-comment-header-55930" class="dsq-comment-header">
+            <cite id="dsq-cite-55930">
+                <span id="dsq-author-user-55930">Digital_b_</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-55930" class="dsq-comment-body">
+            <div id="dsq-comment-message-55930" class="dsq-comment-message"><p>please fix the bluetooth issue in which the phone will not connect to vehicles automatically after having been paired. this is the reason I dont use cyanogen any more. also the fact that with the galaxy s 3 for sprint the camera doesnt work or locks up </p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-55931">
+        <div id="dsq-comment-header-55931" class="dsq-comment-header">
+            <cite id="dsq-cite-55931">
+                <span id="dsq-author-user-55931">Bradstheannoying</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-55931" class="dsq-comment-body">
+            <div id="dsq-comment-message-55931" class="dsq-comment-message"><p>To the people leaving bug reports here in the blog comments&#8230; Scroll to the top and read again, if you have already read this and understand but still feel the need to leave it here then please delete your system32 folder or disconnect your internet&#8230; Forever. </p>
+<p>To the bugmonkey, great work and keep it up! </p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-55940">
+        <div id="dsq-comment-header-55940" class="dsq-comment-header">
+            <cite id="dsq-cite-55940">
+                <span id="dsq-author-user-55940">Bigmind</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-55940" class="dsq-comment-body">
+            <div id="dsq-comment-message-55940" class="dsq-comment-message"><p>MetroPCS S3.<br />
+&#8211; Phone will freez and act laggy when bluetooth headset is paired! at some point it will not give me unlock screen and stay dark and i had to remove battery.<br />
+&#8211; Tethering/Hotspot &#8211; can NOT get auth for device! devices can find my hotspot &#8220;galaxy s3&#8243; but just keep saying connecting.</p>
+<p>Thank you </p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-55941">
+        <div id="dsq-comment-header-55941" class="dsq-comment-header">
+            <cite id="dsq-cite-55941">
+                <span id="dsq-author-user-55941">Alimohsin2000jp</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-55941" class="dsq-comment-body">
+            <div id="dsq-comment-message-55941" class="dsq-comment-message"><p>can you make a cm10 or 10.1 version for the htc one s (s3) villec2&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;.( its not an unpopular phone u no )</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-55944">
+        <div id="dsq-comment-header-55944" class="dsq-comment-header">
+            <cite id="dsq-cite-55944">
+                <span id="dsq-author-user-55944">jrubr</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-55944" class="dsq-comment-body">
+            <div id="dsq-comment-message-55944" class="dsq-comment-message"><p>Why not asking for help to write a script to migrate data from gcode to jira? This petition to manually rewrite all the issues seems a bit shocking to me, except if you want to &#8220;filter&#8221; or get rid of old or unimportant issues. </p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-55951">
+        <div id="dsq-comment-header-55951" class="dsq-comment-header">
+            <cite id="dsq-cite-55951">
+                <span id="dsq-author-user-55951">卓豪 陈</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-55951" class="dsq-comment-body">
+            <div id="dsq-comment-message-55951" class="dsq-comment-message"><p>When can I use Cm 10.1 on LG Optimus 4X HD? Please give some love to LG phones.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-55965">
+        <div id="dsq-comment-header-55965" class="dsq-comment-header">
+            <cite id="dsq-cite-55965">
+                <span id="dsq-author-user-55965">Guest</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-55965" class="dsq-comment-body">
+            <div id="dsq-comment-message-55965" class="dsq-comment-message"><p>can you please add &#8220;easy log in&#8221; to the jira system for example with a google account or XDA account?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-55972">
+        <div id="dsq-comment-header-55972" class="dsq-comment-header">
+            <cite id="dsq-cite-55972">
+                <span id="dsq-author-user-55972">Noctis Yamazaki</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-55972" class="dsq-comment-body">
+            <div id="dsq-comment-message-55972" class="dsq-comment-message"><p>Well, we are looking forward to enjoying this brand-new function.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-56006">
+        <div id="dsq-comment-header-56006" class="dsq-comment-header">
+            <cite id="dsq-cite-56006">
+http://www.spinxwebdesign.com/                <span id="dsq-author-user-56006">Spinx Inc</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56006" class="dsq-comment-body">
+            <div id="dsq-comment-message-56006" class="dsq-comment-message"><p>Nice informative article. JIRA is more powerful than Google code to solve the bugs in project tracking and issue tracking softwares.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-56009">
+        <div id="dsq-comment-header-56009" class="dsq-comment-header">
+            <cite id="dsq-cite-56009">
+                <span id="dsq-author-user-56009">Hannes</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56009" class="dsq-comment-body">
+            <div id="dsq-comment-message-56009" class="dsq-comment-message"><p>If you can live with un-sorted submissions, you may consider something like <a href="https://addons.mozilla.org/en-US/firefox/addon/imacros-for-firefox/" rel="nofollow">https://addons.mozilla.org/en-US/firefox/addon/imacros-for-firefox/</a> for automating the copy&amp;paste from one tracker to another.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-56040">
+        <div id="dsq-comment-header-56040" class="dsq-comment-header">
+            <cite id="dsq-cite-56040">
+                <span id="dsq-author-user-56040">Stranger0302</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56040" class="dsq-comment-body">
+            <div id="dsq-comment-message-56040" class="dsq-comment-message"><p>plz add native sms app with group sms feature&#8230;</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-56047">
+        <div id="dsq-comment-header-56047" class="dsq-comment-header">
+            <cite id="dsq-cite-56047">
+                <span id="dsq-author-user-56047">carlos diaz</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56047" class="dsq-comment-body">
+            <div id="dsq-comment-message-56047" class="dsq-comment-message"><p>speed is only unique interface but the player very controversial and criticized the sound is very vercion relaciondo to the official host would have more di samsung fixed the player and the volume is otherwise not have a video player decided to call this for more good your rom cyanogenmod 10 I prefer the original rom samsung its call is a failure that has no good sound in music player and video player and has no fixed video and audio</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-56287">
+        <div id="dsq-comment-header-56287" class="dsq-comment-header">
+            <cite id="dsq-cite-56287">
+                <span id="dsq-author-user-56287">Liam</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56287" class="dsq-comment-body">
+            <div id="dsq-comment-message-56287" class="dsq-comment-message"><p>vBulletin uses Jira, I know how to use it <img src="http://cyanogenmod.org/wp-includes/images/smilies/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-56335">
+        <div id="dsq-comment-header-56335" class="dsq-comment-header">
+            <cite id="dsq-cite-56335">
+                <span id="dsq-author-user-56335">Craig</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56335" class="dsq-comment-body">
+            <div id="dsq-comment-message-56335" class="dsq-comment-message"><p>What&#8217;s wrong with BugZilla?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-56368">
+        <div id="dsq-comment-header-56368" class="dsq-comment-header">
+            <cite id="dsq-cite-56368">
+                <span id="dsq-author-user-56368">Sebastian Unger</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56368" class="dsq-comment-body">
+            <div id="dsq-comment-message-56368" class="dsq-comment-message"><p>Hi there,</p>
+<p>quoting from above: &#8220;I haven’t found any good xml-to-csv converters that can handle the data, and writing one by hand has proved problematic at best.&#8221;</p>
+<p>This should actually be quite straight forward in XSLT2. if you can give me samples of the XML and the CSV you need it to turn into I can probably write a xslt transformation fairly quickly.</p>
+<p>Not sure how to get my email address to you though without it being public. Have you got a public GPG key?</p>
+<p>Cheers,<br />
+Seb</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-56372">
+        <div id="dsq-comment-header-56372" class="dsq-comment-header">
+            <cite id="dsq-cite-56372">
+                <span id="dsq-author-user-56372">Bob Mac</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-56372" class="dsq-comment-body">
+            <div id="dsq-comment-message-56372" class="dsq-comment-message"><p>Hey guys, not sure if this is the right place, but I have a d2vzw and I am on the nightly builds.  I am seeing the random reboots, but I&#8217;m not sure they are all that random.  From what I see any time I am alerted from Google Play that I have an app that needs updating is when the reboot occurs.  Hope this helps.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-60275">
+        <div id="dsq-comment-header-60275" class="dsq-comment-header">
+            <cite id="dsq-cite-60275">
+                <span id="dsq-author-user-60275">manoj</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-60275" class="dsq-comment-body">
+            <div id="dsq-comment-message-60275" class="dsq-comment-message"><p>Lot of confusion after making sd card as my default storage in huawei ascend y300 using CyanogenMod 11 !! Which one is internal storage , sd card and it&#8217;s showing two sd cards ??</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+            </ul>
+
+
+        </div>
+
+    </div>
+
+<script type="text/javascript">
+var disqus_url = 'http://www.cyanogenmod.org/blog/the-new-jira-bugtracker-is-here';
+var disqus_identifier = '2124 http://www.cyanogenmod.org/?p=2124';
+var disqus_container_id = 'disqus_thread';
+var disqus_shortname = 'cyngn';
+var disqus_title = "The new Jira bugtracker is here";
+var disqus_config_custom = window.disqus_config;
+var disqus_config = function () {
+    /*
+    All currently supported events:
+    onReady: fires when everything is ready,
+    onNewComment: fires when a new comment is posted,
+    onIdentify: fires when user is authenticated
+    */
+    
+    
+    this.language = '';
+        this.callbacks.onReady.push(function () {
+
+        // sync comments in the background so we don't block the page
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = '?cf_action=sync_comments&post_id=2124';
+
+        var firstScript = document.getElementsByTagName('script')[0];
+        firstScript.parentNode.insertBefore(script, firstScript);
+    });
+    
+    if (disqus_config_custom) {
+        disqus_config_custom.call(this);
+    }
+};
+
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+
+</article>
+			</div>
+
+		</div><!-- End Content row -->
+		
+		<aside id="sidebar" class="four columns hide-on-phones" role="complementary">
+	<div class="sidebar-box">
+		<article id="recent-comments-4" class="row widget widget_recent_comments"><div class="sidebar-section twelve columns"><h6><strong>Recent Comments</strong></h6><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">Aashish bhatia</span> on <a href="http://www.cyanogenmod.org/blog/cm-dev-summit/comment-page-1#comment-72732">CM Dev Summit</a></li><li class="recentcomments"><span class="comment-author-link">Aashish bhatia</span> on <a href="http://www.cyanogenmod.org/blog/file-manager-redesign/comment-page-2#comment-72731">Call for response: File Manager Redesign</a></li><li class="recentcomments"><span class="comment-author-link">Portzblitz</span> on <a href="http://www.cyanogenmod.org/blog/capps-package-for-marshmallow/comment-page-2#comment-72730">Cyanogen Apps Package for Marshmallow</a></li><li class="recentcomments"><span class="comment-author-link">Heryan M</span> on <a href="http://www.cyanogenmod.org/blog/microsoft-and-cm12-1-nightlies/comment-page-3#comment-72729">Microsoft and CM12.1 Nightlies</a></li><li class="recentcomments"><span class="comment-author-link">Jonathan Barbosa</span> on <a href="http://www.cyanogenmod.org/blog/cm-13-0-release-znh5y/comment-page-4#comment-72728">CM 13.0 Release &#8211; ZNH5Y</a></li></ul></div></article>	</div>
+</aside><!-- /#sidebar -->		
+		</div><!-- End Main row -->
+		
+		<footer id="content-info" role="contentinfo" class="hide-on-phones" style="margin:40px 0 0 0;">
+			<div class="row">
+				<article id="nav_menu-4" class="three columns widget widget_nav_menu"><div class="footer-section"><h6><strong>Navigation</strong></h6><div class="menu-main-container"><ul id="menu-main" class="menu"><li id="menu-item-798" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-798"><a href="http://www.cyanogenmod.org/about">About</a></li>
+<li id="menu-item-2403" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2403"><a href="http://wiki.cyanogenmod.org/">Wiki</a></li>
+<li id="menu-item-2404" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2404"><a href="http://download.cyanogenmod.org">Download</a></li>
+<li id="menu-item-825" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-825"><a href="/blog">Blog</a></li>
+<li id="menu-item-904" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-904"><a href="http://forum.cyanogenmod.org">Forum</a></li>
+<li id="menu-item-829" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-829"><a href="http://www.cyanogenmod.org/community">Community</a></li>
+<li id="menu-item-2709" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2709"><a href="http://shop.cyanogenmod.org">Shop</a></li>
+</ul></div></div></article><article id="nav_menu-3" class="three columns widget widget_nav_menu"><div class="footer-section"><h6><strong>Social Networks</strong></h6><div class="menu-social-networks-container"><ul id="menu-social-networks" class="menu"><li id="menu-item-2173" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2173"><a href="https://www.facebook.com/CyanogenMod">Facebook</a></li>
+<li id="menu-item-2174" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2174"><a href="https://twitter.com/CyanogenMod">Twitter</a></li>
+<li id="menu-item-2175" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2175"><a href="https://plus.google.com/+CyanogenMod/posts">Google+</a></li>
+</ul></div></div></article>                                <article class="three columns widget widget widget_nav_menu">
+                                    <div class="footer-section">
+                                        <h6><strong>Sponsored By</strong></h6>
+                                        <a href="http://twilio.com/?utm_source=cyanogenmod&utm_medium=webbadge&utm_campaign=cyanogenverify" style="text: decoration: none; display: inline-block; width: 166px; height: 0; overflow: hidden; padding-top: 31px; background: url(https://www.twilio.com/packages/company/img/logos_icon_poweredbysmall.png) no-repeat;">powered by twilio™</a>
+                                    </div>
+                                </article>
+			</div>
+		</footer>
+        
+      <div id="navigation" class="row mobile-footer show-on-phones">
+			<div class="twelve columns">
+            	<h6>Navigate cyanogenmod.org</h6>
+            	<ul>
+                	<li><a href="/about">About</a></li>
+                    <!--<li><a href="#">Features</a></li>-->
+                    <li><a href="http://wiki.cyanogenmod.org/">Wiki</a></li>
+                    <li><a href="http://download.cyanogenmod.org/">Download</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="http://forum.cyanogenmod.org">Forum</a></li>
+                    <li><a href="/community">Community</a></li>  
+                    <li><a href="http://shop.cyanogenmod.org">Shop</a></li>
+                </ul>
+            </div>
+        </div>
+			
+	</div><!-- Container End -->
+    
+
+	<!-- Included JS Files of Foundation -->
+	<script src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/foundation.js"></script>
+	<script src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/app.js"></script>
+	
+	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+	     chromium.org/developers/how-tos/chrome-frame-getting-started -->
+	<!--[if lt IE 7]>
+		<script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+		<script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+	<![endif]-->
+	
+	        <script type="text/javascript">
+        // <![CDATA[
+        var disqus_shortname = 'cyngn';
+        (function () {
+            var nodes = document.getElementsByTagName('span');
+            for (var i = 0, url; i < nodes.length; i++) {
+                if (nodes[i].className.indexOf('dsq-postid') != -1) {
+                    nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('data-dsqidentifier'));
+                    url = nodes[i].parentNode.href.split('#', 1);
+                    if (url.length == 1) { url = url[0]; }
+                    else { url = url[1]; }
+                    nodes[i].parentNode.href = url + '#disqus_thread';
+                }
+            }
+            var s = document.createElement('script'); 
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+        // ]]>
+        </script>
+        <script type='text/javascript' src='http://cyanogenmod.org/wp-includes/js/comment-reply.min.js?ver=4.2.4'></script>
+<script type="text/javascript">/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+ Served from: www.cyanogenmod.org @ 2016-09-10 08:01:03 by W3 Total Cache -->

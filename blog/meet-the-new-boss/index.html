@@ -1,0 +1,551 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+
+	<title>Meet the new boss? | CyanogenMod</title>
+	
+	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	
+	<!-- Included Foundation CSS Files -->
+	<link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/css/foundation.css">
+	<link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/css/app.css">
+    <link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/tipTip.css">
+    <link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/fonts/style.css">
+    <link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/css/flexslider.css" type="text/css" media="screen" />
+	
+	<link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/style.css">
+	
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/css/ie.css">
+	<![endif]-->
+	
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<!-- Favicon and Feed -->
+	<link rel="shortcut icon" type="image/png" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/favicon.ico">
+	<link rel="alternate" type="application/rss+xml" title="CyanogenMod Feed" href="http://www.cyanogenmod.org/feed/">
+	
+	<!--  iPhone Web App Home Screen Icon -->
+	<link rel="apple-touch-icon" sizes="72x72" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-icon-ipad.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-icon-retina.png" />
+	<link rel="apple-touch-icon" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-icon.png" />
+	
+	<!-- Enable Startup Image for iOS Home Screen Web App -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link rel="apple-touch-startup-image" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/mobile-load.png" />
+
+	<!-- Startup Image iPad Landscape (748x1024) -->
+	<link rel="apple-touch-startup-image" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-load-ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)" />
+	<!-- Startup Image iPad Portrait (768x1004) -->
+	<link rel="apple-touch-startup-image" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-load-ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)" />
+	<!-- Startup Image iPhone (320x460) -->
+	<link rel="apple-touch-startup-image" href="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/devices/reverie-load.png" media="screen and (max-device-width: 320px)" />
+	
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.min.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.jparallax.min.js" ></script>
+  <script defer type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.featureList-1.0.0.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.tipTip.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/easySlider1.7.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/modernizr.foundation.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/jquery.flexslider-min.js"></script>
+  <script type="text/javascript" src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/custom.js"></script>
+  
+  <script type="text/javascript">
+    $(document).load(function(){
+
+	  // The slider being synced must be initialized first
+	  $('.flexslider').flexslider({
+		animation: "slide",
+		controlNav: false,
+	  });
+	  
+    });
+  </script>
+  
+  	
+<!-- All in One SEO Pack 2.2.7.1 by Michael Torbert of Semper Fi Web Design[493,520] -->
+<meta name="description"  content="Tim Bray posted something today on the Android developers blog that everyone running CyanogenMod or any other custom firmware on their mobile device should" />
+
+<link rel="canonical" href="http://www.cyanogenmod.org/blog/meet-the-new-boss" />
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-39737599-3']);
+		  _gaq.push(['_trackPageview']);
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
+<!-- /all in one seo pack -->
+<link rel="alternate" type="application/rss+xml" title="CyanogenMod &raquo; Meet the new boss? Comments Feed" href="http://www.cyanogenmod.org/blog/meet-the-new-boss/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/cyanogenmod.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.2.4"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://cyanogenmod.org/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://cyanogenmod.org/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Calling all web designers!' href='http://www.cyanogenmod.org/blog/calling-web-designers-wordpress-developers' />
+<link rel='next' title='Great responses for Web Design!' href='http://www.cyanogenmod.org/blog/great-responses-for-web-design' />
+<meta name="generator" content="WordPress 4.2.4" />
+<link rel='shortlink' href='http://www.cyanogenmod.org/?p=762' />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+</head>
+
+<body class="single single-post postid-762 single-format-standard">
+
+	<div class="menusto hide-on-phones"></div>
+	<!-- Start the main container -->
+	<div id="container" class="container" role="document" style="padding:80px 0 0 0;">
+		
+        
+        <div class="row mobile-header show-on-phones">
+            <div class="nine">
+            	<a href="http://www.cyanogenmod.org" title="CyanogenMod" class="logo-mobile"><img src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/logo-mobile.png" alt=""/></a>
+            </div>
+            <a href="#navigation" class="mobile-menu"><img src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/btn-menu-mobile.png" alt=""/></a>
+        </div>
+        
+		<!-- Row for blog navigation -->
+		<div class="row hide-on-phones">
+			<header class="twelve columns" role="banner">
+				<div class="reverie-header">
+                	<a href="http://www.cyanogenmod.org" title="CyanogenMod" class="logo"><img src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/images/logo.png" alt=""/></a>
+                    <div id="glavno" class="nav hide-on-phones">
+                        <ul id="glavno">                   
+                            <li><a href="http://wiki.cyanogenmod.org/">Wiki</a></li>
+                            <!--<li><a href="http://cyanogenmod.org/about/features">Features</a></li>-->
+                            <li><a href="http://download.cyanogenmod.org/">Download</a></li>
+                            <li><a href="http://www.cyanogenmod.org/blog/">Blog</a></li>
+                            <li><a href="http://forum.cyanogenmod.org/">Forum</a></li>
+                            <li>
+                            	<a href="http://www.cyanogenmod.org/community">Community</a>
+                                <div style="opacity: 0; display: none; width:100%" class="sub">
+                                    <ul>
+                                    	<div style="width:980px; margin:0 auto; color:#fff;">
+                                        	<div class="contributesub">
+                                            	<h2>Contribute</h2>
+                                                
+                                                <h4><a href="http://review.cyanogenmod.org/">Gerrit Review</a></h4>
+                                                <p>Gerrit is a web based code review system, facilitating online code reviews for projects using the Git version control system.</p>
+                                                    
+                                                <h4><a href="http://wiki.cyanogenmod.org/">Wiki</a></h4>
+                                                <p>Our Wiki is a comprehensive tool for users to find information. This also needs contributions to keep it fresh and relevant.</p>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/community">Join The Team</a></h4>
+                                                <p>We love working with others. You can submit code via Gerrit. If you think there is something else you can help with, get in touch with us on the forums.</p>
+                                            </div>
+                                            
+                                        	<div class="contributesub">
+                                            	<h2>Help</h2>
+                                                
+                                                <h4><a href="http://forum.cyanogenmod.org/">Forum</a></h4>
+                                                <p>Our forums have a wealth of knowledge and resources. All of it is free and accessible from both your desktop and mobile phone.</p>
+                                                    
+                                                <h4><a href="irc://irc.freenode.net/cyanogenmod">IRC</a></h4>
+                                                <p>If you are comfortable with IRC and would like instant help and assistance from both developers and others users alike.</p>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/blog">Blog</a></h4>
+                                                <p>Our blogs will contain the latest news and releases as well as other related news concerning the distribution.</p>
+                                                    
+                                                <h4><a href="http://wiki.cyanogenmod.org/">Wiki</a></h4>
+                                                <p>Our Wiki is a comprehensive tool for users to find information. This also needs contributions to keep it fresh and relevant.</p>
+                                            </div>
+                                            
+                                        	<div class="contributesub">
+                                            	<h2>Information</h2>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/bugs">Bug Tracker</a></h4>
+                                                <p>This is the official Bug Tracker where you can submit and review bugs that users may experience.</p>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/github">Github Repo</a></h4>
+                                                <p>Our source is free and open. you can check the Github page to see what we do and how you can contribute.</p>
+                                                    
+                                                <h4><a href="http://www.cyanogenmod.org/stats">Installation Statistics</a></h4>
+                                                <p>We have an opt-in feature in our ROMS to enable us to gain statistics on users as well as devices used.</p>
+                                            </div>
+                                            
+                                        	<div class="contributesub last">
+                                            	<h2>Support</h2>
+                                                
+                                                <h4><a href="/cdn-cgi/l/email-protection#5135342723343d113228303f3e36343f3c3e357f3e2336">Developer Relations</a></h4>
+                                                <p>If you wish to contact us regarding development contributions, please do so here.</p>
+                                                    
+                                                <h4><a href="/cdn-cgi/l/email-protection#e180858c888fa18298808f8e86848f8c8e85cf8e9386">Website Support</a></h4>
+                                                <p>This email is dedicated to website, forum, wiki and hosting support. We will not respond to ROM support.</p>
+                                                    
+                                                <h4><a href="/cdn-cgi/l/email-protection#147570797d7a54776d757a7b73717a797b703a7b6673">Social Network</a></h4>
+                                                <p>To contact us in relation to our Social media structure.</p>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                    
+                                </div>
+                            </li>
+                      </ul>
+                    </div>
+				</div>
+
+			</header>
+		</div>
+
+		
+		<!-- Row for main content area -->
+		<div id="main" class="row">
+		<!-- Row for main content area -->
+		<div id="content" class="eight columns" role="main">
+	
+			<div class="post-box">
+					<article class="post-762 post type-post status-publish format-standard hentry category-blog" id="post-762">
+		<header>
+        	<time class="updated" datetime="2010-12-21T02:01:24+00:00" pubdate>December 21st, 2010 &bull; Written by <a href="http://www.cyanogenmod.org/author/cyanogen" rel="author" class="fn">Steve Kondik</a></time>        	<h2 class="entry-title">Meet the new boss?</h2>
+					</header>
+		<div class="entry-content">
+			<p><a href="http://twitter.com/timbray">Tim Bray</a> posted something today on the <a href="http://android-developers.blogspot.com/2010/12/its-not-rooting-its-openness.html">Android developers blog</a> that everyone running CyanogenMod or any other custom firmware on their mobile device should read. </p>
+<p>I&#8217;m preaching to the choir here, but he&#8217;s right on. We want a reliable connection and friendly service when things go wrong. We don&#8217;t want to live in your walled garden and pay $5 extra for services that our PC gets for free. We want to be able to tinker with the awesome pile of electronics that some of us have paid full retail for. We want to *help* you fix bugs and improve security.</p>
+<p>We are starting to see some carriers embrace it slowly (guess who?) and others try to fight it with every last breath (guess who?).</p>
+<p>My mom doesn&#8217;t pay her ISP extra money to connect to an Exchange server from her home PC. What&#8217;s so different about my phone that&#8217;s actually more powerful than her PC?</p>
+		</div>
+
+<div id="disqus_thread">
+            <div id="dsq-content">
+
+
+            <ul id="dsq-comments">
+                    <li class="comment even thread-even depth-1" id="dsq-comment-33512">
+        <div id="dsq-comment-header-33512" class="dsq-comment-header">
+            <cite id="dsq-cite-33512">
+                <span id="dsq-author-user-33512">Anton</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-33512" class="dsq-comment-body">
+            <div id="dsq-comment-message-33512" class="dsq-comment-message"><p>The blog post is actually for those who don&#8217;t own an Android phone.</p>
+<p>A &#8220;rooted&#8221; device means full control. Corporate windows users with no Administrator account should be able to explain it better 😉</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-33520">
+        <div id="dsq-comment-header-33520" class="dsq-comment-header">
+            <cite id="dsq-cite-33520">
+                <span id="dsq-author-user-33520">Matt</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-33520" class="dsq-comment-body">
+            <div id="dsq-comment-message-33520" class="dsq-comment-message"><p>The recent OTA update for the Evo from Sprint was the straw that broke the camels back for me&#8230;an update is one thing but installing more bloatware is unacceptable. I&#8217;m forever rooted running CM6 and not looking back!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-33523">
+        <div id="dsq-comment-header-33523" class="dsq-comment-header">
+            <cite id="dsq-cite-33523">
+                <span id="dsq-author-user-33523">Ian</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-33523" class="dsq-comment-body">
+            <div id="dsq-comment-message-33523" class="dsq-comment-message"><p>T-Mobile is the most root-friendly service of any out there so far, but even they have a lot of room to improve. I&#8217;d like to see fastboot oem unlock for the Defy and the G2, for example. Go go Magenta!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-33545">
+        <div id="dsq-comment-header-33545" class="dsq-comment-header">
+            <cite id="dsq-cite-33545">
+                <span id="dsq-author-user-33545">Andrew</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-33545" class="dsq-comment-body">
+            <div id="dsq-comment-message-33545" class="dsq-comment-message"><p>I love tmo they don&#8217;t crack down hard on the rooters and they allow the dev phone to be used on their service.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment byuser comment-author-rickb928 even thread-even depth-1" id="dsq-comment-33656">
+        <div id="dsq-comment-header-33656" class="dsq-comment-header">
+            <cite id="dsq-cite-33656">
+                <span id="dsq-author-user-33656">rickb928</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-33656" class="dsq-comment-body">
+            <div id="dsq-comment-message-33656" class="dsq-comment-message"><p>Bloatware is a revenue stream.  If you&#8217;re asking why your carrier wants more revenue, please consider avoiding this subject entirely until you understand.  You will understand, of course.</p>
+<p>My G1 is still working for me, and only because it&#8217;s rooted.  I would feel both left out and abandoned if not.  But we&#8217;re in this space in history where our devices are being obsoleted before they wear out or fail.  The carriers don&#8217;t seem to want to change the subsidy model yet. I wonder what the uptake of Android in Europe is, where most people buy their phones outright.  Hard to keep buying the latest when it&#8217;s only been less than a year.  I&#8217;m thinking a G2 would be nice, but then I see the dual-core Tegra phones coming and I hate buying a new phone now and being left out maybe two months from now.  </p>
+<p>But TMO doesn&#8217;t drive all this process.  The makers also drive this, and Samsung may yet lock down their phones too much.  LG is showing the Tegra phone, and I wonder if it can be rooted?  </p>
+<p>So far, TMO is the place to be.  And CM is the ROM to run.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment byuser comment-author-jobyone odd alt thread-odd thread-alt depth-1" id="dsq-comment-33658">
+        <div id="dsq-comment-header-33658" class="dsq-comment-header">
+            <cite id="dsq-cite-33658">
+                <span id="dsq-author-user-33658">jobyone</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-33658" class="dsq-comment-body">
+            <div id="dsq-comment-message-33658" class="dsq-comment-message"><p>@Anton</p>
+<p>Unfortunately you&#8217;re not quite right. This applies to EVERYONE, because they&#8217;ll likely enforce their non-neutrality at their end, not on your device. All the rooted Android gadgets in the world won&#8217;t get you a YouTube video if they block back at Verizon HQ.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment byuser comment-author-digitalpioneer even thread-even depth-1" id="dsq-comment-33659">
+        <div id="dsq-comment-header-33659" class="dsq-comment-header">
+            <cite id="dsq-cite-33659">
+                <span id="dsq-author-user-33659">DigitalPioneer</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-33659" class="dsq-comment-body">
+            <div id="dsq-comment-message-33659" class="dsq-comment-message"><p>OK, so just to get caught up with everyone else, which carriers are we talking about here? I don&#8217;t follow carriers that closely (I prefer buying unsubsidized, and greatly prefer not letting the carrier know what kind of phone I have at all) so I&#8217;d like to know if any carriers are going evil and blocking rooted devices or the like. Verizon is trying to do this? Is anyone else?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment byuser comment-author-pcorning odd alt thread-odd thread-alt depth-1" id="dsq-comment-33661">
+        <div id="dsq-comment-header-33661" class="dsq-comment-header">
+            <cite id="dsq-cite-33661">
+                <span id="dsq-author-user-33661">pcorning</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-33661" class="dsq-comment-body">
+            <div id="dsq-comment-message-33661" class="dsq-comment-message"><p>The supplemental Exchange fees are probably a way to gouge business customers.  </p>
+<p>But AT&amp;T DSL gives me 150-200 GB of transfer before they start calling me names.  T-Mobile&#8217;s down to 5 GB before throttling (how about letting us buy more capacity at least?).  So any extra traffic due to Exchange would have a bigger impact on the wireless networks &#8211; there may be some justification here&#8230;</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment byuser comment-author-deliberate187 even thread-even depth-1" id="dsq-comment-33665">
+        <div id="dsq-comment-header-33665" class="dsq-comment-header">
+            <cite id="dsq-cite-33665">
+                <span id="dsq-author-user-33665">deliberate187</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-33665" class="dsq-comment-body">
+            <div id="dsq-comment-message-33665" class="dsq-comment-message"><p>T-Mobile does seem to be one of the most root-friendly carriers out there. At least they didn&#8217;t pull a Verizon and make the phones shut off until factory firmware was installed, or &#8220;Bing&#8221; the Google OS. Hell, they didn&#8217;t even charge for tethering. It&#8217;s included with the G2 as part of an OTA update.</p>
+<p>I think magenta listens to its customers in a way, in that instead of making us install custom firmware to get tethering, or installing YABA (yet another bloatware app) to make us pay 30 bucks a month for tethering *cough cough Verizon* they did the right thing and allowed us to have it as part of our native G2 package.</p>
+<p>And unlike AT&amp;T/Verizon, they merely throttled us at 5GB, which is easily worked around with a few changes in the system. Much better IMO than making us pay ANOTHER data fee. I would have already paid 60 bucks in internet alone if this had been the case with magenta.</p>
+<p>BTW, I&#8217;m running unthrottled at like 6GB usage right now, so huzzah!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment byuser comment-author-cj-chitwood odd alt thread-odd thread-alt depth-1" id="dsq-comment-33666">
+        <div id="dsq-comment-header-33666" class="dsq-comment-header">
+            <cite id="dsq-cite-33666">
+                <span id="dsq-author-user-33666">cj chitwood</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-33666" class="dsq-comment-body">
+            <div id="dsq-comment-message-33666" class="dsq-comment-message"><p>I didn&#8217;t choose T-Mobile but I&#8217;m not planning on leaving them any time soon, and mainly BECAUSE they&#8217;re so open to things like cooked ROM usage and tethering without extra charge.  I hardly ever use tethering, so I&#8217;m certainly not going to pay another $30 each month just for the few hundred KB/few MB I might use in that month.  I just did a speed test last night on &#8220;4&#8221;g, and only received at something like 300 kbit per second, so it&#8217;s not like I&#8217;d use their networks for much other than an occasional, small, necessary file transfer or light web browsing.</p>
+<p>That said, I&#8217;ve listened to my coworkers and friends who are on other networks.  One of them used to work in Verizon&#8217;s store, and because of Verizon&#8217;s practices &#8212; even to their own employees &#8212; he left them to work for AT&amp;T.  I soon after heard him complaining about AT&amp;T&#8217;s practices &#8212; nowhere near what Verizon was like, but still.  I&#8217;ve also heard a lot of coworkers complain about both of these providers, and I have other friends and family with Sprint who are less than satisfied with their services. </p>
+<p>I haven&#8217;t heard any of them complain about T-Mobile.  </p>
+<p>Seems to me, T-Mo&#8217;s doing it right, whatever they&#8217;re [not] doing [to their customers].  I wonder how actively they seek out comments like these in forums like these.  Do they know how much they are appreciated for what they do?  Does anybody, like, call them up and thank them?  &#8230;send them letters of appreciation?  &#8230;erect shrines in their honor?</p>
+<p>Frankly, I have no reason not to be with T-Mo.  And I second @rickb928 above:  I&#8217;m also using a G1, and while I considered getting a G2, I simply can&#8217;t afford one right now &#8212; even with the subsidy &#8212; and I would feel left out and abandoned as well if it weren&#8217;t for the ability to hack the phone and put FroYo on it.  I think my father in law is still running Donut on his stock G1.  Granted, his is a little less futzy, works a bit more stably, lasts a lot longer on a single charge, and actually still makes and receives calls without fail; but he can&#8217;t tether, can&#8217;t get &#8220;4&#8221;g, and can&#8217;t run several of the apps I use on a regular basis.  Oh, and can&#8217;t get exchange e-mail without paying extra for it, nor sync multiple GMail accounts.  So it&#8217;s a tradeoff, but I like the benefits of running CM6.1 and the drawbacks are fairly few and far between in the stable releases.</p>
+<p>A big thanks to Steve and Kompany for all the hard work they do!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment byuser comment-author-swordofwar even thread-even depth-1" id="dsq-comment-33670">
+        <div id="dsq-comment-header-33670" class="dsq-comment-header">
+            <cite id="dsq-cite-33670">
+                <span id="dsq-author-user-33670">SwordOfWar</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-33670" class="dsq-comment-body">
+            <div id="dsq-comment-message-33670" class="dsq-comment-message"><p>I like Verizon simply because it has given me the best coverage. It is more expensive, but with a custom ROM you can still get tethering, and if you don&#8217;t have CyanogenMod on your phone there must be something wrong with you anyway <img src="http://cyanogenmod.org/wp-includes/images/smilies/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment byuser comment-author-anton odd alt thread-odd thread-alt depth-1" id="dsq-comment-33697">
+        <div id="dsq-comment-header-33697" class="dsq-comment-header">
+            <cite id="dsq-cite-33697">
+                <span id="dsq-author-user-33697">Anton</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-33697" class="dsq-comment-body">
+            <div id="dsq-comment-message-33697" class="dsq-comment-message"><p>@jobyone</p>
+<p>I understand that by &#8220;the world&#8221; you mean US. Fortunately, I don&#8217;t belong to this kind of &#8220;the world&#8221;. There is a low which does not allow to lock the phone in Asia Pacific region and there is no Verizon. This could be a good example for US.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment byuser comment-author-dances1000 even thread-even depth-1" id="dsq-comment-33869">
+        <div id="dsq-comment-header-33869" class="dsq-comment-header">
+            <cite id="dsq-cite-33869">
+                <span id="dsq-author-user-33869">dances1000</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-33869" class="dsq-comment-body">
+            <div id="dsq-comment-message-33869" class="dsq-comment-message"><p>It&#8217;s hit or miss with alot of these guys. I&#8217;m with sprint and when I just upgraded to my EVO I told the sales manager I rooted(I don&#8217;t care and if I can&#8217;t fix it enough to get it into the store then I must have done something retarded). Anyway the guy wanted CM6 soooo bad but was just scared of the plunge! Told me to bring in optimus rooted and they would activate it. The more idiot proof and stable the devs make these is going to be the plus/minus where carriers make changes. Isn&#8217;t there already more people running evo nightlys than expected? You are GOING to have more noobs on forums but that is the only drawback. If you know what I mean it would not be as esoteric anymore! People already understand why &#8220;to root&#8221;. People like my girlfriend who are just &#8220;ordinary users&#8221; and have to be &#8220;told&#8221; how to use their device are the reason carriers get away with it. My gf does not understand data charges (she has our baby to think about and biology!) all she understands it that she cannot get on CL without it, right!? I think remote locks, if they are really doing it, are absurd. Essentially, either the carriers are holed up trying to figure out new ways to keep their control or they are trying to find the healthy middle.</p>
+<p>*_+</p>
+<p>BTW- I have been with a few carriers and choose sprint. The only thing I do not like right now is their 2gb 5gb price option for tabs. I DON&#8221;T LIKE CAPS! Can you imagine if that was 4g(the galaxy) I would bust that cap and be ruined financially! Sprints data charge(as of 1/1/2011, I haven&#8217;t checked since) compare about the same with tmobile and no data charge.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+            </ul>
+
+
+        </div>
+
+    </div>
+
+<script type="text/javascript">
+var disqus_url = 'http://www.cyanogenmod.org/blog/meet-the-new-boss';
+var disqus_identifier = '762 http://www.cyanogenmod.com/?p=762';
+var disqus_container_id = 'disqus_thread';
+var disqus_shortname = 'cyngn';
+var disqus_title = "Meet the new boss?";
+var disqus_config_custom = window.disqus_config;
+var disqus_config = function () {
+    /*
+    All currently supported events:
+    onReady: fires when everything is ready,
+    onNewComment: fires when a new comment is posted,
+    onIdentify: fires when user is authenticated
+    */
+    
+    
+    this.language = '';
+        this.callbacks.onReady.push(function () {
+
+        // sync comments in the background so we don't block the page
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = '?cf_action=sync_comments&post_id=762';
+
+        var firstScript = document.getElementsByTagName('script')[0];
+        firstScript.parentNode.insertBefore(script, firstScript);
+    });
+    
+    if (disqus_config_custom) {
+        disqus_config_custom.call(this);
+    }
+};
+
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+
+</article>
+			</div>
+
+		</div><!-- End Content row -->
+		
+		<aside id="sidebar" class="four columns hide-on-phones" role="complementary">
+	<div class="sidebar-box">
+		<article id="recent-comments-4" class="row widget widget_recent_comments"><div class="sidebar-section twelve columns"><h6><strong>Recent Comments</strong></h6><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">Eins</span> on <a href="http://www.cyanogenmod.org/blog/capps-package-for-marshmallow/comment-page-1#comment-72297">Cyanogen Apps Package for Marshmallow</a></li><li class="recentcomments"><span class="comment-author-link">Chaitanya Kanteti</span> on <a href="http://www.cyanogenmod.org/blog/capps-package-for-marshmallow/comment-page-1#comment-72296">Cyanogen Apps Package for Marshmallow</a></li><li class="recentcomments"><span class="comment-author-link">devansh trivedi</span> on <a href="http://www.cyanogenmod.org/blog/cyanogen-inc-and-cyanogenmod/comment-page-2#comment-72295">Cyanogen Inc and CyanogenMod</a></li><li class="recentcomments"><span class="comment-author-link">Jaiji Ramon Salazar</span> on <a href="http://www.cyanogenmod.org/blog/cm-13-0-release-1/comment-page-10#comment-72294">CM 13.0 Release 1</a></li><li class="recentcomments"><span class="comment-author-link">Jaiji Ramon Salazar</span> on <a href="http://www.cyanogenmod.org/blog/cm-13-0-release-1/comment-page-10#comment-72293">CM 13.0 Release 1</a></li></ul></div></article>	</div>
+</aside><!-- /#sidebar -->		
+		</div><!-- End Main row -->
+		
+		<footer id="content-info" role="contentinfo" class="hide-on-phones" style="margin:40px 0 0 0;">
+			<div class="row">
+				<article id="nav_menu-4" class="three columns widget widget_nav_menu"><div class="footer-section"><h6><strong>Navigation</strong></h6><div class="menu-main-container"><ul id="menu-main" class="menu"><li id="menu-item-798" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-798"><a href="http://www.cyanogenmod.org/about">About</a></li>
+<li id="menu-item-2403" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2403"><a href="http://wiki.cyanogenmod.org/">Wiki</a></li>
+<li id="menu-item-2404" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2404"><a href="http://download.cyanogenmod.org">Download</a></li>
+<li id="menu-item-825" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-825"><a href="/blog">Blog</a></li>
+<li id="menu-item-904" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-904"><a href="http://forum.cyanogenmod.org">Forum</a></li>
+<li id="menu-item-829" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-829"><a href="http://www.cyanogenmod.org/community">Community</a></li>
+<li id="menu-item-2709" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2709"><a href="http://shop.cyanogenmod.org">Shop</a></li>
+</ul></div></div></article><article id="nav_menu-3" class="three columns widget widget_nav_menu"><div class="footer-section"><h6><strong>Social Networks</strong></h6><div class="menu-social-networks-container"><ul id="menu-social-networks" class="menu"><li id="menu-item-2173" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2173"><a href="https://www.facebook.com/CyanogenMod">Facebook</a></li>
+<li id="menu-item-2174" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2174"><a href="https://twitter.com/CyanogenMod">Twitter</a></li>
+<li id="menu-item-2175" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2175"><a href="https://plus.google.com/+CyanogenMod/posts">Google+</a></li>
+</ul></div></div></article>                                <article class="three columns widget widget widget_nav_menu">
+                                    <div class="footer-section">
+                                        <h6><strong>Sponsored By</strong></h6>
+                                        <a href="http://twilio.com/?utm_source=cyanogenmod&utm_medium=webbadge&utm_campaign=cyanogenverify" style="text: decoration: none; display: inline-block; width: 166px; height: 0; overflow: hidden; padding-top: 31px; background: url(https://www.twilio.com/packages/company/img/logos_icon_poweredbysmall.png) no-repeat;">powered by twilio™</a>
+                                    </div>
+                                </article>
+			</div>
+		</footer>
+        
+      <div id="navigation" class="row mobile-footer show-on-phones">
+			<div class="twelve columns">
+            	<h6>Navigate cyanogenmod.org</h6>
+            	<ul>
+                	<li><a href="/about">About</a></li>
+                    <!--<li><a href="#">Features</a></li>-->
+                    <li><a href="http://wiki.cyanogenmod.org/">Wiki</a></li>
+                    <li><a href="http://download.cyanogenmod.org/">Download</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="http://forum.cyanogenmod.org">Forum</a></li>
+                    <li><a href="/community">Community</a></li>  
+                    <li><a href="http://shop.cyanogenmod.org">Shop</a></li>
+                </ul>
+            </div>
+        </div>
+			
+	</div><!-- Container End -->
+    
+
+	<!-- Included JS Files of Foundation -->
+	<script src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/foundation.js"></script>
+	<script src="http://cyanogenmod.org/wp-content/themes/cyanogenmodv3/js/app.js"></script>
+	
+	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+	     chromium.org/developers/how-tos/chrome-frame-getting-started -->
+	<!--[if lt IE 7]>
+		<script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+		<script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+	<![endif]-->
+	
+	        <script type="text/javascript">
+        // <![CDATA[
+        var disqus_shortname = 'cyngn';
+        (function () {
+            var nodes = document.getElementsByTagName('span');
+            for (var i = 0, url; i < nodes.length; i++) {
+                if (nodes[i].className.indexOf('dsq-postid') != -1) {
+                    nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('data-dsqidentifier'));
+                    url = nodes[i].parentNode.href.split('#', 1);
+                    if (url.length == 1) { url = url[0]; }
+                    else { url = url[1]; }
+                    nodes[i].parentNode.href = url + '#disqus_thread';
+                }
+            }
+            var s = document.createElement('script'); 
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+        // ]]>
+        </script>
+        <script type='text/javascript' src='http://cyanogenmod.org/wp-includes/js/comment-reply.min.js?ver=4.2.4'></script>
+<script type="text/javascript">/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+ Served from: www.cyanogenmod.org @ 2016-08-10 13:14:19 by W3 Total Cache -->

@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>CyanogenMod &#187; bsxtn</title>
+	<atom:link href="http://www.cyanogenmod.org/author/bsxtn/feed" rel="self" type="application/rss+xml" />
+	<link>http://www.cyanogenmod.org</link>
+	<description>CyanogenMod Android ROM</description>
+	<lastBuildDate>Tue, 23 Aug 2016 16:45:49 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=4.2.4</generator>
+	<item>
+		<title>Developer Spotlight: A Few Words With Chris &#8216;Raymanfx&#8217; Hesse</title>
+		<link>http://www.cyanogenmod.org/blog/ds-cnh</link>
+		<comments>http://www.cyanogenmod.org/blog/ds-cnh#comments</comments>
+		<pubDate>Fri, 01 Jul 2016 17:58:47 +0000</pubDate>
+		<dc:creator><![CDATA[bsxtn]]></dc:creator>
+				<category><![CDATA[Blog]]></category>
+
+		<guid isPermaLink="false">http://www.cyanogenmod.org/?p=3214</guid>
+		<description><![CDATA[<p>Our last Developer Spotlight with Roman Birg. This time around we are moving the spotlight over to Christopher N. Hesse. He is responsible for several devices including the controversial Exynos devices like the Galaxy Note 4 and the Galaxy Tab S2. Developer Spotlights are a public nudge of appreciation to the developers that tirelessly work and contribute to a greater cause for a better OS.</p> <p>Hi Chris, how is your day today? Welcome to your first Developer Spotlight! Can you give us an introduction to yourself? </p> <p><strong>CNH: </strong>Hi Steve, my day has been great so far, thanks! My name is Christopher Noel Hesse, I’m 20 years old and live in Germany, where I’m studying at University at the moment.</p> <p>I’m working in the automotive industry on my non-University days and enjoy working on the Android platform there as well.</p> <p>It does not surprise me one bit that you tinker with cars as well as smartphones. ...<p><a href="http://www.cyanogenmod.org/blog/ds-cnh">Read the Rest...</a></p>]]></description>
+				<content:encoded><![CDATA[<p><span style="font-weight: 400;">Our last Developer Spotlight with Roman Birg. This time around we are moving the spotlight over to Christopher N. Hesse. He is responsible for several devices including the controversial Exynos devices like the Galaxy Note 4 and the Galaxy Tab S2. Developer Spotlights are a public nudge of appreciation to the developers that tirelessly work and contribute to a greater cause for a better OS.</span></p>
+<p><b>Hi Chris, how is your day today? Welcome to your first Developer Spotlight! Can you give us an introduction to yourself? </b></p>
+<p><span style="font-weight: 400;"><strong>CNH: </strong>Hi Steve, my day has been great so far, thanks! My name is Christopher Noel Hesse, I’m 20 years old and live in Germany, where I’m studying at University at the moment.</span></p>
+<p><span style="font-weight: 400;">I’m working in the automotive industry on my non-University days and enjoy working on the Android platform there as well.</span></p>
+<p><b>It does not surprise me one bit that you tinker with cars as well as smartphones. What are you currently studying in college?</b></p>
+<p><span style="font-weight: 400;"><strong>CNH: </strong>I have been studying business informatics for two years now and hope to acquire my first degree by 2017.</span></p>
+<p><b>By the time you graduate you will have quite a bit of experience under your belt. What got you into tinkering with Android and open source?</b></p>
+<p><span style="font-weight: 400;"><strong>CNH: </strong>I think it was the desire to actually be able to do what I want with a device I paid for.</span></p>
+<p><span style="font-weight: 400;">The bad situation with (major) Android version updates was another factor. I consider it quite funny seeing how the situation is still about as bad today, whereas Apple is supporting their devices at least twice as long and well on average.</span></p>
+<p><span style="font-weight: 400;">This is why I am an avid advocate of open source software. We need to be able to keep their devices alive when the OEM decides to drop it or our planet will drown in garbage soon.</span></p>
+<p><b>Well, for the same price you get similar ‘premium hardware’. Apple has tried to set a precedent of expectation for software updates and support. It’s an awesome and sad thing at the same time. We have the community to continue support while the company getting paid for the hardware sets a short update path.</b></p>
+<p><b>What was your first device and how long was it supported by the manufacturer?</b></p>
+<p><span style="font-weight: 400;"><strong>CNH: </strong>My first (Android) device was the Samsung Galaxy 3 (GT-I5800, not the S3), which came with Android Eclair (2.1) and was supported for about a year if I remember correctly &#8211; at least it got the update to Froyo (2.2) which was a big deal at that time because it brought important improvements such as the Dalvik Just In Time (JIT) compiler.</span></p>
+<p><span style="font-weight: 400;">The community achieved an almost usable Gingerbread AOSP build and someone even continued to work on Ice Cream Sandwich (by the time I had moved on to a Sony Xperia S).</span></p>
+<p><b>So you received an additional (nearly) two years of support for this device from the community? That is awesome. </b><b>I started with the Motorola Droid on Verizon, which developers supported up to Ice Cream Sandwich. What devices are you currently maintaining and do you think current hardware limitations will allow for longer community support?</b></p>
+<p><span style="font-weight: 400;"><strong>CNH: </strong>It really is.</span></p>
+<p><span style="font-weight: 400;">I sadly never owned a Motorola device and apparently I’m late to the party, with Lenovo now owning their mobile division. </span><span style="font-weight: 400;">I am currently responsible for the Exynos5 and Exynos7 platforms and I maintain the Samsung Galaxy Note 4 Exynos family, the Galaxy Note 5 family as well as the Galaxy Tab S2 family.</span></p>
+<p><span style="font-weight: 400;">Now, the funny thing is that all our current Exynos5/7 board support code is based off an Android Kitkat BSP release from the hardkernel guys, with tons of our own fixes and updates to it. </span><span style="font-weight: 400;">This means I am right now supporting devices running the latest Android Marshmallow (cm-13) using drivers that were designed for an iteration that was released several years ago.</span></p>
+<p><span style="font-weight: 400;">I’m quite confident I can support the Exynos 5430 and upwards for quite a while still.</span></p>
+<p>&nbsp;</p>
+<p><b>You are a bigger key figure in the upbringing of a difficult platform than most people understand. Thanks for the hard work and dedication.</b></p>
+<p><b>How is it working with the other components like camera and touchscreen on the Samsung devices? Is it just as difficult as the board?</b></p>
+<p><span style="font-weight: 400;"><strong>CNH: </strong>The difference in working with the two subsystems you pointed out is actually night and day on the devices I worked on so far. As for touchscreen, the kernel driver (which they are obliged to release as part of the GPL) is usually all you need and in most cases, it is just a simple Inter-Integrated-Circuit (i2c) bus that needs to be looked at for bug fixing and improvements.</span></p>
+<p><span style="font-weight: 400;">The camera however, is a different cup of tea. We are still struggling with the Exynos7 camera hardware to this day, because the user space drivers play a big role here as well. Samsung’s kernel space components, namely the Multi Format Codec (MFC) and others, provide well documented interfaces we can work with.</span></p>
+<p><span style="font-weight: 400;">The Android platform drivers build on top of the Video4Linux (V4L2) architecture and are utterly complex with specific Exynos graphics format mappings and whatnot. All in all, working with Exynos specific subsystems can be a pain &#8211; but an unparalleled learning experience at the same time.</span></p>
+<p><b>I figured as much when it comes to the intricacies of Samsung’s policies and hardware. Enough of the technicalities though. What do you find yourself doing on the other side of the phones? You said you work in the automotive realm, any hobbies of choice?</b></p>
+<p><span style="font-weight: 400;"><strong>CNH: </strong>My hobbies these days basically denote to spending as much time with my friends as I can, including going to the local beach, playing paintball or just roaming the German cities at night.</span></p>
+<p><span style="font-weight: 400;">I played football for about eight years, but never really got into it again after that. I do enjoy watching the European Championship and other sport events though. </span><span style="font-weight: 400;">Apart from that, I also grew to like skiing and I definitely wish I could do it more often.</span></p>
+<p><b>I have never had the opportunity to ski. It looks painful to wipe out with a bit less control than on a skateboard. </b></p>
+<p><b>I find it amazing that you find time to also spend countless hours contributing to CM. Where did you pick this skill up and when did you start?</b></p>
+<p><span style="font-weight: 400;"><strong>CNH: </strong>I can only recommend trying it out, it’s awesome! <img src="http://cyanogenmod.org/wp-includes/images/smilies/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" /></span></p>
+<p><span style="font-weight: 400;">That’s a good question and a hard one to answer actually. I guess it was by the time I went to school for the last two years when I got bored more and more each day, so I started hacking on the Lego Mindstorms NXT set I got a while back (not using the click-to-code interface) and soon after that wanting to modify my Android smartphone to run the latest and greatest iteration everyone was talking about.</span></p>
+<p><span style="font-weight: 400;">I started by learning Java but soon came to the conclusion I’d need to dive into C and C++ as well to be able to be successful with Android development. In the last two years, I started picking up extended Java and C++ courses at the University but at the very beginning, my programming knowledge was self taught I guess.</span></p>
+<p><b>I went as far as to learn some Java and Python, I ended up focusing on design and web work. Do you have anybody you looked up to in the Android community?</b></p>
+<p><span style="font-weight: 400;"><strong>CNH: </strong>I envy you web designers for I still think designing HTML pages using CSS is a mess.</span></p>
+<p><span style="font-weight: 400;">Sometimes I wish I could get into that topic as much as low level platform development.</span></p>
+<p><span style="font-weight: 400;">I think I looked up to Ethan Chen (Intervigil) for the most time, not necessarily because of the things he did for the community, but also the way how he did it. </span><span style="font-weight: 400;">You can see him constantly pushing new patches to CyanogenMod (and Inc. probably), yet he still finds time to check in on the IRC channels and he’s always up for discussing all things Android and CM.</span></p>
+<p><span style="font-weight: 400;">In a nutshell, I always perceived him as an accessible, helpful and friendly source of knowledge, something that isn’t exactly prevalent in the Android open source community to this grade.</span></p>
+<p><b>Ha, I wasn’t much of a designer, more of an organizer and apprentice, I always ask for input or another perspective.</b></p>
+<p><b>Anything you want to say before we end this chat?</b></p>
+<p><span style="font-weight: 400;"><strong>CNH:</strong> I’d like to take the opportunity to encourage more developers and enthusiasts to contribute to a large project like CyanogenMod to provide aftermarket support for awesome hardware, often left to be forgotten because of sub-par software. I know at least two really talented developers, working full time jobs at industry leaders such as Red Hat, who were trying to get more into Android development but were discouraged by the attitude of the community towards them.</span></p>
+<p><span style="font-weight: 400;">Words such as ‘kanging’ or others aren’t used nearly as often in other Linux communities as they are used in the Android one for example. </span><span style="font-weight: 400;">In my opinion, fragmentation is a problem for Linux distributions as well, the more eyes you can get to look on a patchset, the better your code and overall software quality will be.</span></p>
+<p><span style="font-weight: 400;">I feel happy knowing the CyanogenMod community is steadily growing and new talents are joining constantly. It’s a great thing seeing all these people push code to the project daily and CM providing the infrastructure for a flawless experience (build servers, download servers, gerrit nodes, etc.).</span></p>
+<p>It’s been a great experience for me so far and a steep learning curve, I can only hope to continue this awesome hobby for as long as possible. Cheers, and see you on the forum, or in the IRC chan!</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.cyanogenmod.org/blog/ds-cnh/feed</wfw:commentRss>
+		<slash:comments>14</slash:comments>
+		</item>
+		<item>
+		<title>Developer Spotlight: Reminiscing with Roman Birg</title>
+		<link>http://www.cyanogenmod.org/blog/ds-roman-birg</link>
+		<comments>http://www.cyanogenmod.org/blog/ds-roman-birg#comments</comments>
+		<pubDate>Fri, 10 Jun 2016 19:17:24 +0000</pubDate>
+		<dc:creator><![CDATA[bsxtn]]></dc:creator>
+				<category><![CDATA[Blog]]></category>
+
+		<guid isPermaLink="false">http://www.cyanogenmod.org/?p=3210</guid>
+		<description><![CDATA[<p>It’s been a couple weeks since our last Developer Spotlight with Mike Bestas two weeks ago. This time around we are moving the spotlight over to Roman Birg. He is responsible for several repositories today at Cyanogen Inc., but is ultimately known for his work on AOKP (Android Open Kang Project). Developer Spotlights are a public nudge of appreciation to the developers that tirelessly work and contribute to a greater cause for a better OS.</p> <p>Roman, nice to have you on here. How is life and the dream?</p> <p><strong>R. Birg</strong>: Life is great! I’ve been living in Seattle with my girlfriend Dani for over two years now, and it has been amazing. We even got a chocolate lab who’s growing into a quite a fine doge (he had a lot of teenager energy). I can’t see myself leaving the PNW (Pacific North West), I love this place.</p> <p>Tell us a bit about yourself, where do ...<p><a href="http://www.cyanogenmod.org/blog/ds-roman-birg">Read the Rest...</a></p>]]></description>
+				<content:encoded><![CDATA[<p><span style="font-weight: 400;">It’s been a couple weeks since our last Developer Spotlight with Mike Bestas two weeks ago. This time around we are moving the spotlight over to Roman Birg. He is responsible for several repositories today at Cyanogen Inc., but is ultimately known for his work on AOKP (Android Open Kang Project). Developer Spotlights are a public nudge of appreciation to the developers that tirelessly work and contribute to a greater cause for a better OS.</span></p>
+<p><b>Roman, nice to have you on here. How is life and the dream?</b></p>
+<p><span style="font-weight: 400;"><strong>R. Birg</strong>: Life is great! I’ve been living in Seattle with my girlfriend Dani for over two years now, and it has been amazing. We even got a chocolate lab who’s growing into a quite a fine doge (he had a lot of teenager energy). I can’t see myself leaving the PNW (Pacific North West), I love this place.</span></p>
+<p><b>Tell us a bit about yourself, where do you come from and how did you start tinkering with code?</b></p>
+<p><span style="font-weight: 400;"><strong>R. Birg</strong>: Born in Russia &#8211; moved to Memphis, Tennessee when I was 7, where I stayed until I graduated college. Although I didn’t start programming until high school, I kind of always knew that’s what I wanted to do… there was just no easy way to get into it when I was younger (and on dial up at the time). </span></p>
+<p><span style="font-weight: 400;">I guess I started with some small time website hacking. I remember in 6th grade, I downloaded the phpBB forum zip, and opening the zip and trying to make sense of the PHP files on the school Windows 2000 PC’s. I also had no idea how to “run” them, I definitely tried though. I stuck with it for a while and eventually I was at the point where I had to learn Flash to continue down the web development path. I did not continue down that path.</span></p>
+<p><b>What was the first language you started with? And what was the first project you completed?</b></p>
+<p><span style="font-weight: 400;"><strong>R. Birg</strong>: My high school programming class started us out with Java, so I ran with that. Turned out it was the right call more or less &#8211; most of college courses stuck with Java as well. And then came Android (well, bytecode[smali] first for me). Since then I’ve been exploring other languages as many chances as I get, Java just doesn’t cut it alone anymore.</span></p>
+<p>&nbsp;</p>
+<p><b>What have you incorporated from working on AOKP while working at Cyanogen Inc.?</b></p>
+<p><span style="font-weight: 400;"><strong>R. Birg</strong>: A few features here and there (nav bar arrow keys I still use daily), and maybe my experience messing with quick settings? Mostly unicorn jokes though.</span></p>
+<p><b>Not surprising, I am sure you rode in on one today.</b></p>
+<p><b>What are you currently working on today?</b></p>
+<p><span style="font-weight: 400;"><strong>R. Birg</strong>: I’m working on a nasty NFC + Bluetooth beaming bug where an unsuccessful transfer could put the other device in a bad state and not able to receive future file/photo beams until a reboot… so much stuff going on the device at that time too, it’s pretty gnarly.</span></p>
+<p><b>Bug hunts can lead to or help create other bugs. Also, messing with Bluetooth can be a nightmare.</b></p>
+<p><span style="font-weight: 400;"><strong>R. Birg</strong>:  Are you suggesting I’ve introduced bugs before? Never!</span></p>
+<p><b>You have been around for a while in the Android scene, what do you think big manufacturers need to improve or focus on to be a better device manufacturer?</b></p>
+<p><span style="font-weight: 400;"><strong>R. Birg</strong>: Everyone is so focused on making the next huge product that will sell millions of phones. But no one is putting in the time or love to make a device that doesn’t feel rushed. Everyone always has to have the newest hottest hardware (I do too sometimes). It’s really hard to find a balance.</span></p>
+<p><span style="font-weight: 400;">I feel like if there was a _stellar_ phone out right now, that released with an MSM8974 (like the original OnePlus device), but it had the best camera on market, a fingerprint sensor, useful UI enhancement (CM anyone?), and proper LTE band support, I’d be all over it. You usually get two, maybe three out of four of those things, but never all.</span></p>
+<p><span style="font-weight: 400;">The Nexus devices are the closest thing to this for me, but as always, those are severely lacking in the camera department.</span></p>
+<p><b>So do you think that is why everything feels ‘outsourced’ and ‘stamped/rehashed’?</b></p>
+<p><span style="font-weight: 400;"><strong>R. Birg</strong>: I think that’s a byproduct of OEMs iterating on designs they already have (or have seen working elsewhere). It’s expensive to make these things, and even more expensive to make them right!</span></p>
+<p><span style="font-weight: 400;">I would like to see manufacturers not release a new flagship _every_ year. I’ll pick on Samsung here since they’re the easiest target. I think this is what makes them feel not brand-spankin’ new anymore. They’ll change out a tiny feature here and there every year, so it’s never a HUGE surprise what they announce next.</span></p>
+<p><span style="font-weight: 400;">If I didn’t see Samsung for a year with a new flagship, and they came back the next year with a quality product, I would definitely think twice. I haven’t thought about buying a Samsung since the S3, which was just a stellar device.</span></p>
+<p><span style="font-weight: 400;">On the other hand there the business side of things to think of. If I was in Samsung’s position, I’d probably be doing something very similar. It’s generating them users and profit. The question is always about sustainability.</span></p>
+<p><b>What device are you currently using as your daily driver?</b></p>
+<p><span style="font-weight: 400;"><strong>R. Birg</strong>: I’ve been using the Nexus 6P as my daily since it was released. It’s camera is decent for a Nexus device, but I’ve found that it really sucks at close up shots. I realize it’s a phone, but I’ve seen better.</span></p>
+<p><b>I think that the camera is basically the most popular deciding factor for buyers today. </b></p>
+<p><span style="font-weight: 400;"><strong>R. Birg</strong>: It wasn’t for me. Definitely a big part though. I knew this thing wasn’t going to have the best camera (although it was advertised to have a better one, and that did factor into my decision). </span></p>
+<p><span style="font-weight: 400;">I think the fingerprint unlock did it for me. It was between a 6P and a new Moto X. The fingerprint sensor was the biggest difference between the two (that I cared about) and I don’t regret the decision. I use it heavily throughout the day &#8211; when I know I need to use my phone, it’s ready to go by the time I’m looking at it.</span></p>
+<p><b>I would have to concur. Security is at an all time paramount these days.</b></p>
+<p><b>You have a ton of experience with the amount of devices you have been able to test. With the Android platform being pretty dominant in today&#8217;s industry, what advice would you give to upcoming developers?</b></p>
+<p><span style="font-weight: 400;"><strong>R. Birg</strong>: Write code. Don&#8217;t be scared of breaking stuff and dig in. I feel like that&#8217;s pretty standard advice, but if works. </span></p>
+<p><span style="font-weight: 400;">Also it&#8217;s not always about *just* writing code &#8211; make sure your that code is actually solving a problem. It might be as small as a bug. The problem could even be learning to program! But it&#8217;s never about just sitting down at a computer for the sake of writing code.</span></p>
+<p><b>Breaking starts way before fixing! I love that line!</b></p>
+<p><b>Is there any developers you looked up to or reached out to while learning Android?</b></p>
+<p><span style="font-weight: 400;"><strong>R. Birg</strong>: I want to give a huge shout out to Faux123. It was the time of the LG G2, and he was doing his own kernels and AOSP builds, I took a stab and reached out to him for help because I was stuck… and to my surprise he replied back! He was very patient with me and I tried to extract as much knowledge from him as possible without being annoying. I don’t think I could have started AOKP without his prior help.</span></p>
+<p><span style="font-weight: 400;">The coolest part was I got to meet him a few years later at the BBQ (and then again at the CM Dev summit last year). Cheers Paul!</span></p>
+<p><b>Paul is a very skilled developer, I am pretty sure everyone who has flashed a Kernel has heard of him.</b></p>
+<p><b>Anything else before we part ways and get back to work?</b></p>
+<p><span style="font-weight: 400;"><strong>R. Birg</strong>: I just want to say thanks to all the other developers contributing to CM (and other ROMs!), you all have shown me the power of the open source community. It’s all about having fun and learning new things, and this is a great place to do both.</span></p>
+<p><span style="font-weight: 400;">Thanks for having me on here Steve!</span></p>
+<p>&nbsp;</p>
+<p>You can catch Roman on <a href="https://twitter.com/romanbb">Twitter</a> or <a href="https://plus.google.com/u/0/+RomanBirg">Google Plus</a> for his social channels.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.cyanogenmod.org/blog/ds-roman-birg/feed</wfw:commentRss>
+		<slash:comments>15</slash:comments>
+		</item>
+		<item>
+		<title>Developer Spotlight: A Moment with Michael &#8216;mikeioannina&#8217; Bestas</title>
+		<link>http://www.cyanogenmod.org/blog/a-moment-with-mbestas</link>
+		<comments>http://www.cyanogenmod.org/blog/a-moment-with-mbestas#comments</comments>
+		<pubDate>Fri, 27 May 2016 19:17:32 +0000</pubDate>
+		<dc:creator><![CDATA[bsxtn]]></dc:creator>
+				<category><![CDATA[Blog]]></category>
+
+		<guid isPermaLink="false">http://www.cyanogenmod.org/?p=3200</guid>
+		<description><![CDATA[<p>It&#8217;s been a while since our <a href="http://www.cyanogenmod.org/blog/developer-spotlight-uberlaggydarwin">last Developer Spotlight</a> with Brinly Taylor (UberLaggy Darwin) in August 2015. This time around we are moving the spotlight over to Michael Bestas. Mike is responsible for several Oppo and Sony devices including the R7. Developer Spotlights are a public nudge of appreciation to the developers that tirelessly work and contribute to a greater cause for a better OS.</p> <p><strong>Hey Mike, tell us a little bit about yourself. What can we expect from you in the average day?</strong></p> <p><strong>M. Bestas:</strong> Since last year I work with my father as a smith (not sure this is the correct word, creating metal constructions) and in my free time I work on CM or tinker around with computers.</p> <p><strong>Do you have any shared interests that you have found working with metal and working with code?</strong></p> <p><strong>M. Bestas:</strong> I always liked creating stuff. I&#8217;d say the common thing is that with the proper knowledge you ...<p><a href="http://www.cyanogenmod.org/blog/a-moment-with-mbestas">Read the Rest...</a></p>]]></description>
+				<content:encoded><![CDATA[<p>It&#8217;s been a while since our <a href="http://www.cyanogenmod.org/blog/developer-spotlight-uberlaggydarwin">last Developer Spotlight</a> with Brinly Taylor (UberLaggy Darwin) in August 2015. This time around we are moving the spotlight over to Michael Bestas. Mike is responsible for several Oppo and Sony devices including the R7. Developer Spotlights are a public nudge of appreciation to the developers that tirelessly work and contribute to a greater cause for a better OS.</p>
+<p><strong>Hey Mike, tell us a little bit about yourself. What can we expect from you in the average day?</strong></p>
+<p><strong>M. Bestas:</strong> Since last year I work with my father as a smith (not sure this is the correct word, creating metal constructions) and in my free time I work on CM or tinker around with computers.</p>
+<p><strong>Do you have any shared interests that you have found working with metal and working with code?</strong></p>
+<p><strong>M. Bestas:</strong> I always liked creating stuff. I&#8217;d say the common thing is that with the proper knowledge you can create anything you imagine, with metal or code.</p>
+<p><strong>So taking a manifestation and creating a tangible/visible product right? That&#8217;s pretty awesome.</strong></p>
+<p><strong>Which devices are you currently maintaining and supporting?</strong></p>
+<p><strong>M. Bestas:</strong> At the moment I officially maintain OPPO Find7 variants and helping in YU Yureka &amp; Yuphoria bringup. OPPO R7f is also close to official support, just got a couple bugs to squash first. I also maintain unofficial builds for 11 Sony Ericsson 2011 devices.</p>
+<p><strong>Are there any devices you look forward to? Which of the new devices have caught your interest?</strong></p>
+<p>To be honest most new flagships don&#8217;t surprise me anymore. If I had to choose one of the recent new devices, that would be Nextbit Robin. Its design is something new, not another dull device.</p>
+<p><strong>We have a few floating around the office, what exactly attracts you to it?</strong></p>
+<p>Mainly the colors and the fact that it&#8217;s not just another copy of some other manufacturer&#8217;s design. You can also put CM on it.</p>
+<p><strong>I have to admit I like the modular look and feel.</strong></p>
+<p><strong>What do you think that today&#8217;s big manufacturers can do to be different in both hardware and software?</strong></p>
+<p><strong>M. Bestas:</strong> I think device specs don&#8217;t matter a lot anymore, since we have powerful SoCs even on low end devices nowadays. The manufacturers should just figure out the right combination of hardware components and be a little bit more creative with design. The real problem is in software though, we need more bloatware-free devices with frequent OS updates. Google is doing great with their monthly security updates and developer previews, but I haven&#8217;t seen any other manufacturer come close to that. Security is important but sadly it&#8217;s ignored.</p>
+<p><strong>Agreed. On another note, what does Mike Bestas do on his free time?</strong></p>
+<p>Most of my time is spent fixing bugs or implementing features in CM. I also like experimenting with electronics and Internet of Things. Not very interesting, but that&#8217;s mainly caused by the poor economic situation in my country which doesn&#8217;t allow people try new things.</p>
+<p><strong>Electronics are definitely entertaining to tear apart. I used to get into trouble for tearing my RC cars apart.</strong></p>
+<p><strong>What inspired you to start writing code and which language did you start on?</strong></p>
+<p><strong>M. Bestas:</strong> My first programming experience was back in 2002 when I was about 11 years old, my uncle wrote some tutorials and installed Delphi on my PC. It was a nice experience but I didn&#8217;t take coding seriously until 2010 when I started looking into java/C and android stuff.</p>
+<p><strong>Was there anyone in particular that inspired you to start programming?</strong></p>
+<p>I think the biggest inspiration was from the FreeXperia team back in 2010 (defer, jerpelea, Kali-, nobodyAtall).</p>
+<p><strong>Do you have any side projects you are currently working on you would like to share?</strong></p>
+<p><strong>M. Bestas:</strong> Not at the moment, but I am planning something for the following months. Can&#8217;t reveal any details though. <img src="http://cyanogenmod.org/wp-includes/images/smilies/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p><strong>Do you have any advice for those wanting to start programming?</strong></p>
+<p>In my opinion if you really like coding and have determination towards it, you don&#8217;t need to wait for some advice. Start it now, the more you work on it the more you learn. There are many tutorials/books for any language you choose and you can solve 99% of your questions with a simple google search. If you&#8217;re willing to learn others will be also willing to help, so don&#8217;t expect to be spoon fed when asking for help.</p>
+<p><strong>That sounds like some pretty solid advice. Are there any languages you recommend to start with or would you say languages are like an &#8216;acquired taste&#8217;?</strong></p>
+<p><strong>M. Bestas:</strong> Well, language choice is mainly about personal taste but if I had to choose I&#8217;d recommend python or java for first-time learners, I had a lot of fun learning python (still a noob though)</p>
+<p><strong>Python was the first language I attempted in college. Fun language and easy to pick up. Is there anything you would like to say before I end this interview?</strong></p>
+<p><strong>M. Bestas:</strong> I&#8217;d like to see more frequent developer spotlight posts, keep &#8217;em coming!</p>
+<p>&nbsp;</p>
+<p><em>You can catch Mike and his code on <a href="https://github.com/mikeNG">Github</a> and you can follow him at <a href="https://plus.google.com/+MichaelBestas/posts">Google+</a> for updates.</em></p>
+<p>Stay tuned for the next Developer Spotlight!</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.cyanogenmod.org/blog/a-moment-with-mbestas/feed</wfw:commentRss>
+		<slash:comments>14</slash:comments>
+		</item>
+		<item>
+		<title>Introducing the Cyanogen Apps Package</title>
+		<link>http://www.cyanogenmod.org/blog/introducing-the-cyanogen-apps-package</link>
+		<comments>http://www.cyanogenmod.org/blog/introducing-the-cyanogen-apps-package#comments</comments>
+		<pubDate>Wed, 11 Nov 2015 00:20:37 +0000</pubDate>
+		<dc:creator><![CDATA[bsxtn]]></dc:creator>
+				<category><![CDATA[Blog]]></category>
+
+		<guid isPermaLink="false">http://www.cyanogenmod.org/?p=3108</guid>
+		<description><![CDATA[<p>Many CM community users may be familiar with Cyanogen OS, the certified commercial version that comes preloaded on retail smartphones such as the OnePlus One, WileyFox, ZUK Z1, Andromax Q, and YU branded devices. </p> <p>Cyanogen OS includes a variety of apps and services that leverage CyanogenMod’s open platform. As CM users, these apps were previously unavailable to you unless you bought a Cyanogen OS powered retail phone. Starting today, we’re announcing the release of the Cyanogen Apps Package (C-Apps).</p> <p>C-Apps is being offered as an optional download and will not be preinstalled on CyanogenMod releases. This package will allow you to take your existing devices running CM 12.1, and make them more like the Cyanogen OS experience. The latest version of CM 12.1 is required for C-Apps to run properly.</p> <p>Download and wiki instructions are located at the bottom of this post. The following features are included in the initial C-Apps Package:</p> Theme Chooser ...<p><a href="http://www.cyanogenmod.org/blog/introducing-the-cyanogen-apps-package">Read the Rest...</a></p>]]></description>
+				<content:encoded><![CDATA[<p><span style="font-weight: 400;">Many CM community users may be familiar with Cyanogen OS, the certified commercial version that comes preloaded on retail smartphones such as the OnePlus One, WileyFox, ZUK Z1, Andromax Q, and YU branded devices. </span></p>
+<p><span style="font-weight: 400;">Cyanogen OS includes a variety of apps and services that leverage CyanogenMod’s open platform. As CM users, these apps were previously unavailable to you unless you bought a Cyanogen OS powered retail phone. Starting today, we’re announcing the release of the Cyanogen Apps Package (C-Apps).</span></p>
+<p><span style="font-weight: 400;">C-Apps is being offered as an </span><i><span style="font-weight: 400;">optional</span></i><span style="font-weight: 400;"> download and will not be preinstalled on CyanogenMod releases. This package will allow you to take your existing devices running CM 12.1, and make them more like the Cyanogen OS experience. The latest version of CM 12.1 is required for C-Apps to run properly.</span></p>
+<p><span style="font-weight: 400;">Download and wiki instructions are located at the bottom of this post. The following features are included in the initial C-Apps Package:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Theme Chooser with per-app theming</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Theme Store</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">AudioFX</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Cyanogen Accounts</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Gallery </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Dialer with TrueCaller integration</span></li>
+<li style="font-weight: 400;">Email powered by Boxer</li>
+</ul>
+<p><strong>Audio FX</strong></p>
+<figure><a href="http://www.cyanogenmod.org/wp-content/uploads/2015/09/AudioFX_Rock1.png"><img class="alignnone" src="http://www.cyanogenmod.org/wp-content/uploads/2015/09/AudioFX_Rock1-169x300.png" alt="AudioFX_Rock" /> </a><a href="http://www.cyanogenmod.org/wp-content/uploads/2015/09/AudioFX_Classical1.png"><img class="alignnone" src="http://www.cyanogenmod.org/wp-content/uploads/2015/09/AudioFX_Classical1-169x300.png" alt="AudioFX_Classical" /></a> <a href="http://www.cyanogenmod.org/wp-content/uploads/2015/09/AudioFX_Custom1.png"><img class="alignnone" src="http://www.cyanogenmod.org/wp-content/uploads/2015/09/AudioFX_Custom1-169x300.png" alt="AudioFX_Custom" /></a></figure>
+<p>Audio FX is our answer to the need of great audio tweaks and controls. With an intuitive and simple design, Audio FX can be used to switch between audio presets and custom settings created by the user.</p>
+<p>AudioFX gives you unmatched customization and quality for your music. AudioFX delivers 24-bit High-Res Lossless Audio with bass boost, surround, reverb, and 13 preset configurations.</p>
+<p><strong>Theme Chooser</strong></p>
+<figure><a href="http://www.cyanogenmod.org/wp-content/uploads/2015/09/themes_chooser.png"><img class="alignnone" src="http://www.cyanogenmod.org/wp-content/uploads/2015/09/themes_chooser-169x300.png" alt="themes_chooser" /></a> <a href="http://www.cyanogenmod.org/wp-content/uploads/2015/09/themes_chooser_customize.png"><img class="alignnone" src="http://www.cyanogenmod.org/wp-content/uploads/2015/09/themes_chooser_customize-169x300.png" alt="themes_chooser_customize" /></a></figure>
+<p>Theme Chooser is designed for you and how you want your device to look. We are making this available to help enhance how you live your mobile life.</p>
+<p>You can use the Theme Chooser to mix and match all the different parts of any theme—so you can create a theme that’s truly your own.</p>
+<p><strong>Theme Store</strong></p>
+<figure><a href="http://www.cyanogenmod.org/wp-content/uploads/2015/09/themes_store_detail.png"><img class="alignnone" src="http://www.cyanogenmod.org/wp-content/uploads/2015/09/themes_store_detail-169x300.png" alt="themes_store_detail" /></a> <a href="http://www.cyanogenmod.org/wp-content/uploads/2015/09/themes_store-1.png"><img class="alignnone" src="http://www.cyanogenmod.org/wp-content/uploads/2015/09/themes_store-1-169x300.png" alt="themes_store (1)" /></a></figure>
+<p><span style="font-weight: 400;">The Cyanogen Theme Store is the place to browse and download any number of themes. Choose from more than 200 themes, with more themes added regularly.</span></p>
+<p><strong style="line-height: 1.5;">Gallery</strong></p>
+<figure><a href="http://www.cyanogenmod.org/wp-content/uploads/2015/09/Gallery-1.jpg"><img class="alignnone" src="http://www.cyanogenmod.org/wp-content/uploads/2015/09/Gallery-1-169x300.jpg" alt="Gallery-(1)" /></a> <a href="http://www.cyanogenmod.org/wp-content/uploads/2015/09/gallery_Drawer-1.png"><img class="alignnone" src="http://www.cyanogenmod.org/wp-content/uploads/2015/09/gallery_Drawer-1-169x300.png" alt="gallery_Drawer (1)" /></a></figure>
+<p>Our Integrated Gallery brings together all your photos from multiple different services, automatically sorting them and removing duplicates.</p>
+<p><strong>Cyanogen Dialer with Integrated Truecaller</strong></p>
+<figure><a href="http://cyanogenmod.org/wp-content/uploads/2015/11/dialer_TrueCaller-First-Time-User-Dialog-Opt-Out.png"><img class="alignnone" src="http://cyanogenmod.org/wp-content/uploads/2015/11/dialer_TrueCaller-First-Time-User-Dialog-Opt-Out-169x300.png" alt="dialer_TrueCaller - First Time User Dialog Opt Out" /></a> <a href="http://cyanogenmod.org/wp-content/uploads/2015/11/dialer_TrueCaller-Incomiing-Call-Spam-Caller-Block-Caller-1.png"><img class="alignnone" src="http://cyanogenmod.org/wp-content/uploads/2015/11/dialer_TrueCaller-Incomiing-Call-Spam-Caller-Block-Caller-1-169x300.png" alt="dialer_TrueCaller - Incomiing Call - Spam Caller - Block Caller (1)" /></a></figure>
+<p><span style="font-weight: 400;">With more than 1.7 billion contacts worldwide, the robust caller ID included in Truecaller Integrated Dialer allows you to identify and block incoming spam right from your heads up notification. </span><i><span style="font-weight: 400;">(A Cyanogen Account is required to enable.)</span></i></p>
+<p><strong>Email powered by Boxer</strong></p>
+<figure><a href="http://cyanogenmod.org/wp-content/uploads/2015/11/email_Boxer-Email-Drawer.png"><img class="alignnone" src="http://cyanogenmod.org/wp-content/uploads/2015/11/email_Boxer-Email-Drawer-169x300.png" alt="email_Boxer - Email - Drawer" /></a> <a href="http://cyanogenmod.org/wp-content/uploads/2015/11/email_Boxer-Email-Bulk-Actions.png"><img class="alignnone" src="http://cyanogenmod.org/wp-content/uploads/2015/11/email_Boxer-Email-Bulk-Actions-169x300.png" alt="email_Boxer - Email - Bulk Actions" /></a> <a href="http://cyanogenmod.org/wp-content/uploads/2015/11/email_Boxer-Email-OOBE.png"><img class="alignnone" src="http://cyanogenmod.org/wp-content/uploads/2015/11/email_Boxer-Email-OOBE-169x300.png" alt="email_Boxer - Email - OOBE" /></a></figure>
+<p><span style="font-weight: 400;">Email, powered by Boxer, helps you stay organized and connected by syncing multiple email accounts into one.</span></p>
+<p><b>Cyanogen Account</b></p>
+<p><span style="font-weight: 400;">Creating a Cyanogen Account gives you access to the Theme Store, the ability to locate your device, remote lock and remote wipe it, and enable the TrueCaller functionality. After signing up for your Cyanogen account online, you can manage your account and device at <a href="https://account.cyngn.com">account.cyngn.com</a>.</span></p>
+<p><strong>For download, please visit the Cyanogen Inc. <a href="https://cyngn.com/c-apps">page for Cyanogen apps</a>. </strong>For detailed installation instructions, please visit our wiki located on the <a href="https://wiki.cyanogenmod.org/w/C-apps">CyanogenMod C-Apps</a> page.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.cyanogenmod.org/blog/introducing-the-cyanogen-apps-package/feed</wfw:commentRss>
+		<slash:comments>251</slash:comments>
+		</item>
+		<item>
+		<title>Developer Spotlight: Brinly &#8220;UberLaggyDarwin&#8221; Taylor</title>
+		<link>http://www.cyanogenmod.org/blog/developer-spotlight-uberlaggydarwin</link>
+		<comments>http://www.cyanogenmod.org/blog/developer-spotlight-uberlaggydarwin#comments</comments>
+		<pubDate>Fri, 28 Aug 2015 16:37:58 +0000</pubDate>
+		<dc:creator><![CDATA[bsxtn]]></dc:creator>
+				<category><![CDATA[Blog]]></category>
+
+		<guid isPermaLink="false">http://www.cyanogenmod.org/?p=3093</guid>
+		<description><![CDATA[<p>Welcome to another Developer Spotlight, a short Q &#38; A with community staff. This is a small spectacle of a much larger picture that we focus on to recognize the many talented developers who contribute to one of the largest community driven open source projects around.</p> <p>Brinly Taylor aka UberLaggyDarwin/uld, is a contributor and device maintainer part of the maintainer &#38; bring-up team for the CyanogenMod community. He has been a core contributor to the project since 2012 with hundreds of contributions including being a big part of device bring ups. He’s currently a student in Adelaide, Australia, while spending some of his spare time reverse engineering low level firmware of Android devices.</p> <p><strong>So how did you get started with programming and tinkering with devices?</strong></p> <p>I started pretty young playing with Rockbox open source firmware for my Sandisk &#8211; got me into open source, plus then I got a Nintendo DS for homebrew projects.</p> <p><strong>That&#8217;s ...<p><a href="http://www.cyanogenmod.org/blog/developer-spotlight-uberlaggydarwin">Read the Rest...</a></p>]]></description>
+				<content:encoded><![CDATA[<p>Welcome to another Developer Spotlight, a short Q &amp; A with community staff. This is a small spectacle of a much larger picture that we focus on to recognize the many talented developers who contribute to one of the largest community driven open source projects around.</p>
+<p>Brinly Taylor aka UberLaggyDarwin/uld, is a contributor and device maintainer part of the maintainer &amp; bring-up team for the CyanogenMod community. He has been a core contributor to the project since 2012 with hundreds of contributions including being a big part of device bring ups. He’s currently a student in Adelaide, Australia, while spending some of his spare time reverse engineering low level firmware of Android devices.</p>
+<p><strong>So how did you get started with programming and tinkering with devices?</strong></p>
+<p>I started pretty young playing with Rockbox open source firmware for my Sandisk &#8211; got me into open source, plus then I got a Nintendo DS for homebrew projects.</p>
+<p><strong>That&#8217;s awesome, I remember when PS3 had Linux before Sony took the option away. I love hacking on consoles.</strong></p>
+<p><strong>You are one of the essential developers on HTC and Sony devices, how do you find time to work on personal projects (reverse engineering), be a student and maintain 6 devices?</strong></p>
+<p>I don’t sleep much! :P.</p>
+<p><strong>What device is your daily driver for a device?</strong><br />
+Currently using a HTC Desire Eye (codename &#8216;eyeul&#8217;) but it swaps around a lot. I have like a fair few devices (15+) .</p>
+<p><strong>What advice do you have for new programmers or aspiring programmers?</strong></p>
+<p>Just keep going, don’t give up. Start on a project that is mostly supported already and have a look at bugs that exist but it’s always good to have programming experience before jumping in.</p>
+<p><strong>What was the first big project you were involved in and how did it turn out?</strong></p>
+<p>First big project relating to CM would have to be one of the device bring-ups as they are the core work to enable not just CM but many other CM based derivative works. This includes working with kernel source and reverse engineering certain hardware drivers to get certain features working in CM. A common one is of course the camera stack which is always a problem for CM developers due to it’s proprietary nature. We must build a device tree and kernel tree that is compatible with the HAL so that hardware features on the device will be functional on CyanogenMod. Working on feature enhancements on the framework is also quite fun and interesting!</p>
+<p><strong>That seems like a ton of work, would you say the outcome is worth the input?</strong></p>
+<p>Generally it is.</p>
+<p><strong>So what do you do in your free time? Any pastimes you enjoy in the Outback?</strong><br />
+I quite like cycling (I don’t modify bicycle’s though).. &amp; camping is quite nice in the outback in just a tent (no caravan) or swags is really nice, you can get away from the city lights.</p>
+<p><strong>There is quite a few locations here in the Seattle area that you can escape the light pollution and enjoy the stars and horizon with mountains.</strong></p>
+<p><strong>Do you participate in group cycling events?</strong></p>
+<p>No. I’m not that confident . I do love my recently purchased road bike (1980’s style but refurbished) as well as my other bicycles.</p>
+<p><strong>I have a carbon bike myself, in the city you get a completely different exercise with all of the elevation.</strong><br />
+Sweet.</p>
+<p><strong>You recently visited here in Seattle, do you feel you had enough time to meet everyone you wanted to and see what you expected?</strong></p>
+<p>I really enjoyed my time in Seattle but it was too short, still getting to meet the guys that I work with on Gerrit was really nice and great to see what was happening with the Cyngn crew! Seattle is a really nice city with a great view of the ocean!.</p>
+<p><strong>When it’s time to feed the beast, what’s the grub of choice?</strong><br />
+I’d probably have to say fruit or olives but both don’t really count for a meal. I like pizza though (I’m a vegetarian).</p>
+<p><strong>Pizza is an all time favorite, here in Seattle, you can find it everywhere.</strong></p>
+<p>Yeah, I had pizza there. I don’t think it is as nice as home made pizza though!</p>
+<p><strong>Who did you look up to when you started coding and hacking around with hardware?</strong></p>
+<p>Jerpelea, Kali-, Cyanogen (Steve K) and some others but I don’t have all day to write up a huge list.</p>
+<p><strong>After several discussions with Steve K. and Arcee, I have come to the conclusion they are neurotic when it comes to getting things working.</strong></p>
+<p><b>Is there anything you would like to say to the community before we end our chat? I have had a great time chatting with you about all of the awesome things we see around the community.</b></p>
+<p>Come hang out with us on IRC at #cyanogenmod-dev on freenode and say hello! (uld on freenode).</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.cyanogenmod.org/blog/developer-spotlight-uberlaggydarwin/feed</wfw:commentRss>
+		<slash:comments>6</slash:comments>
+		</item>
+		<item>
+		<title>Cyanogen Platform SDK: The Proof Is In The Pudding</title>
+		<link>http://www.cyanogenmod.org/blog/cyanogen-platform-sdk-the-proof-is-in-the-pudding</link>
+		<comments>http://www.cyanogenmod.org/blog/cyanogen-platform-sdk-the-proof-is-in-the-pudding#comments</comments>
+		<pubDate>Fri, 14 Aug 2015 22:56:47 +0000</pubDate>
+		<dc:creator><![CDATA[bsxtn]]></dc:creator>
+				<category><![CDATA[Blog]]></category>
+
+		<guid isPermaLink="false">http://www.cyanogenmod.org/?p=3082</guid>
+		<description><![CDATA[<p>At its core, CyanogenMod is a best in class example of Open Source development. Secure, fast, and full of meaningful choices for users, our goal is to make the world’s best Android OS available to hundreds of millions of users around the world.</p> <p>Along with the resources of Cyanogen Inc. behind it, we’ve created the Platform SDK. This platform empowers developers to scale the open development of Android through CyanogenMod.</p> <a href="http://www.cyanogenmod.org/wp-content/uploads/2015/08/image02.jpg"><img class=" aligncenter" src="http://www.cyanogenmod.org/wp-content/uploads/2015/08/image02.jpg" alt="image02" /></a> <p>The Cyanogen Platform SDK is about safely giving developers deeper access to Android, while enabling them to create original experiences for users. Whether it’s creating new ways of engaging with existing applications or developing completely new experiences, our goal is to make sure the Cyanogen platform offers meaningful choices to meet the growing needs of a diverse, global smartphone population (6b+ by 2020).</p> <p>As we approach <a href="http://hacktheplanet.mlh.io/">Hack The Planet</a>, we wanted to share the first apps that ...<p><a href="http://www.cyanogenmod.org/blog/cyanogen-platform-sdk-the-proof-is-in-the-pudding">Read the Rest...</a></p>]]></description>
+				<content:encoded><![CDATA[<p>At its core, CyanogenMod is a best in class example of Open Source development. Secure, fast, and full of meaningful choices for users, our goal is to make the world’s best Android OS available to hundreds of millions of users around the world.</p>
+<p>Along with the resources of Cyanogen Inc. behind it, we’ve created the Platform SDK. This platform empowers developers to scale the open development of Android through CyanogenMod.</p>
+<figure><a href="http://www.cyanogenmod.org/wp-content/uploads/2015/08/image02.jpg"><img class=" aligncenter" src="http://www.cyanogenmod.org/wp-content/uploads/2015/08/image02.jpg" alt="image02" /></a></figure>
+<p>The Cyanogen Platform SDK is about safely giving developers deeper access to Android, while enabling them to create original experiences for users. Whether it’s creating new ways of engaging with existing applications or developing completely new experiences, our goal is to make sure the Cyanogen platform offers meaningful choices to meet the growing needs of a diverse, global smartphone population (6b+ by 2020).</p>
+<p>As we approach <a href="http://hacktheplanet.mlh.io/">Hack The Planet</a>, we wanted to share the first apps that are leveraging the Platform SDK to bring more functionality to users daily lives.</p>
+<p><strong>Kelvin Sense:</strong><br />
+<a href="https://senseai.io/kelvin-sense">Kelvin Sense</a> is a thermometer that utilizes the implicit temperature dependence of the sensors and other electronic components in existing devices to determine the ambient temperature in a variety of situations. The heat generated by the various sensors, as well as the processor, screen, battery, WiFi, GSM/CDMA, and GPS are combined using a mathematical model of the device whose output accurately measures the temperature of the surroundings.</p>
+<p>Sense Ai has generalized this approach in their SDK to provide an array of previously unmeasurable quantities and environmental states.</p>
+<figure><a href="http://www.cyanogenmod.org/wp-content/uploads/2015/08/pasted-image-01.png"><img class=" aligncenter" src="http://www.cyanogenmod.org/wp-content/uploads/2015/08/pasted-image-01-576x1024.png" alt="pasted image 0" width="290" height="515" /></a></figure>
+<p>With integration into Quick Settings Tiles, it is as easy as a swipe to know more about your personal environment. You can see in the image above that it was much hotter in Palo Alto in general than the building I was in when I captured the screenshot. The enhanced app will be available on the OnePlus One when OS 12.1 rolls out and to other Cyanogen OS devices after that.</p>
+<p>Have any questions? <a href="https://www.facebook.com/KelvinSense">Reach out and say hello to the team</a></p>
+<p><strong>Dual SIM Control:</strong><br />
+<a href="https://play.google.com/store/apps/details?id=pt.joaormf.mtkcontrol">Dual SIM</a> is something that is becoming more and more relevant as new users adopt smartphones around the world. We connected with João, the creator of Dual SIM Control, because we saw that his app has very positive user reviews, even though in many cases it requires root access. We’ve been blown away by the quality and speed of João’s development and are thrilled that his Dual SIM API is the first 3rd party API to be added to the SDK.</p>
+<p>He’s combined his new API with the Quick Settings API to give users seamless control over their Dual SIM use.</p>
+<p>As Adnan mentioned in his <a href="http://www.cyanogenmod.org/blog/update-to-cyanogen-platform-sdk">last post</a>, we’re moving to a quarterly release cadence for stable branching, so access to the enhanced Dual SIM app and the API will have to wait a bit longer for Cyanogen OS &amp; CyanogenMod (non-nightly) devices.</p>
+<p><iframe width="500" height="375" src="https://www.youtube.com/embed/B1GDkLrnI9M?feature=oembed" frameborder="0" allowfullscreen></iframe></p>
+<p><strong>Tasker:</strong><br />
+If you don’t know what <a href="https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm">Tasker</a> is, it’s an advanced application that allows users to automate actions based on different triggers. We’re working with the creator, Pent, to implement an extension using the Platform SDK which you can look for soon.</p>
+<figure><a href="http://www.cyanogenmod.org/wp-content/uploads/2015/08/pasted-image-0-1.png"><img class=" aligncenter" src="http://www.cyanogenmod.org/wp-content/uploads/2015/08/pasted-image-0-1-576x1024.png" alt="pasted image 0 (1)" width="290" height="516" /></a></figure>
+<p>This is just the beginning. The Community and Cyanogen are working to provide more tooling, experiences and access to continue making the Android platform more open and provide choice to users around the world.</p>
+<p><a href="http://twitch.tv/mlh">Tune-in to Twitch</a> this Sunday at 3pm PDT to see what 400 of the brightest college hackers around the world create with the Cyanogen Platform SDK.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.cyanogenmod.org/blog/cyanogen-platform-sdk-the-proof-is-in-the-pudding/feed</wfw:commentRss>
+		<slash:comments>37</slash:comments>
+		</item>
+		<item>
+		<title>Update to Cyanogen Platform SDK</title>
+		<link>http://www.cyanogenmod.org/blog/update-to-cyanogen-platform-sdk</link>
+		<comments>http://www.cyanogenmod.org/blog/update-to-cyanogen-platform-sdk#comments</comments>
+		<pubDate>Mon, 03 Aug 2015 22:33:12 +0000</pubDate>
+		<dc:creator><![CDATA[bsxtn]]></dc:creator>
+				<category><![CDATA[Blog]]></category>
+
+		<guid isPermaLink="false">http://www.cyanogenmod.org/?p=3058</guid>
+		<description><![CDATA[<p dir="ltr">   <a href="http://www.cyanogenmod.org/wp-content/uploads/2015/08/image02.jpg"><img class="aligncenter" alt="image02" src="http://www.cyanogenmod.org/wp-content/uploads/2015/08/image02.jpg" /></a></p> <p><strong> </strong></p> <p dir="ltr"><strong>Update to Cyanogen Platform SDK</strong></p> <p dir="ltr"><em>Written by Adnan Begovic, In Developer</em></p> <p dir="ltr">After the announcement of the <a href="https://www.cyngn.com/developer-blog/introducing-the-cyanogen-platform-sdk">Platform SDK</a> in May we had a healthy amount of interest from users, CyanogenMod community developers, and third party Android developers. Since then we’ve had a stable release of the first version of the SDK, created further infrastructure to enable easier accessibility and maintenance, and expanded on the features available to third party app developers.</p> <p dir="ltr">As a recap for release notes, the CM SDK hit a stable branching point for 12.1 on June 22nd, 2015. With this stable branching we’ve introduced a <a href="https://github.com/CyanogenMod/android_prebuilts_cmsdk">prebuilts</a> repo which can be utilized to reference prebuilt, statically linkable java archives that match the current stable release. Likewise we’ve also updated the platform sdk’s <a href="https://github.com/CyanogenMod/cm_platform_sdk/wiki">wiki</a> to detail everything from the downloading and including the jar in your own applications to ...<p><a href="http://www.cyanogenmod.org/blog/update-to-cyanogen-platform-sdk">Read the Rest...</a></p>]]></description>
+				<content:encoded><![CDATA[<p dir="ltr">   <a href="http://www.cyanogenmod.org/wp-content/uploads/2015/08/image02.jpg"><img class="aligncenter" alt="image02" src="http://www.cyanogenmod.org/wp-content/uploads/2015/08/image02.jpg" /></a></p>
+<p><strong> </strong></p>
+<p dir="ltr"><strong>Update to Cyanogen Platform SDK</strong></p>
+<p dir="ltr"><em>Written by Adnan Begovic, In Developer</em></p>
+<p dir="ltr">After the announcement of the <a href="https://www.cyngn.com/developer-blog/introducing-the-cyanogen-platform-sdk">Platform SDK</a> in May we had a healthy amount of interest from users, CyanogenMod community developers, and third party Android developers. Since then we’ve had a stable release of the first version of the SDK, created further infrastructure to enable easier accessibility and maintenance, and expanded on the features available to third party app developers.</p>
+<p dir="ltr">As a recap for release notes, the CM SDK hit a stable branching point for 12.1 on June 22nd, 2015. With this stable branching we’ve introduced a <a href="https://github.com/CyanogenMod/android_prebuilts_cmsdk">prebuilts</a> repo which can be utilized to reference prebuilt, statically linkable java archives that match the current stable release. Likewise we’ve also updated the platform sdk’s <a href="https://github.com/CyanogenMod/cm_platform_sdk/wiki">wiki</a> to detail everything from the downloading and including the jar in your own applications to the submission and testing process revolving around the infrastructure of the project.</p>
+<p dir="ltr">The current stable SDK release is titled “Apricot”, and the java archive it represents can be found at the <a href="https://github.com/CyanogenMod/android_prebuilts_cmsdk/tree/master/current">prebuilts/current</a> repo and it contains the capability of the <a href="https://cyanogenmod.github.io/cm_platform_sdk/reference/cyanogenmod/app/CustomTile.html">CustomTile API</a> which allows your application to post its own toggles to the QS Panel within the quick settings drawer. A usage of the CustomTile API is exemplified by one of our OSS members in recent community releases as the backing framework for <a href="http://www.cyanogenmod.org/blog/latest-updates-to-cm-12-1">Dynamic Tiles</a>. These dynamic tiles within the OS now allow us to see things like active root sessions (per application) within our community builds.</p>
+<p dir="ltr" style="text-align: center;"> <a href="http://www.cyanogenmod.org/wp-content/uploads/2015/08/image01.png"><img class="alignnone" alt="image01" src="http://www.cyanogenmod.org/wp-content/uploads/2015/08/image01-168x300.png" /></a><a href="http://www.cyanogenmod.org/wp-content/uploads/2015/08/image00.png"><img class="alignleft" alt="image00" src="http://www.cyanogenmod.org/wp-content/uploads/2015/08/image00-168x300.png" /></a></p>
+<p dir="ltr">With moving towards the next release named “Boysenberry”, we’ve spent time factoring out one of our most prominent features within the OS known as “Profiles”. The Profiles API has always been hidden away internally in the android framework in CyanogenMod, but we’ll now be looking to expose it to any third party application which may be interested. Originally contributed by community member <a href="https://github.com/martinlong1978">Martin Long</a>, the Profiles API has allowed for managing different device states and behavior based off of environmental triggers such as bluetooth connecting to a certain device or WiFi disconnecting from a specific AP. Since the Profiles API’s introduction into CyanogenMod, the OS’s settings application has been the primary management tool for any user wanting to create their own device profiles, starting today any application can become a management tool for profiles.</p>
+<p dir="ltr">The Profiles API allows you to override numerous default settings for the user depending on a trigger. You can programmatically create a Profile which sets the ring mode on the device to muted, disables WiFi, and switches the devices default data connection to 3G all with a few lines of code.</p>
+<p dir="ltr">An example list of override-able settings can be seen here:</p>
+<ul>
+<li dir="ltr">
+<p dir="ltr">AirplaneMode</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Brightness level</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Audio stream volumes</p>
+<ul>
+<li dir="ltr">
+<p dir="ltr">Alarm</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">DTMF</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Music</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Notification</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Phone Ring</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">System sounds</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Voice call</p>
+</li>
+</ul>
+</li>
+<li dir="ltr">
+<p dir="ltr">Ring Modes</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Connection Settings</p>
+<ul>
+<li dir="ltr">
+<p dir="ltr">Data Connection (2g/3g/4g)</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Bluetooth</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">GPS</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">NFC</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Data sync</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">WiFi</p>
+</li>
+</ul>
+</li>
+<li dir="ltr">
+<p dir="ltr">Expanded Desktop</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Doze mode</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Screen Lock</p>
+</li>
+</ul>
+<p dir="ltr">These settings can quickly be overridden by utilizing the Profile class and the ProfileManager (for publishing). A quick example of creating a profile which overrides the default AirplaneMode setting and then sets the profile to active can be seen below.</p>
+<pre><code class="java">private void createOverrideForAPandSetActive() {
+    // Get instance of ProfileManager
+    ProfileManager profileManager = ProfileManager.getInstance(this);
+
+    // Create new Profile object with name
+    Profile profile = new Profile("Custom Profile AP Override");
+    // Of type Toggle
+    profile.setProfileType(Type.TOGGLE);
+    // Where we set the default airplane mode setting to enabled
+    AirplaneModeSettings airplaneModeSettings =
+            new AirplaneModeSettings(
+                AirplaneModeSettings.BooleanState.STATE_ENABLED, true);
+    profile.setAirplaneMode(airplaneModeSettings);
+    // Add the profile to the internal map
+    profileManager.addProfile(profile);
+    // And set it active
+    profileManager.setActiveProfile(profile.getUuid());
+}</code></pre>
+<p dir="ltr">We’ve also recently supplied new functionality within the <a href="https://cyanogenmod.github.io/cm_platform_sdk/reference/cyanogenmod/app/CustomTile.html">CustomTile</a> API, allowing you go as far as publishing <a href="http://developer.android.com/reference/android/widget/RemoteViews.html">RemoteViews</a> as an <a href="https://cyanogenmod.github.io/cm_platform_sdk/reference/cyanogenmod/app/CustomTile.RemoteExpandedStyle.html">ExpandedStyle</a> to be shown for when the user interacts with the tile itself. A quick example that inflates a layout containing a button can be seen here:</p>
+<pre><code class="java">private void createRemoteViewExpandedTile() {
+    // Create a remoteviews object
+    RemoteViews contentView = new RemoteViews(getPackageName(),
+            R.layout.remote_view);
+
+    // Create intent for the onclick button
+    Intent cyngnIntent = new Intent(Intent.ACTION_VIEW)
+        .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        .setData(Uri.parse("http://www.cyngn.com"));
+
+    // Get a pending intent for the defined intent
+    PendingIntent intent = PendingIntent.getActivity(this, 0,
+            cyngnIntent, 0);
+
+    // Set the pending intent on the button in our layout
+    contentView.setOnClickPendingIntent(R.id.whats_hot_click, intent);
+
+    // Create the new RemoteExpandedStyle
+    CustomTile.RemoteExpandedStyle remoteExpandedStyle =
+            new CustomTile.RemoteExpandedStyle();
+    remoteExpandedStyle.setRemoteViews(contentView);
+
+    // Build the custom tile
+    CustomTile customTile = new CustomTile.Builder(CMStatusBarTest.this)
+        .setLabel("Remote Style From SDK")
+        .setIcon(R.drawable.ic_launcher)
+        .setExpandedStyle(remoteExpandedStyle)
+        .setOnSettingsClickIntent(new Intent(thiis, DummyClass.class)
+                .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
+        .setContentDescription("Description of content for expanded style")
+        .build();
+
+    // Publish the custom tile
+    CMStatusBarManager.getInstance(this)
+            .publishTile(CUSTOM_TILE_SETTINGS_ID, customTile);
+}</code></pre>
+<p dir="ltr"><a href="http://www.cyanogenmod.org/wp-content/uploads/2015/08/image03.png"><img class="aligncenter" alt="image03" src="http://www.cyanogenmod.org/wp-content/uploads/2015/08/image03-168x300.png" /></a></p>
+<p dir="ltr">Currently, we’re trending towards a quarterly release cadence for our stable branching and the Profiles API will be constantly worked on and refactored alongside other interface and feature work. However, we’ve made available a bleeding edge java archive which contains access to these new features with our nightly builds on CyanogenMod. The java archive can be found within the <a href="https://github.com/CyanogenMod/android_prebuilts_cmsdk/tree/master/future">future</a> folder of the CMSDK prebuilts with documentation always-up-to-date which can be found on the <a href="https://cyanogenmod.github.io/cm_platform_sdk/reference/packages.html">github page for the project.</a></p>
+<p dir="ltr">Likewise, to help decipher which APIs are available to you at any given point (if at all), we’ve created a copy of the <a href="https://cyanogenmod.github.io/cm_platform_sdk/reference/cyanogenmod/os/Build.html">Build API</a> from AOSP allowing you to programmatically compare the devices current API version to see if specific features are available or not.</p>
+<p dir="ltr">A simple call to retrieve the <a href="https://cyanogenmod.github.io/cm_platform_sdk/reference/cyanogenmod/os/Build.CM_VERSION.html#SDK_INT">SDK constant</a> and comparing it against the <a href="https://cyanogenmod.github.io/cm_platform_sdk/reference/cyanogenmod/os/Build.CM_VERSION_CODES.html#BOYSENBERRY">Boysenberry API level</a> allows you to see if your application is running on a CyanogenMod device that can support the new SDK feature:</p>
+<pre><code class="java">private void removeActiveProfile() {
+    // Make sure we're running on BoysenBerry or higher to use Profiles API
+    if (Build.CM_VERSION.SDK_INT &gt;= Build.CM_VERSION_CODES.BOYSENBERRY) {
+        ProfileManager profileManager = ProfileManager.getInstance(this);
+        Profile activeProfile = profileManager.getActiveProfile();
+        if (activeProfile != null) {
+            profileManager.removeProfile(activeProfile);
+        }
+    }
+}</code></pre>
+<p dir="ltr">Along with the new tooling available in the SDK, we’ve also expanded our test coverage on the overall project itself. For future submissions or contributions, in an effort to push for a more stable platform, we will be requiring that each change to existing APIs passes the current tests and that any feature or interface change comes supplemented with newer tests. To see more details on the testing package, view the package on <a href="https://github.com/CyanogenMod/cm_platform_sdk/tree/cm-12.1/tests">Github</a>.</p>
+<p dir="ltr">Furthermore we will be partaking in numerous upcoming events to help further provide exposure and developer support.</p>
+<p dir="ltr"><strong>Upcoming Event Lineup for 2015</strong></p>
+<p dir="ltr">August 2015 &#8211; Seattle Code Rush hosted by Facebook</p>
+<p dir="ltr">August 2015 &#8211; Hack the Planet Hosted by Major League Hacking</p>
+<p dir="ltr">October 2015 &#8211; Big Android BBQ</p>
+<p>&nbsp;</p>
+<p dir="ltr">We are bound to add more events in the near future and if there are any events you would like to see us attend, please send an email to community@cyngn.com</p>
+<p dir="ltr"><em>If you have any questions, concerns or comments, feel free to leave a reply down below or if your questions are more developer oriented, please contributed to the <a href="https://groups.google.com/forum/#!topic/cyanogenmod/cDy-WU1zt8w">Google Group</a> set up for the project.</em></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.cyanogenmod.org/blog/update-to-cyanogen-platform-sdk/feed</wfw:commentRss>
+		<slash:comments>4</slash:comments>
+		</item>
+		<item>
+		<title>Update To Instant Contact Card</title>
+		<link>http://www.cyanogenmod.org/blog/update-to-instant-contact-card</link>
+		<comments>http://www.cyanogenmod.org/blog/update-to-instant-contact-card#comments</comments>
+		<pubDate>Fri, 10 Jul 2015 21:40:41 +0000</pubDate>
+		<dc:creator><![CDATA[bsxtn]]></dc:creator>
+				<category><![CDATA[Blog]]></category>
+
+		<guid isPermaLink="false">http://www.cyanogenmod.org/?p=3053</guid>
+		<description><![CDATA[<p dir="ltr">We received a ton of great responses from the community regarding our <a href="http://www.cyanogenmod.org/blog/contact-card">contact card proposal</a>, so we wanted to share with you a few additional contact card options based on your feedback. The initial contact card proposal was designed to optimize for the majority of users who do not have contact photos or high resolution contact photos. The secondary goal was to create a UX affordance that allows up to 5 options on the card while making those options easily reachable. After much discussion, we identified support for hi-res images as a third goal.</p> <p>&#160;</p> <p dir="ltr">Due to the complexity of supporting multiple layouts, as well as consistency between low res and hi res cards, we would like to only support one layout for contact cards. We also want to preserve the original photo. We listened to your feedback and put together the additional options below.</p> <p>&#160;</p> <p dir="ltr">Option 1: This is the ...<p><a href="http://www.cyanogenmod.org/blog/update-to-instant-contact-card">Read the Rest...</a></p>]]></description>
+				<content:encoded><![CDATA[<p dir="ltr">We received a ton of great responses from the community regarding our <a href="http://www.cyanogenmod.org/blog/contact-card">contact card proposal</a>, so we wanted to share with you a few additional contact card options based on your feedback. The initial contact card proposal was designed to optimize for the majority of users who do not have contact photos or high resolution contact photos. The secondary goal was to create a UX affordance that allows up to 5 options on the card while making those options easily reachable. After much discussion, we identified support for hi-res images as a third goal.</p>
+<p>&nbsp;</p>
+<p dir="ltr">Due to the complexity of supporting multiple layouts, as well as consistency between low res and hi res cards, we would like to only support one layout for contact cards. We also want to preserve the original photo. We listened to your feedback and put together the additional options below.</p>
+<p>&nbsp;</p>
+<p dir="ltr">Option 1: This is the originally proposed contact card. This is still our preferred option as it meets all of our goals mentioned above but does not support hi res photos well.</p>
+<p>&nbsp;</p>
+<p dir="ltr">Option 2: The background photo is no longer blurred, which introduces contrast issues when text is applied on top of the photo. This is a good middle ground to show the high res photo.  This would be our second choice.</p>
+<p>&nbsp;</p>
+<p dir="ltr">Option 3: The photo is sized to expand to the top of the screen. This will cause low res photos to appear pixelated. There is also excessive space when there is no photo, which will be the most common case.</p>
+<p>&nbsp;</p>
+<p dir="ltr">Option 4: The photo does not inherit the contact color. The same issues from previous options apply to this option a well.</p>
+<p> <a href="http://www.cyanogenmod.org/wp-content/uploads/2015/07/Community-Feedback.png"><img class="alignnone" alt="Community-Feedback" src="http://www.cyanogenmod.org/wp-content/uploads/2015/07/Community-Feedback.png" width="533" height="1211" /></a></p>
+<p>&nbsp;</p>
+<p>We would love to hear your thoughts, so feel free to contact the design team at design@cyngn.com.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.cyanogenmod.org/blog/update-to-instant-contact-card/feed</wfw:commentRss>
+		<slash:comments>176</slash:comments>
+		</item>
+		<item>
+		<title>Developer Spotlight: A Moment With Jorge Ruesga</title>
+		<link>http://www.cyanogenmod.org/blog/jorge-ruesga</link>
+		<comments>http://www.cyanogenmod.org/blog/jorge-ruesga#comments</comments>
+		<pubDate>Thu, 02 Jul 2015 17:53:47 +0000</pubDate>
+		<dc:creator><![CDATA[bsxtn]]></dc:creator>
+				<category><![CDATA[Blog]]></category>
+
+		<guid isPermaLink="false">http://www.cyanogenmod.org/?p=3047</guid>
+		<description><![CDATA[<p dir="ltr"><em>Welcome to our second Developer Spotlight, a short Q &#38; A with community staff. This is our way of taking a moment to recognize the many talented developers who contribute to one of the largest community driven open source projects around.</em></p> <p dir="ltr"><em>Jorge Ruesga is a contributor/feature developer, on the User Interface and User Experience team, for the CyanogenMod community. He has been a core contributor to the project since 2012 with hundreds of contributions, including dynamic live tiles. He currently works as a J2EE Architect in Spain.</em></p> <p dir="ltr"><strong>You are one of the developers on the Asus TF700T and other Transformer devices, how do you find time to work on dynamic live tiles and maintain a device?</strong></p> <p dir="ltr">I just helped out <em>dasunsrule32</em> and the others transformer guys with some UI/UX features for these devices, like dock battery or the custom keys handling of the dock keyboard. In my daily contributions, I work ...<p><a href="http://www.cyanogenmod.org/blog/jorge-ruesga">Read the Rest...</a></p>]]></description>
+				<content:encoded><![CDATA[<p dir="ltr"><em>Welcome to our second Developer Spotlight, a short Q &amp; A with community staff. This is our way of taking a moment to recognize the many talented developers who contribute to one of the largest community driven open source projects around.</em></p>
+<p dir="ltr"><em>Jorge Ruesga is a contributor/feature developer, on the User Interface and User Experience team, for the CyanogenMod community. He has been a core contributor to the project since 2012 with hundreds of contributions, including dynamic live tiles. He currently works as a J2EE Architect in Spain.</em></p>
+<p dir="ltr"><strong>You are one of the developers on the Asus TF700T and other Transformer devices, how do you find time to work on dynamic live tiles and maintain a device?</strong></p>
+<p dir="ltr">I just helped out <em>dasunsrule32</em> and the others transformer guys with some UI/UX features for these devices, like dock battery or the custom keys handling of the dock keyboard. In my daily contributions, I work more closely with the frameworks/apps part of the code, but sometimes its also interesting to look at the code that governs the devices.</p>
+<p dir="ltr"><strong>How would you explain dynamic live tiles to a new CyanogenMod user? A lot of people are excited for it.</strong></p>
+<p dir="ltr">A dynamic tile is a quick setting tile that is only displayed during an active system event (ex: an app with a root session or an active alarm). The concept of dynamic tiles comes from CM11, where they were implemented inside the SystemUI by listening to special events generated by the system. In CM12.1, we decided to go in a different direction. With the help of Custom Tiles API<br />
+(in the new CMSDK), we move the creation of the dynamic tiles to the source of the event. This allows more useful information than what we provided before.</p>
+<p><strong>What gave you the idea for dynamic live tiles?</strong></p>
+<p dir="ltr">At CyanogenMod, we run an instance of an issue tracker called Jira, which also serves as a feature tracker. At the beginning of the bring-up of CM12, the core team introduced all of the functionalities present in CM11 that we really would want to port to the next version. Every individual of the core project can take responsibility for a feature in the list. Dynamic tiles was one such feature that we decided to port.</p>
+<p><strong>What device is your daily driver for a device?</strong></p>
+<p dir="ltr">This is a little embarrassing. Currently, my daily driver is a stock Samsung Galaxy S6 Edge but I own other CM ready devices to test CM11 and CM12 bugs and to develop new features.</p>
+<p dir="ltr"><strong>What advice do you have for new programmers or aspiring programmers?</strong></p>
+<p dir="ltr">Time to learn, as the internet is full of source code. They only need to have passion and perseverance, and a solid idea about what they want to build. After the initial learning curve, fun times will come.</p>
+<p><strong>What was the first big project you were involved in and how did it turn out?</strong></p>
+<p dir="ltr">It was some time ago. I&#8217;m still maintaining it.</p>
+<p><strong>Can you share which project that is?</strong></p>
+<p dir="ltr">Nope, it&#8217;s still a secret. <img src="http://s.w.org/images/core/emoji/72x72/1f609.png" alt="😉" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p><strong>Ahh, understood. Enough with the technical inquiries, what do you do in your free time? Any pastimes you enjoy outside of coding?</strong></p>
+<p dir="ltr">I usually code in my free time (in CM or in other personal projects), but I like to watch movies when coding fatigues or overwhelms me.</p>
+<p><strong>Fill in the blank. Bacon and ______?</strong></p>
+<p dir="ltr">Eggs? More bacon could be a bit unhealthy <img src="http://cyanogenmod.org/wp-includes/images/smilies/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p><strong>I am huge on eggs, scrambled with cheese or right on top of a burger with bacon.</strong><br />
+<strong>Who did you look up to when you started coding and hacking around?</strong></p>
+<p>There&#8217;s a lot of talented people in CyanogenMod (Steve, Ricardo, Danny &amp; more).</p>
+<p><strong>There is a lot of talent around the community for sure, no lack of that here. </strong></p>
+<p>It&#8217;s probably unfair to name only them because I&#8217;m leaving many out.</p>
+<p><strong></strong><strong>Is there anything you would like to say to the community before we end our chat?</strong></p>
+<p>I want to thank them for all the support they give to us. If you want to find me, I&#8217;ll be around working to fix bugs and adding new features (like bloatware of course&#8230; just kidding).</p>
+<p><strong>I had a great time chatting with Jorge about his contributions and the other awesome aspects of our community. Y</strong><strong>ou can follow Jorge on his personal social media:</strong></p>
+<figure><a href="http://github.com/jruesga"><img class="alignnone" alt="github_social_64" src="http://www.cyanogenmod.org/wp-content/uploads/2015/05/github_social_64.png" /></a>  <a href="https://plus.google.com/u/0/101076798912578642565/posts"><img class="alignnone" alt="64_google plus" src="http://www.cyanogenmod.org/wp-content/uploads/2015/05/64_google-plus.png" /></a></figure>
+]]></content:encoded>
+			<wfw:commentRss>http://www.cyanogenmod.org/blog/jorge-ruesga/feed</wfw:commentRss>
+		<slash:comments>20</slash:comments>
+		</item>
+		<item>
+		<title>Thread Throwdown Winner Announcement</title>
+		<link>http://www.cyanogenmod.org/blog/thread-throwdown-winner-announcement</link>
+		<comments>http://www.cyanogenmod.org/blog/thread-throwdown-winner-announcement#comments</comments>
+		<pubDate>Sat, 13 Jun 2015 16:17:55 +0000</pubDate>
+		<dc:creator><![CDATA[bsxtn]]></dc:creator>
+				<category><![CDATA[Blog]]></category>
+
+		<guid isPermaLink="false">http://www.cyanogenmod.org/?p=2945</guid>
+		<description><![CDATA[<p>After a week of voting and after nearly a thousand votes, we bring to you the winner the Thread Throwdown contest!</p> <p>*Drumroll*</p> <p>The winner is: Greg Willard</p> <a href="http://www.cyanogenmod.org/wp-content/uploads/2015/06/GregW.png"><img class="alignnone" alt="GregW" src="http://www.cyanogenmod.org/wp-content/uploads/2015/06/GregW.png" /></a> <p>&#160;</p> <p>Thank all of you for your entries. Keep your inboxes synced and watch for an email. To all contestants including the winner: we will be contacting you soon for some swag! A big thank you to everyone for submitting!</p>]]></description>
+				<content:encoded><![CDATA[<p>After a week of voting and after nearly a thousand votes, we bring to you the winner the Thread Throwdown contest!</p>
+<p>*Drumroll*</p>
+<p>The winner is: Greg Willard</p>
+<figure><a href="http://www.cyanogenmod.org/wp-content/uploads/2015/06/GregW.png"><img class="alignnone" alt="GregW" src="http://www.cyanogenmod.org/wp-content/uploads/2015/06/GregW.png" /></a></figure>
+<p>&nbsp;</p>
+<p>Thank all of you for your entries. Keep your inboxes synced and watch for an email. To all contestants including the winner: we will be contacting you soon for some swag! A big thank you to everyone for submitting!</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.cyanogenmod.org/blog/thread-throwdown-winner-announcement/feed</wfw:commentRss>
+		<slash:comments>20</slash:comments>
+		</item>
+	</channel>
+</rss>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+ Served from: www.cyanogenmod.org @ 2016-08-26 10:16:40 by W3 Total Cache -->
