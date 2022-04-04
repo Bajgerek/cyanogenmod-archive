@@ -89,7 +89,7 @@ body{
     border: 1px solid #2d63c8;
     border-radius: 20px;
     padding: 15px 50px;
-    cursor: pointer
+    cursor: pointer;
 }
 .button1:hover {
     color: #2d63c8;
@@ -103,8 +103,7 @@ body{
     border: 1px solid #2d63c8;
     border-radius: 20px;
     padding: 15px 50px;
-    cursor: pointer
-
+    cursor: pointer;
 }
 
 .button2:hover {
@@ -113,9 +112,23 @@ body{
 }
 
 .soon {
-color: #ffffff
-
-
+    color: #ffffff;
 }
 
+.device{
+    display: flex;
+    justify-content: center;
+}
 
+.device img{
+    width: 300px;
+}
+
+.btn{
+    text-align: center;
+}
+
+.text{
+    text-align: center;
+    color: white;
+}
